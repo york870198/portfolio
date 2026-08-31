@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="utf-8">
+  <title>重新導向中...</title>
+  <script>
+    // GitHub Pages SPA 404 Redirect Script (spa-github-pages)
+    // 針對路徑段數進行重定向
+    var pathSegmentsToKeep = 1; // 適用於 https://<username>.github.io/portfolio/
+
+    var l = window.location;
+    l.replace(
+      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+      l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+      l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+      (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+      l.hash
+    );
+  </script>
+</head>
+<body>
+</body>
+</html>
