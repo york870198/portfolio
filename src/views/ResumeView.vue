@@ -97,7 +97,7 @@ onMounted(() => {
           </div>
           <div class="contact-item">
             <span class="contact-icon">💼</span>
-            <a href="https://www.linkedin.com/in/fay-chung-682698224/" target="_blank" rel="noopener noreferrer" class="contact-link">linkedin.com/in/fay-chung</a>
+            <a href="https://www.linkedin.com/in/fay-chung-682698224/" target="_blank" rel="noopener noreferrer" class="contact-link">linkedin: Fay-Chung</a>
           </div>
         </div>
       </header>
