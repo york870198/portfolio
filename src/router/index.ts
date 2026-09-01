@@ -112,6 +112,12 @@ const routes: RouteRecordRaw[] = [
     meta: { title: 'How | Portfolio of Fay' }
   },
   {
+    path: '/resume',
+    name: 'resume',
+    component: () => import('@/views/ResumeView.vue'),
+    meta: { title: '完整履歷 | Portfolio of Fay' }
+  },
+  {
     path: '/about',
     redirect: '/who'
   },

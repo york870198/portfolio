@@ -8,6 +8,7 @@ import QuickContact from '@/components/QuickContact.vue'
 const route = useRoute()
 const router = useRouter()
 const isMobileMenuOpen = ref(false)
+const isGeneratingPdf = ref(false)
 
 const toggleMobileMenu = () => {
   isMobileMenuOpen.value = !isMobileMenuOpen.value
@@ -20,6 +21,55 @@ const closeMobileMenu = () => {
 const navigateTo = (path: string) => {
   closeMobileMenu()
   router.push(path)
+}
+
+// 下載履歷處理函式（方案 A：透過隱藏 iframe 背景列印 / 匯出 PDF）
+const handleDownloadResume = () => {
+  closeMobileMenu()
+
+  // 若使用者已在 /resume 頁面，直接觸發系統列印
+  if (route.path === '/resume') {
+    window.print()
+    return
+  }
+
+  isGeneratingPdf.value = true
+
+  // 建立不可見的 iframe 載入 /resume 內容，達成不跳頁的原生列印體驗
+  const iframe = document.createElement('iframe')
+  iframe.style.position = 'fixed'
+  iframe.style.right = '0'
+  iframe.style.bottom = '0'
+  iframe.style.width = '0'
+  iframe.style.height = '0'
+  iframe.style.border = '0'
+  iframe.style.opacity = '0'
+  iframe.style.pointerEvents = 'none'
+
+  const base = import.meta.env.BASE_URL || '/'
+  const cleanBase = base.endsWith('/') ? base : `${base}/`
+  iframe.src = `${cleanBase}resume?print=true`
+
+  document.body.appendChild(iframe)
+
+  iframe.onload = () => {
+    setTimeout(() => {
+      try {
+        iframe.contentWindow?.focus()
+        iframe.contentWindow?.print()
+      } catch (err) {
+        console.warn('Iframe print failed, falling back to route navigation:', err)
+        router.push('/resume?print=true')
+      } finally {
+        isGeneratingPdf.value = false
+        setTimeout(() => {
+          if (document.body.contains(iframe)) {
+            document.body.removeChild(iframe)
+          }
+        }, 1500)
+      }
+    }, 450)
+  }
 }
 
 // 監聽鍵盤 Escape 鍵自動收合手機選單
@@ -63,8 +113,22 @@ onUnmounted(() => {
         </ul>
       </nav>
 
-      <!-- Utility Actions: Theme Toggle & Quick Contact -->
+      <!-- Utility Actions: Download Resume, Theme Toggle & Quick Contact -->
       <div class="navbar-actions">
+        <!-- 下載履歷按鍵 -->
+        <button
+          id="nav-download-resume-btn"
+          class="btn-download-resume"
+          @click="handleDownloadResume"
+          :disabled="isGeneratingPdf"
+          title="下載履歷 (匯出為 PDF)"
+          aria-label="下載履歷 PDF"
+        >
+          <span v-if="isGeneratingPdf" class="btn-icon spin">⏳</span>
+          <span v-else class="btn-icon">📄</span>
+          <span class="btn-text">下載履歷</span>
+        </button>
+
         <QuickContact
           variant="compact"
           label="聯絡"
@@ -107,6 +171,19 @@ onUnmounted(() => {
               </button>
             </li>
           </ul>
+
+          <!-- 行動版專用下載履歷按鈕 -->
+          <div class="mobile-drawer-actions">
+            <button
+              class="mobile-download-btn"
+              @click="handleDownloadResume"
+              :disabled="isGeneratingPdf"
+              id="mobile-download-resume-btn"
+            >
+              <span v-if="isGeneratingPdf" class="spin">⏳ 準備履歷中...</span>
+              <span v-else>📄 下載履歷 (PDF)</span>
+            </button>
+          </div>
         </nav>
       </div>
     </transition>
@@ -317,6 +394,86 @@ onUnmounted(() => {
   font-size: 0.75rem;
 }
 
+/* Download Resume Button (Desktop) */
+.btn-download-resume {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.42rem 0.85rem;
+  background: var(--accent-gradient);
+  color: #ffffff;
+  font-size: 0.86rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  box-shadow: 0 2px 10px var(--accent-glow);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), opacity var(--transition-fast);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-download-resume:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+  opacity: 0.95;
+}
+
+.btn-download-resume:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-download-resume:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.btn-icon {
+  font-size: 0.95rem;
+}
+
+.spin {
+  display: inline-block;
+  animation: spin-pulse 1.2s ease infinite;
+}
+
+@keyframes spin-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+/* Mobile Drawer Actions */
+.mobile-drawer-actions {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.mobile-download-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1rem;
+  background: var(--accent-gradient);
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 14px var(--accent-glow);
+  cursor: pointer;
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+.mobile-download-btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.mobile-download-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
 /* Transitions */
 .mobile-menu-enter-active,
 .mobile-menu-leave-active {
@@ -332,6 +489,9 @@ onUnmounted(() => {
 /* Responsive Media Queries */
 @media (max-width: 860px) {
   .desktop-nav {
+    display: none;
+  }
+  .btn-download-resume {
     display: none;
   }
   .mobile-toggle {

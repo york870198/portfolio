@@ -290,3 +290,127 @@ button {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--accent-primary);
 }
+
+/* ==========================================================================
+   Print Stylesheet (@media print & @page A4 optimization)
+   ========================================================================== */
+
+@page {
+  size: A4 portrait;
+  margin: 12mm 15mm;
+}
+
+@media print {
+  /* 隱藏互動導覽與非列印元件 */
+  #main-navbar,
+  .mobile-drawer,
+  .no-print,
+  .theme-toggle,
+  .mobile-toggle,
+  .resume-toolbar,
+  .btn-download-resume,
+  .footprint-arrow {
+    display: none !important;
+  }
+
+  /* 基礎版面與色彩重設 (以白底高對比呈現，確保墨水經濟與文字銳利度) */
+  html,
+  body {
+    background: #ffffff !important;
+    background-image: none !important;
+    color: #0f172a !important;
+    font-size: 13.5px !important;
+    line-height: 1.55 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .container,
+  .resume-container {
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .page-container {
+    padding: 0 !important;
+  }
+
+  /* 避免卡片與技能區塊在分頁處被腰斬 */
+  .qna-card,
+  .skill-category-block,
+  .footprint-card,
+  .resume-profile-header,
+  .page-header {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* 卡片在紙本上的簡潔邊框與陰影消除 */
+  .card,
+  .qna-card,
+  .resume-profile-header,
+  .skill-category-block,
+  .footprint-card {
+    box-shadow: none !important;
+    border: 1px solid #cbd5e1 !important;
+    background: #ffffff !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  .qna-card {
+    padding: 1.5rem !important;
+    margin-bottom: 1.25rem !important;
+    background: #f8fafc !important;
+  }
+
+  .qna-highlight {
+    background: #f1f5f9 !important;
+    border-left: 3px solid var(--card-accent, #6366f1) !important;
+    padding: 0.75rem 1rem !important;
+  }
+
+  .qna-question {
+    color: #0f172a !important;
+    font-size: 1.2rem !important;
+  }
+
+  .qna-answer-body {
+    color: #334155 !important;
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+  }
+
+  .resume-profile-header {
+    margin-bottom: 2rem !important;
+    padding: 1.5rem !important;
+  }
+
+  .resume-sections-flow {
+    gap: 2.25rem !important;
+  }
+
+  .page-header {
+    margin-bottom: 1.5rem !important;
+  }
+
+  .page-title {
+    font-size: 1.8rem !important;
+    color: #0f172a !important;
+    margin-bottom: 0.35rem !important;
+  }
+
+  .page-subtitle {
+    font-size: 0.95rem !important;
+    color: #64748b !important;
+  }
+
+  /* 保持標籤與外框清晰 */
+  .qna-tag,
+  .badge {
+    background: #e0e7ff !important;
+    color: #3730a3 !important;
+    border-color: #c7d2fe !important;
+  }
+}
