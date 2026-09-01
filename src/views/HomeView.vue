@@ -77,7 +77,6 @@ const navigateTo = (path: string) => {
           Everything about <span class="gradient-text">Fay</span>
         </h1>
       </section>
-      <!-- 5W1H Minimalist Line Grid Entrance -->
       <section class="dimensions-section">
 
         <div class="dimensions-grid">

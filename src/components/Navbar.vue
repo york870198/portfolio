@@ -43,7 +43,7 @@ onUnmounted(() => {
     <div class="container navbar-container">
       <!-- Brand / Logo -->
       <router-link to="/" class="navbar-brand" @click="closeMobileMenu" id="nav-brand-link">
-        <span class="brand-badge">5W</span>
+        <span class="brand-badge">Fay</span>
         <span class="brand-name">Portfolio<span class="brand-dot">.</span></span>
       </router-link>
 

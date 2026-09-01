@@ -73,43 +73,43 @@ const routes: RouteRecordRaw[] = [
     path: '/',
     name: 'home',
     component: () => import('@/views/HomeView.vue'),
-    meta: { title: '首頁 5W1H 總覽 | 資深前端履歷' }
+    meta: { title: '首頁' }
   },
   {
     path: '/who',
     name: 'who',
     component: () => import('@/views/WhoView.vue'),
-    meta: { title: 'Who - 個人定位與特質 | 5W1H Portfolio' }
+    meta: { title: 'Who' }
   },
   {
     path: '/when',
     name: 'when',
     component: () => import('@/views/WhenView.vue'),
-    meta: { title: 'When - 經歷時序與里程碑 | 5W1H Portfolio' }
+    meta: { title: 'When' }
   },
   {
     path: '/what',
     name: 'what',
     component: () => import('@/views/WhatView.vue'),
-    meta: { title: 'What - 作品專案與技能棧 | 5W1H Portfolio' }
+    meta: { title: 'What' }
   },
   {
     path: '/where',
     name: 'where',
     component: () => import('@/views/WhereView.vue'),
-    meta: { title: 'Where - 工作偏好與社群足跡 | 5W1H Portfolio' }
+    meta: { title: 'Where' }
   },
   {
     path: '/why',
     name: 'why',
     component: () => import('@/views/WhyView.vue'),
-    meta: { title: 'Why - 求職動機與工程哲學 | 5W1H Portfolio' }
+    meta: { title: 'Why' }
   },
   {
     path: '/how',
     name: 'how',
     component: () => import('@/views/HowView.vue'),
-    meta: { title: 'How - 方法論與協作實踐 | 5W1H Portfolio' }
+    meta: { title: 'How' }
   },
   {
     path: '/about',
