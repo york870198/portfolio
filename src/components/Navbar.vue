@@ -65,7 +65,11 @@ onUnmounted(() => {
 
       <!-- Utility Actions: Theme Toggle & Quick Contact -->
       <div class="navbar-actions">
-        <QuickContact variant="compact" label="聯絡" />
+        <QuickContact
+          variant="compact"
+          label="聯絡"
+          email="york870198@gmail.com"
+        />
         <ThemeToggle />
 
         <!-- Mobile Hamburger Toggle Button -->

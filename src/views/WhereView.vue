@@ -1,13 +1,18 @@
 <script setup lang="ts">
 import PageHeader from '@/components/PageHeader.vue'
 import QnACard from '@/components/QnACard.vue'
-import QuickContact from '@/components/QuickContact.vue'
+import plurkIcon from '@/assets/icons/plurk.png'
 
 const socialLinks = [
-  { name: 'GitHub', icon: '💻', url: 'https://github.com', desc: '開源專案與代碼倉庫' },
-  { name: 'LinkedIn', icon: '💼', url: 'https://linkedin.com', desc: '專業經歷與職業人脈' },
-  { name: 'Technical Blog', icon: '📝', url: 'https://medium.com', desc: '前端架構與跨職能協作心得' }
+  { name: 'GitHub', icon: '💻', url: 'https://github.com/york870198', desc: '我個人開發時習慣本地操作，所以它有點空。' },
+  { name: 'Plurk', icon: plurkIcon, url: 'https://www.plurk.com/york870198', desc: '沒有演算法幫你決定你想看什麼的社群平台。' },
+  { name: 'LinkedIn', icon: '💼', url: 'https://www.linkedin.com/in/fay-chung-682698224/', desc: '平常只用來看 JS Developer 發的迷因。' },
+  { name: 'Cake', icon: '🍰', url: 'https://www.cake.me/me/fayang', desc: '上面的資訊應該沒有比這裡多，但你往這裡發訊息我會收到通知。' }
 ]
+
+const isImageIcon = (icon: string) => {
+  return icon.startsWith('data:') || icon.startsWith('/') || icon.includes('.') || icon.includes('blob:')
+}
 </script>
 
 <template>
@@ -16,38 +21,22 @@ const socialLinks = [
       <PageHeader
         themeTag="WHERE"
         themeIndex="04"
-        title="工作偏好與社群足跡"
-        subtitle="我在哪裡發揮影響力？工作模式彈性偏好與線上開源社群足跡。"
+        title="活動範圍"
+        subtitle="扣掉不到一年的短暫高雄生活，我基本上是個沒見過世面的台北鄉巴佬。"
         accentColor="var(--theme-where)"
       />
 
       <div class="page-content-flow">
-        <!-- Q1 Placeholder -->
         <QnACard
           :index="1"
-          question="我的工作模式偏好與地點彈性如何？"
-          highlight="高度自我驅動與非同步協作能力，支援全遠端 (Remote)、混合辦公 (Hybrid) 或彈性 On-site。"
-          :tags="['Remote-Friendly', 'Async Collaboration', 'Timezone Flexibility']"
+          question="我在哪裡？"
+          highlight="台北，以及網路上。"
           accentColor="var(--theme-where)"
         >
           <p>
-            我擁有豐富的<strong>非同步協作 (Asynchronous Communication)</strong> 與遠端團隊配合經驗：
+            我目前定居於台北，由於與家族同住，短期內沒有移居他地的規劃。<br>
           </p>
-          <ul>
-            <li><strong>地點彈性：</strong> 偏好 Remote 或 Hybrid 辦公模式，具備優異的自主時間管理與交付透明度。</li>
-            <li><strong>溝通原則：</strong> 善用文檔驅動（RFC、Issue 追蹤、API Schema 對齊），確保所有決策皆有跡可循。</li>
-            <li><strong>理想團隊文化：</strong> 欣賞開放透明、注重代碼品質、鼓勵技術探索且以產品價值為核心的團隊氛圍。</li>
-          </ul>
-        </QnACard>
-
-        <!-- Q2 Placeholder -->
-        <QnACard
-          :index="2"
-          question="在哪裡可以找到我的技術足跡與線上作品？"
-          highlight="活躍於開源社群與技術分享，歡迎隨時透過下方連結或郵件與我交流！"
-          :tags="['GitHub', 'LinkedIn', 'Tech Articles', 'Contact']"
-          accentColor="var(--theme-where)"
-        >
+          <p>除了約出來面對面，你也能在以下地方找到我：</p>
           <div class="footprint-grid">
             <a
               v-for="link in socialLinks"
@@ -57,7 +46,10 @@ const socialLinks = [
               rel="noopener noreferrer"
               class="footprint-card"
             >
-              <span class="footprint-icon">{{ link.icon }}</span>
+              <span class="footprint-icon">
+                <img v-if="isImageIcon(link.icon)" :src="link.icon" :alt="link.name" class="footprint-img" />
+                <span v-else>{{ link.icon }}</span>
+              </span>
               <div class="footprint-info">
                 <span class="footprint-name">{{ link.name }}</span>
                 <span class="footprint-desc">{{ link.desc }}</span>
@@ -65,11 +57,18 @@ const socialLinks = [
               <span class="footprint-arrow">↗</span>
             </a>
           </div>
+        </QnACard>
 
-          <div class="direct-contact-box">
-            <span class="direct-text">需要進一步洽談或索取完整履歷？</span>
-            <QuickContact variant="primary" label="一鍵複製 Email 聯絡" />
-          </div>
+        <QnACard
+          :index="2"
+          question="我能跑多遠去工作？"
+          highlight="大台北地區，或者公司遠端網路速度夠快。"
+          accentColor="var(--theme-where)"
+        >
+          <ul>
+            <li><strong>移動範圍：</strong>大台北地區中能夠靠捷運、公車與腳踏車抵達的地點。</li>
+            <li><strong>偏好：</strong>混合式辦公。我有豐富的遠端協作經驗，能順暢與跨地點、跨時區的同事合作。</li>
+          </ul>
         </QnACard>
       </div>
     </div>
@@ -79,7 +78,7 @@ const socialLinks = [
 <style scoped>
 .footprint-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
   margin-top: 0.5rem;
 }
@@ -103,6 +102,17 @@ const socialLinks = [
 
 .footprint-icon {
   font-size: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  flex-shrink: 0;
+}
+.footprint-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .footprint-info {

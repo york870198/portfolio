@@ -9,50 +9,47 @@ import QnACard from '@/components/QnACard.vue'
       <PageHeader
         themeTag="WHO"
         themeIndex="01"
-        title="個人定位與核心特質"
-        subtitle="我是誰？具備全端工程視野與 UI/UX 設計思維的資深前端工程師。"
+        title="個人資訊"
+        subtitle="一名資深前端工程師，略懂後端。"
         accentColor="var(--theme-who)"
       />
 
       <div class="page-content-flow">
-        <!-- Q1 Placeholder -->
         <QnACard
           :index="1"
-          question="我的專業定位是什麼？具備哪些跨領域核心優勢？"
-          highlight="以資深前端為核心，深度掌握 React 與 Vue 雙生態系，並能無縫銜接後端架構與 UI/UX 設計語彙。"
-          :tags="['Senior Frontend', 'React & Vue', 'Full-Stack Mindset', 'UI/UX Literacy']"
+          question="我是誰？"
+          highlight="剛好趕在 AI 開始威脅要取代我們之前，從手工寫程式開始的資深前端工程師。"
+          :tags="['Senior Frontend', 'React & Vue', 'Full-Stack Mindset']"
           accentColor="var(--theme-who)"
         >
           <p>
-            我專注於現代前端架構與極致使用者體驗。除了深入掌握 <strong>Vue 3 (Composition API / Pinia / Vite)</strong> 
-            與 <strong>React (Hooks / Next.js / TypeScript)</strong> 兩大前端生態，我亦具備紮實的後端知識與 API 設計經驗。
+            我在工作場合自稱 Fay，另外在不同社群間有不同的暱稱。<br />
+            如果你是從 LinkedIn 等人才媒合平台過來，你會在那邊看到我的本名。<br />
           </p>
           <p>
-            在團隊中，我不僅是純粹的介面實作者，更是工程與設計、前端與後端之間的<strong>跨職能橋樑</strong>：
+            我專注於現代前端架構，慣於使用 <strong>Vue 3</strong> 及 <strong>React</strong> 兩項前端生態系。<br/>稍微摸過一下 Svelte 跟 Angular，但僅止於小規模專案實作。
           </p>
           <ul>
-            <li><strong>後端協作優勢：</strong> 理解 RESTful / GraphQL API 設計思維與微服務資料流，能提前預防前後端整合瓶頸。</li>
-            <li><strong>UI/UX 敏銳度：</strong> 主動學習 Design System 與互動設計原則，能精準將 Figma 設計稿轉化為具備無障礙 (a11y) 與高響應性的元件。</li>
-            <li><strong>工程化素養：</strong> 重視 TypeScript 強型別防護、模組化封裝與自動化 CI/CD 流程。</li>
+            <li><strong>後端協作：</strong> 後端技術不是我的主要職能，不過我的知識至少充分到與後端工程師合作四年不會吵架。</li>
+            <li><strong>UI/UX 協作</strong> 理解 Design System 與互動設計原則，能依據 Figma 設計稿完成高精準度的 UI 實作</li>
           </ul>
         </QnACard>
 
-        <!-- Q2 Placeholder -->
         <QnACard
           :index="2"
-          question="在團隊與組織中，我如何發揮技術影響力與協作價值？"
-          highlight="透過建立標準化元件庫、推動代碼審查文化與主動賦能團隊成員，持續提升整體的研發效率與產品品質。"
-          :tags="['Team Empowerment', 'Code Review', 'Design System', 'Mentorship']"
+          question="我平常在關注誰？"
+          highlight="公務上關注前端技術，私底下關注獨立遊戲。"
+          :tags="[]"
           accentColor="var(--theme-who)"
         >
           <p>
-            身為資深工程師，我深信優秀的軟體來自健全的協作機制與持續的知識共享：
+            在我成為前端工程師之前，我首先是在鑽研獨立遊戲開發。<br/>
+            當時跟 PM 一起天天跟畫面演出的細節大戰三百回合，做著做著回過神來發現我在寫的東西跟網頁前端有八成像。<br/>
+            至於後來那個遊戲開發工具的下一代核心真的變成 HTML / CSS / JS，只能說是美麗的巧合。
           </p>
-          <ul>
-            <li><strong>標準化與賦能：</strong> 主導建立 Design Tokens 與共用 UI 元件庫，大幅減少跨部門重複溝通成本與前端開發耗時。</li>
-            <li><strong>品質守門：</strong> 積極參與 Code Review，推動 Clean Code 原則與前端測試規範，守護產品的可維護性與穩定度。</li>
-            <li><strong>知識沉澱：</strong> 定期舉辦技術分享會與架構復盤，協助 Junior 成員快速成長並促進團隊技術迭代。</li>
-          </ul>
+          <p>
+            現在我平常追蹤 Hacker News 接收業界新聞，有空閒時則在獨立遊戲開發者的社群看看流行的新技術。
+          </p>
         </QnACard>
       </div>
     </div>

@@ -106,6 +106,7 @@ const props = withDefaults(defineProps<Props>(), {
   line-height: 1.4;
   color: var(--text-primary);
   letter-spacing: -0.01em;
+  padding: 3.3px 0;
 }
 
 /* Tags */
@@ -235,6 +236,7 @@ const props = withDefaults(defineProps<Props>(), {
 
   .qna-question {
     font-size: 1.2rem;
+    padding: 0;
   }
 }
 </style>

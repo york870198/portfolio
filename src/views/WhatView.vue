@@ -1,46 +1,19 @@
 <script setup lang="ts">
 import PageHeader from '@/components/PageHeader.vue'
 import QnACard from '@/components/QnACard.vue'
-import ProjectCard from '@/components/ProjectCard.vue'
-
-const sampleProjects = [
-  {
-    title: '現代化 5W1H 履歷作品集系統',
-    role: '資深前端架構師',
-    description: '基於 Vue 3 Composition API、TypeScript 與 Vite 建構的高效能 SPA 應用。採用 5W1H 六大維度架構，結合深淺色主題切換與模組化問答卡片設計。',
-    tags: ['Vue 3', 'TypeScript', 'Vite', 'CSS Tokens', 'SPA'],
-    metrics: [
-      { label: 'Lighthouse 效能', value: '99+' },
-      { label: '型別安全性', value: '100% TS' }
-    ],
-    githubUrl: 'https://github.com',
-    liveUrl: '/'
-  },
-  {
-    title: '企業級 Design System & UI 元件庫',
-    role: '前端負責人',
-    description: '與 UI/UX 設計師密切合作，從 Figma Tokens 銜接至前端 Web Components 與 Vue/React 封裝。提供超過 40+ 高覆蓋率原子元件與詳細文檔。',
-    tags: ['Design System', 'Figma Tokens', 'Vue/React', 'Storybook', 'a11y'],
-    metrics: [
-      { label: '元件數量', value: '40+' },
-      { label: '開發速度提升', value: '35%' }
-    ],
-    githubUrl: 'https://github.com'
-  }
-]
 
 const skillCategories = [
   {
     name: '前端核心生態',
-    skills: ['Vue 3 (Composition API / Pinia / Vue Router)', 'React 18+ (Hooks / Context / Next.js)', 'TypeScript (強型別安全)', 'Vite / Webpack / pnpm']
+    skills: ['Vue 3 (Pinia / Vue Router)', 'React 18+ (Functional component / Redux)', 'TypeScript (強型別安全)', 'Vite / pnpm']
   },
   {
-    name: '後端與資料協作',
-    skills: ['Node.js / Express / Fastify', 'RESTful API & GraphQL 規格設計', 'PostgreSQL / Redis 基礎運作概念', 'API Mocking & Contract Testing']
+    name: '後端與資料',
+    skills: ['Node.js / Express', 'RxJS', 'RESTful API', 'MySQL', 'API Mocking']
   },
   {
-    name: 'UI/UX 與工程品質',
-    skills: ['Figma 協作 / Design Tokens 對齊', '響應式排版 (RWD) & 網頁無障礙 (a11y)', 'CI/CD (GitHub Actions / Pages)', 'Vitest / Jest / Playwright']
+    name: 'UI/UX 與 QA',
+    skills: ['Figma 協作', '響應式排版 (RWD)', 'CI/CD (GitHub Actions / Pages)', 'Vitest']
   }
 ]
 </script>
@@ -51,8 +24,8 @@ const skillCategories = [
       <PageHeader
         themeTag="WHAT"
         themeIndex="03"
-        title="專案作品與技能棧"
-        subtitle="我做過什麼？精選代表專案成果展示與全方位技術能力棧清單。"
+        title="技術棧"
+        subtitle="說長不長、說短也不短的職涯中，那些簡單的、困難的、還有令人抓狂的事情。"
         accentColor="var(--theme-what)"
       />
 
@@ -60,32 +33,9 @@ const skillCategories = [
         <!-- Q1: 精選專案 -->
         <QnACard
           :index="1"
-          question="我的代表性專案有哪些？解決了什麼痛點與帶來哪些具體成效？"
-          highlight="精準簡潔呈現專案架構、技術棧標籤、前後端與設計協作細節及關鍵成效指標。"
-          :tags="['Case Studies', 'Key Deliverables', 'Impact']"
-          accentColor="var(--theme-what)"
-        >
-          <div class="projects-list">
-            <ProjectCard
-              v-for="project in sampleProjects"
-              :key="project.title"
-              :title="project.title"
-              :role="project.role"
-              :description="project.description"
-              :tags="project.tags"
-              :metrics="project.metrics"
-              :githubUrl="project.githubUrl"
-              :liveUrl="project.liveUrl"
-            />
-          </div>
-        </QnACard>
-
-        <!-- Q2: 技能清單 -->
-        <QnACard
-          :index="2"
-          question="我的完整技術能力矩陣清單為何？"
-          highlight="以前端生態為基石，向外延伸至後端資料流與 UI/UX 設計系統，形成具備廣度與深度的 T 型技能樹。"
-          :tags="['Tech Stack', 'Skill Matrix', 'T-Shaped Engineer']"
+          question="最熟悉的開發項目？"
+          highlight="跨平台/裝置/瀏覽器的網頁開發。"
+          :tags="['Web Development', 'UI/UX', 'RWD' ]"
           accentColor="var(--theme-what)"
         >
           <div class="skills-grid">
@@ -98,6 +48,34 @@ const skillCategories = [
               </ul>
             </div>
           </div>
+        </QnACard>
+
+        <QnACard
+          :index="2"
+          question="除了前端以外我還會什麼？"
+          accentColor="var(--theme-what)"
+        >
+          <ul>
+            <li><strong>Tauri：</strong>基於 Rust 實現的跨平台軟體框架，最近正在用這個開發 Side Project。</li>
+            <li><strong>Flutter：</strong>Google 開發的跨平台開發套件，在上一份工作有一項專案以此開發，但我個人沒有特別喜歡。</li>
+            <li><strong>Python：</strong>大學時主要在寫的程式語言，開始專注在前端領域之後比較沒在碰了。</li>
+          </ul>
+        </QnACard>
+
+        <QnACard
+          :index="3"
+          question="我對 AI 開發的看法？"
+          highlight="非常強大的自動導航 ── 假如你知道你要去哪裡的話。"
+          accentColor="var(--theme-what)"
+        >
+          <p>
+            假裝「軟體開發」像是騎腳踏車出門，AI 就如同把腳踏車裝上引擎、掛上導航、連龍頭都會自動轉彎。<br/>
+            假如你對目的地沒有想法，它可能會載著你繞很多遠路；<br/>
+            如果你不知道道路顛簸或下坡轉彎時，坐在車上的你該擺什麼姿勢，你大概會摔下車。
+          </p>
+          <p>
+            但只要你會騎腳踏車、也想好等等要去哪裡，那它會幫你比用腳踩踏板省下非常多力氣。
+          </p>
         </QnACard>
       </div>
     </div>

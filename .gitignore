@@ -36,7 +36,7 @@ Thumbs.db
 
 # AI Agents & Local scratch / skills (unrelated to website)
 .agents/
-docs/agents/
+docs/
 .scratch/
 skills-lock.json
 AGENTS.md

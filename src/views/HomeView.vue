@@ -16,48 +16,48 @@ interface DimensionItem {
 const dimensions: DimensionItem[] = [
   {
     tag: 'WHO',
-    title: '個人定位與特質',
-    subtitle: '我是誰？資深前端、React/Vue 雙生態系，兼具後端視野與 UI/UX 協作思維。',
+    title: '個人資訊',
+    subtitle: '資深前端，以及除此以外。',
     icon: '👤',
     path: '/who',
     accentColor: 'var(--theme-who)'
   },
   {
     tag: 'WHEN',
-    title: '經歷時序與里程碑',
-    subtitle: '我的成長時間軸？從關鍵專案到系統架構演進的歷程與轉折突破點。',
+    title: '經歷',
+    subtitle: '成為工程師之後，以及之前。',
     icon: '⏳',
     path: '/when',
     accentColor: 'var(--theme-when)'
   },
   {
     tag: 'WHAT',
-    title: '專案作品與技能棧',
-    subtitle: '我做過什麼？精選代表專案成果、量化指標與全方位技術能力棧清單。',
+    title: '技術棧',
+    subtitle: '通常在寫網頁，偶爾寫不是網頁的東西。',
     icon: '⚡',
     path: '/what',
     accentColor: 'var(--theme-what)'
   },
   {
     tag: 'WHERE',
-    title: '工作偏好與足跡',
-    subtitle: '我在哪裡發揮影響力？工作模式偏好（Remote / Hybrid）與開源社群足跡。',
+    title: '活動範圍',
+    subtitle: '在哪裡找得到我，或者我能跑多遠去找你。',
     icon: '📍',
     path: '/where',
     accentColor: 'var(--theme-where)'
   },
   {
     tag: 'WHY',
-    title: '求職動機與工程哲學',
-    subtitle: '為什麼深耕前端？架構決策原則、技術選型邏輯與未來的職涯願景。',
+    title: '動機',
+    subtitle: '原因很重要，但結果有時會比原因更早到。',
     icon: '💡',
     path: '/why',
     accentColor: 'var(--theme-why)'
   },
   {
     tag: 'HOW',
-    title: '方法論與協作實踐',
-    subtitle: '我如何解決問題？跨職能 API 規範、Design Token 對齊與複雜排查方法。',
+    title: '實踐方法',
+    subtitle: '推薦你首先問問這個網站是怎麼做的。',
     icon: '🛠️',
     path: '/how',
     accentColor: 'var(--theme-how)'
@@ -74,35 +74,12 @@ const navigateTo = (path: string) => {
     <div class="container home-container">
       <!-- Minimalist Hero Section -->
       <section class="hero-section">
-        <div class="badge hero-badge">
-          <span>✨ 5W1H 概念履歷實例</span>
-        </div>
-
         <h1 class="hero-title">
-          資深前端工程師 <br />
-          <span class="gradient-text">架構思維 × 跨域協作</span>
+          Everything about <span class="gradient-text">Fay</span>
         </h1>
-
-        <p class="hero-description">
-          以 <strong>5W1H（Who / When / What / Where / Why / How）</strong> 
-          六個核心維度，立體解析我的技術實踐、工程哲學與職涯價值。
-        </p>
-
-        <div class="hero-actions">
-          <button class="btn-primary" @click="navigateTo('/who')" id="hero-btn-start">
-            <span>開始探索 5W1H</span>
-            <span class="btn-arrow">→</span>
-          </button>
-          <QuickContact label="一鍵複製 Email 聯絡" variant="secondary" />
-        </div>
       </section>
-
       <!-- 5W1H Minimalist Line Grid Entrance -->
       <section class="dimensions-section">
-        <div class="section-heading">
-          <h2 class="section-title">5W1H 主題入口導航</h2>
-          <p class="section-desc">點擊進入各主題獨立頁面，探索詳細問答與專業實踐</p>
-        </div>
 
         <div class="dimensions-grid">
           <div
@@ -123,7 +100,7 @@ const navigateTo = (path: string) => {
 
             <div class="dimension-card-bottom">
               <span class="explore-link">
-                進入探索
+                更多細節
                 <span class="explore-arrow">→</span>
               </span>
             </div>
@@ -226,7 +203,7 @@ const navigateTo = (path: string) => {
 .dimension-card {
   display: flex;
   flex-direction: column;
-  padding: 1.75rem;
+  padding: 1.5rem;
   border-radius: var(--radius-lg);
   cursor: pointer;
   position: relative;

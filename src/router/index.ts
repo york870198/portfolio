@@ -13,7 +13,7 @@ export const navRoutes: NavRouteItem[] = [
   {
     path: '/',
     name: 'home',
-    title: '首頁',
+    title: 'Home',
     tag: 'HOME',
     icon: '🏠',
     accentColor: 'var(--accent-primary)'

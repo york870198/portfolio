@@ -40,7 +40,7 @@ const copyEmail = async () => {
       id="quick-contact-btn"
     >
       <span class="btn-icon">{{ copied ? '✓' : '✉️' }}</span>
-      <span class="btn-text">{{ copied ? 'Email 已複製！' : props.label }}</span>
+      <span class="btn-text">{{ copied ? '已複製 Email 地址' : props.label }}</span>
     </button>
   </div>
 </template>
