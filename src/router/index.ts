@@ -73,43 +73,43 @@ const routes: RouteRecordRaw[] = [
     path: '/',
     name: 'home',
     component: () => import('@/views/HomeView.vue'),
-    meta: { title: '首頁' }
+    meta: { title: 'Home | Portfolio of Fay' }
   },
   {
     path: '/who',
     name: 'who',
     component: () => import('@/views/WhoView.vue'),
-    meta: { title: 'Who' }
+    meta: { title: 'Who | Portfolio of Fay' }
   },
   {
     path: '/when',
     name: 'when',
     component: () => import('@/views/WhenView.vue'),
-    meta: { title: 'When' }
+    meta: { title: 'When | Portfolio of Fay' }
   },
   {
     path: '/what',
     name: 'what',
     component: () => import('@/views/WhatView.vue'),
-    meta: { title: 'What' }
+    meta: { title: 'What | Portfolio of Fay' }
   },
   {
     path: '/where',
     name: 'where',
     component: () => import('@/views/WhereView.vue'),
-    meta: { title: 'Where' }
+    meta: { title: 'Where | Portfolio of Fay' }
   },
   {
     path: '/why',
     name: 'why',
     component: () => import('@/views/WhyView.vue'),
-    meta: { title: 'Why' }
+    meta: { title: 'Why | Portfolio of Fay' }
   },
   {
     path: '/how',
     name: 'how',
     component: () => import('@/views/HowView.vue'),
-    meta: { title: 'How' }
+    meta: { title: 'How | Portfolio of Fay' }
   },
   {
     path: '/about',
