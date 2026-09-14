@@ -22,9 +22,14 @@ import QnACard from '@/components/QnACard.vue'
           accentColor="var(--theme-how)"
         >
           <p>
-            我想了很多，包含這個網頁的目的、要在什麼裝置上被閱覽、要用哪些框架與工具、要佈署在什麼平台。<br />
-            想完之後，我按照以前工作時 PM 寫規格書的方式，把我想好的事情寫下來，開始指揮 Gemini 做事。<br />
+            由我定義這個網頁的目的、要在什麼裝置上被閱覽、要用哪些框架與工具、要佈署在什麼平台。<br />
+            我按照以前工作時 PM 寫規格書的方式，把我預期的目標寫下來，開始指揮 Gemini 做事。<br />
             它做出來的東西跟我自己手動敲鍵盤基本上差不多，但它只需要我五分之一或更少的時間。
+          </p>
+          <p>
+            如果你想知道的是技術面的細節：<br />
+            這個網站是以 Vue / Vue Router / Vite / TypeScript 實作的靜態網站，<br />
+            透過 Github Action 佈署至 Github Pages。
           </p>
         </QnACard>
 
