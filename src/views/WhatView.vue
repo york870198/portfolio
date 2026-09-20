@@ -5,7 +5,7 @@ import QnACard from '@/components/QnACard.vue'
 const skillCategories = [
   {
     name: '前端核心生態',
-    skills: ['Vue 3 (Pinia / Vue Router)', 'React 18+ (Functional component / Redux)', 'TypeScript (強型別安全)', 'Vite / pnpm','瀏覽器差異對策']
+    skills: ['Vue 3 (Pinia / Vue Router)', 'React 18+ (Functional component / Redux)', 'TypeScript (強型別安全)', 'Vite / pnpm','PWA', '瀏覽器差異對策']
   },
   {
     name: '後端與資料',
