@@ -51,6 +51,10 @@ for (const [key, original] of Object.entries(zh)) {
 }
 
 const normalize = value => value.replace(/\s+/g, ' ').trim()
+const fixedSources = new Map(await Promise.all(
+  [...new Set(inventory.items.filter(item => item.category === 'fixed').map(item => item.file))]
+    .map(async file => [file, normalize(await readFile(new URL(file, root), 'utf8'))])
+))
 const used = new Set()
 for (const key of revisions.addedKeys ?? []) {
   assert.ok(key in zh, `Missing new UI message: ${key}`)
@@ -58,7 +62,10 @@ for (const key of revisions.addedKeys ?? []) {
 }
 for (const item of inventory.items) {
   assert.ok(['fixed', 'translatable'].includes(item.category), `Unclassified source: ${item.file}:${item.line}`)
-  if (item.category === 'fixed') continue
+  if (item.category === 'fixed') {
+    assert.ok(fixedSources.get(item.file).includes(item.original), `Fixed design text changed: ${item.file}:${item.line} '${item.original}'`)
+    continue
+  }
   if (revisions.retiredKeys.includes(item.key)) {
     assert.ok(!(item.key in zh), `Retired Resume message remains: ${item.key}`)
     continue

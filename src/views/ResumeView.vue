@@ -694,4 +694,17 @@ const { t } = useI18n({ useScope: 'global' })
     gap: 3.5rem;
   }
 }
+
+@media (max-width: 440px) {
+  .resume-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+    padding: 0.75rem;
+  }
+
+  .toolbar-btn {
+    justify-content: center;
+  }
+}
 </style>
