@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
 import { ref, onMounted } from 'vue'
 
 const isDark = ref(true)
@@ -31,14 +32,15 @@ onMounted(() => {
     document.documentElement.setAttribute('data-theme', 'dark')
   }
 })
+const { t } = useI18n({ useScope: 'global' })
 </script>
 
 <template>
   <button
     class="theme-toggle-btn"
     @click="toggleTheme"
-    :title="isDark ? '切換為淺色主題' : '切換為深色主題'"
-    :aria-label="isDark ? '切換為淺色主題' : '切換為深色主題'"
+    :title="isDark ? t('common.theme.switchToLight') : t('common.theme.switchToDark')"
+    :aria-label="isDark ? t('common.theme.switchToLight') : t('common.theme.switchToDark')"
     id="theme-toggle-btn"
   >
     <span class="theme-icon" v-if="isDark">◐</span>
@@ -48,6 +50,8 @@ onMounted(() => {
 
 <style scoped>
 .theme-toggle-btn {
+  flex-shrink: 0;
+  min-width: 44px;
   display: inline-flex;
   align-items: center;
   justify-content: center;

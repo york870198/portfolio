@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { navRoutes } from '@/router'
@@ -6,6 +7,7 @@ import NavigationLink from './NavigationLink.vue'
 const props = withDefaults(defineProps<{ themeTag: string; themeIndex?: string; title: string; subtitle: string; accentColor?: string }>(), { themeIndex: '01', accentColor: 'var(--accent-primary)' })
 const route = useRoute()
 const isResume = computed(() => route.path === '/resume')
+const { t } = useI18n({ useScope: 'global' })
 </script>
 <template>
   <header class="page-header" :class="{ 'resume-section-header': isResume }">
@@ -13,7 +15,7 @@ const isResume = computed(() => route.path === '/resume')
     <span class="theme-letter" :style="isResume ? undefined : { viewTransitionName: `dimension-${props.themeTag.toLowerCase()}` }">{{ props.themeTag }}</span>
     <component :is="isResume ? 'h2' : 'h1'" class="page-title">{{ props.title }}</component>
     <p class="page-subtitle">{{ props.subtitle }}</p>
-    <nav v-if="!isResume" class="chapter-nav no-print" aria-label="六個面向">
+    <nav v-if="!isResume" class="chapter-nav no-print" :aria-label="t('common.dimensions')">
       <NavigationLink v-for="item in navRoutes.slice(1)" :key="item.path" :to="item.path">{{ item.tag }}</NavigationLink>
     </nav>
   </header>

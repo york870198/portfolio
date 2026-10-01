@@ -1,5 +1,6 @@
 {
   "sourceCommit": "ef55a00301f0e91f4fede6227ad48094321b393e",
+  "addedKeys": ["common.language.label"],
   "reason": "User-approved cultural wording edits and Resume alignment. Keep the original #01 inventory as history, rather than regenerating its baseline.",
   "chinese": {
     "what.beyondFrontend.tauri": "基於 Rust 實現的跨平台軟體框架，最近正在用這個開發 side project。",

@@ -1,21 +1,93 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
 import PageHeader from '@/components/PageHeader.vue'
 import QnACard from '@/components/QnACard.vue'
 
 const skillCategories = [
   {
-    name: '前端核心生態',
-    skills: ['Vue 3 (Pinia / Vue Router)', 'React 18+ (Functional component / Redux)', 'TypeScript (強型別安全)', 'Vite / pnpm','PWA', '瀏覽器差異對策']
+    "id": "frontend",
+    "nameKey": "what.skills.frontend.title",
+    "skills": [
+      {
+        "id": "vue",
+        "label": "Vue 3 (Pinia / Vue Router)"
+      },
+      {
+        "id": "react",
+        "label": "React 18+ (Functional component / Redux)"
+      },
+      {
+        "id": "typescript",
+        "messageKey": "what.skills.frontend.typescript"
+      },
+      {
+        "id": "vite",
+        "label": "Vite / pnpm"
+      },
+      {
+        "id": "pwa",
+        "label": "PWA"
+      },
+      {
+        "id": "browserCompatibility",
+        "messageKey": "what.skills.frontend.browserCompatibility"
+      }
+    ]
   },
   {
-    name: '後端與資料',
-    skills: ['Node.js / Express', 'RxJS', 'RESTful API', 'MySQL', 'API Mocking', 'WebSocket 即時通訊']
+    "id": "backend",
+    "nameKey": "what.skills.backend.title",
+    "skills": [
+      {
+        "id": "node",
+        "label": "Node.js / Express"
+      },
+      {
+        "id": "rxjs",
+        "label": "RxJS"
+      },
+      {
+        "id": "rest",
+        "label": "RESTful API"
+      },
+      {
+        "id": "mysql",
+        "label": "MySQL"
+      },
+      {
+        "id": "mocking",
+        "label": "API Mocking"
+      },
+      {
+        "id": "websocket",
+        "messageKey": "what.skills.backend.websocket"
+      }
+    ]
   },
   {
-    name: 'UI/UX 與 QA',
-    skills: ['Figma 協作', '響應式排版 (RWD)', 'CI/CD (GitHub Actions / Pages)', 'Vitest']
+    "id": "design",
+    "nameKey": "what.skills.design.title",
+    "skills": [
+      {
+        "id": "figma",
+        "messageKey": "what.skills.design.figma"
+      },
+      {
+        "id": "responsive",
+        "messageKey": "what.skills.design.responsive"
+      },
+      {
+        "id": "ci",
+        "label": "CI/CD (GitHub Actions / Pages)"
+      },
+      {
+        "id": "vitest",
+        "label": "Vitest"
+      }
+    ]
   }
 ]
+const { t } = useI18n({ useScope: 'global' })
 </script>
 
 <template>
@@ -24,8 +96,8 @@ const skillCategories = [
       <PageHeader
         themeTag="WHAT"
         themeIndex="03"
-        title="技術棧"
-        subtitle="說長不長、說短也不短的職涯中，那些簡單的、困難的、還有令人抓狂的事情。"
+        :title="t('what.title')"
+        :subtitle="t('what.subtitle')"
         accentColor="var(--theme-what)"
       />
 
@@ -33,17 +105,17 @@ const skillCategories = [
         <!-- Q1: 精選專案 -->
         <QnACard
           :index="1"
-          question="最熟悉的開發項目？"
-          highlight="跨平台/裝置/瀏覽器的網頁開發。"
+          :question="t('what.web.question')"
+          :highlight="t('what.web.highlight')"
           :tags="['Web Development', 'UI/UX', 'RWD' ]"
           accentColor="var(--theme-what)"
         >
           <div class="skills-grid">
-            <div v-for="cat in skillCategories" :key="cat.name" class="skill-category-block">
-              <h3 class="category-title">{{ cat.name }}</h3>
+            <div v-for="cat in skillCategories" :key="cat.id" class="skill-category-block">
+              <h3 class="category-title">{{ t(cat.nameKey) }}</h3>
               <ul class="skills-sublist">
-                <li v-for="item in cat.skills" :key="item" class="skill-li">
-                  {{ item }}
+                <li v-for="item in cat.skills" :key="item.id" class="skill-li">
+                  {{ item.messageKey ? t(item.messageKey) : item.label }}
                 </li>
               </ul>
             </div>
@@ -52,30 +124,24 @@ const skillCategories = [
 
         <QnACard
           :index="2"
-          question="除了前端以外我還會什麼？"
+          :question="t('what.beyondFrontend.question')"
           accentColor="var(--theme-what)"
         >
           <ul>
-            <li><strong>Tauri：</strong>基於 Rust 實現的跨平台軟體框架，最近正在用這個開發 side project。</li>
-            <li><strong>Flutter：</strong>Google 開發的跨平台開發套件，在上一份工作有一項專案以此開發。</li>
-            <li><strong>Python：</strong>大學時主要在寫的程式語言，開始專注在前端領域之後比較沒在碰了。</li>
+            <li><strong>Tauri：</strong>{{ t('what.beyondFrontend.tauri') }}</li>
+            <li><strong>Flutter：</strong>{{ t('what.beyondFrontend.flutter') }}</li>
+            <li><strong>Python：</strong>{{ t('what.beyondFrontend.python') }}</li>
           </ul>
         </QnACard>
 
         <QnACard
           :index="3"
-          question="我對 AI 開發的看法？"
-          highlight="非常強大的自動導航 ── 假如你知道你要去哪裡的話。"
+          :question="t('what.ai.question')"
+          :highlight="t('what.ai.highlight')"
           accentColor="var(--theme-what)"
         >
-          <p>
-            如果將「軟體開發」想像成騎腳踏車出門，AI 就是把腳踏車裝上引擎、掛上導航、連龍頭都會自動轉彎。<br/>
-            假如你對目的地沒有想法，它可能會載著你繞很多遠路；<br/>
-            如果你不知道道路顛簸或下坡轉彎時，坐在車上的你該擺什麼姿勢，你大概會摔下車。
-          </p>
-          <p>
-            但只要你會騎腳踏車、也想好等等要去哪裡，那它會幫你比用腳踩踏板省下非常多力氣。
-          </p>
+          <p> {{ t('what.ai.bicycle') }}<br/> {{ t('what.ai.destination') }}<br/> {{ t('what.ai.balance') }} </p>
+          <p> {{ t('what.ai.benefit') }} </p>
         </QnACard>
       </div>
     </div>

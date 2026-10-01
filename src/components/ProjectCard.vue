@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
 interface Metric {
   label: string
   value: string
@@ -18,6 +19,7 @@ const props = withDefaults(defineProps<Props>(), {
   tags: () => [],
   metrics: () => []
 })
+const { t } = useI18n({ useScope: 'global' })
 </script>
 
 <template>
@@ -35,7 +37,7 @@ const props = withDefaults(defineProps<Props>(), {
           target="_blank"
           rel="noopener noreferrer"
           class="project-link-btn"
-          title="查看 GitHub 原始碼"
+          :title="t('common.project.viewSource')"
         >
           <span>GitHub</span>
           <span class="link-arrow">↗</span>
@@ -46,7 +48,7 @@ const props = withDefaults(defineProps<Props>(), {
           target="_blank"
           rel="noopener noreferrer"
           class="project-link-btn primary"
-          title="前往 Live Demo 預覽"
+          :title="t('common.project.viewDemo')"
         >
           <span>Live Demo</span>
           <span class="link-arrow">↗</span>

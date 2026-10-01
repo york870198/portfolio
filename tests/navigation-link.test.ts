@@ -5,6 +5,7 @@ import { createPortfolioRouter } from '../src/router'
 import NavigationLink from '../src/components/NavigationLink.vue'
 import ResumeView from '../src/views/ResumeView.vue'
 import NotFoundView from '../src/views/NotFoundView.vue'
+import i18n from '../src/i18n'
 
 let app: App | undefined
 beforeEach(() => {
@@ -79,7 +80,7 @@ describe('language-aware internal links', () => {
     const router = createPortfolioRouter(createMemoryHistory())
     await router.push(from)
     app = createApp(view)
-    app.use(router)
+    app.use(i18n).use(router)
     app.mount('#test-app')
     const navigation = new Promise<void>(resolve => { const stop = router.afterEach(() => { stop(); resolve() }) })
     document.querySelector<HTMLButtonElement>(selector)!.click()

@@ -1,10 +1,13 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
 import { ref, nextTick, watch, onMounted, onUnmounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { navRoutes } from '@/router'
 import NavigationLink from './NavigationLink.vue'
 import ThemeToggle from './ThemeToggle.vue'
 import QuickContact from './QuickContact.vue'
+import LanguageSwitcher from './LanguageSwitcher.vue'
+import { resolveLocale } from '@/i18n/locale'
 
 const route = useRoute()
 const router = useRouter()
@@ -13,6 +16,7 @@ const isGeneratingPdf = ref(false)
 const header = ref<HTMLElement>()
 const menuToggle = ref<HTMLButtonElement>()
 let printFrame: HTMLIFrameElement | undefined
+let printTimeout: number | undefined
 const desktopQuery = window.matchMedia('(min-width: 1101px)')
 
 function closeMobileMenu() { isMobileMenuOpen.value = false }
@@ -44,6 +48,7 @@ onUnmounted(() => {
   document.removeEventListener('focusin', onOutside)
   desktopQuery.removeEventListener('change', onResize)
   printFrame?.remove()
+  window.clearTimeout(printTimeout)
 })
 async function handleDownloadResume() {
   closeMobileMenu()
@@ -52,20 +57,24 @@ async function handleDownloadResume() {
   isGeneratingPdf.value = true
   printFrame?.remove()
   const iframe = document.createElement('iframe')
+  const resumeTarget = { path: '/resume', query: { lang: resolveLocale(route.query.lang) }, hash: '' }
   printFrame = iframe
-  iframe.title = '完整履歷列印'
+  iframe.title = t('common.navbar.printFrameTitle')
   iframe.setAttribute('aria-hidden', 'true')
   iframe.tabIndex = -1
   iframe.style.cssText = 'position:fixed;width:0;height:0;border:0;opacity:0;pointer-events:none'
   // The parent owns printing; the frame must not use the auto-print query.
-  iframe.src = `${import.meta.env.BASE_URL}resume`
+  iframe.src = router.resolve(resumeTarget).href
   const fail = () => {
+    if (!iframe.isConnected) return
+    window.clearTimeout(printTimeout)
     iframe.remove()
     isGeneratingPdf.value = false
-    void router.push('/resume?print=true')
+    void router.push({ ...resumeTarget, query: { ...resumeTarget.query, print: 'true' } })
   }
-  const timeout = window.setTimeout(fail, 15000)
+  printTimeout = window.setTimeout(fail, 15000)
   iframe.onload = async () => {
+    iframe.onload = null
     try {
       const frameWindow = iframe.contentWindow
       const frameDocument = iframe.contentDocument
@@ -75,18 +84,19 @@ async function handleDownloadResume() {
         if (!iframe.isConnected) return
         await new Promise(resolve => window.setTimeout(resolve, 50))
       }
-      await frameDocument.fonts.ready
+      await frameDocument.fonts?.ready
       if (!iframe.isConnected) return
-      window.clearTimeout(timeout)
+      window.clearTimeout(printTimeout)
       frameWindow.addEventListener('afterprint', () => iframe.remove(), { once: true })
       frameWindow.focus()
       frameWindow.print()
       isGeneratingPdf.value = false
-    } catch { window.clearTimeout(timeout); fail() }
+    } catch { fail() }
   }
-  iframe.onerror = () => { window.clearTimeout(timeout); fail() }
+  iframe.onerror = fail
   document.body.appendChild(iframe)
 }
+const { t } = useI18n({ useScope: 'global' })
 </script>
 
 <template>
@@ -95,7 +105,7 @@ async function handleDownloadResume() {
       <NavigationLink to="/" class="navbar-brand" id="nav-brand-link" @click="closeMobileMenu">
         <span class="brand-mark" aria-hidden="true">✳</span><span class="brand-name">Fay</span><span class="brand-caption">Portfolio.</span>
       </NavigationLink>
-      <nav class="desktop-nav" aria-label="主要導覽選單">
+      <nav class="desktop-nav" :aria-label="t('common.navbar.mainNavigation')">
         <ul class="nav-list">
           <li v-for="item in navRoutes" :key="item.path">
             <NavigationLink :to="item.path" class="nav-link" :id="`nav-link-${item.name}`">{{ item.title }}</NavigationLink>
@@ -103,18 +113,19 @@ async function handleDownloadResume() {
         </ul>
       </nav>
       <div class="navbar-actions">
-        <button id="nav-download-resume-btn" class="btn-download-resume" @click="handleDownloadResume" :disabled="isGeneratingPdf" aria-label="下載履歷 PDF">
-          {{ isGeneratingPdf ? '準備中…' : '下載履歷' }} <span aria-hidden="true">↗</span>
+        <LanguageSwitcher />
+        <button id="nav-download-resume-btn" class="btn-download-resume" @click="handleDownloadResume" :disabled="isGeneratingPdf" :aria-label="t('common.navbar.downloadResumePdf')">
+          {{ isGeneratingPdf ? t('common.navbar.preparing') : t('common.navbar.downloadResume') }} <span aria-hidden="true">↗</span>
         </button>
-        <QuickContact variant="compact" label="聯絡" email="york870198@gmail.com" />
+        <QuickContact variant="compact" :label="t('common.navbar.contact')" email="york870198@gmail.com" />
         <ThemeToggle />
-        <button ref="menuToggle" id="mobile-menu-toggle" class="mobile-toggle" @click="toggleMobileMenu" :aria-label="isMobileMenuOpen ? '關閉選單' : '開啟選單'" :aria-expanded="isMobileMenuOpen" aria-controls="mobile-dropdown-menu">
+        <button ref="menuToggle" id="mobile-menu-toggle" class="mobile-toggle" @click="toggleMobileMenu" :aria-label="isMobileMenuOpen ? t('common.navbar.closeMenu') : t('common.navbar.openMenu')" :aria-expanded="isMobileMenuOpen" aria-controls="mobile-dropdown-menu">
           <span aria-hidden="true">{{ isMobileMenuOpen ? '×' : '☰' }}</span>
         </button>
       </div>
     </div>
     <div v-if="isMobileMenuOpen" class="mobile-drawer" id="mobile-dropdown-menu">
-      <nav class="mobile-nav" aria-label="行動版導覽選單">
+      <nav class="mobile-nav" :aria-label="t('common.navbar.mobileNavigation')">
         <ul class="mobile-nav-list">
           <li v-for="item in navRoutes" :key="item.path">
             <NavigationLink :to="item.path" class="mobile-nav-link" :id="`mobile-nav-link-${item.name}`" @click="closeMobileMenu">
@@ -122,7 +133,7 @@ async function handleDownloadResume() {
             </NavigationLink>
           </li>
         </ul>
-        <button class="mobile-download-btn" @click="handleDownloadResume" :disabled="isGeneratingPdf" id="mobile-download-resume-btn">{{ isGeneratingPdf ? '準備履歷中…' : '下載履歷 (PDF)' }} <span aria-hidden="true">↗</span></button>
+        <button class="mobile-download-btn" @click="handleDownloadResume" :disabled="isGeneratingPdf" id="mobile-download-resume-btn">{{ isGeneratingPdf ? t('common.navbar.preparingResume') : t('common.navbar.mobileDownloadResume') }} <span aria-hidden="true">↗</span></button>
       </nav>
     </div>
   </header>
@@ -151,4 +162,11 @@ async function handleDownloadResume() {
 .mobile-download-btn { display: flex; justify-content: space-between; width: 100%; margin-top: 1rem; padding: .85rem; background: var(--accent-primary); color: var(--text-inverse); }
 @media(max-width: 1100px) { .desktop-nav, .btn-download-resume { display: none; } .mobile-toggle { display: block; } }
 @media(max-width: 440px) { .brand-caption { display: none; } .navbar-container { gap: .5rem; } .navbar-actions { gap: .4rem; } }
+@media(max-width: 600px) {
+  .navbar-header { height: auto; }
+  .navbar-container { flex-wrap: wrap; gap: 0; padding-top: .25rem; padding-bottom: .25rem; }
+  .navbar-actions { width: 100%; justify-content: space-between; gap: .25rem; }
+  .navbar-container { width: 100%; padding-left: .5rem; padding-right: .5rem; }
+  .navbar-actions :deep(.variant-compact) { padding: .25rem; gap: .35rem; }
+}
 </style>

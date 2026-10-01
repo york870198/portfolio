@@ -52,6 +52,10 @@ for (const [key, original] of Object.entries(zh)) {
 
 const normalize = value => value.replace(/\s+/g, ' ').trim()
 const used = new Set()
+for (const key of revisions.addedKeys ?? []) {
+  assert.ok(key in zh, `Missing new UI message: ${key}`)
+  used.add(key)
+}
 for (const item of inventory.items) {
   assert.ok(['fixed', 'translatable'].includes(item.category), `Unclassified source: ${item.file}:${item.line}`)
   if (item.category === 'fixed') continue
