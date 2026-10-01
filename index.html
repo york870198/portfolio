@@ -9,12 +9,13 @@
   <meta name="description" content="Portfolio - 個人簡介" />
   <title>Portfolio of Fay</title>
 
-  <!-- Google Fonts: Outfit & Inter -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap"
-    rel="stylesheet">
+  <script>
+    try {
+      var saved = localStorage.getItem('portfolio-theme');
+      document.documentElement.dataset.theme = saved === 'dark' || saved === 'light'
+        ? saved : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    } catch (_) { document.documentElement.dataset.theme = 'dark'; }
+  </script>
 
   <!-- GitHub Pages SPA Redirect Handler -->
   <script>

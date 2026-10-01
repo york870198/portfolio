@@ -41,8 +41,8 @@ onMounted(() => {
     :aria-label="isDark ? '切換為淺色主題' : '切換為深色主題'"
     id="theme-toggle-btn"
   >
-    <span class="theme-icon" v-if="isDark">🌙</span>
-    <span class="theme-icon" v-else>☀️</span>
+    <span class="theme-icon" v-if="isDark">◐</span>
+    <span class="theme-icon" v-else>◑</span>
   </button>
 </template>
 
@@ -51,8 +51,8 @@ onMounted(() => {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
+  width: 44px;
+  height: 44px;
   border-radius: var(--radius-full);
   background: var(--bg-card-subtle);
   border: 1px solid var(--border-subtle);

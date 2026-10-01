@@ -78,7 +78,7 @@ const isImageIcon = (icon: string) => {
 <style scoped>
 .footprint-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
   gap: 1rem;
   margin-top: 0.5rem;
 }

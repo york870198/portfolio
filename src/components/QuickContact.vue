@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onUnmounted } from 'vue'
 
 interface Props {
   email?: string
@@ -15,6 +15,8 @@ const props = withDefaults(defineProps<Props>(), {
 
 const copied = ref(false)
 let timer: number | null = null
+
+onUnmounted(() => { if (timer) window.clearTimeout(timer) })
 
 const copyEmail = async () => {
   try {
@@ -39,75 +41,20 @@ const copyEmail = async () => {
       :title="`點擊複製 Email: ${props.email}`"
       id="quick-contact-btn"
     >
-      <span class="btn-icon">{{ copied ? '✓' : '✉️' }}</span>
-      <span class="btn-text">{{ copied ? '已複製 Email 地址' : props.label }}</span>
+      <span class="btn-icon">{{ copied ? '✓' : '↗' }}</span>
+      <span class="btn-text">{{ props.label }}</span>
     </button>
+    <span class="copy-status" role="status">{{ copied ? "已複製 Email 地址" : "" }}</span>
   </div>
 </template>
 
 <style scoped>
-.quick-contact-wrapper {
-  display: inline-flex;
-  position: relative;
-}
-
-.quick-contact-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 600;
-  font-size: 0.9rem;
-  border-radius: var(--radius-full);
-  transition: all var(--transition-fast);
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-.variant-primary {
-  padding: 0.6rem 1.25rem;
-  background: var(--accent-gradient);
-  color: #ffffff;
-  box-shadow: 0 4px 14px var(--accent-glow);
-}
-
-.variant-primary:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(99, 102, 241, 0.4);
-}
-
-.variant-secondary {
-  padding: 0.5rem 1.1rem;
-  background: var(--bg-card-subtle);
-  border: 1px solid var(--border-subtle);
-  color: var(--text-primary);
-}
-
-.variant-secondary:hover {
-  background: var(--bg-card-hover);
-  border-color: var(--border-card-hover);
-  transform: translateY(-1px);
-}
-
-.variant-compact {
-  padding: 0.45rem 0.85rem;
-  font-size: 0.82rem;
-  background: var(--bg-card-subtle);
-  border: 1px solid var(--border-subtle);
-  color: var(--text-secondary);
-}
-
-.variant-compact:hover {
-  color: var(--text-primary);
-  border-color: var(--border-card-hover);
-}
-
-.quick-contact-btn.is-copied {
-  background: rgba(16, 185, 129, 0.18) !important;
-  border-color: rgba(16, 185, 129, 0.5) !important;
-  color: #10b981 !important;
-}
-
-.btn-icon {
-  font-size: 0.95rem;
-}
+.quick-contact-wrapper { display: inline-flex; position: relative; }
+.quick-contact-btn { display: inline-flex; align-items: center; gap: .65rem; min-height: 44px; padding: .5rem .65rem; color: var(--text-primary); font-size: 13px; white-space: nowrap; }
+.quick-contact-btn:hover, .quick-contact-btn.is-copied { color: var(--accent-primary); }
+.btn-icon { color: var(--accent-primary); font-size: 20px; }
+.variant-primary { background: var(--accent-primary); color: var(--text-inverse); }
+.variant-primary .btn-icon { color: inherit; }
+.variant-secondary { border: 1px solid var(--border-subtle); }
+.copy-status:not(:empty) { position: absolute; top: calc(100% + 12px); right: 0; padding: .65rem 1rem; background: var(--accent-primary); color: var(--text-inverse); white-space: nowrap; font-size: 13px; }
 </style>

@@ -1,19 +1,26 @@
 <script setup lang="ts">
+import { nextTick, watch } from 'vue'
+import { useRoute } from 'vue-router'
 import Navbar from '@/components/Navbar.vue'
+
+const route = useRoute()
+watch(() => route.path, async () => {
+  await nextTick()
+  const heading = document.querySelector<HTMLElement>('main h1')
+  heading?.setAttribute('tabindex', '-1')
+  heading?.focus({ preventScroll: true })
+}, { flush: 'post' })
 </script>
 
 <template>
   <div class="app-layout">
+    <a class="skip-link" href="#main-content">跳至主要內容</a>
     <!-- 常駐導覽列 -->
     <Navbar />
 
     <!-- 頁面內容容器 -->
-    <main class="main-content">
-      <router-view v-slot="{ Component }">
-        <transition name="page-fade" mode="out-in">
-          <component :is="Component" />
-        </transition>
-      </router-view>
+    <main id="main-content" class="main-content" tabindex="-1">
+      <router-view />
     </main>
 
     <!-- 頁尾 -->
@@ -40,28 +47,12 @@ import Navbar from '@/components/Navbar.vue'
   flex-direction: column;
 }
 
-/* Page Transition */
-.page-fade-enter-active,
-.page-fade-leave-active {
-  transition: opacity 0.22s ease, transform 0.22s ease;
-}
-
-.page-fade-enter-from {
-  opacity: 0;
-  transform: translateY(6px);
-}
-
-.page-fade-leave-to {
-  opacity: 0;
-  transform: translateY(-6px);
-}
-
 /* Footer */
 .app-footer {
   border-top: 1px solid var(--border-subtle);
   padding: 1.75rem 0;
   margin-top: auto;
-  background: rgba(11, 15, 25, 0.5);
+  background: var(--bg-primary);
 }
 
 .footer-container {
