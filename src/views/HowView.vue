@@ -29,7 +29,7 @@ import QnACard from '@/components/QnACard.vue'
           <p>
             如果你想知道的是技術面的細節：<br />
             這個網站是以 Vue / Vue Router / Vite / TypeScript 實作的靜態網站，<br />
-            透過 Github Action 佈署至 Github Pages。
+            透過 GitHub Actions 佈署至 GitHub Pages。
           </p>
         </QnACard>
 

@@ -33,8 +33,8 @@ const zhTW = {
     },
     "metadata": {
       "description": "Portfolio - 個人簡介",
-      "resumeTitle": "完整履歷 | Portfolio of Fay",
-      "notFoundTitle": "404 找不到頁面 | Portfolio"
+      "resumeTitle": "完整履歷 {'|'} Portfolio of Fay",
+      "notFoundTitle": "404 找不到頁面 {'|'} Portfolio"
     }
   },
   "home": {
@@ -208,13 +208,6 @@ const zhTW = {
       "title": "資深前端工程師",
       "summary": "專注於現代前端架構（Vue 3 / React / TypeScript），具備 4+ 年高強度產品開發與跨領域協作經驗，重視清晰的程式碼架構、使用者體驗與溝通效率。",
       "location": "台灣 台北 {location}"
-    },
-    "who": {
-      "svelteAngular": "稍微摸過一下 Svelte 跟 Angular，但僅止於小規模專案實作。",
-      "backendLabel": "後端協作：",
-      "backend": "後端技術方面我使用 NodeJS，並有長期與後端工程師協作的經驗。",
-      "designLabel": "UI/UX 協作：",
-      "design": "理解 Design System 與互動設計原則，能依據 Figma 設計稿完成高精準度的 UI 實作。"
     },
     "when": {
       "family": "2026 年初時，我的家庭內發生了需要我專注處理的問題，實在沒有心力蠟燭兩頭燒。",

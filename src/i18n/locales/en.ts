@@ -35,8 +35,8 @@ const en = {
     },
     "metadata": {
       "description": "Portfolio - Personal profile",
-      "resumeTitle": "Full resume | Portfolio of Fay",
-      "notFoundTitle": "404 Page not found | Portfolio"
+      "resumeTitle": "Full resume {'|'} Portfolio of Fay",
+      "notFoundTitle": "404 Page not found {'|'} Portfolio"
     }
   },
   "home": {
@@ -210,13 +210,6 @@ const en = {
       "title": "Senior Frontend Engineer",
       "summary": "Focused on modern frontend architecture (Vue 3 / React / TypeScript), with 4+ years of intensive product development and cross-disciplinary collaboration experience. I value clear code architecture, user experience, and efficient communication.",
       "location": "Taipei, Taiwan {location}"
-    },
-    "who": {
-      "svelteAngular": "I've also tried Svelte and Angular, though only in small projects.",
-      "backendLabel": "Backend collaboration:",
-      "backend": "For backend work, I use NodeJS and have extensive experience collaborating with backend engineers.",
-      "designLabel": "UI/UX collaboration:",
-      "design": "I understand design systems and interaction design principles, and can implement UI that closely matches Figma designs."
     },
     "when": {
       "family": "In early 2026, a family matter needed my full attention. I couldn't keep stretching myself between both responsibilities.",
