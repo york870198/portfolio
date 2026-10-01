@@ -27,12 +27,10 @@ import QnACard from '@/components/QnACard.vue'
             如果你是從 LinkedIn 等人才媒合平台過來，你會在那邊看到我的本名。<br />
           </p>
           <p>
-            我專注於現代前端架構，慣於使用 <strong>Vue 3</strong> 及 <strong>React</strong> 兩項前端生態系。<br/>稍微摸過一下 Svelte 跟 Angular，但僅止於小規模專案實作。
+            我專注於現代前端架構，慣於使用 <strong>Vue 3</strong> 及 <strong>React</strong> 兩項前端生態系。<br />
+            後端技術方面我使用 NodeJS，並有長期與後端工程師協作的經驗<br />
+            理解 Design System 與互動設計原則，能依據 Figma 設計稿完成高精準度的 UI 實作<br />
           </p>
-          <ul>
-            <li><strong>後端協作：</strong> 後端技術不是我的主要職能，不過我的知識至少充分到與後端工程師合作四年不會吵架。</li>
-            <li><strong>UI/UX 協作</strong> 理解 Design System 與互動設計原則，能依據 Figma 設計稿完成高精準度的 UI 實作</li>
-          </ul>
         </QnACard>
 
         <QnACard

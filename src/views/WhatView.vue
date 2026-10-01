@@ -40,7 +40,7 @@ const skillCategories = [
         >
           <div class="skills-grid">
             <div v-for="cat in skillCategories" :key="cat.name" class="skill-category-block">
-              <h4 class="category-title">{{ cat.name }}</h4>
+              <h3 class="category-title">{{ cat.name }}</h3>
               <ul class="skills-sublist">
                 <li v-for="item in cat.skills" :key="item" class="skill-li">
                   {{ item }}
