@@ -127,11 +127,11 @@ onMounted(() => {
                 如果你是從 LinkedIn 等人才媒合平台過來，你會在那邊看到我的本名。<br />
               </p>
               <p>
-                我專注於現代前端架構，慣於使用 <strong>Vue 3</strong> 及 <strong>React</strong> 兩項前端生態系。<br/>稍微摸過一下 Svelte 跟 Angular，但僅止於小規模專案實作。
+                我專注於現代前端架構，慣於使用 <strong>Vue 3</strong> 及 <strong>React</strong> 兩項前端生態系。<br/>
+                後端技術方面我使用 NodeJS，並有長期與後端工程師協作的經驗<br />
+                理解 Design System 與互動設計原則，能依據 Figma 設計稿完成高精準度的 UI 實作<br />
               </p>
               <ul>
-                <li><strong>後端協作：</strong> 後端技術不是我的主要職能，不過我的知識至少充分到與後端工程師合作四年不會吵架。</li>
-                <li><strong>UI/UX 協作：</strong> 理解 Design System 與互動設計原則，能依據 Figma 設計稿完成高精準度的 UI 實作。</li>
               </ul>
             </QnACard>
 
@@ -231,8 +231,8 @@ onMounted(() => {
               accentColor="var(--theme-what)"
             >
               <ul>
-                <li><strong>Tauri：</strong>基於 Rust 實現的跨平台軟體框架，最近正在用這個開發 Side Project。</li>
-                <li><strong>Flutter：</strong>Google 開發的跨平台開發套件，在上一份工作有一項專案以此開發，但我個人沒有特別喜歡。</li>
+                <li><strong>Tauri：</strong>基於 Rust 實現的跨平台軟體框架，最近正在用這個開發 side project。</li>
+                <li><strong>Flutter：</strong>Google 開發的跨平台開發套件，在上一份工作有一項專案以此開發。</li>
                 <li><strong>Python：</strong>大學時主要在寫的程式語言，開始專注在前端領域之後比較沒在碰了。</li>
               </ul>
             </QnACard>
@@ -317,7 +317,7 @@ onMounted(() => {
             themeTag="WHY"
             themeIndex="05"
             title="動機"
-            subtitle="俗話說得好：Javascript，從入門到放棄。我目前還在中間。"
+            subtitle="俗話說得好：JavaScript，從入門到放棄。我目前還在中間。"
             accentColor="var(--theme-why)"
           />
           <div class="section-content-flow">

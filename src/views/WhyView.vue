@@ -10,7 +10,7 @@ import QnACard from '@/components/QnACard.vue'
         themeTag="WHY"
         themeIndex="05"
         title="動機"
-        subtitle="俗話說得好：Javascript，從入門到放棄。我目前還在中間。"
+        subtitle="俗話說得好：JavaScript，從入門到放棄。我目前還在中間。"
         accentColor="var(--theme-why)"
       />
 

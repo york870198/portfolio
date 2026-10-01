@@ -128,8 +128,8 @@ const zhTW = {
     },
     "beyondFrontend": {
       "question": "除了前端以外我還會什麼？",
-      "tauri": "基於 Rust 實現的跨平台軟體框架，最近正在用這個開發 Side Project。",
-      "flutter": "Google 開發的跨平台開發套件，在上一份工作有一項專案以此開發，但我個人沒有特別喜歡。",
+      "tauri": "基於 Rust 實現的跨平台軟體框架，最近正在用這個開發 side project。",
+      "flutter": "Google 開發的跨平台開發套件，在上一份工作有一項專案以此開發。",
       "python": "大學時主要在寫的程式語言，開始專注在前端領域之後比較沒在碰了。"
     },
     "ai": {
@@ -167,7 +167,7 @@ const zhTW = {
   },
   "why": {
     "title": "動機",
-    "subtitle": "俗話說得好：Javascript，從入門到放棄。我目前還在中間。",
+    "subtitle": "俗話說得好：JavaScript，從入門到放棄。我目前還在中間。",
     "frontend": {
       "question": "為什麼選擇前端領域？",
       "highlight": "其實一開始不是選這個，只是走著走著方向剛好朝這邊。",
@@ -187,7 +187,7 @@ const zhTW = {
       "timeSaved": "它做出來的東西跟我自己手動敲鍵盤基本上差不多，但它只需要我五分之一或更少的時間。",
       "technicalIntro": "如果你想知道的是技術面的細節：",
       "stack": "這個網站是以 Vue / Vue Router / Vite / TypeScript 實作的靜態網站，",
-      "deployment": "透過 Github Action 佈署至 Github Pages。"
+      "deployment": "透過 GitHub Actions 佈署至 GitHub Pages。"
     },
     "collaboration": {
       "question": "我如何與不同領域的協作者進行跨領域合作？",
@@ -212,7 +212,7 @@ const zhTW = {
     "who": {
       "svelteAngular": "稍微摸過一下 Svelte 跟 Angular，但僅止於小規模專案實作。",
       "backendLabel": "後端協作：",
-      "backend": "後端技術不是我的主要職能，不過我的知識至少充分到與後端工程師合作四年不會吵架。",
+      "backend": "後端技術方面我使用 NodeJS，並有長期與後端工程師協作的經驗。",
       "designLabel": "UI/UX 協作：",
       "design": "理解 Design System 與互動設計原則，能依據 Figma 設計稿完成高精準度的 UI 實作。"
     },
