@@ -115,7 +115,7 @@ onMounted(() => {
             accentColor="var(--theme-who)"
           />
           <div class="section-content-flow">
-            <QnACard
+            <QnACard :heading-level="3"
               :index="1"
               question="我是誰？"
               highlight="剛好趕在 AI 開始威脅要取代我們之前，從手工寫程式開始的資深前端工程師。"
@@ -135,7 +135,7 @@ onMounted(() => {
               </ul>
             </QnACard>
 
-            <QnACard
+            <QnACard :heading-level="3"
               :index="2"
               question="我平常在關注誰？"
               highlight="公務上關注前端技術，私底下關注獨立遊戲。"
@@ -164,7 +164,7 @@ onMounted(() => {
             accentColor="var(--theme-when)"
           />
           <div class="section-content-flow">
-            <QnACard
+            <QnACard :heading-level="3"
               :index="1"
               question="我何時成為前端工程師？"
               highlight="2021 年末。"
@@ -177,7 +177,7 @@ onMounted(() => {
               </p>
             </QnACard>
 
-            <QnACard
+            <QnACard :heading-level="3"
               :index="2"
               question="上一份工作何時開始、何時結束？"
               highlight="2021 年末，2026 年中離職。"
@@ -206,7 +206,7 @@ onMounted(() => {
             accentColor="var(--theme-what)"
           />
           <div class="section-content-flow">
-            <QnACard
+            <QnACard :heading-level="3"
               :index="1"
               question="最熟悉的開發項目？"
               highlight="跨平台/裝置/瀏覽器的網頁開發。"
@@ -225,7 +225,7 @@ onMounted(() => {
               </div>
             </QnACard>
 
-            <QnACard
+            <QnACard :heading-level="3"
               :index="2"
               question="除了前端以外我還會什麼？"
               accentColor="var(--theme-what)"
@@ -237,7 +237,7 @@ onMounted(() => {
               </ul>
             </QnACard>
 
-            <QnACard
+            <QnACard :heading-level="3"
               :index="3"
               question="我對 AI 開發的看法？"
               highlight="非常強大的自動導航 ── 假如你知道你要去哪裡的話。"
@@ -265,7 +265,7 @@ onMounted(() => {
             accentColor="var(--theme-where)"
           />
           <div class="section-content-flow">
-            <QnACard
+            <QnACard :heading-level="3"
               :index="1"
               question="我在哪裡？"
               highlight="台北，以及網路上。"
@@ -297,7 +297,7 @@ onMounted(() => {
               </div>
             </QnACard>
 
-            <QnACard
+            <QnACard :heading-level="3"
               :index="2"
               question="我能跑多遠去工作？"
               highlight="大台北地區，或者公司遠端網路速度夠快。"
@@ -321,7 +321,7 @@ onMounted(() => {
             accentColor="var(--theme-why)"
           />
           <div class="section-content-flow">
-            <QnACard
+            <QnACard :heading-level="3"
               :index="1"
               question="為什麼選擇前端領域？"
               highlight="其實一開始不是選這個，只是走著走著方向剛好朝這邊。"
@@ -346,7 +346,7 @@ onMounted(() => {
             accentColor="var(--theme-how)"
           />
           <div class="section-content-flow">
-            <QnACard
+            <QnACard :heading-level="3"
               :index="1"
               question="這個網站是怎麼做的？"
               highlight="我出一張嘴，Google Antigravity 出力。"
@@ -359,7 +359,7 @@ onMounted(() => {
               </p>
             </QnACard>
 
-            <QnACard
+            <QnACard :heading-level="3"
               :index="2"
               question="我如何與不同領域的協作者進行跨領域合作？"
               highlight="心有靈犀（誇飾）。"

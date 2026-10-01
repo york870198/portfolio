@@ -1,5 +1,6 @@
 <script setup lang="ts">
 interface Props {
+  headingLevel?: 2 | 3
   question: string
   highlight?: string
   tags?: string[]
@@ -8,6 +9,7 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
+  headingLevel: 2,
   tags: () => [],
   accentColor: 'var(--accent-primary)'
 })
@@ -21,9 +23,9 @@ const props = withDefaults(defineProps<Props>(), {
         <span v-if="props.index" class="qna-index">
           Q{{ props.index }}
         </span>
-        <h2 class="qna-question">
+        <component :is="`h${props.headingLevel}`" class="qna-question">
           {{ props.question }}
-        </h2>
+        </component>
       </div>
 
       <!-- Optional Tags -->
