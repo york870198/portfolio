@@ -1,0 +1,242 @@
+import type { MessageCatalog } from './zh-TW'
+
+// Existing English design text stays in the templates or shared data.
+const en = {
+  "common": {
+    "skipToContent": "Skip to main content",
+    "dimensions": "Six dimensions",
+    "moreDetails": "More details",
+    "backHome": "Back to home",
+    "navbar": {
+      "mainNavigation": "Main navigation",
+      "mobileNavigation": "Mobile navigation",
+      "downloadResume": "Download resume",
+      "downloadResumePdf": "Download resume PDF",
+      "mobileDownloadResume": "Download resume (PDF)",
+      "preparing": "Preparing…",
+      "preparingResume": "Preparing resume…",
+      "printFrameTitle": "Full resume print preview",
+      "contact": "Contact",
+      "closeMenu": "Close menu",
+      "openMenu": "Open menu"
+    },
+    "contact": {
+      "label": "Contact me",
+      "copyEmail": "Click to copy Email: {email}",
+      "emailCopied": "Email address copied"
+    },
+    "theme": {
+      "switchToLight": "Switch to light theme",
+      "switchToDark": "Switch to dark theme"
+    },
+    "project": {
+      "viewSource": "View GitHub source code",
+      "viewDemo": "Open Live Demo preview"
+    },
+    "metadata": {
+      "description": "Portfolio - Personal profile",
+      "resumeTitle": "Full resume | Portfolio of Fay",
+      "notFoundTitle": "404 Page not found | Portfolio"
+    }
+  },
+  "home": {
+    "who": {
+      "title": "About me",
+      "subtitle": "Senior frontend, and more."
+    },
+    "when": {
+      "title": "Experience",
+      "subtitle": "After becoming an engineer, and before."
+    },
+    "what": {
+      "title": "Tech stack",
+      "subtitle": "Usually building websites. Occasionally, something else."
+    },
+    "where": {
+      "title": "Where to find me",
+      "subtitle": "Where you can find me, and how far I can travel to find you."
+    },
+    "why": {
+      "title": "Motivation",
+      "subtitle": "Reasons matter, though sometimes the results arrive first."
+    },
+    "how": {
+      "title": "How I work",
+      "subtitle": "I'd suggest starting with how this website was made."
+    }
+  },
+  "who": {
+    "title": "About me",
+    "subtitle": "A senior frontend engineer with some backend knowledge.",
+    "identity": {
+      "question": "Who am I?",
+      "highlight": "A senior frontend engineer who started by writing code by hand, just before AI began threatening to replace us.",
+      "workName": "I go by Fay at work, and use different nicknames in different communities.",
+      "realName": "If you came here from LinkedIn or another recruiting platform, you'll have seen my real name there.",
+      "architecture": "I focus on modern frontend architecture, regularly working with the {vue} and {react} ecosystems.",
+      "backend": "For backend work, I use NodeJS and have extensive experience collaborating with backend engineers",
+      "design": "I understand Design System and interaction design principles, and can implement UI that closely matches Figma designs"
+    },
+    "interests": {
+      "question": "Who do I follow?",
+      "highlight": "Frontend technology at work; indie games in my own time.",
+      "gameDevelopment": "Before becoming a frontend engineer, I was exploring indie game development.",
+      "presentation": "Back then, the PM and I wrestled with the details of how everything looked and behaved every day. At some point, I realized what I was writing was about 80% like web frontend code.",
+      "coincidence": "As for that game development tool's next-generation core actually becoming HTML / CSS / JS later on, that was a happy coincidence.",
+      "communities": "These days, I follow Hacker News for industry news and browse indie game developer communities for new technologies in my spare time."
+    }
+  },
+  "when": {
+    "title": "Experience",
+    "subtitle": "The AI era is moving a little too fast. It makes my past, hand-coding self feel older than it really is.",
+    "careerStart": {
+      "question": "When did I become a frontend engineer?",
+      "highlight": "Late 2021.",
+      "hobby": "I started programming in high school, but it remained a hobby. I didn't major in computer science at university, either.",
+      "pandemic": "The COVID pandemic changed a lot in 2020. It hit the field I was working in hard, and I felt I couldn't carry on that way.",
+      "transition": "I resigned, took a structured course to review what I needed to know for frontend work at the time, landed a frontend role, and that was that."
+    },
+    "previousRole": {
+      "question": "When did my previous job start and end?",
+      "highlight": "Started in late 2021; left in mid-2026.",
+      "tenure": "My previous job was also my first in the industry. I stayed for more than four years.",
+      "company": "It was a fast-growing company, and the team's technical lead was a highly skilled engineer dedicated to the open-source community.",
+      "studyGroups": "Beyond technologies directly related to our work, the company held regular study groups where we kept learning and revisiting what we knew together.",
+      "family": "In early 2026, a family matter needed my full attention. I couldn't keep stretching myself between both responsibilities, so I left to focus on the situation at home."
+    }
+  },
+  "what": {
+    "title": "Tech stack",
+    "subtitle": "The easy, difficult, and maddening things from a career that's neither particularly long nor particularly short.",
+    "web": {
+      "question": "What kind of development am I most familiar with?",
+      "highlight": "Web development across platforms, devices, and browsers."
+    },
+    "skills": {
+      "frontend": {
+        "title": "Core frontend ecosystem",
+        "typescript": "TypeScript (strong type safety)",
+        "browserCompatibility": "Handling browser differences"
+      },
+      "backend": {
+        "title": "Backend and data",
+        "websocket": "WebSocket real-time communication"
+      },
+      "design": {
+        "title": "UI/UX and QA",
+        "figma": "Figma collaboration",
+        "responsive": "Responsive layouts (RWD)"
+      }
+    },
+    "beyondFrontend": {
+      "question": "What else do I know besides frontend development?",
+      "tauri": "A cross-platform application framework built on Rust. I've recently been using it for a Side Project.",
+      "flutter": "A cross-platform development toolkit from Google. One project at my previous job used it, though I'm not particularly fond of it myself.",
+      "python": "The language I mainly used at university. I haven't used it much since focusing on frontend development."
+    },
+    "ai": {
+      "question": "What do I think about developing with AI?",
+      "highlight": "Very powerful autopilot — if you know where you're going.",
+      "bicycle": "If software development is like going out on a bicycle, AI adds an engine and navigation, and even steers the handlebars for you.",
+      "destination": "If you don't have a destination in mind, it may take you on plenty of detours;",
+      "balance": "if you don't know how to position yourself on a bumpy road or a downhill turn, you'll probably fall off.",
+      "benefit": "But if you know how to ride and have decided where you're going, it will save you a lot of effort compared with pedaling yourself."
+    }
+  },
+  "where": {
+    "title": "Where to find me",
+    "subtitle": "Apart from a brief stay in Kaohsiung of less than a year, I'm basically a Taipei homebody who hasn't seen much of the world.",
+    "location": {
+      "question": "Where am I?",
+      "highlight": "Taipei, and online.",
+      "home": "I'm based in Taipei. Since I live with my family, I don't plan to move elsewhere in the near future.",
+      "socialIntro": "Besides meeting in person, you can find me in these places:"
+    },
+    "social": {
+      "github": "I tend to work locally on personal projects, so it's a little empty.",
+      "plurk": "A social platform without an algorithm deciding what you want to see.",
+      "linkedin": "I mostly use it to look at memes posted by JS Developer.",
+      "cake": "It probably doesn't have more information than this site, but I'll get a notification if you message me there."
+    },
+    "work": {
+      "question": "How far can I travel for work?",
+      "highlight": "Greater Taipei, or a company with a fast enough connection for remote work.",
+      "rangeLabel": "Travel range:",
+      "range": "Places in Greater Taipei that I can reach by MRT, bus, and bicycle.",
+      "preferenceLabel": "Preference:",
+      "preference": "Hybrid work. I have extensive remote collaboration experience and can work smoothly with colleagues across locations and time zones."
+    }
+  },
+  "why": {
+    "title": "Motivation",
+    "subtitle": "As the saying goes: Javascript, from getting started to giving up. I'm somewhere in between.",
+    "frontend": {
+      "question": "Why did I choose frontend development?",
+      "highlight": "It wasn't my initial choice. I just happened to end up heading this way.",
+      "interest": "At first, it was just a personal interest: I started programming to make games.",
+      "fullStack": "Game development includes both frontend and backend work, so strictly speaking, my original direction was closer to full-stack engineering.",
+      "firstRole": "When programming finally became my job, my first role was in frontend development. Over time, that naturally came to take the overwhelming majority of my attention."
+    }
+  },
+  "how": {
+    "title": "How I work",
+    "subtitle": "There are always more solutions than problems. And there are a lot of problems.",
+    "website": {
+      "question": "How was this website made?",
+      "highlight": "I did the talking; Google Antigravity did the heavy lifting.",
+      "scope": "I defined the website's purpose, the devices it would be viewed on, the frameworks and tools to use, and the platform to deploy it on.",
+      "specification": "Following how PMs wrote specifications at my previous job, I wrote down my intended goals and started directing Gemini.",
+      "timeSaved": "What it produced was essentially comparable to what I'd write by hand, but took a fifth of my time or less.",
+      "technicalIntro": "If you're interested in the technical details:",
+      "stack": "This is a static website built with Vue / Vue Router / Vite / TypeScript,",
+      "deployment": "deployed to Github Pages through Github Action."
+    },
+    "collaboration": {
+      "question": "How do I collaborate with people from other disciplines?",
+      "highlight": "Reading each other's minds (an exaggeration).",
+      "experience": "Throughout my four-and-a-half-year career, I've worked closely with backend engineers, designers, and product managers.",
+      "sharedPicture": "We reached a shared conclusion: the key to smooth collaboration can be reduced to one sentence — “I know what you're picturing.”",
+      "basicKnowledge": "Even a little introductory knowledge helps me understand more accurately what the other person is trying to convey.",
+      "lessFriction": "The clearer our shared picture, the less friction there is in communication during development.",
+      "backend": "I have the necessary knowledge of common backend architectures, along with practical experience working with backend engineers over the long term;",
+      "designCourse": "to improve how I collaborate with designers, I'm also taking the Google UX Design Certificate course to learn about UI/UX design."
+    }
+  },
+  "resume": {
+    "toolbar": {
+      "print": "Print / Save as PDF"
+    },
+    "profile": {
+      "title": "Senior frontend engineer",
+      "summary": "Focused on modern frontend architecture (Vue 3 / React / TypeScript), with 4+ years of intensive product development and cross-disciplinary collaboration experience. I value clear code architecture, user experience, and efficient communication.",
+      "location": "Taipei, Taiwan {location}"
+    },
+    "who": {
+      "svelteAngular": "I've also tried Svelte and Angular, though only in small projects.",
+      "backendLabel": "Backend collaboration:",
+      "backend": "Backend technology isn't my main responsibility, but I know enough to have worked with backend engineers for four years without getting into arguments.",
+      "designLabel": "UI/UX collaboration:",
+      "design": "I understand Design System and interaction design principles, and can implement UI that closely matches Figma designs."
+    },
+    "when": {
+      "family": "In early 2026, a family matter needed my full attention. I couldn't keep stretching myself between both responsibilities.",
+      "handover": "The product I'd been primarily responsible for developing had entered a stable phase after delivery, so I used that opportunity to finish the handover and leave to focus on the situation at home."
+    },
+    "social": {
+      "github": "Personal development and project repositories",
+      "plurk": "Technology discussions and everyday life",
+      "linkedin": "Professional experience and connections",
+      "cake": "Online resume and contact channel"
+    },
+    "how": {
+      "scope": "I thought through many things: the website's purpose, the devices it would be viewed on, the frameworks and tools to use, and the platform to deploy it on.",
+      "specification": "Then, following how PMs wrote specifications at my previous job, I wrote down what I'd decided and started directing Gemini."
+    }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "Sorry, the page you're looking for doesn't exist or has moved. Check the URL or use the button below to return home."
+  }
+} satisfies MessageCatalog
+
+export default en
