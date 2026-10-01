@@ -141,6 +141,14 @@ const router = createRouter({
   }
 })
 
+// Static directory entries can arrive with a trailing slash. Preserve the
+// existing route URLs and query/hash while keeping route-dependent UI consistent.
+router.beforeEach((to) => {
+  if (to.path !== '/' && to.path.endsWith('/')) {
+    return { path: to.path.replace(/\/+$/, ''), query: to.query, hash: to.hash, replace: true }
+  }
+})
+
 // Update document title on navigation
 router.afterEach((to) => {
   if (to.meta.title && typeof to.meta.title === 'string') {
