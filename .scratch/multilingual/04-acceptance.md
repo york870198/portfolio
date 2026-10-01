@@ -63,3 +63,13 @@
 ## 客戶端 metadata 限制
 
 英文網址提供可分享的 query 與執行 JavaScript 後的 html lang、title、description。各語言仍使用同一份靜態 HTML，初始 source 是繁中；不執行 JavaScript 的搜尋器或社群預覽機器人不保證取得英文 metadata。本次未新增多語預渲染、獨立社群預覽或 /en 目錄。
+
+## Code review
+
+固定比較點：8383f3e53a52335243f76d54ca94714691eed7e2；實作提交：856b50b。
+
+Standards：0 項文件規範違反；0 項需提報 heuristic smell。ready-for-human 與未標記 Completed 符合現況。
+
+Spec：0 項實作缺陷；1 項未完成驗收要求，即實際 PDF／原生列印預覽的分頁、裁切與取消後重試。沒有 scope creep，未把模擬列印當成 PDF 通過。
+
+Spec 審查者另行重跑 npm test 與 check:locales，37 tests、143 messages、109 筆固定文字來源檢查通過。
