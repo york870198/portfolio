@@ -426,7 +426,7 @@ onMounted(() => {
 
 .print-btn {
   background: var(--accent-gradient);
-  color: #ffffff;
+  color: var(--text-inverse);
   box-shadow: 0 4px 12px var(--accent-glow);
 }
 
@@ -465,7 +465,7 @@ onMounted(() => {
   height: 48px;
   border-radius: var(--radius-sm);
   background: var(--accent-gradient);
-  color: #ffffff;
+  color: var(--text-inverse);
   font-weight: 800;
   font-size: 1.25rem;
   font-family: var(--font-mono);

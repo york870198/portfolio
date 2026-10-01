@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { useRouter } from 'vue-router'
+import { ref } from 'vue'
+import NavigationLink from '@/components/NavigationLink.vue'
 
-const router = useRouter()
+const activeTag = ref('WHO')
 
 interface DimensionItem {
   tag: string
@@ -63,221 +64,82 @@ const dimensions: DimensionItem[] = [
   }
 ]
 
-const navigateTo = (path: string) => {
-  router.push(path)
-}
 </script>
 
 <template>
   <div class="page home-page">
     <div class="container home-container">
-      <!-- Minimalist Hero Section -->
       <section class="hero-section">
-        <h1 class="hero-title">
-          Everything about <span class="gradient-text">Fay</span>
-        </h1>
-      </section>
-      <section class="dimensions-section">
-
-        <div class="dimensions-grid">
-          <div
-            v-for="item in dimensions"
-            :key="item.tag"
-            class="dimension-card card"
-            :style="{ '--card-accent': item.accentColor }"
-            @click="navigateTo(item.path)"
-            :id="`dimension-card-${item.tag.toLowerCase()}`"
-          >
-            <div class="dimension-card-top">
-              <span class="dimension-tag">{{ item.tag }}</span>
-              <span class="dimension-icon">{{ item.icon }}</span>
-            </div>
-
-            <h3 class="dimension-title">{{ item.title }}</h3>
-            <p class="dimension-subtitle">{{ item.subtitle }}</p>
-
-            <div class="dimension-card-bottom">
-              <span class="explore-link">
-                更多細節
-                <span class="explore-arrow">→</span>
-              </span>
-            </div>
-          </div>
+        <h1 class="hero-title"><span class="hero-eyebrow">Everything about </span><span class="hero-name">Fay<span aria-hidden="true">.</span></span></h1>
+        <div class="identity-diagram" aria-hidden="true">
+          <svg viewBox="0 0 360 260" fill="none">
+            <path class="diagram-axis" d="M0 130H360M180 0V260" />
+            <g v-for="(_, i) in dimensions" :key="i" :transform="'rotate(' + (i * 30) + ' 180 130)'">
+              <ellipse cx="180" cy="130" rx="105" ry="77" :class="{ selected: dimensions[i]?.tag === activeTag }" />
+            </g>
+          </svg>
+          <span class="diagram-label">{{ activeTag }}</span>
+          <span class="diagram-caption">01 — 06</span>
         </div>
+        <div class="hero-footnote" aria-hidden="true"><span>WHO · WHEN · WHAT<br>WHERE · WHY · HOW</span><span>↘</span></div>
       </section>
+      <nav class="dimensions-section" aria-label="六個面向">
+        <div class="index-label"><span>六個面向</span><span>INDEX ↓</span></div>
+        <NavigationLink v-for="(item, index) in dimensions" :key="item.tag" :to="item.path" class="dimension-card" :id="'dimension-card-' + item.tag.toLowerCase()" @mouseenter="activeTag = item.tag" @focusin="activeTag = item.tag">
+          <span class="dimension-number">0{{ index + 1 }}</span>
+          <div class="dimension-copy">
+            <div class="dimension-heading"><span class="dimension-tag" :style="{ viewTransitionName: 'dimension-' + item.tag.toLowerCase() }">{{ item.tag }}</span><h2 class="dimension-title">{{ item.title }}</h2></div>
+            <p class="dimension-subtitle">{{ item.subtitle }}</p>
+          </div>
+          <span class="explore-arrow" aria-hidden="true">↗</span><span class="sr-only">更多細節</span>
+        </NavigationLink>
+      </nav>
     </div>
   </div>
 </template>
-
 <style scoped>
-.home-page {
-  padding: 3.5rem 0 5rem;
-}
-
-.home-container {
-  display: flex;
-  flex-direction: column;
-  gap: 4.5rem;
-}
-
-/* Hero */
-.hero-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  max-width: 820px;
-  margin: 0 auto;
-}
-
-.hero-badge {
-  margin-bottom: 1.5rem;
-}
-
-.hero-title {
-  font-size: 3.2rem;
-  line-height: 1.2;
-  margin-bottom: 1.25rem;
-  letter-spacing: -0.03em;
-}
-
-.hero-description {
-  font-size: 1.15rem;
-  color: var(--text-secondary);
-  line-height: 1.75;
-  margin-bottom: 2.25rem;
-  max-width: 680px;
-}
-
-.hero-description strong {
-  color: var(--text-primary);
-}
-
-.hero-actions {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.btn-arrow {
-  transition: transform var(--transition-fast);
-}
-
-.btn-primary:hover .btn-arrow {
-  transform: translateX(4px);
-}
-
-/* Dimensions Section */
-.dimensions-section {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.section-heading {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.section-title {
-  font-size: 1.75rem;
-}
-
-.section-desc {
-  color: var(--text-secondary);
-  font-size: 0.98rem;
-}
-
-.dimensions-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-
-.dimension-card {
-  display: flex;
-  flex-direction: column;
-  padding: 1.5rem;
-  border-radius: var(--radius-lg);
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  border-top: 3px solid var(--card-accent, var(--accent-primary));
-}
-
-.dimension-card-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-}
-
-.dimension-tag {
-  font-family: var(--font-mono);
-  font-weight: 800;
-  font-size: 0.88rem;
-  letter-spacing: 0.08em;
-  color: var(--card-accent, var(--accent-primary));
-}
-
-.dimension-icon {
-  font-size: 1.4rem;
-}
-
-.dimension-title {
-  font-size: 1.28rem;
-  font-weight: 700;
-  margin-bottom: 0.65rem;
-  color: var(--text-primary);
-}
-
-.dimension-subtitle {
-  color: var(--text-secondary);
-  font-size: 0.92rem;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-  flex: 1;
-}
-
-.dimension-card-bottom {
-  margin-top: auto;
-}
-
-.explore-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: var(--card-accent, var(--accent-primary));
-}
-
-.explore-arrow {
-  transition: transform var(--transition-fast);
-}
-
-.dimension-card:hover .explore-arrow {
-  transform: translateX(4px);
-}
-
-/* Responsive adjustments */
-@media (max-width: 960px) {
-  .dimensions-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 640px) {
-  .hero-title {
-    font-size: 2.3rem;
-  }
-
-  .dimensions-grid {
-    grid-template-columns: 1fr;
-  }
+.home-page { padding: 3rem 0 5rem; }
+.home-container { display: grid; grid-template-columns: .85fr 1.15fr; gap: 4.5rem; }
+.hero-section { border-right: 1px solid var(--border-subtle); padding-right: 3.5rem; }
+.hero-title { font-weight: 700; }
+.hero-eyebrow { display: block; font: 12px var(--font-mono); letter-spacing: 0; color: var(--text-secondary); }
+.hero-name { display: block; font-size: clamp(6rem, 13vw, 12rem); letter-spacing: -.075em; line-height: 1.05; margin: 2rem 0 2.5rem; }
+.hero-name > span { color: var(--accent-primary); }
+.identity-diagram { position: relative; border: 1px solid var(--border-subtle); max-width: 360px; }
+.identity-diagram svg { display: block; width: 100%; }
+.identity-diagram ellipse { stroke: var(--text-muted); stroke-width: .8; transition: stroke .2s ease, fill .2s ease; }
+.identity-diagram ellipse.selected { stroke: var(--accent-primary); stroke-width: 1.5; fill: var(--bg-tag); }
+.diagram-axis { stroke: var(--border-subtle); }
+.diagram-label { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: .5rem; background: var(--bg-primary); font: 11px var(--font-mono); color: var(--accent-primary); }
+.diagram-caption { position: absolute; left: 12px; bottom: 12px; font: 10px var(--font-mono); color: var(--text-muted); }
+.hero-footnote { display: flex; justify-content: space-between; margin-top: 1.25rem; font: 10px/1.9 var(--font-mono); color: var(--text-muted); max-width: 360px; }
+.hero-footnote > span:last-child { font-size: 26px; color: var(--accent-primary); }
+.index-label { display: flex; justify-content: space-between; padding-bottom: 1.5rem; font: 12px var(--font-mono); color: var(--text-secondary); }
+.dimension-card { display: grid; grid-template-columns: 22px 1fr 28px; gap: 1rem; padding: 1.65rem 0; border-top: 1px solid var(--border-subtle); align-items: start; }
+.dimension-card:last-child { border-bottom: 1px solid var(--border-subtle); }
+.dimension-number { color: var(--accent-primary); font: 11px var(--font-mono); padding-top: .6rem; }
+.dimension-heading { display: flex; align-items: baseline; flex-wrap: wrap; gap: .5rem 1.15rem; }
+.dimension-tag { display: block; font: 700 clamp(1.85rem, 3.2vw, 2.85rem)/1 var(--font-heading); letter-spacing: -.05em; }
+.dimension-title { font-size: 1.1rem; font-weight: 500; letter-spacing: .03em; }
+.dimension-subtitle { color: var(--text-secondary); font-size: .95rem; line-height: 1.8; margin-top: .9rem; }
+.explore-arrow { font-size: 25px; line-height: 1.3; color: var(--text-muted); transition: transform .2s ease; }
+.dimension-card:hover .dimension-tag, .dimension-card:focus-visible .dimension-tag { color: var(--accent-primary); }
+.dimension-card:hover .explore-arrow { transform: translate(3px, -3px); color: var(--accent-primary); }
+@media(max-width: 1000px) { .home-container { gap: 2.5rem; grid-template-columns: .7fr 1.3fr; } .hero-section { padding-right: 2rem; } }
+@media(max-width: 700px) {
+  .home-page { padding: 1.75rem 0 3rem; }
+  .home-container { grid-template-columns: 1fr; gap: 2rem; }
+  .hero-section { border-right: 0; padding-right: 0; display: grid; grid-template-columns: 1fr 100px; gap: 1rem; align-items: center; }
+  .hero-name { font-size: 5.5rem; margin: .75rem 0 0; }
+  .identity-diagram { border: 0; }
+  .identity-diagram svg { overflow: visible; }
+  .diagram-label { font-size: 8px; padding: .25rem; }
+  .diagram-caption, .hero-footnote { display: none; }
+  .index-label { padding-bottom: 1.1rem; }
+  .dimension-card { padding: 1.4rem 0; gap: .65rem; grid-template-columns: 20px 1fr 22px; }
+  .dimension-heading { gap: .5rem .8rem; }
+  .dimension-tag { font-size: 2rem; }
+  .dimension-title { font-size: 1rem; }
+  .dimension-subtitle { margin-top: .65rem; font-size: .9rem; }
 }
 </style>

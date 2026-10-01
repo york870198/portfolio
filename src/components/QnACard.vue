@@ -36,7 +36,6 @@ const props = withDefaults(defineProps<Props>(), {
 
     <!-- Optional Highlight / Key Takeaway Block -->
     <div v-if="props.highlight" class="qna-highlight">
-      <span class="highlight-icon">💡</span>
       <p class="highlight-text">{{ props.highlight }}</p>
     </div>
 
@@ -48,195 +47,26 @@ const props = withDefaults(defineProps<Props>(), {
 </template>
 
 <style scoped>
-.qna-card {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding: 2.25rem;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border-card);
-  position: relative;
-  overflow: hidden;
-  background: var(--bg-card);
-}
-
-.qna-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background: var(--card-accent, var(--accent-primary));
-  opacity: 0.85;
-}
-
-/* Header */
-.qna-header {
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
-}
-
-.qna-title-row {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-}
-
-.qna-index {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.3rem 0.75rem;
-  border-radius: var(--radius-sm);
-  background: var(--bg-card-subtle);
-  border: 1px solid var(--card-accent, var(--accent-primary));
-  color: var(--card-accent, var(--accent-primary));
-  font-family: var(--font-mono);
-  font-weight: 800;
-  font-size: 0.9rem;
-  flex-shrink: 0;
-  margin-top: 0.15rem;
-}
-
-.qna-question {
-  font-size: 1.45rem;
-  font-weight: 700;
-  line-height: 1.4;
-  color: var(--text-primary);
-  letter-spacing: -0.01em;
-  padding: 3.3px 0;
-}
-
-/* Tags */
-.qna-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-left: calc(0.9rem + 1.5rem + 1rem);
-}
-
-.qna-tag {
-  font-size: 0.78rem;
-  font-weight: 600;
-  padding: 0.2rem 0.65rem;
-  border-radius: var(--radius-full);
-  background: var(--bg-tag);
-  color: var(--text-tag);
-  border: 1px solid var(--border-tag);
-}
-
-/* Highlight Box */
-.qna-highlight {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.85rem;
-  padding: 1rem 1.25rem;
-  background: var(--bg-card-subtle);
-  border-radius: var(--radius-md);
-  border-left: 3px solid var(--card-accent, var(--accent-primary));
-}
-
-.highlight-icon {
-  font-size: 1.2rem;
-  line-height: 1.4;
-}
-
-.highlight-text {
-  font-size: 0.96rem;
-  color: var(--text-primary);
-  font-weight: 500;
-  line-height: 1.6;
-}
-
-/* Answer Body */
-.qna-answer-body {
-  color: var(--text-secondary);
-  font-size: 1.02rem;
-  line-height: 1.75;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.qna-answer-body :deep(p) {
-  margin: 0;
-}
-
-.qna-answer-body :deep(strong) {
-  color: var(--text-primary);
-  font-weight: 600;
-}
-
-.qna-answer-body :deep(ul) {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.65rem;
-  padding-left: 0.25rem;
-}
-
-.qna-answer-body :deep(li) {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.65rem;
-}
-
-.qna-answer-body :deep(li::before) {
-  content: '▹';
-  color: var(--card-accent, var(--accent-primary));
-  font-weight: bold;
-  font-size: 1.1rem;
-  line-height: 1.5;
-}
-
-.qna-answer-body :deep(.metrics-grid) {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1rem;
-  margin-top: 0.5rem;
-}
-
-.qna-answer-body :deep(.metric-item) {
-  padding: 0.85rem 1rem;
-  background: var(--bg-card-subtle);
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border-subtle);
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.qna-answer-body :deep(.metric-val) {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--card-accent, var(--accent-primary));
-  font-family: var(--font-heading);
-}
-
-.qna-answer-body :deep(.metric-label) {
-  font-size: 0.82rem;
-  color: var(--text-muted);
-}
-
-@media (max-width: 768px) {
-  .qna-card {
-    padding: 1.5rem 1.25rem;
-  }
-
-  .qna-title-row {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .qna-tags {
-    margin-left: 0;
-  }
-
-  .qna-question {
-    font-size: 1.2rem;
-    padding: 0;
-  }
-}
+.qna-card { display: flex; flex-direction: column; gap: 1.5rem; padding: 2.25rem 0 3rem; border: 0; border-top: 1px solid var(--border-subtle); border-radius: 0; background: transparent; box-shadow: none; }
+.qna-header { display: flex; flex-direction: column; gap: .85rem; }
+.qna-title-row { display: flex; align-items: baseline; gap: 1rem; }
+.qna-index { flex-shrink: 0; color: var(--accent-primary); font: 12px var(--font-mono); }
+.qna-question { font-size: 1.15rem; line-height: 1.65; font-weight: 500; }
+.qna-tags { display: flex; flex-wrap: wrap; gap: .5rem 1rem; }
+.qna-tag { font: 12px/1.7 var(--font-mono); color: var(--text-muted); }
+.qna-highlight { max-width: 38rem; }
+.highlight-text { font-size: clamp(1.25rem, 2vw, 1.65rem); line-height: 1.7; font-weight: 600; color: var(--text-primary); letter-spacing: .01em; text-wrap: pretty; }
+.qna-answer-body { display: flex; flex-direction: column; gap: 1.25rem; max-width: 42em; color: var(--text-secondary); font-size: 1.025rem; line-height: 1.95; overflow-wrap: anywhere; }
+.qna-answer-body :deep(p) { margin: 0; }
+.qna-answer-body :deep(strong) { color: var(--text-primary); font-weight: 600; }
+.qna-answer-body :deep(ul) { padding-left: 1.25rem; }
+.qna-answer-body :deep(li) { margin: .55rem 0; }
+.qna-answer-body :deep(li::marker) { color: var(--accent-primary); }
+.qna-answer-body :deep(a:not(.footprint-card)) { text-decoration: underline; text-underline-offset: .25em; }
+.qna-answer-body :deep(.footprint-card:hover .footprint-name) { text-decoration: underline; text-underline-offset: .25em; }
+.qna-answer-body :deep(.metrics-grid) { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); gap: 1rem; }
+.qna-answer-body :deep(.metric-item) { display: flex; flex-direction: column; padding: 1rem; border: 1px solid var(--border-subtle); }
+.qna-answer-body :deep(.metric-val) { font-size: 1.4rem; color: var(--accent-primary); }
+.qna-answer-body :deep(.metric-label) { font-size: .85rem; }
+@media(max-width: 800px) { .qna-card { padding: 1.75rem 0 2rem; gap: 1.25rem; } .qna-question { font-size: 1.05rem; } .qna-answer-body { font-size: 1rem; } }
 </style>
