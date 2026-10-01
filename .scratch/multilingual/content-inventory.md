@@ -4,6 +4,16 @@
 
 雙語字典：`src/i18n/locales/zh-TW.ts`、`src/i18n/locales/en.ts`。本票只新增資源，不接入元件或安裝 Vue I18n；繁中資料是既有用字，英文維持相同事實與原有口吻。
 
+## #02 更新：使用者編修與 Resume 對齊
+
+使用者在 ef55a00 手動調整英文文化／禮儀及部分中文。這些編修優先於 #01 的逐字保留原則；[editorial-revisions.json](editorial-revisions.json) 記錄已確認的中文修訂、英文措辭例外與退休 keys。原始盤點保留歷史，不重新產生來源雜湊。
+
+Resume Who 回答已由使用者改成與 WhoView 相同的後端／設計敘述，移除 Svelte／Angular 與協作列表。兩份字典移除不再使用的 resume.who keys，#03 接入時共用 who.identity.backend／design，保留其已人工潤飾的英文。完整履歷的離職交接、網站規劃與社群描述仍獨立保存。技能項目數量仍以 Resume 現有資料為準，不自動增加 What 頁面項目。
+
+固定英文節點保留；中文段落中的用語依人工修訂對齊，例如 side project、JavaScript、GitHub Actions／GitHub Pages。HowView 的部署說明同步已編修字典的 GitHub 名稱；Resume 空白列表移除。Resume 的固定 Senior Frontend Developer 仍保留，人工編修的 profile.title 為 Senior Frontend Engineer。
+
+Metadata messages 的 `|` 使用 Vue I18n literal interpolation `{'|'}`，實際標題維持原有分隔符，避免被當成 plural separator。
+
 ## 可翻譯文字清單
 
 完整逐項清單在 [content-inventory.json](content-inventory.json)，每筆包含原始檔案、基準行號、原文、分類及對應 message key。基準行號只用於本次盤點；後續接入時可用 key 與原文查找。相同語意共用 key，首頁卡片與頁面標題保留各自上下文。

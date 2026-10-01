@@ -1,0 +1,21 @@
+{
+  "sourceCommit": "ef55a00301f0e91f4fede6227ad48094321b393e",
+  "reason": "User-approved cultural wording edits and Resume alignment. Keep the original #01 inventory as history, rather than regenerating its baseline.",
+  "chinese": {
+    "what.beyondFrontend.tauri": "基於 Rust 實現的跨平台軟體框架，最近正在用這個開發 side project。",
+    "what.beyondFrontend.flutter": "Google 開發的跨平台開發套件，在上一份工作有一項專案以此開發。",
+    "why.subtitle": "俗話說得好：JavaScript，從入門到放棄。我目前還在中間。",
+    "how.website.deployment": "透過 GitHub Actions 佈署至 GitHub Pages。"
+  },
+  "retiredKeys": [
+    "resume.who.svelteAngular",
+    "resume.who.backendLabel",
+    "resume.who.backend",
+    "resume.who.designLabel",
+    "resume.who.design"
+  ],
+  "englishTokenExceptions": {
+    "who.identity.design": ["Design", "System"],
+    "where.social.linkedin": ["JS", "Developer"]
+  }
+}

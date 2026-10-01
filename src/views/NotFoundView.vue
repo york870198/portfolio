@@ -1,10 +1,12 @@
 <script setup lang="ts">
-import { useRouter } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
+import { localizedTarget } from '@/i18n/locale'
 
 const router = useRouter()
+const route = useRoute()
 
 const navigateToHome = () => {
-  router.push('/')
+  router.push(localizedTarget(router.resolve('/'), route))
 }
 </script>
 

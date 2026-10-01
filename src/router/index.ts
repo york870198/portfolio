@@ -1,4 +1,6 @@
-import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHistory, type RouterHistory, type RouteRecordRaw } from 'vue-router'
+import i18n from '@/i18n'
+import { normalizeLocaleRoute, resolveLocale } from '@/i18n/locale'
 
 export interface NavRouteItem {
   path: string
@@ -115,45 +117,48 @@ const routes: RouteRecordRaw[] = [
     path: '/resume',
     name: 'resume',
     component: () => import('@/views/ResumeView.vue'),
-    meta: { title: '完整履歷 | Portfolio of Fay' }
+    meta: { titleKey: 'common.metadata.resumeTitle' }
   },
   {
     path: '/about',
-    redirect: '/who'
+    redirect: to => ({ path: '/who', query: to.query, hash: to.hash })
   },
   {
     path: '/:pathMatch(.*)*',
     name: 'not-found',
     component: () => import('@/views/NotFoundView.vue'),
-    meta: { title: '404 找不到頁面 | Portfolio' }
+    meta: { titleKey: 'common.metadata.notFoundTitle' }
   }
 ]
 
-const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes,
-  scrollBehavior(_to, _from, savedPosition) {
-    if (savedPosition) {
-      return savedPosition
-    } else {
+export function createPortfolioRouter(history: RouterHistory = createWebHistory(import.meta.env.BASE_URL)) {
+  const router = createRouter({
+    history,
+    routes,
+    scrollBehavior(to, from, savedPosition) {
+      if (savedPosition) return savedPosition
+      if (to.path === from.path && to.hash === from.hash) return false
       return { top: 0, behavior: 'instant' }
     }
-  }
-})
+  })
 
-// Static directory entries can arrive with a trailing slash. Preserve the
-// existing route URLs and query/hash while keeping route-dependent UI consistent.
-router.beforeEach((to) => {
-  if (to.path !== '/' && to.path.endsWith('/')) {
-    return { path: to.path.replace(/\/+$/, ''), query: to.query, hash: to.hash, replace: true }
-  }
-})
+  // Normalize language and static directory URLs in a single redirect.
+  router.beforeEach(to => normalizeLocaleRoute(to))
 
-// Update document title on navigation
-router.afterEach((to) => {
-  if (to.meta.title && typeof to.meta.title === 'string') {
-    document.title = to.meta.title
-  }
-})
+  // Only successful, confirmed URLs can change the site's language. This runs
+  // on initial navigation before main.ts mounts, and on query/history changes.
+  router.afterEach((to, _from, failure) => {
+    if (failure) return
+    const locale = resolveLocale(to.query.lang)
+    i18n.global.locale.value = locale
+    document.documentElement.lang = locale
+    document.title = typeof to.meta.titleKey === 'string'
+      ? i18n.global.t(to.meta.titleKey)
+      : typeof to.meta.title === 'string' ? to.meta.title : 'Portfolio of Fay'
+    document.querySelector('meta[name="description"]')?.setAttribute('content', i18n.global.t('common.metadata.description'))
+  })
 
-export default router
+  return router
+}
+
+export default createPortfolioRouter()

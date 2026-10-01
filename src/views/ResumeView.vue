@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+import { localizedTarget } from '@/i18n/locale'
 import PageHeader from '@/components/PageHeader.vue'
 import QnACard from '@/components/QnACard.vue'
 import plurkIcon from '@/assets/icons/plurk.png'
@@ -39,7 +40,7 @@ const printResume = () => {
 }
 
 const goBack = () => {
-  router.push('/')
+  router.push(localizedTarget(router.resolve('/'), route))
 }
 
 onMounted(() => {
@@ -131,8 +132,6 @@ onMounted(() => {
                 後端技術方面我使用 NodeJS，並有長期與後端工程師協作的經驗<br />
                 理解 Design System 與互動設計原則，能依據 Figma 設計稿完成高精準度的 UI 實作<br />
               </p>
-              <ul>
-              </ul>
             </QnACard>
 
             <QnACard :heading-level="3"
