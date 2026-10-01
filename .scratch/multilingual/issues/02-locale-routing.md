@@ -16,3 +16,7 @@ Vue I18n 11 Composition API 已安裝並於 router 啟動前註冊。locale.ts �
 本次使用者追加要求：保留 ef55a00 的文化／禮儀修訂，將 Resume 已刪除的 Who 敘述從字典移除、共用現有 who.identity 詞彙，清除空列表；How 的部署名詞對齊人工修訂。保留 #01 原始 inventory，另存 editorial-revisions.json 記錄中文修訂、退休 keys 與必要的英文 token 例外。Metadata 的 literal | 已正確 escape，實際 title 維持原文分隔符。
 
 全站內文接入、Navbar LanguageSwitcher 與列印 iframe 的語言傳遞屬 #03；目前 query 已同步 i18n 與 metadata，但尚未將既有硬編碼內文改為 t()。
+
+## Review
+
+以 ef55a00301f0e91f4fede6227ad48094321b393e 為基準執行 code-review 的平行 Standards／Spec review。Standards：0 項規範違反、0 項值得提報的 heuristic smell；Spec：0 項缺漏或範圍擴張。Spec review 另執行 npm test，19 個測試通過。
