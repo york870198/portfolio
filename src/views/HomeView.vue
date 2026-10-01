@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
 import { ref } from 'vue'
 import NavigationLink from '@/components/NavigationLink.vue'
 
@@ -6,8 +7,8 @@ const activeTag = ref('WHO')
 
 interface DimensionItem {
   tag: string
-  title: string
-  subtitle: string
+  titleKey: string
+  subtitleKey: string
   icon: string
   path: string
   accentColor: string
@@ -16,54 +17,55 @@ interface DimensionItem {
 const dimensions: DimensionItem[] = [
   {
     tag: 'WHO',
-    title: '個人資訊',
-    subtitle: '資深前端，以及除此以外。',
+    titleKey: 'home.who.title',
+    subtitleKey: 'home.who.subtitle',
     icon: '👤',
     path: '/who',
     accentColor: 'var(--theme-who)'
   },
   {
     tag: 'WHEN',
-    title: '經歷',
-    subtitle: '成為工程師之後，以及之前。',
+    titleKey: 'home.when.title',
+    subtitleKey: 'home.when.subtitle',
     icon: '⏳',
     path: '/when',
     accentColor: 'var(--theme-when)'
   },
   {
     tag: 'WHAT',
-    title: '技術棧',
-    subtitle: '通常在寫網頁，偶爾寫不是網頁的東西。',
+    titleKey: 'home.what.title',
+    subtitleKey: 'home.what.subtitle',
     icon: '⚡',
     path: '/what',
     accentColor: 'var(--theme-what)'
   },
   {
     tag: 'WHERE',
-    title: '活動範圍',
-    subtitle: '在哪裡找得到我，或者我能跑多遠去找你。',
+    titleKey: 'home.where.title',
+    subtitleKey: 'home.where.subtitle',
     icon: '📍',
     path: '/where',
     accentColor: 'var(--theme-where)'
   },
   {
     tag: 'WHY',
-    title: '動機',
-    subtitle: '原因很重要，但結果有時會比原因更早到。',
+    titleKey: 'home.why.title',
+    subtitleKey: 'home.why.subtitle',
     icon: '💡',
     path: '/why',
     accentColor: 'var(--theme-why)'
   },
   {
     tag: 'HOW',
-    title: '實踐方法',
-    subtitle: '推薦你首先問問這個網站是怎麼做的。',
+    titleKey: 'home.how.title',
+    subtitleKey: 'home.how.subtitle',
     icon: '🛠️',
     path: '/how',
     accentColor: 'var(--theme-how)'
   }
 ]
 
+const { t } = useI18n({ useScope: 'global' })
 </script>
 
 <template>
@@ -83,15 +85,15 @@ const dimensions: DimensionItem[] = [
         </div>
         <div class="hero-footnote" aria-hidden="true"><span>WHO · WHEN · WHAT<br>WHERE · WHY · HOW</span><span>↘</span></div>
       </section>
-      <nav class="dimensions-section" aria-label="六個面向">
-        <div class="index-label"><span>六個面向</span><span>INDEX ↓</span></div>
+      <nav class="dimensions-section" :aria-label="t('common.dimensions')">
+        <div class="index-label"><span>{{ t('common.dimensions') }}</span><span>INDEX ↓</span></div>
         <NavigationLink v-for="(item, index) in dimensions" :key="item.tag" :to="item.path" class="dimension-card" :id="'dimension-card-' + item.tag.toLowerCase()" @mouseenter="activeTag = item.tag" @focusin="activeTag = item.tag">
           <span class="dimension-number">0{{ index + 1 }}</span>
           <div class="dimension-copy">
-            <div class="dimension-heading"><span class="dimension-tag" :style="{ viewTransitionName: 'dimension-' + item.tag.toLowerCase() }">{{ item.tag }}</span><h2 class="dimension-title">{{ item.title }}</h2></div>
-            <p class="dimension-subtitle">{{ item.subtitle }}</p>
+            <div class="dimension-heading"><span class="dimension-tag" :style="{ viewTransitionName: 'dimension-' + item.tag.toLowerCase() }">{{ item.tag }}</span><h2 class="dimension-title">{{ t(item.titleKey) }}</h2></div>
+            <p class="dimension-subtitle">{{ t(item.subtitleKey) }}</p>
           </div>
-          <span class="explore-arrow" aria-hidden="true">↗</span><span class="sr-only">更多細節</span>
+          <span class="explore-arrow" aria-hidden="true">↗</span><span class="sr-only">{{ t('common.moreDetails') }}</span>
         </NavigationLink>
       </nav>
     </div>

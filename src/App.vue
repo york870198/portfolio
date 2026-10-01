@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
 import { nextTick, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import Navbar from '@/components/Navbar.vue'
@@ -10,11 +11,12 @@ watch(() => route.path, async () => {
   heading?.setAttribute('tabindex', '-1')
   heading?.focus({ preventScroll: true })
 }, { flush: 'post' })
+const { t } = useI18n({ useScope: 'global' })
 </script>
 
 <template>
   <div class="app-layout">
-    <a class="skip-link" href="#main-content">跳至主要內容</a>
+    <a class="skip-link" href="#main-content">{{ t('common.skipToContent') }}</a>
     <!-- 常駐導覽列 -->
     <Navbar />
 

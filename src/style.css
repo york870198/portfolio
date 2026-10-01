@@ -96,6 +96,7 @@ h1[tabindex="-1"]:focus, main[tabindex="-1"]:focus { outline: none; }
   .page-container { padding: 1.75rem 0 3rem; }
   .page-container:not(.resume-page) > .container { grid-template-columns: 1fr; gap: 2.5rem; }
 }
+@media(max-width: 600px) { :root { --navbar-height: 96px; } }
 @media(prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
   ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }

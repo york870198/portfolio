@@ -1,18 +1,20 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
 import PageHeader from '@/components/PageHeader.vue'
 import QnACard from '@/components/QnACard.vue'
 import plurkIcon from '@/assets/icons/plurk.png'
 
 const socialLinks = [
-  { name: 'GitHub', icon: '💻', url: 'https://github.com/york870198', desc: '我個人開發時習慣本地操作，所以它有點空。' },
-  { name: 'Plurk', icon: plurkIcon, url: 'https://www.plurk.com/york870198', desc: '沒有演算法幫你決定你想看什麼的社群平台。' },
-  { name: 'LinkedIn', icon: '💼', url: 'https://www.linkedin.com/in/fay-chung-682698224/', desc: '平常只用來看 JS Developer 發的迷因。' },
-  { name: 'Cake', icon: '🍰', url: 'https://www.cake.me/me/fayang', desc: '上面的資訊應該沒有比這裡多，但你往這裡發訊息我會收到通知。' }
+  { id: 'github', name: 'GitHub', icon: '💻', url: 'https://github.com/york870198', descKey: 'where.social.github' },
+  { id: 'plurk', name: 'Plurk', icon: plurkIcon, url: 'https://www.plurk.com/york870198', descKey: 'where.social.plurk' },
+  { id: 'linkedin', name: 'LinkedIn', icon: '💼', url: 'https://www.linkedin.com/in/fay-chung-682698224/', descKey: 'where.social.linkedin' },
+  { id: 'cake', name: 'Cake', icon: '🍰', url: 'https://www.cake.me/me/fayang', descKey: 'where.social.cake' }
 ]
 
 const isImageIcon = (icon: string) => {
   return icon.startsWith('data:') || icon.startsWith('/') || icon.includes('.') || icon.includes('blob:')
 }
+const { t } = useI18n({ useScope: 'global' })
 </script>
 
 <template>
@@ -21,26 +23,25 @@ const isImageIcon = (icon: string) => {
       <PageHeader
         themeTag="WHERE"
         themeIndex="04"
-        title="活動範圍"
-        subtitle="扣掉不到一年的短暫高雄生活，我基本上是個沒見過世面的台北鄉巴佬。"
+        :title="t('where.title')"
+        :subtitle="t('where.subtitle')"
         accentColor="var(--theme-where)"
       />
 
       <div class="page-content-flow">
         <QnACard
           :index="1"
-          question="我在哪裡？"
-          highlight="台北，以及網路上。"
+          :question="t('where.location.question')"
+          :highlight="t('where.location.highlight')"
           accentColor="var(--theme-where)"
         >
-          <p>
-            我目前定居於台北，由於與家族同住，短期內沒有移居他地的規劃。<br>
+          <p> {{ t('where.location.home') }}<br>
           </p>
-          <p>除了約出來面對面，你也能在以下地方找到我：</p>
+          <p>{{ t('where.location.socialIntro') }}</p>
           <div class="footprint-grid">
             <a
               v-for="link in socialLinks"
-              :key="link.name"
+              :key="link.id"
               :href="link.url"
               target="_blank"
               rel="noopener noreferrer"
@@ -52,7 +53,7 @@ const isImageIcon = (icon: string) => {
               </span>
               <div class="footprint-info">
                 <span class="footprint-name">{{ link.name }}</span>
-                <span class="footprint-desc">{{ link.desc }}</span>
+                <span class="footprint-desc">{{ t(link.descKey) }}</span>
               </div>
               <span class="footprint-arrow">↗</span>
             </a>
@@ -61,13 +62,13 @@ const isImageIcon = (icon: string) => {
 
         <QnACard
           :index="2"
-          question="我能跑多遠去工作？"
-          highlight="大台北地區，或者公司遠端網路速度夠快。"
+          :question="t('where.work.question')"
+          :highlight="t('where.work.highlight')"
           accentColor="var(--theme-where)"
         >
           <ul>
-            <li><strong>移動範圍：</strong>大台北地區中能夠靠捷運、公車與腳踏車抵達的地點。</li>
-            <li><strong>偏好：</strong>混合式辦公。我有豐富的遠端協作經驗，能順暢與跨地點、跨時區的同事合作。</li>
+            <li><strong>{{ t('where.work.rangeLabel') }}</strong>{{ t('where.work.range') }}</li>
+            <li><strong>{{ t('where.work.preferenceLabel') }}</strong>{{ t('where.work.preference') }}</li>
           </ul>
         </QnACard>
       </div>

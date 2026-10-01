@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
 import { ref, onUnmounted } from 'vue'
 
 interface Props {
@@ -9,7 +10,6 @@ interface Props {
 
 const props = withDefaults(defineProps<Props>(), {
   email: 'contact@example.com',
-  label: '聯絡我',
   variant: 'secondary'
 })
 
@@ -31,6 +31,7 @@ const copyEmail = async () => {
     window.location.href = `mailto:${props.email}`
   }
 }
+const { t } = useI18n({ useScope: 'global' })
 </script>
 
 <template>
@@ -38,13 +39,13 @@ const copyEmail = async () => {
     <button
       :class="['quick-contact-btn', `variant-${props.variant}`, { 'is-copied': copied }]"
       @click="copyEmail"
-      :title="`點擊複製 Email: ${props.email}`"
+      :title="t('common.contact.copyEmail', { email: props.email })"
       id="quick-contact-btn"
     >
       <span class="btn-icon">{{ copied ? '✓' : '↗' }}</span>
-      <span class="btn-text">{{ props.label }}</span>
+      <span class="btn-text">{{ props.label ?? t('common.contact.label') }}</span>
     </button>
-    <span class="copy-status" role="status">{{ copied ? "已複製 Email 地址" : "" }}</span>
+    <span class="copy-status" role="status">{{ copied ? t('common.contact.emailCopied') : "" }}</span>
   </div>
 </template>
 

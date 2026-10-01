@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
 import { useRoute, useRouter } from 'vue-router'
 import { localizedTarget } from '@/i18n/locale'
 
@@ -8,6 +9,7 @@ const route = useRoute()
 const navigateToHome = () => {
   router.push(localizedTarget(router.resolve('/'), route))
 }
+const { t } = useI18n({ useScope: 'global' })
 </script>
 
 <template>
@@ -15,13 +17,11 @@ const navigateToHome = () => {
     <div class="container notfound-container">
       <div class="card notfound-card">
         <span class="error-code gradient-text">404</span>
-        <h1 class="notfound-title">找不到此頁面</h1>
-        <p class="notfound-desc">
-          抱歉，您所尋找的頁面不存在或已被移動。請檢查網址或點擊下方按鈕返回首頁。
-        </p>
+        <h1 class="notfound-title">{{ t('notFound.title') }}</h1>
+        <p class="notfound-desc"> {{ t('notFound.description') }} </p>
         <div class="notfound-actions">
           <button class="btn-primary" @click="navigateToHome" id="notfound-btn-home">
-            <span>返回首頁</span>
+            <span>{{ t('common.backHome') }}</span>
           </button>
         </div>
       </div>

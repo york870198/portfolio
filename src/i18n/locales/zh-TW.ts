@@ -1,6 +1,7 @@
 // Original Traditional Chinese wording. Keep message keys aligned with en.ts.
 const zhTW = {
   "common": {
+    "language": { "label": "網站語言" },
     "skipToContent": "跳至主要內容",
     "dimensions": "六個面向",
     "moreDetails": "更多細節",
