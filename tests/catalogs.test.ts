@@ -24,7 +24,7 @@ describe('approved bilingual content', () => {
     expect(en.who.identity.design).toContain('design systems')
     expect(en.what.beyondFrontend.flutter).toBe('A cross-platform development toolkit from Google. One project at my previous job used it.')
     expect(en.where.social.linkedin).toBe('Professional experience and connections.')
-    expect(en.how.website.highlight).toBe('I set the specs; Google Antigravity powered the execution.')
+    expect(en.how.website.highlight).toBe('I do the thinking; the agent handles the execution.')
     expect(en.resume).not.toHaveProperty('who')
     expect(zhTW.resume).not.toHaveProperty('who')
   })
