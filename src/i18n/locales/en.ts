@@ -47,7 +47,7 @@ const en = {
     },
     "when": {
       "title": "Experience",
-      "subtitle": "After becoming an engineer, and before."
+      "subtitle": "Work experience and a selected project."
     },
     "what": {
       "title": "Tech stack",
@@ -72,7 +72,7 @@ const en = {
     "identity": {
       "question": "Who am I?",
       "highlight": "A senior frontend engineer with four years of industry experience.",
-      "workName": "I go by Fay at work, and use different nicknames in different communities.",
+      "workName": "I go by Fay at work.",
       "realName": "If you came here from LinkedIn or another recruiting platform, you'll have seen my real name there.",
       "architecture": "I focus on modern frontend architecture, regularly working with the {vue} and {react} ecosystems.",
       "backend": "For backend work, I use NodeJS and have extensive experience collaborating with backend engineers",
@@ -109,7 +109,7 @@ const en = {
       "verification": "Personally checked the implementation against Figma designs and verified cross-browser behavior before acceptance by designers and QA. Unit tests were defined jointly by the frontend team."
     },
     "title": "Experience",
-    "subtitle": "The AI era is moving a little too fast. It makes my past, hand-coding self feel older than it really is.",
+    "subtitle": "Roles, career progression, and product delivery.",
     "careerStart": {
       "question": "When did I become a frontend engineer?",
       "highlight": "December 2021.",

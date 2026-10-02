@@ -45,7 +45,7 @@ const zhTW = {
     },
     "when": {
       "title": "經歷",
-      "subtitle": "成為工程師之後，以及之前。"
+      "subtitle": "工作經歷與代表案例。"
     },
     "what": {
       "title": "技術棧",
@@ -70,7 +70,7 @@ const zhTW = {
     "identity": {
       "question": "我是誰？",
       "highlight": "從業四年的資深前端工程師。",
-      "workName": "我在工作場合自稱 Fay，另外在不同社群間有不同的暱稱。",
+      "workName": "我在工作場合使用 Fay 這個名字。",
       "realName": "如果你是從 LinkedIn 等人才媒合平台過來，你會在那邊看到我的本名。",
       "architecture": "我專注於現代前端架構，慣於使用 {vue} 及 {react} 兩項前端生態系。",
       "backend": "後端技術方面我使用 NodeJS，並有長期與後端工程師協作的經驗",
@@ -107,7 +107,7 @@ const zhTW = {
       "verification": "親自比對 Figma 設計稿並檢查跨瀏覽器行為，再交由設計師與 QA 驗收。單元測試由前端團隊共同訂定。"
     },
     "title": "經歷",
-    "subtitle": "AI 時代飛行速度有點太快，害我感覺過去那個手寫程式的自己比實際上更老。",
+    "subtitle": "任職、升遷與產品交付經驗。",
     "careerStart": {
       "question": "我何時成為前端工程師？",
       "highlight": "2021 年 12 月。",
