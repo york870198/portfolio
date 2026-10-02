@@ -71,7 +71,7 @@ const en = {
     "subtitle": "A senior frontend engineer with some backend knowledge.",
     "identity": {
       "question": "Who am I?",
-      "highlight": "A senior frontend engineer who started by writing code by hand, just before AI began threatening to replace us.",
+      "highlight": "A senior frontend engineer with four years of industry experience.",
       "workName": "I go by Fay at work, and use different nicknames in different communities.",
       "realName": "If you came here from LinkedIn or another recruiting platform, you'll have seen my real name there.",
       "architecture": "I focus on modern frontend architecture, regularly working with the {vue} and {react} ecosystems.",
@@ -121,7 +121,7 @@ const en = {
       "question": "When did my previous job start and end?",
       "highlight": "2021.12–2026.05",
       "tenure": "My previous job was also my first in the industry. I stayed for more than four years.",
-      "company": "It was a fast-growing company, and the team's technical lead was a highly skilled engineer dedicated to the open-source community.",
+      "company": "It was a company where both the product and team were growing rapidly. The team's technical lead was a highly skilled engineer dedicated to the open-source community, and learning under him was immensely rewarding.",
       "studyGroups": "Beyond technologies directly related to our work, the company held regular study groups where we kept learning and revisiting what we knew together.",
       "family": "In early 2026, a family matter needed my full attention. I couldn't keep stretching myself between both responsibilities, so I left to focus on the situation at home."
     }
@@ -136,7 +136,7 @@ const en = {
       "readCase": "Read the work experience and case study"
     },
     "title": "Tech stack",
-    "subtitle": "The easy, difficult, and maddening things from a career that's neither particularly long nor particularly short.",
+    "subtitle": "The simple and challenging things across my career.",
     "web": {
       "question": "What kind of development am I most familiar with?",
       "highlight": "Web development across platforms, devices, and browsers."
@@ -174,7 +174,7 @@ const en = {
   },
   "where": {
     "title": "Where to find me",
-    "subtitle": "Aside from a brief stint in Kaohsiung, I'm a lifelong Taipei local through and through.",
+    "subtitle": "Aside from living in Kaohsiung for less than a year, I rarely leave Taipei.",
     "location": {
       "question": "Where am I?",
       "highlight": "Taipei, and online.",
@@ -182,7 +182,7 @@ const en = {
       "socialIntro": "Besides meeting in person, you can find me in these places:"
     },
     "social": {
-      "github": "I tend to work locally on personal projects, so it's a little empty.",
+      "github": "Projects currently under active development are not yet public, but you can see my commit frequency.",
       "plurk": "A social platform without an algorithm deciding what you want to see.",
       "linkedin": "Professional experience and connections.",
       "cake": "I'll get a notification if you message me there."
@@ -198,7 +198,7 @@ const en = {
   },
   "why": {
     "title": "Motivation",
-    "subtitle": "As the saying goes: JavaScript, from getting started to giving up. I'm somewhere in between.",
+    "subtitle": "The JavaScript journey is long and demanding; I'm still on the way.",
     "frontend": {
       "question": "Why did I choose frontend development?",
       "highlight": "It wasn't my initial choice. I just happened to end up heading this way.",
@@ -225,9 +225,9 @@ const en = {
     "subtitle": "There are always more solutions than problems. And there are a lot of problems.",
     "website": {
       "question": "How was this website made?",
-      "highlight": "I set the specs; Google Antigravity powered the execution.",
+      "highlight": "I do the thinking; the agent handles the execution.",
       "scope": "I defined the website's purpose, the devices it would be viewed on, the frameworks and tools to use, and the platform to deploy it on.",
-      "specification": "Following how PMs wrote specifications at my previous job, I wrote down my intended goals and started directing Gemini.",
+      "specification": "Following how PMs wrote specifications at my previous job, I wrote down my intended goals and started directing the agent.",
       "timeSaved": "What it produced was essentially comparable to what I'd write by hand, but took a fifth of my time or less.",
       "technicalIntro": "If you're interested in the technical details:",
       "stack": "This is a static website built with Vue / Vue Router / Vite / TypeScript,",
@@ -235,7 +235,7 @@ const en = {
     },
     "collaboration": {
       "question": "How do I collaborate with people from other disciplines?",
-      "highlight": "Reading each other's minds (an exaggeration).",
+      "highlight": "With good communication sustained over time, you eventually start reading each other's minds.",
       "experience": "Throughout my four-and-a-half-year career, I've worked closely with backend engineers, designers, and product managers.",
       "sharedPicture": "We reached a shared conclusion: the key to smooth collaboration can be reduced to one sentence — “I know what you're picturing.”",
       "basicKnowledge": "Even a little introductory knowledge helps me understand more accurately what the other person is trying to convey.",
