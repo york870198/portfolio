@@ -3,11 +3,7 @@ import { useI18n } from 'vue-i18n'
 import { nextTick, onMounted, onUnmounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { localizedTarget } from '@/i18n/locale'
-import PageHeader from '@/components/PageHeader.vue'
-import QnACard from '@/components/QnACard.vue'
-import CollaborationCase from '@/components/CollaborationCase.vue'
 import WorkExperience from '@/components/WorkExperience.vue'
-import plurkIcon from '@/assets/icons/plurk.png'
 
 const route = useRoute()
 const router = useRouter()
@@ -85,17 +81,6 @@ const skillCategories = [
   }
 ]
 
-const socialLinks = [
-  { id: 'github', name: 'GitHub', icon: '💻', url: 'https://github.com/york870198', descKey: 'resume.social.github' },
-  { id: 'plurk', name: 'Plurk', icon: plurkIcon, url: 'https://www.plurk.com/york870198', descKey: 'resume.social.plurk' },
-  { id: 'linkedin', name: 'LinkedIn', icon: '💼', url: 'https://www.linkedin.com/in/fay-chung-682698224/', descKey: 'resume.social.linkedin' },
-  { id: 'cake', name: 'Cake', icon: '🍰', url: 'https://www.cake.me/me/fayang', descKey: 'resume.social.cake' }
-]
-
-const isImageIcon = (icon: string) => {
-  return icon.startsWith('data:') || icon.startsWith('/') || icon.includes('.') || icon.includes('blob:')
-}
-
 const printResume = () => {
   window.print()
 }
@@ -138,7 +123,7 @@ const { t } = useI18n({ useScope: 'global' })
             <span class="profile-badge">Fay</span>
             <div class="name-block">
               <h1 class="profile-name">Fay Chung</h1>
-              <p class="profile-title">{{ t('resume.profile.title') }} <span>Senior Frontend Developer</span></p>
+              <p class="profile-title">{{ t('resume.profile.title') }}</p>
             </div>
           </div>
           <p class="profile-summary"> {{ t('resume.profile.summary') }} </p>
@@ -151,7 +136,7 @@ const { t } = useI18n({ useScope: 'global' })
           </div>
           <div class="contact-item">
             <span class="contact-icon">📍</span>
-            <i18n-t scope="global" keypath="resume.profile.location" tag="span"><template #location><span lang="en">(Taipei, Taiwan)</span></template></i18n-t>
+            <span>{{ t('resume.concise.location') }}</span>
           </div>
           <div class="contact-item">
             <span class="contact-icon">💻</span>
@@ -159,241 +144,76 @@ const { t } = useI18n({ useScope: 'global' })
           </div>
           <div class="contact-item">
             <span class="contact-icon">💼</span>
-            <a href="https://www.linkedin.com/in/fay-chung-682698224/" target="_blank" rel="noopener noreferrer" class="contact-link">linkedin: Fay-Chung</a>
+            <a href="https://www.linkedin.com/in/fay-chung-682698224/" target="_blank" rel="noopener noreferrer" class="contact-link">LinkedIn: Fay Chung</a>
           </div>
         </div>
       </header>
 
-      <!-- 5W1H 拼接區塊 -->
       <div class="resume-sections-flow">
-        
-        <!-- SECTION 1: WHO -->
-        <section class="resume-section" id="section-who">
-          <PageHeader
-            themeTag="WHO"
-            themeIndex="01"
-            :title="t('home.who.title')"
-            :subtitle="t('who.subtitle')"
-            accentColor="var(--theme-who)"
-          />
-          <div class="section-content-flow">
-            <QnACard :heading-level="3"
-              :index="1"
-              :question="t('who.identity.question')"
-              :highlight="t('who.identity.highlight')"
-              :tags="['Senior Frontend', 'React & Vue', 'Full-Stack Mindset']"
-              accentColor="var(--theme-who)"
-            >
-              <p> {{ t('who.identity.workName') }}<br /> {{ t('who.identity.realName') }}<br />
-              </p>
-              <p>
-                <i18n-t scope="global" keypath="who.identity.architecture" tag="span"><template #vue><strong lang="en">Vue 3</strong></template><template #react><strong lang="en">React</strong></template></i18n-t><br/> {{ t('who.identity.backend') }}<br /> {{ t('who.identity.design') }}<br />
-              </p>
-            </QnACard>
-
-            <QnACard :heading-level="3"
-              :index="2"
-              :question="t('who.interests.question')"
-              :highlight="t('who.interests.highlight')"
-              :tags="[]"
-              accentColor="var(--theme-who)"
-            >
-              <p> {{ t('who.interests.gameDevelopment') }}<br/> {{ t('who.interests.presentation') }}<br/> {{ t('who.interests.coincidence') }} </p>
-              <p> {{ t('who.interests.communities') }} </p>
-            </QnACard>
-          </div>
-        </section>
-
-        <!-- SECTION 2: WHEN -->
-        <section class="resume-section" id="section-when">
-          <PageHeader
-            themeTag="WHEN"
-            themeIndex="02"
-            :title="t('home.when.title')"
-            :subtitle="t('when.subtitle')"
-            accentColor="var(--theme-when)"
-          />
+        <section class="resume-section" aria-labelledby="resume-experience-title">
+          <h2 id="resume-experience-title" class="resume-section-title">{{ t('home.when.title') }}</h2>
           <div class="section-content-flow">
             <WorkExperience compact :heading-level="3" />
-
-            <QnACard :heading-level="3"
-              :index="3"
-              :question="t('when.careerStart.question')"
-              :highlight="t('when.careerStart.highlight')"
-              accentColor="var(--theme-when)"
-            >
-              <p> {{ t('when.careerStart.hobby') }}<br/> {{ t('when.careerStart.pandemic') }}<br/> {{ t('when.careerStart.transition') }} </p>
-            </QnACard>
-
           </div>
         </section>
 
-        <!-- SECTION 3: WHAT -->
-        <section class="resume-section" id="section-what">
-          <PageHeader
-            themeTag="WHAT"
-            themeIndex="03"
-            :title="t('home.what.title')"
-            :subtitle="t('what.subtitle')"
-            accentColor="var(--theme-what)"
-          />
-          <div class="section-content-flow">
-            <QnACard :heading-level="3"
-              :index="1"
-              :question="t('what.web.question')"
-              :highlight="t('what.web.highlight')"
-              :tags="['Web Development', 'UI/UX', 'RWD']"
-              accentColor="var(--theme-what)"
-            >
-              <div class="skills-grid">
-                <div v-for="cat in skillCategories" :key="cat.id" class="skill-category-block">
-                  <h4 class="category-title">{{ t(cat.nameKey) }}</h4>
-                  <ul class="skills-sublist">
-                    <li v-for="item in cat.skills" :key="item.id" class="skill-li">
-                      {{ item.messageKey ? t(item.messageKey) : item.label }}
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </QnACard>
-
-            <QnACard :heading-level="3"
-              :index="2"
-              :question="t('what.beyondFrontend.question')"
-              accentColor="var(--theme-what)"
-            >
-              <ul>
-                <li><strong>Tauri：</strong>{{ t('what.beyondFrontend.tauri') }}</li>
-                <li><strong>Flutter：</strong>{{ t('what.beyondFrontend.flutter') }}</li>
-                <li><strong>Python：</strong>{{ t('what.beyondFrontend.python') }}</li>
+        <section class="resume-section" aria-labelledby="resume-skills-title">
+          <h2 id="resume-skills-title" class="resume-section-title">{{ t('home.what.title') }}</h2>
+          <div class="skills-grid">
+            <div v-for="cat in skillCategories" :key="cat.id" class="skill-category-block">
+              <h3 class="category-title">{{ t(cat.nameKey) }}</h3>
+              <ul class="skills-sublist">
+                <li v-for="item in cat.skills" :key="item.id" class="skill-li">
+                  {{ item.messageKey ? t(item.messageKey) : item.label }}
+                </li>
               </ul>
-            </QnACard>
-
-            <QnACard :heading-level="3"
-              :index="3"
-              :question="t('what.ai.question')"
-              :highlight="t('what.ai.highlight')"
-              accentColor="var(--theme-what)"
-            >
-              <p> {{ t('what.ai.bicycle') }}<br/> {{ t('what.ai.destination') }}<br/> {{ t('what.ai.balance') }} </p>
-              <p> {{ t('what.ai.benefit') }} </p>
-            </QnACard>
+            </div>
           </div>
         </section>
 
-        <!-- SECTION 4: WHERE -->
-        <section class="resume-section" id="section-where">
-          <PageHeader
-            themeTag="WHERE"
-            themeIndex="04"
-            :title="t('home.where.title')"
-            :subtitle="t('where.subtitle')"
-            accentColor="var(--theme-where)"
-          />
-          <div class="section-content-flow">
-            <QnACard :heading-level="3"
-              :index="1"
-              :question="t('where.location.question')"
-              :highlight="t('where.location.highlight')"
-              accentColor="var(--theme-where)"
-            >
-              <p> {{ t('where.location.home') }}<br>
-              </p>
-              <p>{{ t('where.location.socialIntro') }}</p>
-              <div class="footprint-grid">
-                <a
-                  v-for="link in socialLinks"
-                  :key="link.id"
-                  :href="link.url"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="footprint-card"
-                >
-                  <span class="footprint-icon">
-                    <img v-if="isImageIcon(link.icon)" :src="link.icon" :alt="link.name" class="footprint-img" />
-                    <span v-else>{{ link.icon }}</span>
-                  </span>
-                  <div class="footprint-info">
-                    <span class="footprint-name">{{ link.name }}</span>
-                    <span class="footprint-desc">{{ t(link.descKey) }}</span>
-                  </div>
-                  <span class="footprint-arrow">↗</span>
-                </a>
-              </div>
-            </QnACard>
-
-            <QnACard :heading-level="3"
-              :index="2"
-              :question="t('where.work.question')"
-              :highlight="t('where.work.highlight')"
-              accentColor="var(--theme-where)"
-            >
-              <ul>
-                <li><strong>{{ t('where.work.rangeLabel') }}</strong>{{ t('where.work.range') }}</li>
-                <li><strong>{{ t('where.work.preferenceLabel') }}</strong>{{ t('where.work.preference') }}</li>
-              </ul>
-            </QnACard>
-          </div>
+        <section class="resume-section resume-body" aria-labelledby="resume-development-title">
+          <h2 id="resume-development-title" class="resume-section-title">{{ t('resume.concise.developmentTitle') }}</h2>
+          <ul>
+            <li>{{ t('resume.concise.uxCourse') }}</li>
+            <li><strong>Tauri:</strong> {{ t('resume.concise.tauri') }}</li>
+            <li><strong>Flutter:</strong> {{ t('resume.concise.flutter') }}</li>
+          </ul>
         </section>
 
-        <!-- SECTION 5: WHY -->
-        <section class="resume-section" id="section-why">
-          <PageHeader
-            themeTag="WHY"
-            themeIndex="05"
-            :title="t('home.why.title')"
-            :subtitle="t('why.subtitle')"
-            accentColor="var(--theme-why)"
-          />
-          <div class="section-content-flow">
-            <QnACard :heading-level="3"
-              :index="1"
-              :question="t('why.frontend.question')"
-              :highlight="t('why.frontend.highlight')"
-              accentColor="var(--theme-why)"
-            >
-              <p> {{ t('why.frontend.interest') }}<br /> {{ t('why.frontend.fullStack') }}<br /> {{ t('why.frontend.firstRole') }} </p>
-            </QnACard>
-          </div>
+        <section class="resume-section resume-body" aria-labelledby="resume-work-title">
+          <h2 id="resume-work-title" class="resume-section-title">{{ t('resume.concise.workTitle') }}</h2>
+          <p>{{ t('resume.concise.work') }}</p>
+          <p>{{ t('resume.concise.remoteExperience') }}</p>
         </section>
-
-        <!-- SECTION 6: HOW -->
-        <section class="resume-section" id="section-how">
-          <PageHeader
-            themeTag="HOW"
-            themeIndex="06"
-            :title="t('home.how.title')"
-            :subtitle="t('how.subtitle')"
-            accentColor="var(--theme-how)"
-          />
-          <div class="section-content-flow">
-            <QnACard :heading-level="3"
-              :index="1"
-              :question="t('how.website.question')"
-              :highlight="t('how.website.highlight')"
-              accentColor="var(--theme-how)"
-            >
-              <p> {{ t('resume.how.scope') }}<br /> {{ t('resume.how.specification') }}<br /> {{ t('how.website.timeSaved') }} </p>
-            </QnACard>
-
-            <QnACard :heading-level="3"
-              :index="2"
-              :question="t('how.collaboration.question')"
-              :highlight="t('how.case.summary')"
-              accentColor="var(--theme-how)"
-            >
-              <CollaborationCase />
-              <p> {{ t('how.collaboration.backend') }}<br /> {{ t('how.collaboration.designCourse') }} </p>
-            </QnACard>
-          </div>
-        </section>
-
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
+.resume-section-title {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.resume-body {
+  color: var(--text-secondary);
+  font-size: 1.025rem;
+  line-height: 1.95;
+  overflow-wrap: anywhere;
+}
+
+.resume-body ul { padding-left: 1.25rem; }
+.resume-body li + li { margin-top: 0.5rem; }
+.resume-body strong { color: var(--text-primary); }
+
+@media print {
+  .resume-section-title { break-after: avoid; page-break-after: avoid; }
+  .resume-body { break-inside: avoid; page-break-inside: avoid; }
+}
+
 .resume-container {
   max-width: 900px;
 }
@@ -547,7 +367,7 @@ const { t } = useI18n({ useScope: 'global' })
   text-decoration: underline;
 }
 
-/* 5W1H 區塊排列 */
+/* Continuous resume reading order */
 .resume-sections-flow {
   display: flex;
   flex-direction: column;
@@ -603,69 +423,6 @@ const { t } = useI18n({ useScope: 'global' })
   font-size: 0.9rem;
   color: var(--text-secondary);
   line-height: 1.5;
-}
-
-/* Footprint 網格 (來自 WhereView) */
-.footprint-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1rem;
-  margin-top: 0.5rem;
-}
-
-.footprint-card {
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-  padding: 1rem;
-  background: var(--bg-card-subtle);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  transition: all var(--transition-fast);
-}
-
-.footprint-card:hover {
-  background: var(--bg-card-hover);
-  border-color: var(--theme-where, #f59e0b);
-  transform: translateY(-2px);
-}
-
-.footprint-icon {
-  font-size: 1.5rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 1.75rem;
-  height: 1.75rem;
-  flex-shrink: 0;
-}
-
-.footprint-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.footprint-info {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.footprint-name {
-  font-weight: 600;
-  color: var(--text-primary);
-  font-size: 0.95rem;
-}
-
-.footprint-desc {
-  font-size: 0.78rem;
-  color: var(--text-muted);
-}
-
-.footprint-arrow {
-  color: var(--text-muted);
-  font-size: 0.95rem;
 }
 
 @media (max-width: 768px) {

@@ -34,16 +34,34 @@
     "how.case.differences",
     "how.case.agreement",
     "how.case.api",
-    "how.case.verification"
+    "how.case.verification",
+    "resume.concise.location",
+    "resume.concise.developmentTitle",
+    "resume.concise.uxCourse",
+    "resume.concise.tauri",
+    "resume.concise.flutter",
+    "resume.concise.workTitle",
+    "resume.concise.work",
+    "resume.concise.remoteExperience"
   ],
-  "reason": "User-approved cultural wording edits and Resume alignment. Keep the original #01 inventory as history, rather than regenerating its baseline.",
+  "reason": "User-approved wording from text-update commits and content-concision #01. Preserve the original inventory as history; retiredFixedText applies only to the specified reading version. English token aliases validate exact lowercase equivalents of ordinary words, not omitted facts.",
   "chinese": {
     "what.beyondFrontend.tauri": "基於 Rust 實現的跨平台軟體框架，最近正在用這個開發 side project。",
     "what.beyondFrontend.flutter": "Google 開發的跨平台開發套件，在上一份工作有一項專案以此開發。",
-    "why.subtitle": "俗話說得好：JavaScript，從入門到放棄。我目前還在中間。",
+    "why.subtitle": "JavaScript 道阻且長，我目前還在途中。",
     "how.website.deployment": "透過 GitHub Actions 佈署至 GitHub Pages。",
     "when.previousRole.highlight": "2021.12–2026.05",
-    "when.careerStart.highlight": "2021 年 12 月。"
+    "when.careerStart.highlight": "2021 年 12 月。",
+    "who.identity.highlight": "從業四年的資深前端工程師。",
+    "when.previousRole.company": "是一間產品與團隊都在快速成長的公司，團隊的技術領導是致力於開源社群的大神，跟著他學習的過程使我獲益良多。",
+    "what.subtitle": "職涯中那些簡單的與困難的事情。",
+    "where.social.github": "目前密集開發中的專案還未公開，但你可以看到 Commit 頻率。",
+    "where.social.linkedin": "專業經歷與職業人脈",
+    "where.social.cake": "你往這裡發訊息我會收到通知。",
+    "where.subtitle": "除了不到一年的短暫高雄生活，我很少離開台北。",
+    "how.website.highlight": "我負責動腦，Agent 負責動手。",
+    "how.website.specification": "我按照以前工作時 PM 寫規格書的方式，把我預期的目標寫下來，開始指揮 Agent 做事。",
+    "how.collaboration.highlight": "良好的溝通，累積夠久之後就會開始心有靈犀。"
   },
   "retiredKeys": [
     "resume.who.svelteAngular",
@@ -64,5 +82,98 @@
     "when.careerStart.highlight": [
       "12"
     ]
+  },
+  "retiredFixedText": [
+    {
+      "file": "src/views/ResumeView.vue",
+      "original": "Plurk"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "original": "Cake"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "original": "Senior Frontend Developer"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "original": "WHO"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "original": "Senior Frontend"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "original": "React & Vue"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "original": "Full-Stack Mindset"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "original": "WHEN"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "original": "WHAT"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "original": "Web Development"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "original": "UI/UX"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "original": "RWD"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "original": "Tauri："
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "original": "Flutter："
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "original": "Python："
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "original": "WHERE"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "original": "WHY"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "original": "HOW"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "original": "(Taipei, Taiwan)"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "original": "linkedin: Fay-Chung"
+    }
+  ],
+  "englishTokenAliases": {
+    "where.social.github": {
+      "Commit": "commit"
+    },
+    "how.website.highlight": {
+      "Agent": "agent"
+    },
+    "how.website.specification": {
+      "Agent": "agent"
+    }
   }
 }

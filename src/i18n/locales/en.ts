@@ -245,6 +245,16 @@ const en = {
     }
   },
   "resume": {
+    "concise": {
+      "location": "Taipei, Taiwan",
+      "developmentTitle": "Learning and additional experience",
+      "uxCourse": "Google UX Design Certificate: in progress, studying UI/UX design to improve collaboration with designers.",
+      "tauri": "Used in a personal project in development.",
+      "flutter": "Used on a project in my previous role.",
+      "workTitle": "Work preferences",
+      "work": "No near-term relocation plans. I prefer hybrid work, with a commuting range covering locations in Greater Taipei accessible by public transport and bicycle.",
+      "remoteExperience": "Experienced in remote collaboration with colleagues across locations and time zones."
+    },
     "project": {
       "delivery": "Delivered feature-based page modules integrating UI, user flows, and APIs for the Router, and maintained shared components. Used Pinia for state management, RxJS for asynchronous data updates, and WebSocket for real-time interaction messages.",
       "requirements": "Clarified discrepancies between documentation, live behavior, and updated designs with the PM and designers, agreed on the new flows, and updated outdated specifications.",

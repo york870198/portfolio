@@ -46,7 +46,8 @@ for (const [key, original] of Object.entries(zh)) {
   // Keep original technical names and numeric facts, even inside mixed prose.
   for (const token of original.match(/[A-Za-z][A-Za-z0-9]*|\d+\+?/g) ?? []) {
     if (revisions.englishTokenExceptions[key]?.includes(token)) continue
-    assert.ok(en[key].includes(token), `Original name or number '${token}' missing in ${key}`)
+    const expected = revisions.englishTokenAliases?.[key]?.[token] ?? token
+    assert.ok(en[key].includes(expected), `Original name or number '${token}' missing in ${key}`)
   }
 }
 
@@ -63,6 +64,8 @@ for (const key of revisions.addedKeys ?? []) {
 for (const item of inventory.items) {
   assert.ok(['fixed', 'translatable'].includes(item.category), `Unclassified source: ${item.file}:${item.line}`)
   if (item.category === 'fixed') {
+    // Approved content cuts can retire a fixed phrase in one reading version.
+    if (revisions.retiredFixedText?.some(retired => retired.file === item.file && retired.original === item.original)) continue
     assert.ok(fixedSources.get(item.file).includes(item.original), `Fixed design text changed: ${item.file}:${item.line} '${item.original}'`)
     continue
   }
