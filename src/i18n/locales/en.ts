@@ -176,8 +176,8 @@ const en = {
     "social": {
       "github": "I tend to work locally on personal projects, so it's a little empty.",
       "plurk": "A social platform without an algorithm deciding what you want to see.",
-      "linkedin": "I mostly use it to look at memes posted by the JavaScript community.",
-      "cake": "It probably doesn't have more information than this site, but I'll get a notification if you message me there."
+      "linkedin": "Professional experience and connections.",
+      "cake": "I'll get a notification if you message me there."
     },
     "work": {
       "question": "How far can I travel for work?",
