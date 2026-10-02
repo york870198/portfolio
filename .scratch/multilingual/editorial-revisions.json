@@ -25,7 +25,16 @@
     "what.evidence.pinia",
     "what.evidence.rxjs",
     "what.evidence.websocket",
-    "what.evidence.readCase"
+    "what.evidence.readCase",
+    "how.case.summary",
+    "how.case.labels.differences",
+    "how.case.labels.agreement",
+    "how.case.labels.api",
+    "how.case.labels.verification",
+    "how.case.differences",
+    "how.case.agreement",
+    "how.case.api",
+    "how.case.verification"
   ],
   "reason": "User-approved cultural wording edits and Resume alignment. Keep the original #01 inventory as history, rather than regenerating its baseline.",
   "chinese": {
