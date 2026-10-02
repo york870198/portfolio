@@ -42,6 +42,19 @@ async function mountSite(url: string) {
 }
 
 describe('localized reading experience', () => {
+  it.each(['zh-TW', 'en'])('opens the work case from the %s tech stack without changing language', async locale => {
+    const router = await mountSite(`/what?lang=${locale}`)
+    const link = document.querySelector<HTMLAnchorElement>('#work-evidence-link')!
+    expect(link.getAttribute('href')).toBe(`/portfolio/when?lang=${locale}`)
+    const navigation = new Promise<void>(resolve => { const stop = router.afterEach(() => { stop(); resolve() }) })
+    link.click()
+    await navigation
+    await nextTick()
+    expect(router.currentRoute.value.fullPath).toBe(`/when?lang=${locale}`)
+    expect(document.querySelector('#vue3-rebuild')).not.toBeNull()
+    expect(document.documentElement.lang).toBe(locale)
+  })
+
   it('switches the same page and reactive skill lists through a labelled native language control', async () => {
     const router = await mountSite('/what?lang=en&source=cv#intro')
     expect(document.querySelector('main')!.textContent).toContain('Core frontend ecosystem')

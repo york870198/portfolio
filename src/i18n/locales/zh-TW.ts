@@ -125,6 +125,14 @@ const zhTW = {
     }
   },
   "what": {
+    "evidence": {
+      "title": "技術在專案中的應用",
+      "vue": "實作畫面與操作流程，組成可接入 Router 的功能頁面。",
+      "pinia": "管理頁面狀態。",
+      "rxjs": "處理後端非同步資料變化。",
+      "websocket": "接收即時互動訊息。",
+      "readCase": "閱讀工作經歷與案例"
+    },
     "title": "技術棧",
     "subtitle": "職涯中那些簡單的與困難的事情。",
     "web": {
