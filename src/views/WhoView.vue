@@ -24,22 +24,10 @@ const { t } = useI18n({ useScope: 'global' })
           :tags="['Senior Frontend', 'React & Vue', 'Full-Stack Mindset']"
           accentColor="var(--theme-who)"
         >
-          <p> {{ t('who.identity.workName') }}<br /> {{ t('who.identity.realName') }}<br />
-          </p>
+          <p>{{ t('who.identity.workName') }}</p>
           <p>
             <i18n-t scope="global" keypath="who.identity.architecture" tag="span"><template #vue><strong lang="en">Vue 3</strong></template><template #react><strong lang="en">React</strong></template></i18n-t><br /> {{ t('who.identity.backend') }}<br /> {{ t('who.identity.design') }}<br />
           </p>
-        </QnACard>
-
-        <QnACard
-          :index="2"
-          :question="t('who.interests.question')"
-          :highlight="t('who.interests.highlight')"
-          :tags="[]"
-          accentColor="var(--theme-who)"
-        >
-          <p> {{ t('who.interests.gameDevelopment') }}<br/> {{ t('who.interests.presentation') }}<br/> {{ t('who.interests.coincidence') }} </p>
-          <p> {{ t('who.interests.communities') }} </p>
         </QnACard>
       </div>
     </div>

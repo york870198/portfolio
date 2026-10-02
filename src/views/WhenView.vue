@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import PageHeader from '@/components/PageHeader.vue'
-import QnACard from '@/components/QnACard.vue'
 import WorkExperience from '@/components/WorkExperience.vue'
 const { t } = useI18n({ useScope: 'global' })
 </script>
@@ -19,16 +18,6 @@ const { t } = useI18n({ useScope: 'global' })
 
       <div class="page-content-flow">
         <WorkExperience />
-
-        <QnACard
-          :index="3"
-          :question="t('when.careerStart.question')"
-          :highlight="t('when.careerStart.highlight')"
-          accentColor="var(--theme-when)"
-        >
-          <p> {{ t('when.careerStart.hobby') }}<br/> {{ t('when.careerStart.pandemic') }}<br/> {{ t('when.careerStart.transition') }} </p>
-        </QnACard>
-
       </div>
     </div>
   </div>

@@ -61,7 +61,10 @@
     "where.subtitle": "除了不到一年的短暫高雄生活，我很少離開台北。",
     "how.website.highlight": "我負責動腦，Agent 負責動手。",
     "how.website.specification": "我按照以前工作時 PM 寫規格書的方式，把我預期的目標寫下來，開始指揮 Agent 做事。",
-    "how.collaboration.highlight": "良好的溝通，累積夠久之後就會開始心有靈犀。"
+    "how.collaboration.highlight": "良好的溝通，累積夠久之後就會開始心有靈犀。",
+    "who.identity.workName": "我在工作場合使用 Fay 這個名字。",
+    "when.subtitle": "任職、升遷與產品交付經驗。",
+    "home.when.subtitle": "工作經歷與代表案例。"
   },
   "retiredKeys": [
     "resume.who.svelteAngular",
