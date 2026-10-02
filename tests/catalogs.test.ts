@@ -23,7 +23,7 @@ describe('approved bilingual content', () => {
   it('retains the manually edited English wording and shares the updated Who vocabulary with Resume', () => {
     expect(en.who.identity.design).toContain('design systems')
     expect(en.what.beyondFrontend.flutter).toBe('A cross-platform development toolkit from Google. One project at my previous job used it.')
-    expect(en.where.social.linkedin).toBe('I mostly use it to look at memes posted by the JavaScript community.')
+    expect(en.where.social.linkedin).toBe('Professional experience and connections.')
     expect(en.how.website.highlight).toBe('I set the specs; Google Antigravity powered the execution.')
     expect(en.resume).not.toHaveProperty('who')
     expect(zhTW.resume).not.toHaveProperty('who')

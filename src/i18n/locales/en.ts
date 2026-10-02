@@ -208,6 +208,19 @@ const en = {
     }
   },
   "how": {
+    "case": {
+      "summary": "Clarify discrepancies, then agree on user flows, data requirements, and verification responsibilities.",
+      "labels": {
+        "differences": "Identify discrepancies:",
+        "agreement": "Agree on the flow:",
+        "api": "Define data and implementation responsibilities:",
+        "verification": "Verify the delivery:"
+      },
+      "differences": "During the upgrade, the updated designs introduced a different interaction flow, while the live product also differed from its existing documentation. I checked the documentation against actual behavior to identify what needed clarification.",
+      "agreement": "After discussing the differences with the PM and designers, we agreed to implement the updated flow, revise outdated specifications, and identify the new components and APIs it required.",
+      "api": "I defined frontend data requirements and expected response structures with backend engineers. The backend team implemented the APIs, and I completed the frontend integration.",
+      "verification": "I personally checked the implementation against Figma designs and verified cross-browser behavior before handing it over to designers and QA for acceptance. Unit tests were defined jointly by the frontend team."
+    },
     "title": "How I work",
     "subtitle": "There are always more solutions than problems. And there are a lot of problems.",
     "website": {

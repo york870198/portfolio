@@ -3,6 +3,7 @@ import { createApp, nextTick, type App as VueApp } from 'vue'
 import { createMemoryHistory } from 'vue-router'
 import { createPortfolioRouter } from '../src/router'
 import i18n from '../src/i18n'
+import en from '../src/i18n/locales/en'
 import App from '../src/App.vue'
 import { readFileSync } from 'node:fs'
 
@@ -181,7 +182,7 @@ describe('localized reading experience', () => {
     await nextTick()
     expect(document.querySelector('[role="status"]')!.textContent).toBe('Email address copied')
     expect(document.querySelector('a[href="https://www.linkedin.com/in/fay-chung-682698224/"]')).not.toBeNull()
-    expect(document.querySelector('main')!.textContent).toContain('JavaScript community')
+    expect(document.querySelector('a[href="https://www.linkedin.com/in/fay-chung-682698224/"]')!.textContent).toContain(en.where.social.linkedin)
     document.querySelector<HTMLButtonElement>('#mobile-menu-toggle')!.click()
     await nextTick()
     expect(document.querySelector('#mobile-download-resume-btn')!.textContent).toContain('Download resume (PDF)')

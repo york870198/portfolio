@@ -5,6 +5,7 @@ import { useRoute, useRouter } from 'vue-router'
 import { localizedTarget } from '@/i18n/locale'
 import PageHeader from '@/components/PageHeader.vue'
 import QnACard from '@/components/QnACard.vue'
+import CollaborationCase from '@/components/CollaborationCase.vue'
 import WorkExperience from '@/components/WorkExperience.vue'
 import plurkIcon from '@/assets/icons/plurk.png'
 
@@ -378,10 +379,10 @@ const { t } = useI18n({ useScope: 'global' })
             <QnACard :heading-level="3"
               :index="2"
               :question="t('how.collaboration.question')"
-              :highlight="t('how.collaboration.highlight')"
+              :highlight="t('how.case.summary')"
               accentColor="var(--theme-how)"
             >
-              <p> {{ t('how.collaboration.experience') }}<br /> {{ t('how.collaboration.sharedPicture') }}<br /> {{ t('how.collaboration.basicKnowledge') }}<br /> {{ t('how.collaboration.lessFriction') }} </p>
+              <CollaborationCase />
               <p> {{ t('how.collaboration.backend') }}<br /> {{ t('how.collaboration.designCourse') }} </p>
             </QnACard>
           </div>
