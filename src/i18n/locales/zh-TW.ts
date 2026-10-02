@@ -243,6 +243,16 @@ const zhTW = {
     }
   },
   "resume": {
+    "concise": {
+      "location": "台灣 台北",
+      "developmentTitle": "進修與補充經驗",
+      "uxCourse": "Google UX Design Certificate：修習中，學習 UI/UX 設計以提升與設計師協作的能力。",
+      "tauri": "用於開發中的個人專案。",
+      "flutter": "曾用於前一份工作的專案。",
+      "workTitle": "工作條件",
+      "work": "短期無搬遷規劃，偏好混合式辦公。通勤範圍為大台北地區大眾運輸與自行車可達的地點。",
+      "remoteExperience": "具備遠端協作經驗，能與跨地點、跨時區的同事合作。"
+    },
     "project": {
       "delivery": "整合畫面、操作流程與 API 串接為可接入 Router 的功能頁面，維護跨頁共用元件；使用 Pinia 管理狀態、RxJS 處理非同步資料變化、WebSocket 接收即時互動訊息。",
       "requirements": "釐清文件、線上操作與新設計的差異，與 PM、設計師確認新版流程並修正過時規格。",

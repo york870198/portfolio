@@ -10,6 +10,9 @@ import { readFileSync } from 'node:fs'
 const inventory: { items: { file: string; category: string; original: string }[] } = JSON.parse(
   readFileSync('.scratch/multilingual/content-inventory.json', 'utf8')
 )
+const revisions: { retiredFixedText?: { file: string; original: string }[] } = JSON.parse(
+  readFileSync('.scratch/multilingual/editorial-revisions.json', 'utf8')
+)
 const viewSources: Record<string, string> = {
   '/': 'Home', '/who': 'Who', '/when': 'When', '/what': 'What', '/where': 'Where',
   '/why': 'Why', '/how': 'How', '/resume': 'Resume', '/missing': 'NotFound'
@@ -18,6 +21,7 @@ const viewSources: Record<string, string> = {
 function expectFixedText(path: string) {
   const scope = document.querySelector('main')!.textContent!.replace(/\s+/g, ' ')
   for (const item of inventory.items.filter(item => item.category === 'fixed' && item.file === `src/views/${viewSources[path]}View.vue`)) {
+    if (revisions.retiredFixedText?.some(retired => retired.file === item.file && retired.original === item.original)) continue
     expect(scope, `${item.file}: ${item.original}`).toContain(item.original)
   }
   expect(document.querySelector('.app-footer')!.textContent).toContain('Portfolio. Built with Vue 3 & TypeScript.')
@@ -108,7 +112,8 @@ describe('localized reading experience', () => {
     await nextTick()
     expect(printed).toHaveLength(1)
     expect(printed[0]).toContain('Senior Frontend Engineer')
-    expect(printed[0]).toContain('Senior Frontend Developer')
+    expect(printed[0]).not.toContain('Senior Frontend Developer')
+    expect(printed[0]!.match(/Taipei, Taiwan/g)).toHaveLength(1)
     expect(printed[0]).not.toMatch(/[\u3400-\u9fff]/)
     await router.push(`/resume?lang=zh-TW&${flag}=true`)
     await nextTick()
