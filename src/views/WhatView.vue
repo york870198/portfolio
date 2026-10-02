@@ -2,6 +2,7 @@
 import { useI18n } from 'vue-i18n'
 import PageHeader from '@/components/PageHeader.vue'
 import QnACard from '@/components/QnACard.vue'
+import NavigationLink from '@/components/NavigationLink.vue'
 
 const skillCategories = [
   {
@@ -120,6 +121,17 @@ const { t } = useI18n({ useScope: 'global' })
               </ul>
             </div>
           </div>
+          <section class="work-evidence" aria-labelledby="work-evidence-title">
+            <h3 id="work-evidence-title">{{ t('what.evidence.title') }}</h3>
+            <p>{{ t('when.project.title') }}</p>
+            <ul>
+              <li><strong>Vue 3：</strong>{{ t('what.evidence.vue') }}</li>
+              <li><strong>Pinia：</strong>{{ t('what.evidence.pinia') }}</li>
+              <li><strong>RxJS：</strong>{{ t('what.evidence.rxjs') }}</li>
+              <li><strong>WebSocket：</strong>{{ t('what.evidence.websocket') }}</li>
+            </ul>
+            <NavigationLink id="work-evidence-link" to="/when">{{ t('what.evidence.readCase') }}</NavigationLink>
+          </section>
         </QnACard>
 
         <QnACard
@@ -149,6 +161,25 @@ const { t } = useI18n({ useScope: 'global' })
 </template>
 
 <style scoped>
+.work-evidence {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.work-evidence h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.work-evidence a {
+  align-self: flex-start;
+  padding-block: 0.5rem;
+}
+
 .projects-list {
   display: flex;
   flex-direction: column;

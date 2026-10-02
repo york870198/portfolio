@@ -127,6 +127,14 @@ const en = {
     }
   },
   "what": {
+    "evidence": {
+      "title": "Technologies in practice",
+      "vue": "Implemented UI and user flows as feature-based pages connected to the Router.",
+      "pinia": "Managed page state.",
+      "rxjs": "Handled asynchronous backend data updates.",
+      "websocket": "Received real-time interaction messages.",
+      "readCase": "Read the work experience and case study"
+    },
     "title": "Tech stack",
     "subtitle": "The easy, difficult, and maddening things from a career that's neither particularly long nor particularly short.",
     "web": {

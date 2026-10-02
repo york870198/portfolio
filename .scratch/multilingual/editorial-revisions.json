@@ -19,7 +19,13 @@
     "resume.project.delivery",
     "resume.project.requirements",
     "resume.project.api",
-    "resume.project.verification"
+    "resume.project.verification",
+    "what.evidence.title",
+    "what.evidence.vue",
+    "what.evidence.pinia",
+    "what.evidence.rxjs",
+    "what.evidence.websocket",
+    "what.evidence.readCase"
   ],
   "reason": "User-approved cultural wording edits and Resume alignment. Keep the original #01 inventory as history, rather than regenerating its baseline.",
   "chinese": {
