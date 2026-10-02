@@ -1,12 +1,34 @@
 {
   "sourceCommit": "ef55a00301f0e91f4fede6227ad48094321b393e",
-  "addedKeys": ["common.language.label"],
+  "addedKeys": [
+    "common.language.label",
+    "when.employment.employer",
+    "when.employment.roles",
+    "when.employment.promotion",
+    "when.project.title",
+    "when.project.summary",
+    "when.project.outcome",
+    "when.project.labels.delivery",
+    "when.project.labels.requirements",
+    "when.project.labels.api",
+    "when.project.labels.verification",
+    "when.project.delivery",
+    "when.project.requirements",
+    "when.project.api",
+    "when.project.verification",
+    "resume.project.delivery",
+    "resume.project.requirements",
+    "resume.project.api",
+    "resume.project.verification"
+  ],
   "reason": "User-approved cultural wording edits and Resume alignment. Keep the original #01 inventory as history, rather than regenerating its baseline.",
   "chinese": {
     "what.beyondFrontend.tauri": "基於 Rust 實現的跨平台軟體框架，最近正在用這個開發 side project。",
     "what.beyondFrontend.flutter": "Google 開發的跨平台開發套件，在上一份工作有一項專案以此開發。",
     "why.subtitle": "俗話說得好：JavaScript，從入門到放棄。我目前還在中間。",
-    "how.website.deployment": "透過 GitHub Actions 佈署至 GitHub Pages。"
+    "how.website.deployment": "透過 GitHub Actions 佈署至 GitHub Pages。",
+    "when.previousRole.highlight": "2021.12–2026.05",
+    "when.careerStart.highlight": "2021 年 12 月。"
   },
   "retiredKeys": [
     "resume.who.svelteAngular",
@@ -16,7 +38,16 @@
     "resume.who.design"
   ],
   "englishTokenExceptions": {
-    "who.identity.design": ["Design", "System"],
-    "where.social.linkedin": ["JS", "Developer"]
+    "who.identity.design": [
+      "Design",
+      "System"
+    ],
+    "where.social.linkedin": [
+      "JS",
+      "Developer"
+    ],
+    "when.careerStart.highlight": [
+      "12"
+    ]
   }
 }

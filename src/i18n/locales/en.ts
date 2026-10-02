@@ -88,18 +88,38 @@ const en = {
     }
   },
   "when": {
+    "employment": {
+      "employer": "Previous employer (anonymized)",
+      "roles": "Frontend Engineer → Senior Frontend Engineer",
+      "promotion": "Promoted during tenure"
+    },
+    "project": {
+      "title": "Product upgrade and Vue 3 rebuild",
+      "summary": "As one of three frontend engineers, contributed to rebuilding an existing Vue 2 website in Vue 3 while retaining the established product architecture. Implemented updated visual designs and interactions provided by the design team.",
+      "outcome": "The new version launched on schedule.",
+      "labels": {
+        "delivery": "Feature delivery:",
+        "requirements": "Requirements clarification:",
+        "api": "API collaboration:",
+        "verification": "Delivery verification:"
+      },
+      "delivery": "Integrated UI, user flows, and API calls into feature-based page modules that could be connected to the Router, and maintained shared components used across pages. Used Pinia for state management, RxJS for asynchronous backend data updates, and WebSocket for real-time interaction messages.",
+      "requirements": "Identified discrepancies between existing documentation, live product behavior, and updated designs. Worked with the PM and designers to confirm the new flows, identify the required components and APIs, and update outdated specifications.",
+      "api": "Defined frontend data requirements and expected response structures, agreed on them with backend engineers, and integrated the APIs after backend implementation.",
+      "verification": "Personally checked the implementation against Figma designs and verified cross-browser behavior before acceptance by designers and QA. Unit tests were defined jointly by the frontend team."
+    },
     "title": "Experience",
     "subtitle": "The AI era is moving a little too fast. It makes my past, hand-coding self feel older than it really is.",
     "careerStart": {
       "question": "When did I become a frontend engineer?",
-      "highlight": "Late 2021.",
+      "highlight": "December 2021.",
       "hobby": "I started programming in high school, but it remained a hobby. I didn't major in computer science at university, either.",
       "pandemic": "The COVID pandemic changed a lot in 2020. It hit the field I was working in hard, and I realized it wasn't a sustainable path for my career.",
       "transition": "I resigned, took a structured course to refresh the necessary skills for frontend development at the time, landed a frontend role, and that was that."
     },
     "previousRole": {
       "question": "When did my previous job start and end?",
-      "highlight": "Started in late 2021; left in mid-2026.",
+      "highlight": "2021.12–2026.05",
       "tenure": "My previous job was also my first in the industry. I stayed for more than four years.",
       "company": "It was a fast-growing company, and the team's technical lead was a highly skilled engineer dedicated to the open-source community.",
       "studyGroups": "Beyond technologies directly related to our work, the company held regular study groups where we kept learning and revisiting what we knew together.",
@@ -204,6 +224,12 @@ const en = {
     }
   },
   "resume": {
+    "project": {
+      "delivery": "Delivered feature-based page modules integrating UI, user flows, and APIs for the Router, and maintained shared components. Used Pinia for state management, RxJS for asynchronous data updates, and WebSocket for real-time interaction messages.",
+      "requirements": "Clarified discrepancies between documentation, live behavior, and updated designs with the PM and designers, agreed on the new flows, and updated outdated specifications.",
+      "api": "Defined frontend data requirements and expected structures with backend engineers, then integrated the APIs implemented by the backend team.",
+      "verification": "Personally checked the UI against Figma designs and verified cross-browser behavior before acceptance by designers and QA."
+    },
     "toolbar": {
       "print": "Print / Save as PDF"
     },

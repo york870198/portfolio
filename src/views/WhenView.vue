@@ -2,6 +2,7 @@
 import { useI18n } from 'vue-i18n'
 import PageHeader from '@/components/PageHeader.vue'
 import QnACard from '@/components/QnACard.vue'
+import WorkExperience from '@/components/WorkExperience.vue'
 const { t } = useI18n({ useScope: 'global' })
 </script>
 
@@ -17,8 +18,10 @@ const { t } = useI18n({ useScope: 'global' })
       />
 
       <div class="page-content-flow">
+        <WorkExperience />
+
         <QnACard
-          :index="1"
+          :index="3"
           :question="t('when.careerStart.question')"
           :highlight="t('when.careerStart.highlight')"
           accentColor="var(--theme-when)"
@@ -26,16 +29,6 @@ const { t } = useI18n({ useScope: 'global' })
           <p> {{ t('when.careerStart.hobby') }}<br/> {{ t('when.careerStart.pandemic') }}<br/> {{ t('when.careerStart.transition') }} </p>
         </QnACard>
 
-        <QnACard
-          :index="2"
-          :question="t('when.previousRole.question')"
-          :highlight="t('when.previousRole.highlight')"
-          accentColor="var(--theme-when)"
-        >
-          <p> {{ t('when.previousRole.tenure') }}<br/> {{ t('when.previousRole.company') }}<br/> {{ t('when.previousRole.studyGroups') }}<br/>
-          </p>
-          <p> {{ t('when.previousRole.family') }} </p>
-        </QnACard>
       </div>
     </div>
   </div>

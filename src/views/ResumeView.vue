@@ -5,6 +5,7 @@ import { useRoute, useRouter } from 'vue-router'
 import { localizedTarget } from '@/i18n/locale'
 import PageHeader from '@/components/PageHeader.vue'
 import QnACard from '@/components/QnACard.vue'
+import WorkExperience from '@/components/WorkExperience.vue'
 import plurkIcon from '@/assets/icons/plurk.png'
 
 const route = useRoute()
@@ -212,8 +213,10 @@ const { t } = useI18n({ useScope: 'global' })
             accentColor="var(--theme-when)"
           />
           <div class="section-content-flow">
+            <WorkExperience compact :heading-level="3" />
+
             <QnACard :heading-level="3"
-              :index="1"
+              :index="3"
               :question="t('when.careerStart.question')"
               :highlight="t('when.careerStart.highlight')"
               accentColor="var(--theme-when)"
@@ -221,16 +224,6 @@ const { t } = useI18n({ useScope: 'global' })
               <p> {{ t('when.careerStart.hobby') }}<br/> {{ t('when.careerStart.pandemic') }}<br/> {{ t('when.careerStart.transition') }} </p>
             </QnACard>
 
-            <QnACard :heading-level="3"
-              :index="2"
-              :question="t('when.previousRole.question')"
-              :highlight="t('when.previousRole.highlight')"
-              accentColor="var(--theme-when)"
-            >
-              <p> {{ t('when.previousRole.tenure') }}<br/> {{ t('when.previousRole.company') }}<br/> {{ t('when.previousRole.studyGroups') }}<br/>
-              </p>
-              <p> {{ t('resume.when.family') }}<br/> {{ t('resume.when.handover') }} </p>
-            </QnACard>
           </div>
         </section>
 
