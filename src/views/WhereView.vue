@@ -65,8 +65,8 @@ const { t } = useI18n({ useScope: 'global' })
           accentColor="var(--theme-where)"
         >
           <ul>
-            <li><strong>{{ t('where.work.rangeLabel') }}</strong>{{ t('where.work.range') }}</li>
-            <li><strong>{{ t('where.work.preferenceLabel') }}</strong>{{ t('where.work.preference') }}</li>
+            <li><strong>{{ t('where.work.rangeLabel') }}</strong> {{ t('where.work.range') }}</li>
+            <li><strong>{{ t('where.work.preferenceLabel') }}</strong> {{ t('where.work.preference') }}</li>
           </ul>
         </QnACard>
       </div>

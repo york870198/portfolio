@@ -193,7 +193,7 @@ describe('localized reading experience', () => {
     expect(document.querySelector('#mobile-download-resume-btn')!.textContent).toContain('Download resume (PDF)')
     await router.push('/where?lang=zh-TW')
     await nextTick()
-    expect(document.querySelector('[role="status"]')!.textContent).toBe('已複製 Email 地址')
+    expect(document.querySelector('[role="status"]')!.textContent).toBe('已複製電子郵件地址')
     expect(document.querySelector('#mobile-dropdown-menu')).toBeNull()
     expect(document.querySelector('main')!.textContent).toContain('台北，以及網路上。')
   })

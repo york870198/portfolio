@@ -14,15 +14,15 @@ const zhTW = {
       "mobileDownloadResume": "下載履歷 (PDF)",
       "preparing": "準備中…",
       "preparingResume": "準備履歷中…",
-      "printFrameTitle": "完整履歷列印",
+      "printFrameTitle": "完整履歷列印預覽",
       "contact": "聯絡",
       "closeMenu": "關閉選單",
       "openMenu": "開啟選單"
     },
     "contact": {
       "label": "聯絡我",
-      "copyEmail": "點擊複製 Email: {email}",
-      "emailCopied": "已複製 Email 地址"
+      "copyEmail": "複製電子郵件地址：{email}",
+      "emailCopied": "已複製電子郵件地址"
     },
     "theme": {
       "switchToLight": "切換為淺色主題",
@@ -53,7 +53,7 @@ const zhTW = {
     },
     "where": {
       "title": "活動範圍",
-      "subtitle": "在哪裡找得到我，或者我能跑多遠去找你。"
+      "subtitle": "聯絡方式與工作條件。"
     },
     "why": {
       "title": "動機",
@@ -199,8 +199,8 @@ const zhTW = {
     "subtitle": "持續學習，讓想法成為看得見的成果。",
     "frontend": {
       "question": "為什麼持續投入前端？",
-      "highlight": "我喜歡學習新工具，並把它變成使用者看得到的成果。",
-      "interest": "AI 縮短了從學習新工具到實作、看見成效的時間，讓探索更有回饋。前端是使用者最先接觸的部分，能直接看到想法如何呈現在畫面與互動中，這讓我持續想投入其中。",
+      "highlight": "我喜歡學習新工具，並用它們創造使用者看得到的成果。",
+      "interest": "有了 AI 協助，我能更快將新學的工具用於實作、看見成效，讓探索更有回饋。前端是使用者最先接觸的部分，能直接看到想法如何呈現在畫面與互動中，這讓我持續想投入其中。",
       "fullStack": "遊戲開發同時包含前端與後端，所以嚴格說來我一開始選擇的方向算是全端工程師。",
       "firstRole": "後來終於正式把寫程式當成工作，第一個的職位是前端，久而久之分配給前端的心力自然也壓倒性的多。"
     }

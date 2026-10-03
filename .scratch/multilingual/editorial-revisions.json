@@ -78,8 +78,8 @@
     "home.how.subtitle": "協作案例與網站實作方式。",
     "what.beyondFrontend.python": "大學時主要使用，近年較少接觸。",
     "why.frontend.question": "為什麼持續投入前端？",
-    "why.frontend.highlight": "我喜歡學習新工具，並把它變成使用者看得到的成果。",
-    "why.frontend.interest": "AI 縮短了從學習新工具到實作、看見成效的時間，讓探索更有回饋。前端是使用者最先接觸的部分，能直接看到想法如何呈現在畫面與互動中，這讓我持續想投入其中。",
+    "why.frontend.highlight": "我喜歡學習新工具，並用它們創造使用者看得到的成果。",
+    "why.frontend.interest": "有了 AI 協助，我能更快將新學的工具用於實作、看見成效，讓探索更有回饋。前端是使用者最先接觸的部分，能直接看到想法如何呈現在畫面與互動中，這讓我持續想投入其中。",
     "how.subtitle": "協作案例與網站實作方式。",
     "how.website.scope": "由我定義網站目的、閱覽裝置、技術與部署方式，並以規格引導 AI 協助實作。",
     "how.website.stack": "網站使用 Vue／Vue Router／Vite／TypeScript，經 GitHub Actions 部署到 GitHub Pages。",
@@ -103,7 +103,12 @@
     "resume.project.delivery": "整合畫面、操作流程與 API 串接為可整合至網站路由的功能頁面，維護跨頁共用元件；使用 Pinia 管理狀態、RxJS 處理後端非同步資料變化、WebSocket 接收即時互動訊息。",
     "resume.project.requirements": "釐清文件、線上操作與新版設計的差異，與 PM、設計師共同確認新版流程並修正過時規格。",
     "resume.project.api": "定義前端資料需求與預期結構，與後端共同確認；由後端實作 API，本人完成串接。",
-    "resume.project.verification": "親自比對 Figma 設計稿並檢查跨瀏覽器行為，再交由設計師及 QA 驗收。"
+    "resume.project.verification": "親自比對 Figma 設計稿並檢查跨瀏覽器行為，再交由設計師及 QA 驗收。",
+    "common.backHome": "返回首頁",
+    "common.navbar.printFrameTitle": "完整履歷列印預覽",
+    "common.contact.copyEmail": "複製電子郵件地址：{email}",
+    "common.contact.emailCopied": "已複製電子郵件地址",
+    "home.where.subtitle": "聯絡方式與工作條件。"
   },
   "retiredKeys": [
     "resume.who.svelteAngular",
