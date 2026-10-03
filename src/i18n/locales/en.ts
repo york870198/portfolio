@@ -23,7 +23,7 @@ const en = {
     },
     "contact": {
       "label": "Contact me",
-      "copyEmail": "Click to copy Email: {email}",
+      "copyEmail": "Copy email address: {email}",
       "emailCopied": "Email address copied"
     },
     "theme": {
@@ -55,7 +55,7 @@ const en = {
     },
     "where": {
       "title": "Where to find me",
-      "subtitle": "Where you can find me, and how far I can travel to find you."
+      "subtitle": "Contact details and work preferences."
     },
     "why": {
       "title": "Motivation",
@@ -201,8 +201,8 @@ const en = {
     "subtitle": "Learning and turning ideas into visible results.",
     "frontend": {
       "question": "Why do I continue working in frontend development?",
-      "highlight": "I enjoy learning new tools and turning them into results users can see.",
-      "interest": "AI shortens the time between learning a new tool, putting it into practice, and seeing the results, making exploration more rewarding. The frontend is what users encounter first. Seeing ideas take shape in the interface and its interactions keeps me engaged in this field.",
+      "highlight": "I enjoy learning new tools and using them to create results users can see.",
+      "interest": "With AI, I can put newly learned tools into practice and see results sooner, making exploration more rewarding. The frontend is what users encounter first. Seeing ideas take shape in the interface and its interactions keeps me engaged in this field.",
       "fullStack": "Game development includes both frontend and backend work, so strictly speaking, my original direction was closer to full-stack engineering.",
       "firstRole": "When programming finally became my job, my first role was in frontend development. Over time, that naturally came to take the overwhelming majority of my attention."
     }
