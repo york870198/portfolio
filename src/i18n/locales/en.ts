@@ -174,26 +174,26 @@ const en = {
   },
   "where": {
     "title": "Where to find me",
-    "subtitle": "Aside from living in Kaohsiung for less than a year, I rarely leave Taipei.",
+    "subtitle": "Contact details and work preferences.",
     "location": {
       "question": "Where am I?",
       "highlight": "Taipei, and online.",
-      "home": "I'm based in Taipei. Since I live with my family, I don't plan to move elsewhere in the near future.",
+      "home": "Based in Taipei, with no near-term relocation plans.",
       "socialIntro": "Besides meeting in person, you can find me in these places:"
     },
     "social": {
-      "github": "Projects currently under active development are not yet public, but you can see my commit frequency.",
-      "plurk": "A social platform without an algorithm deciding what you want to see.",
+      "github": "Personal projects and code",
+      "plurk": "Community and everyday life",
       "linkedin": "Professional experience and connections.",
-      "cake": "I'll get a notification if you message me there."
+      "cake": "Online resume and contact"
     },
     "work": {
-      "question": "How far can I travel for work?",
-      "highlight": "Greater Taipei, or anywhere remote with a solid internet connection.",
-      "rangeLabel": "Travel range:",
-      "range": "Places in Greater Taipei that I can reach by MRT, bus, and bicycle.",
-      "preferenceLabel": "Preference:",
-      "preference": "Hybrid work. I have extensive remote collaboration experience and can work smoothly with colleagues across locations and time zones."
+      "question": "Where and how do I work?",
+      "highlight": "I prefer hybrid work.",
+      "rangeLabel": "Commuting range:",
+      "range": "Locations in Greater Taipei accessible by public transport and bicycle.",
+      "preferenceLabel": "Collaboration experience:",
+      "preference": "Experienced in remote collaboration across locations and time zones."
     }
   },
   "why": {

@@ -35,9 +35,7 @@ const { t } = useI18n({ useScope: 'global' })
           :highlight="t('where.location.highlight')"
           accentColor="var(--theme-where)"
         >
-          <p> {{ t('where.location.home') }}<br>
-          </p>
-          <p>{{ t('where.location.socialIntro') }}</p>
+          <p>{{ t('where.location.home') }}</p>
           <div class="footprint-grid">
             <a
               v-for="link in socialLinks"

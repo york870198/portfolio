@@ -55,16 +55,24 @@
     "who.identity.highlight": "從業四年的資深前端工程師。",
     "when.previousRole.company": "是一間產品與團隊都在快速成長的公司，團隊的技術領導是致力於開源社群的大神，跟著他學習的過程使我獲益良多。",
     "what.subtitle": "職涯中那些簡單的與困難的事情。",
-    "where.social.github": "目前密集開發中的專案還未公開，但你可以看到 Commit 頻率。",
+    "where.social.github": "個人專案與程式碼",
     "where.social.linkedin": "專業經歷與職業人脈",
-    "where.social.cake": "你往這裡發訊息我會收到通知。",
-    "where.subtitle": "除了不到一年的短暫高雄生活，我很少離開台北。",
+    "where.social.cake": "線上履歷與聯絡",
+    "where.subtitle": "聯絡方式與工作條件。",
     "how.website.highlight": "我負責動腦，Agent 負責動手。",
     "how.website.specification": "我按照以前工作時 PM 寫規格書的方式，把我預期的目標寫下來，開始指揮 Agent 做事。",
     "how.collaboration.highlight": "良好的溝通，累積夠久之後就會開始心有靈犀。",
     "who.identity.workName": "我在工作場合使用 Fay 這個名字。",
     "when.subtitle": "任職、升遷與產品交付經驗。",
-    "home.when.subtitle": "工作經歷與代表案例。"
+    "home.when.subtitle": "工作經歷與代表案例。",
+    "where.location.home": "目前定居台北，短期無搬遷規劃。",
+    "where.social.plurk": "社群與日常",
+    "where.work.question": "工作地點與方式？",
+    "where.work.highlight": "偏好混合式辦公。",
+    "where.work.rangeLabel": "通勤範圍：",
+    "where.work.range": "大台北地區大眾運輸與自行車可達的地點。",
+    "where.work.preferenceLabel": "協作經驗：",
+    "where.work.preference": "有跨地點、跨時區的遠端協作經驗。"
   },
   "retiredKeys": [
     "resume.who.svelteAngular",
@@ -169,9 +177,6 @@
     }
   ],
   "englishTokenAliases": {
-    "where.social.github": {
-      "Commit": "commit"
-    },
     "how.website.highlight": {
       "Agent": "agent"
     },
