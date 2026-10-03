@@ -52,7 +52,7 @@
     "how.website.deployment": "透過 GitHub Actions 佈署至 GitHub Pages。",
     "when.previousRole.highlight": "2021.12–2026.05",
     "when.careerStart.highlight": "2021 年 12 月。",
-    "who.identity.highlight": "從業四年的資深前端工程師。",
+    "who.identity.highlight": "具備四年以上前端開發經驗，目前職級為資深前端工程師。",
     "when.previousRole.company": "是一間產品與團隊都在快速成長的公司，團隊的技術領導是致力於開源社群的大神，跟著他學習的過程使我獲益良多。",
     "what.subtitle": "技能與專案中的實際用途。",
     "where.social.github": "個人專案與程式碼",
@@ -83,7 +83,12 @@
     "how.subtitle": "協作案例與網站實作方式。",
     "how.website.scope": "由我定義網站目的、閱覽裝置、技術與部署方式，並以規格引導 AI 協助實作。",
     "how.website.stack": "網站使用 Vue／Vue Router／Vite／TypeScript，經 GitHub Actions 部署到 GitHub Pages。",
-    "how.collaboration.designCourse": "Google UX Design Certificate：修習中，學習 UI/UX 設計以提升與設計師協作的能力。"
+    "how.collaboration.designCourse": "Google UX Design Certificate：修習中，學習 UI/UX 設計以提升與設計師協作的能力。",
+    "home.who.subtitle": "資深前端工程師，具備後端基礎知識。",
+    "who.subtitle": "一名具備後端基礎知識的資深前端工程師。",
+    "who.identity.backend": "後端技術方面使用 Node.js，並有長期與後端工程師協作的經驗。",
+    "who.identity.design": "理解設計系統與互動設計原則，能依據 Figma 設計稿精準實作 UI。",
+    "resume.profile.summary": "專注於現代前端架構（Vue 3 / React / TypeScript），具備四年以上產品開發與跨領域協作經驗，重視清晰的程式碼架構、使用者體驗與溝通效率。"
   },
   "retiredKeys": [
     "resume.who.svelteAngular",
@@ -185,6 +190,10 @@
     {
       "file": "src/views/ResumeView.vue",
       "original": "linkedin: Fay-Chung"
+    },
+    {
+      "file": "src/views/WhoView.vue",
+      "original": "Full-Stack Mindset"
     }
   ],
   "englishTokenAliases": {

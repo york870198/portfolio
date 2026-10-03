@@ -41,7 +41,7 @@ const zhTW = {
   "home": {
     "who": {
       "title": "個人資訊",
-      "subtitle": "資深前端，以及除此以外。"
+      "subtitle": "資深前端工程師，具備後端基礎知識。"
     },
     "when": {
       "title": "經歷",
@@ -66,15 +66,15 @@ const zhTW = {
   },
   "who": {
     "title": "個人資訊",
-    "subtitle": "一名資深前端工程師，略懂後端。",
+    "subtitle": "一名具備後端基礎知識的資深前端工程師。",
     "identity": {
       "question": "我是誰？",
-      "highlight": "從業四年的資深前端工程師。",
+      "highlight": "具備四年以上前端開發經驗，目前職級為資深前端工程師。",
       "workName": "我在工作場合使用 Fay 這個名字。",
       "realName": "如果你是從 LinkedIn 等人才媒合平台過來，你會在那邊看到我的本名。",
       "architecture": "我專注於現代前端架構，慣於使用 {vue} 及 {react} 兩項前端生態系。",
-      "backend": "後端技術方面我使用 NodeJS，並有長期與後端工程師協作的經驗",
-      "design": "理解 Design System 與互動設計原則，能依據 Figma 設計稿完成高精準度的 UI 實作"
+      "backend": "後端技術方面使用 Node.js，並有長期與後端工程師協作的經驗。",
+      "design": "理解設計系統與互動設計原則，能依據 Figma 設計稿精準實作 UI。"
     },
     "interests": {
       "question": "我平常在關注誰？",
@@ -264,7 +264,7 @@ const zhTW = {
     },
     "profile": {
       "title": "資深前端工程師",
-      "summary": "專注於現代前端架構（Vue 3 / React / TypeScript），具備 4+ 年高強度產品開發與跨領域協作經驗，重視清晰的程式碼架構、使用者體驗與溝通效率。",
+      "summary": "專注於現代前端架構（Vue 3 / React / TypeScript），具備四年以上產品開發與跨領域協作經驗，重視清晰的程式碼架構、使用者體驗與溝通效率。",
       "location": "台灣 台北 {location}"
     },
     "when": {

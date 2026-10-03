@@ -21,7 +21,7 @@ const { t } = useI18n({ useScope: 'global' })
           :index="1"
           :question="t('who.identity.question')"
           :highlight="t('who.identity.highlight')"
-          :tags="['Senior Frontend', 'React & Vue', 'Full-Stack Mindset']"
+          :tags="['Senior Frontend Engineer', 'React & Vue']"
           accentColor="var(--theme-who)"
         >
           <p>{{ t('who.identity.workName') }}</p>
