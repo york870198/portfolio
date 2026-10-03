@@ -46,7 +46,7 @@
   ],
   "reason": "User-approved wording from text-update commits and content-concision #01. Preserve the original inventory as history; retiredFixedText applies only to the specified reading version. English token aliases validate exact lowercase equivalents of ordinary words, not omitted facts.",
   "chinese": {
-    "what.beyondFrontend.tauri": "用於開發中的個人專案。",
+    "what.beyondFrontend.tauri": "目前用於開發中的個人專案。",
     "what.beyondFrontend.flutter": "曾用於前一份工作的專案。",
     "why.subtitle": "持續學習，讓想法成為看得見的成果。",
     "how.website.deployment": "透過 GitHub Actions 佈署至 GitHub Pages。",
@@ -108,14 +108,62 @@
     "common.navbar.printFrameTitle": "完整履歷列印預覽",
     "common.contact.copyEmail": "複製電子郵件地址：{email}",
     "common.contact.emailCopied": "已複製電子郵件地址",
-    "home.where.subtitle": "聯絡方式與工作條件。"
+    "home.where.subtitle": "聯絡方式與工作條件。",
+    "what.beyondFrontend.question": "還使用過哪些技術？",
+    "resume.concise.tauri": "目前用於開發中的個人專案。"
   },
   "retiredKeys": [
     "resume.who.svelteAngular",
     "resume.who.backendLabel",
     "resume.who.backend",
     "resume.who.designLabel",
-    "resume.who.design"
+    "resume.who.design",
+    "who.identity.realName",
+    "who.interests.question",
+    "who.interests.highlight",
+    "who.interests.gameDevelopment",
+    "who.interests.presentation",
+    "who.interests.coincidence",
+    "who.interests.communities",
+    "when.careerStart.question",
+    "when.careerStart.highlight",
+    "when.careerStart.hobby",
+    "when.careerStart.pandemic",
+    "when.careerStart.transition",
+    "when.previousRole.question",
+    "when.previousRole.tenure",
+    "when.previousRole.company",
+    "when.previousRole.studyGroups",
+    "when.previousRole.family",
+    "what.ai.question",
+    "what.ai.highlight",
+    "what.ai.bicycle",
+    "what.ai.destination",
+    "what.ai.balance",
+    "what.ai.benefit",
+    "where.location.socialIntro",
+    "why.frontend.fullStack",
+    "why.frontend.firstRole",
+    "how.website.highlight",
+    "how.website.specification",
+    "how.website.timeSaved",
+    "how.website.technicalIntro",
+    "how.website.deployment",
+    "how.collaboration.highlight",
+    "how.collaboration.experience",
+    "how.collaboration.sharedPicture",
+    "how.collaboration.basicKnowledge",
+    "how.collaboration.lessFriction",
+    "how.collaboration.backend",
+    "resume.profile.location",
+    "resume.when.family",
+    "resume.when.handover",
+    "resume.social.github",
+    "resume.social.plurk",
+    "resume.social.linkedin",
+    "resume.social.cake",
+    "resume.how.scope",
+    "resume.how.specification"
   ],
   "englishTokenExceptions": {
     "who.identity.design": [
@@ -214,6 +262,50 @@
     {
       "file": "src/views/WhoView.vue",
       "original": "Full-Stack Mindset"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "original": "React 18+ (Functional component / Redux)"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "original": "CI/CD (GitHub Actions / Pages)"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "original": "Vue 3："
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "original": "Pinia："
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "original": "RxJS："
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "original": "WebSocket："
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "original": "Tauri："
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "original": "Flutter："
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "original": "Python："
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "original": "React 18+ (Functional component / Redux)"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "original": "CI/CD (GitHub Actions / Pages)"
     }
   ],
   "englishTokenAliases": {
