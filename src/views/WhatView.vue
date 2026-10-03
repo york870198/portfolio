@@ -15,7 +15,7 @@ const skillCategories = [
       },
       {
         "id": "react",
-        "label": "React 18+ (Functional component / Redux)"
+        "label": "React 18+ (functional components / Redux)"
       },
       {
         "id": "typescript",
@@ -79,7 +79,7 @@ const skillCategories = [
       },
       {
         "id": "ci",
-        "label": "CI/CD (GitHub Actions / Pages)"
+        "label": "CI/CD (GitHub Actions / GitHub Pages)"
       },
       {
         "id": "vitest",
@@ -88,7 +88,7 @@ const skillCategories = [
     ]
   }
 ]
-const { t } = useI18n({ useScope: 'global' })
+const { t, locale } = useI18n({ useScope: 'global' })
 </script>
 
 <template>
@@ -125,10 +125,10 @@ const { t } = useI18n({ useScope: 'global' })
             <h3 id="work-evidence-title">{{ t('what.evidence.title') }}</h3>
             <p>{{ t('when.project.title') }}</p>
             <ul>
-              <li><strong>Vue 3：</strong>{{ t('what.evidence.vue') }}</li>
-              <li><strong>Pinia：</strong>{{ t('what.evidence.pinia') }}</li>
-              <li><strong>RxJS：</strong>{{ t('what.evidence.rxjs') }}</li>
-              <li><strong>WebSocket：</strong>{{ t('what.evidence.websocket') }}</li>
+              <li><strong>Vue 3{{ locale === 'en' ? ':' : '：' }}</strong> {{ t('what.evidence.vue') }}</li>
+              <li><strong>Pinia{{ locale === 'en' ? ':' : '：' }}</strong> {{ t('what.evidence.pinia') }}</li>
+              <li><strong>RxJS{{ locale === 'en' ? ':' : '：' }}</strong> {{ t('what.evidence.rxjs') }}</li>
+              <li><strong>WebSocket{{ locale === 'en' ? ':' : '：' }}</strong> {{ t('what.evidence.websocket') }}</li>
             </ul>
             <NavigationLink id="work-evidence-link" to="/when">{{ t('what.evidence.readCase') }}</NavigationLink>
           </section>
@@ -140,9 +140,9 @@ const { t } = useI18n({ useScope: 'global' })
           accentColor="var(--theme-what)"
         >
           <ul>
-            <li><strong>Tauri：</strong>{{ t('what.beyondFrontend.tauri') }}</li>
-            <li><strong>Flutter：</strong>{{ t('what.beyondFrontend.flutter') }}</li>
-            <li><strong>Python：</strong>{{ t('what.beyondFrontend.python') }}</li>
+            <li><strong>Tauri{{ locale === 'en' ? ':' : '：' }}</strong> {{ t('what.beyondFrontend.tauri') }}</li>
+            <li><strong>Flutter{{ locale === 'en' ? ':' : '：' }}</strong> {{ t('what.beyondFrontend.flutter') }}</li>
+            <li><strong>Python{{ locale === 'en' ? ':' : '：' }}</strong> {{ t('what.beyondFrontend.python') }}</li>
           </ul>
         </QnACard>
       </div>

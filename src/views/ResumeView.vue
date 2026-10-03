@@ -19,7 +19,7 @@ const skillCategories = [
       },
       {
         "id": "react",
-        "label": "React 18+ (Functional component / Redux)"
+        "label": "React 18+ (functional components / Redux)"
       },
       {
         "id": "typescript",
@@ -71,7 +71,7 @@ const skillCategories = [
       },
       {
         "id": "ci",
-        "label": "CI/CD (GitHub Actions / Pages)"
+        "label": "CI/CD (GitHub Actions / GitHub Pages)"
       },
       {
         "id": "vitest",
@@ -100,7 +100,7 @@ onMounted(async () => {
     if (isMounted) window.print()
   }
 })
-const { t } = useI18n({ useScope: 'global' })
+const { t, locale } = useI18n({ useScope: 'global' })
 </script>
 
 <template>
@@ -175,8 +175,8 @@ const { t } = useI18n({ useScope: 'global' })
           <h2 id="resume-development-title" class="resume-section-title">{{ t('resume.concise.developmentTitle') }}</h2>
           <ul>
             <li>{{ t('resume.concise.uxCourse') }}</li>
-            <li><strong>Tauri:</strong> {{ t('resume.concise.tauri') }}</li>
-            <li><strong>Flutter:</strong> {{ t('resume.concise.flutter') }}</li>
+            <li><strong>Tauri{{ locale === 'en' ? ':' : '：' }}</strong> {{ t('resume.concise.tauri') }}</li>
+            <li><strong>Flutter{{ locale === 'en' ? ':' : '：' }}</strong> {{ t('resume.concise.flutter') }}</li>
           </ul>
         </section>
 
