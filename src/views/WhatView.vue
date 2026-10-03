@@ -103,7 +103,7 @@ const { t } = useI18n({ useScope: 'global' })
       />
 
       <div class="page-content-flow">
-        <!-- Q1: 精選專案 -->
+        <!-- Q1: 技能與專案用途 -->
         <QnACard
           :index="1"
           :question="t('what.web.question')"
@@ -144,16 +144,6 @@ const { t } = useI18n({ useScope: 'global' })
             <li><strong>Flutter：</strong>{{ t('what.beyondFrontend.flutter') }}</li>
             <li><strong>Python：</strong>{{ t('what.beyondFrontend.python') }}</li>
           </ul>
-        </QnACard>
-
-        <QnACard
-          :index="3"
-          :question="t('what.ai.question')"
-          :highlight="t('what.ai.highlight')"
-          accentColor="var(--theme-what)"
-        >
-          <p> {{ t('what.ai.bicycle') }}<br/> {{ t('what.ai.destination') }}<br/> {{ t('what.ai.balance') }} </p>
-          <p> {{ t('what.ai.benefit') }} </p>
         </QnACard>
       </div>
     </div>

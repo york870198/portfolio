@@ -51,7 +51,7 @@ const en = {
     },
     "what": {
       "title": "Tech stack",
-      "subtitle": "Usually building websites. Occasionally, something else."
+      "subtitle": "Skills and their application in projects."
     },
     "where": {
       "title": "Where to find me",
@@ -59,11 +59,11 @@ const en = {
     },
     "why": {
       "title": "Motivation",
-      "subtitle": "Reasons matter, though sometimes the results arrive first."
+      "subtitle": "Learning and turning ideas into visible results."
     },
     "how": {
       "title": "How I work",
-      "subtitle": "I'd suggest starting with how this website was made."
+      "subtitle": "A collaboration case and how this website was built."
     }
   },
   "who": {
@@ -136,7 +136,7 @@ const en = {
       "readCase": "Read the work experience and case study"
     },
     "title": "Tech stack",
-    "subtitle": "The simple and challenging things across my career.",
+    "subtitle": "Skills and their application in projects.",
     "web": {
       "question": "What kind of development am I most familiar with?",
       "highlight": "Web development across platforms, devices, and browsers."
@@ -159,9 +159,9 @@ const en = {
     },
     "beyondFrontend": {
       "question": "What else do I know besides frontend development?",
-      "tauri": "A cross-platform application framework built on Rust. I've recently been using it for a side project.",
-      "flutter": "A cross-platform development toolkit from Google. One project at my previous job used it.",
-      "python": "The language I mainly used at university. I haven't used it much since focusing on frontend development."
+      "tauri": "Used in a personal project in development.",
+      "flutter": "Used on a project in my previous role.",
+      "python": "My main language at university; used less in recent years."
     },
     "ai": {
       "question": "What do I think about developing with AI?",
@@ -198,11 +198,11 @@ const en = {
   },
   "why": {
     "title": "Motivation",
-    "subtitle": "The JavaScript journey is long and demanding; I'm still on the way.",
+    "subtitle": "Learning and turning ideas into visible results.",
     "frontend": {
-      "question": "Why did I choose frontend development?",
-      "highlight": "It wasn't my initial choice. I just happened to end up heading this way.",
-      "interest": "At first, it was just a personal interest: I started programming to make games.",
+      "question": "Why do I continue working in frontend development?",
+      "highlight": "I enjoy learning new tools and turning them into results users can see.",
+      "interest": "AI shortens the time between learning a new tool, putting it into practice, and seeing the results, making exploration more rewarding. The frontend is what users encounter first. Seeing ideas take shape in the interface and its interactions keeps me engaged in this field.",
       "fullStack": "Game development includes both frontend and backend work, so strictly speaking, my original direction was closer to full-stack engineering.",
       "firstRole": "When programming finally became my job, my first role was in frontend development. Over time, that naturally came to take the overwhelming majority of my attention."
     }
@@ -222,15 +222,15 @@ const en = {
       "verification": "I personally checked the implementation against Figma designs and verified cross-browser behavior before handing it over to designers and QA for acceptance. Unit tests were defined jointly by the frontend team."
     },
     "title": "How I work",
-    "subtitle": "There are always more solutions than problems. And there are a lot of problems.",
+    "subtitle": "A collaboration case and how this website was built.",
     "website": {
       "question": "How was this website made?",
       "highlight": "I do the thinking; the agent handles the execution.",
-      "scope": "I defined the website's purpose, the devices it would be viewed on, the frameworks and tools to use, and the platform to deploy it on.",
+      "scope": "I defined the website’s purpose, target devices, technologies, and deployment approach, and used specifications to guide AI-assisted implementation.",
       "specification": "Following how PMs wrote specifications at my previous job, I wrote down my intended goals and started directing the agent.",
       "timeSaved": "What it produced was essentially comparable to what I'd write by hand, but took a fifth of my time or less.",
       "technicalIntro": "If you're interested in the technical details:",
-      "stack": "This is a static website built with Vue / Vue Router / Vite / TypeScript,",
+      "stack": "The website uses Vue, Vue Router, Vite, and TypeScript, and is deployed to GitHub Pages through GitHub Actions.",
       "deployment": "deployed to GitHub Pages through GitHub Actions."
     },
     "collaboration": {
@@ -241,7 +241,7 @@ const en = {
       "basicKnowledge": "Even a little introductory knowledge helps me understand more accurately what the other person is trying to convey.",
       "lessFriction": "The clearer our shared picture, the less friction there is in communication during development.",
       "backend": "I have the necessary knowledge of common backend architectures, along with practical experience working with backend engineers over the long term;",
-      "designCourse": "to improve how I collaborate with designers, I'm also taking the Google UX Design Certificate course to learn about UI/UX design."
+      "designCourse": "Google UX Design Certificate: in progress, studying UI/UX design to improve collaboration with designers."
     }
   },
   "resume": {

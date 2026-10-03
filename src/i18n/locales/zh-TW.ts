@@ -49,7 +49,7 @@ const zhTW = {
     },
     "what": {
       "title": "技術棧",
-      "subtitle": "通常在寫網頁，偶爾寫不是網頁的東西。"
+      "subtitle": "技能與專案中的實際用途。"
     },
     "where": {
       "title": "活動範圍",
@@ -57,11 +57,11 @@ const zhTW = {
     },
     "why": {
       "title": "動機",
-      "subtitle": "原因很重要，但結果有時會比原因更早到。"
+      "subtitle": "持續學習，讓想法成為看得見的成果。"
     },
     "how": {
       "title": "實踐方法",
-      "subtitle": "推薦你首先問問這個網站是怎麼做的。"
+      "subtitle": "協作案例與網站實作方式。"
     }
   },
   "who": {
@@ -134,7 +134,7 @@ const zhTW = {
       "readCase": "閱讀工作經歷與案例"
     },
     "title": "技術棧",
-    "subtitle": "職涯中那些簡單的與困難的事情。",
+    "subtitle": "技能與專案中的實際用途。",
     "web": {
       "question": "最熟悉的開發項目？",
       "highlight": "跨平台/裝置/瀏覽器的網頁開發。"
@@ -157,9 +157,9 @@ const zhTW = {
     },
     "beyondFrontend": {
       "question": "除了前端以外我還會什麼？",
-      "tauri": "基於 Rust 實現的跨平台軟體框架，最近正在用這個開發 side project。",
-      "flutter": "Google 開發的跨平台開發套件，在上一份工作有一項專案以此開發。",
-      "python": "大學時主要在寫的程式語言，開始專注在前端領域之後比較沒在碰了。"
+      "tauri": "用於開發中的個人專案。",
+      "flutter": "曾用於前一份工作的專案。",
+      "python": "大學時主要使用，近年較少接觸。"
     },
     "ai": {
       "question": "我對 AI 開發的看法？",
@@ -196,11 +196,11 @@ const zhTW = {
   },
   "why": {
     "title": "動機",
-    "subtitle": "JavaScript 道阻且長，我目前還在途中。",
+    "subtitle": "持續學習，讓想法成為看得見的成果。",
     "frontend": {
-      "question": "為什麼選擇前端領域？",
-      "highlight": "其實一開始不是選這個，只是走著走著方向剛好朝這邊。",
-      "interest": "最早只是因為個人興趣，為了開發遊戲所以開始寫程式。",
+      "question": "為什麼持續投入前端？",
+      "highlight": "我喜歡學習新工具，並把它變成使用者看得到的成果。",
+      "interest": "AI 縮短了從學習新工具到實作、看見成效的時間，讓探索更有回饋。前端是使用者最先接觸的部分，能直接看到想法如何呈現在畫面與互動中，這讓我持續想投入其中。",
       "fullStack": "遊戲開發同時包含前端與後端，所以嚴格說來我一開始選擇的方向算是全端工程師。",
       "firstRole": "後來終於正式把寫程式當成工作，第一個的職位是前端，久而久之分配給前端的心力自然也壓倒性的多。"
     }
@@ -220,15 +220,15 @@ const zhTW = {
       "verification": "我親自比對 Figma 設計稿並檢查跨瀏覽器行為，完成後交由設計師與 QA 驗收。單元測試由前端團隊共同訂定。"
     },
     "title": "實踐方法",
-    "subtitle": "方法總比問題多，而問題有夠多。",
+    "subtitle": "協作案例與網站實作方式。",
     "website": {
       "question": "這個網站是怎麼做的？",
       "highlight": "我負責動腦，Agent 負責動手。",
-      "scope": "由我定義這個網頁的目的、要在什麼裝置上被閱覽、要用哪些框架與工具、要佈署在什麼平台。",
+      "scope": "由我定義網站目的、閱覽裝置、技術與部署方式，並以規格引導 AI 協助實作。",
       "specification": "我按照以前工作時 PM 寫規格書的方式，把我預期的目標寫下來，開始指揮 Agent 做事。",
       "timeSaved": "它做出來的東西跟我自己手動敲鍵盤基本上差不多，但它只需要我五分之一或更少的時間。",
       "technicalIntro": "如果你想知道的是技術面的細節：",
-      "stack": "這個網站是以 Vue / Vue Router / Vite / TypeScript 實作的靜態網站，",
+      "stack": "網站使用 Vue／Vue Router／Vite／TypeScript，經 GitHub Actions 部署到 GitHub Pages。",
       "deployment": "透過 GitHub Actions 佈署至 GitHub Pages。"
     },
     "collaboration": {
@@ -239,7 +239,7 @@ const zhTW = {
       "basicKnowledge": "即便只是一點入門級的知識，也能讓我更對於對方腦中想要傳達的想像有更準確的理解。",
       "lessFriction": "協作者之間共同的想像越明確，開發時的溝通摩擦便越少。",
       "backend": "我已具備常見後端架構的必要知識，並有與後端工程師長期合作的實務經驗；",
-      "designCourse": "並且為了提升與設計師的協作能力，我正在修習 Google UX Design Certificate 課程，學習 UI/UX 設計的知識。"
+      "designCourse": "Google UX Design Certificate：修習中，學習 UI/UX 設計以提升與設計師協作的能力。"
     }
   },
   "resume": {

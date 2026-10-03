@@ -23,7 +23,7 @@ const { t } = useI18n({ useScope: 'global' })
           :highlight="t('why.frontend.highlight')"
           accentColor="var(--theme-why)"
         >
-          <p> {{ t('why.frontend.interest') }}<br /> {{ t('why.frontend.fullStack') }}<br /> {{ t('why.frontend.firstRole') }} </p>
+          <p>{{ t('why.frontend.interest') }}</p>
         </QnACard>
       </div>
     </div>
