@@ -42,7 +42,8 @@
     "resume.concise.flutter",
     "resume.concise.workTitle",
     "resume.concise.work",
-    "resume.concise.remoteExperience"
+    "resume.concise.remoteExperience",
+    "common.labelSeparator"
   ],
   "reason": "User-approved wording from text-update commits and content-concision #01. Preserve the original inventory as history; retiredFixedText applies only to the specified reading version. English token aliases validate exact lowercase equivalents of ordinary words, not omitted facts.",
   "chinese": {
