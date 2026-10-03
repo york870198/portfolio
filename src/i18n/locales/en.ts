@@ -89,13 +89,13 @@ const en = {
   },
   "when": {
     "employment": {
-      "employer": "Previous employer (anonymized)",
+      "employer": "Previous employer (name withheld)",
       "roles": "Frontend Engineer → Senior Frontend Engineer",
       "promotion": "Promoted during tenure"
     },
     "project": {
       "title": "Product upgrade and Vue 3 rebuild",
-      "summary": "As one of three frontend engineers, contributed to rebuilding an existing Vue 2 website in Vue 3 while retaining the established product architecture. Implemented updated visual designs and interactions provided by the design team.",
+      "summary": "Contributed as one of three frontend engineers to rebuilding an existing Vue 2 website in Vue 3, retaining the established product architecture and implementing the design team’s updated brand visuals and interactions.",
       "outcome": "The new version launched on schedule.",
       "labels": {
         "delivery": "Feature delivery:",
@@ -103,10 +103,10 @@ const en = {
         "api": "API collaboration:",
         "verification": "Delivery verification:"
       },
-      "delivery": "Integrated UI, user flows, and API calls into feature-based page modules that could be connected to the Router, and maintained shared components used across pages. Used Pinia for state management, RxJS for asynchronous backend data updates, and WebSocket for real-time interaction messages.",
-      "requirements": "Identified discrepancies between existing documentation, live product behavior, and updated designs. Worked with the PM and designers to confirm the new flows, identify the required components and APIs, and update outdated specifications.",
-      "api": "Defined frontend data requirements and expected response structures, agreed on them with backend engineers, and integrated the APIs after backend implementation.",
-      "verification": "Personally checked the implementation against Figma designs and verified cross-browser behavior before acceptance by designers and QA. Unit tests were defined jointly by the frontend team."
+      "delivery": "Built modular pages organized by feature, combining UI, user flows, and API integration for use in the site’s routing, and maintained shared components across pages. Used Pinia for state management, RxJS to handle asynchronous backend data updates, and WebSocket to receive real-time interaction messages.",
+      "requirements": "Identified discrepancies between existing documentation, live product behavior, and updated designs. Agreed on the new flows and required components and APIs with the PM and designers, and updated outdated specifications.",
+      "api": "Defined frontend data requirements and expected response structures, confirmed them with backend engineers, and integrated the APIs they implemented.",
+      "verification": "Checked the implementation against Figma designs and verified cross-browser behavior, then handed it over to designers and QA for acceptance testing. Unit tests were defined jointly by the frontend team."
     },
     "title": "Experience",
     "subtitle": "Roles, career progression, and product delivery.",
@@ -119,7 +119,7 @@ const en = {
     },
     "previousRole": {
       "question": "When did my previous job start and end?",
-      "highlight": "2021.12–2026.05",
+      "highlight": "Dec 2021–May 2026",
       "tenure": "My previous job was also my first in the industry. I stayed for more than four years.",
       "company": "It was a company where both the product and team were growing rapidly. The team's technical lead was a highly skilled engineer dedicated to the open-source community, and learning under him was immensely rewarding.",
       "studyGroups": "Beyond technologies directly related to our work, the company held regular study groups where we kept learning and revisiting what we knew together.",
@@ -129,7 +129,7 @@ const en = {
   "what": {
     "evidence": {
       "title": "Technologies in practice",
-      "vue": "Implemented UI and user flows as feature-based pages connected to the Router.",
+      "vue": "Implemented UI and user flows as feature-based pages for use in the site’s routing.",
       "pinia": "Managed page state.",
       "rxjs": "Handled asynchronous backend data updates.",
       "websocket": "Received real-time interaction messages.",
@@ -216,10 +216,10 @@ const en = {
         "api": "Define data and implementation responsibilities:",
         "verification": "Verify the delivery:"
       },
-      "differences": "During the upgrade, the updated designs introduced a different interaction flow, while the live product also differed from its existing documentation. I checked the documentation against actual behavior to identify what needed clarification.",
-      "agreement": "After discussing the differences with the PM and designers, we agreed to implement the updated flow, revise outdated specifications, and identify the new components and APIs it required.",
-      "api": "I defined frontend data requirements and expected response structures with backend engineers. The backend team implemented the APIs, and I completed the frontend integration.",
-      "verification": "I personally checked the implementation against Figma designs and verified cross-browser behavior before handing it over to designers and QA for acceptance. Unit tests were defined jointly by the frontend team."
+      "differences": "During the upgrade, the updated designs changed the user flows, and the live product also differed from its documentation. I compared the documentation with actual behavior to identify discrepancies that needed clarification.",
+      "agreement": "I discussed the discrepancies with the PM and designers. We agreed to implement the updated flows, revise outdated specifications, and identify the new components and APIs needed.",
+      "api": "I proposed the frontend data requirements and defined the expected response structures, then confirmed them with backend engineers. They implemented the APIs, and I integrated them into the frontend.",
+      "verification": "I checked the implementation against Figma designs and verified cross-browser behavior, then handed it over to designers and QA for acceptance testing. Unit tests were defined jointly by the frontend team."
     },
     "title": "How I work",
     "subtitle": "A collaboration case and how this website was built.",
@@ -256,10 +256,10 @@ const en = {
       "remoteExperience": "Experienced in remote collaboration with colleagues across locations and time zones."
     },
     "project": {
-      "delivery": "Delivered feature-based page modules integrating UI, user flows, and APIs for the Router, and maintained shared components. Used Pinia for state management, RxJS for asynchronous data updates, and WebSocket for real-time interaction messages.",
+      "delivery": "Built feature-based pages combining UI, user flows, and API integration for use in the site’s routing, and maintained shared components. Used Pinia for state management, RxJS for asynchronous backend data updates, and WebSocket for real-time interaction messages.",
       "requirements": "Clarified discrepancies between documentation, live behavior, and updated designs with the PM and designers, agreed on the new flows, and updated outdated specifications.",
-      "api": "Defined frontend data requirements and expected structures with backend engineers, then integrated the APIs implemented by the backend team.",
-      "verification": "Personally checked the UI against Figma designs and verified cross-browser behavior before acceptance by designers and QA."
+      "api": "Defined frontend data requirements and expected response structures, confirmed them with backend engineers, and integrated the APIs they implemented.",
+      "verification": "Checked the UI against Figma designs and verified cross-browser behavior, then handed it over to designers and QA for acceptance testing."
     },
     "toolbar": {
       "print": "Print / Save as PDF"

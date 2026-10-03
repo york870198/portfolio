@@ -11,6 +11,11 @@ function messageKeys(group: object, prefix = ''): string[] {
 }
 
 describe('approved bilingual content', () => {
+  it('preserves employment dates when month names are localized', () => {
+    expect(zhTW.when.previousRole.highlight).toBe('2021 年 12 月–2026 年 5 月')
+    expect(en.when.previousRole.highlight).toBe('Dec 2021–May 2026')
+  })
+
   it.each(['zh-TW', 'en'] as const)('compiles every %s message without exposing message syntax', locale => {
     i18n.global.locale.value = locale
     for (const key of messageKeys(zhTW)) {
