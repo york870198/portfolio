@@ -43,7 +43,7 @@ const en = {
   "home": {
     "who": {
       "title": "About me",
-      "subtitle": "Senior frontend, and more."
+      "subtitle": "Senior frontend engineer with backend knowledge."
     },
     "when": {
       "title": "Experience",
@@ -68,15 +68,15 @@ const en = {
   },
   "who": {
     "title": "About me",
-    "subtitle": "A senior frontend engineer with some backend knowledge.",
+    "subtitle": "A senior frontend engineer with backend knowledge.",
     "identity": {
       "question": "Who am I?",
-      "highlight": "A senior frontend engineer with four years of industry experience.",
+      "highlight": "A senior frontend engineer with over four years of frontend development experience.",
       "workName": "I go by Fay at work.",
       "realName": "If you came here from LinkedIn or another recruiting platform, you'll have seen my real name there.",
       "architecture": "I focus on modern frontend architecture, regularly working with the {vue} and {react} ecosystems.",
-      "backend": "For backend work, I use NodeJS and have extensive experience collaborating with backend engineers",
-      "design": "I understand design systems and interaction design principles, and can implement UI that closely matches Figma designs"
+      "backend": "I use Node.js for backend work and have extensive experience collaborating with backend engineers.",
+      "design": "I understand design systems and interaction design principles, and can implement UI that closely matches Figma designs."
     },
     "interests": {
       "question": "What (and who) do I follow?",
@@ -266,7 +266,7 @@ const en = {
     },
     "profile": {
       "title": "Senior Frontend Engineer",
-      "summary": "Focused on modern frontend architecture (Vue 3 / React / TypeScript), with 4+ years of intensive product development and cross-disciplinary collaboration experience. I value clear code architecture, user experience, and efficient communication.",
+      "summary": "Focused on modern frontend architecture (Vue 3 / React / TypeScript), with over four years of product development and cross-disciplinary collaboration experience. I value clear code architecture, user experience, and efficient communication.",
       "location": "Taipei, Taiwan {location}"
     },
     "when": {
