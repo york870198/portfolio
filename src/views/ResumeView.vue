@@ -100,7 +100,7 @@ onMounted(async () => {
     if (isMounted) window.print()
   }
 })
-const { t, locale } = useI18n({ useScope: 'global' })
+const { t } = useI18n({ useScope: 'global' })
 </script>
 
 <template>
@@ -175,8 +175,8 @@ const { t, locale } = useI18n({ useScope: 'global' })
           <h2 id="resume-development-title" class="resume-section-title">{{ t('resume.concise.developmentTitle') }}</h2>
           <ul>
             <li>{{ t('resume.concise.uxCourse') }}</li>
-            <li><strong>Tauri{{ locale === 'en' ? ':' : '：' }}</strong> {{ t('resume.concise.tauri') }}</li>
-            <li><strong>Flutter{{ locale === 'en' ? ':' : '：' }}</strong> {{ t('resume.concise.flutter') }}</li>
+            <li><strong>Tauri{{ t('common.labelSeparator') }}</strong> {{ t('resume.concise.tauri') }}</li>
+            <li><strong>Flutter{{ t('common.labelSeparator') }}</strong> {{ t('resume.concise.flutter') }}</li>
           </ul>
         </section>
 

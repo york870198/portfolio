@@ -3,6 +3,7 @@ import type { MessageCatalog } from './zh-TW'
 // Existing English design text stays in the templates or shared data.
 const en = {
   "common": {
+    "labelSeparator": ":",
     "language": { "label": "Website language" },
     "skipToContent": "Skip to main content",
     "dimensions": "Six dimensions",
