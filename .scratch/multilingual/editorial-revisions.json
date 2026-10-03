@@ -50,7 +50,7 @@
     "what.beyondFrontend.flutter": "曾用於前一份工作的專案。",
     "why.subtitle": "持續學習，讓想法成為看得見的成果。",
     "how.website.deployment": "透過 GitHub Actions 佈署至 GitHub Pages。",
-    "when.previousRole.highlight": "2021.12–2026.05",
+    "when.previousRole.highlight": "2021 年 12 月–2026 年 5 月",
     "when.careerStart.highlight": "2021 年 12 月。",
     "who.identity.highlight": "具備四年以上前端開發經驗，目前職級為資深前端工程師。",
     "when.previousRole.company": "是一間產品與團隊都在快速成長的公司，團隊的技術領導是致力於開源社群的大神，跟著他學習的過程使我獲益良多。",
@@ -88,7 +88,22 @@
     "who.subtitle": "一名具備後端基礎知識的資深前端工程師。",
     "who.identity.backend": "後端技術方面使用 Node.js，並有長期與後端工程師協作的經驗。",
     "who.identity.design": "理解設計系統與互動設計原則，能依據 Figma 設計稿精準實作 UI。",
-    "resume.profile.summary": "專注於現代前端架構（Vue 3 / React / TypeScript），具備四年以上產品開發與跨領域協作經驗，重視清晰的程式碼架構、使用者體驗與溝通效率。"
+    "resume.profile.summary": "專注於現代前端架構（Vue 3 / React / TypeScript），具備四年以上產品開發與跨領域協作經驗，重視清晰的程式碼架構、使用者體驗與溝通效率。",
+    "when.employment.employer": "前公司（名稱不公開）",
+    "when.project.summary": "作為三名前端工程師之一，沿用既有產品架構，參與將 Vue 2 網站以 Vue 3 重建，並實作設計師更新後的品牌視覺與互動。",
+    "when.project.delivery": "以功能為單位整合畫面、操作流程與 API 串接，交付可整合至網站路由的模組化頁面，並維護跨頁共用元件。使用 Pinia 管理狀態、RxJS 處理後端非同步資料變化，以及 WebSocket 接收即時互動訊息。",
+    "when.project.requirements": "核對既有文件、線上操作與新版設計的差異，與 PM、設計師共同確認新版流程及所需的新元件與 API，並修正過時規格。",
+    "when.project.api": "提出前端資料需求並定義預期接收的資料結構，與後端共同確認；由後端實作 API，再由我完成前端串接。",
+    "when.project.verification": "親自比對 Figma 設計稿並檢查跨瀏覽器行為，再交由設計師與 QA 驗收。單元測試由前端團隊共同訂定。",
+    "what.evidence.vue": "實作畫面與操作流程，組成可整合至網站路由的功能頁面。",
+    "how.case.differences": "版本升級時，新版設計的操作流程與舊版不同，而舊版線上行為又與既有文件有落差。我核對文件與實際操作，釐清需要確認的差異。",
+    "how.case.agreement": "我與 PM、設計師討論後，共同確認按新版設計實作流程、修正過時規格，並釐清需要新增的元件與 API。",
+    "how.case.api": "我提出前端資料需求並定義預期接收的資料結構，與後端共同確認。後端實作 API 後，由我完成前端串接。",
+    "how.case.verification": "我親自比對 Figma 設計稿並檢查跨瀏覽器行為，再交由設計師與 QA 驗收。單元測試由前端團隊共同訂定。",
+    "resume.project.delivery": "整合畫面、操作流程與 API 串接為可整合至網站路由的功能頁面，維護跨頁共用元件；使用 Pinia 管理狀態、RxJS 處理後端非同步資料變化、WebSocket 接收即時互動訊息。",
+    "resume.project.requirements": "釐清文件、線上操作與新版設計的差異，與 PM、設計師共同確認新版流程並修正過時規格。",
+    "resume.project.api": "定義前端資料需求與預期結構，與後端共同確認；由後端實作 API，本人完成串接。",
+    "resume.project.verification": "親自比對 Figma 設計稿並檢查跨瀏覽器行為，再交由設計師及 QA 驗收。"
   },
   "retiredKeys": [
     "resume.who.svelteAngular",
@@ -202,6 +217,10 @@
     },
     "how.website.specification": {
       "Agent": "agent"
+    },
+    "when.previousRole.highlight": {
+      "5": "May",
+      "12": "Dec"
     }
   }
 }
