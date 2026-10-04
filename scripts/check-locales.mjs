@@ -4,12 +4,12 @@ import { readFile } from 'node:fs/promises'
 import ts from 'typescript'
 
 const root = new URL('../', import.meta.url)
-const inventory = JSON.parse(await readFile(new URL('.scratch/multilingual/content-inventory.json', root), 'utf8'))
-const revisions = JSON.parse(await readFile(new URL('.scratch/multilingual/editorial-revisions.json', root), 'utf8'))
+const inventory = JSON.parse(await readFile(new URL('tests/fixtures/locales/content-inventory.json', root), 'utf8'))
+const revisions = JSON.parse(await readFile(new URL('tests/fixtures/locales/editorial-revisions.json', root), 'utf8'))
 
 async function loadCatalog(name) {
   // Use the project's existing TypeScript compiler; no runtime i18n dependency
-  // is needed to verify the dictionaries before ticket 02 installs Vue I18n.
+  // is needed to verify the dictionaries.
   const source = await readFile(new URL(`src/i18n/locales/${name}.ts`, root), 'utf8')
   const { outputText } = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.ESNext } })
   return (await import(`data:text/javascript;base64,${Buffer.from(outputText).toString('base64')}`)).default
@@ -84,8 +84,8 @@ for (const item of inventory.items) {
 }
 assert.deepEqual([...used].sort(), Object.keys(zh).sort(), 'Every message must have an inventoried source')
 
-// Ticket 01 also promises zero changes to the existing website. This optional
-// check is intentionally omitted when later tickets wire messages into views.
+// Optional: verify website sources still match the hashes recorded when the
+// inventory was created. Omitted by default because views now use messages.
 if (process.argv.includes('--source-baseline')) {
   for (const [file, expected] of Object.entries(inventory.sourceHashes)) {
     const source = await readFile(new URL(file, root))
