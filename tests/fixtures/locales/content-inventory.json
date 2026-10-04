@@ -1,0 +1,2656 @@
+{
+  "baselineCommit": "d7dfa69ac4472e7bb77df17fe9daf35d6fa87bea",
+  "sourceHashes": {
+    "src/App.vue": "f6d2fae550a5120da655b4b4b91392f0fcbe53a78a96882562ec65f5115a06b2",
+    "src/components/Navbar.vue": "968e57b077f28d589f9e6ea073745f470a83ae7498f3eec88e00dfaca8479809",
+    "src/components/PageHeader.vue": "fca33ce6a37f017660c1e06cd49c9ff64f21961ea23cd5abe0defb53b30740af",
+    "src/components/QuickContact.vue": "bc16801f44997da2ac466c5e34c0c6bc0516ec8b28968b034fe55808e08daaf5",
+    "src/components/ThemeToggle.vue": "0d40a9e99ab9224f6177216a0bb492197a16ccff4d5ce22cbe68f9b842673300",
+    "src/components/ProjectCard.vue": "54d56b3386e5c9d9a4234799c75ac279d3d69ec68fdee114d8882b066140fdf8",
+    "src/views/HomeView.vue": "fee8c6a98a5aa17910b37eff0d5dde757b29c42730ff0cd0c9643a7560533fa7",
+    "src/views/WhoView.vue": "09ffb77938dc1e5d547bc6f92e5fa9a4f6b742bd3afa943c2121ed7e7ecaedd0",
+    "src/views/WhenView.vue": "29f03b992bae31610500166c042f789589a9357cfff5430287ab5a20818b4884",
+    "src/views/WhatView.vue": "db0cf55870f4a8e3042046e42ea4e7979c3c843a6638e521f9689f7e9af4a9f7",
+    "src/views/WhereView.vue": "3a2c3391ed89f1afb3fed68e2df623ceb96f666b93bdea50da4b39996f525e0d",
+    "src/views/WhyView.vue": "1f2b9ab311f382b44b1de20d16b70274da05073f2348c9c66fcb7348d3d64259",
+    "src/views/HowView.vue": "6c692438d122060a554d1c9a6209ed5861bed66db72a76f3dae0176ee5720e7b",
+    "src/views/ResumeView.vue": "e3dbfb1e14bb4ab14f27f7b347056ea0b68ff8b7ce22eb90bbfe89050127200c",
+    "src/views/NotFoundView.vue": "d307429b433b823f20e22cb8b45eec98cc75dad73ed580c2b848c7cdfc3fcf66",
+    "src/router/index.ts": "29749b2257c7ced4931f90923985c6d771cfff861821016c6a26953e930d04d2",
+    "index.html": "03ddfc2b0da73bf653a9c1bb04ea8492bb8ac235ec39ac2625e1b84c1ffc5ace"
+  },
+  "slotDefaults": {
+    "vue": "Vue 3",
+    "react": "React",
+    "location": "(Taipei, Taiwan)"
+  },
+  "items": [
+    {
+      "file": "src/App.vue",
+      "line": 17,
+      "kind": "text",
+      "original": "跳至主要內容",
+      "key": "common.skipToContent",
+      "category": "translatable"
+    },
+    {
+      "file": "src/App.vue",
+      "line": 30,
+      "kind": "text",
+      "original": "Portfolio. Built with Vue 3 & TypeScript.",
+      "category": "fixed"
+    },
+    {
+      "file": "src/components/Navbar.vue",
+      "line": 56,
+      "kind": "script",
+      "original": "完整履歷列印",
+      "key": "common.navbar.printFrameTitle",
+      "category": "translatable"
+    },
+    {
+      "file": "src/components/Navbar.vue",
+      "line": 96,
+      "kind": "text",
+      "original": "Fay",
+      "category": "fixed"
+    },
+    {
+      "file": "src/components/Navbar.vue",
+      "line": 96,
+      "kind": "text",
+      "original": "Portfolio.",
+      "category": "fixed"
+    },
+    {
+      "file": "src/components/Navbar.vue",
+      "line": 98,
+      "kind": "attribute",
+      "original": "主要導覽選單",
+      "key": "common.navbar.mainNavigation",
+      "category": "translatable"
+    },
+    {
+      "file": "src/components/Navbar.vue",
+      "line": 106,
+      "kind": "attribute",
+      "original": "下載履歷 PDF",
+      "key": "common.navbar.downloadResumePdf",
+      "category": "translatable"
+    },
+    {
+      "file": "src/components/Navbar.vue",
+      "line": 107,
+      "kind": "script",
+      "original": "準備中…",
+      "key": "common.navbar.preparing",
+      "category": "translatable"
+    },
+    {
+      "file": "src/components/Navbar.vue",
+      "line": 107,
+      "kind": "script",
+      "original": "下載履歷",
+      "key": "common.navbar.downloadResume",
+      "category": "translatable"
+    },
+    {
+      "file": "src/components/Navbar.vue",
+      "line": 109,
+      "kind": "attribute",
+      "original": "聯絡",
+      "key": "common.navbar.contact",
+      "category": "translatable"
+    },
+    {
+      "file": "src/components/Navbar.vue",
+      "line": 111,
+      "kind": "script",
+      "original": "關閉選單",
+      "key": "common.navbar.closeMenu",
+      "category": "translatable"
+    },
+    {
+      "file": "src/components/Navbar.vue",
+      "line": 111,
+      "kind": "script",
+      "original": "開啟選單",
+      "key": "common.navbar.openMenu",
+      "category": "translatable"
+    },
+    {
+      "file": "src/components/Navbar.vue",
+      "line": 117,
+      "kind": "attribute",
+      "original": "行動版導覽選單",
+      "key": "common.navbar.mobileNavigation",
+      "category": "translatable"
+    },
+    {
+      "file": "src/components/Navbar.vue",
+      "line": 125,
+      "kind": "script",
+      "original": "準備履歷中…",
+      "key": "common.navbar.preparingResume",
+      "category": "translatable"
+    },
+    {
+      "file": "src/components/Navbar.vue",
+      "line": 125,
+      "kind": "script",
+      "original": "下載履歷 (PDF)",
+      "key": "common.navbar.mobileDownloadResume",
+      "category": "translatable"
+    },
+    {
+      "file": "src/components/PageHeader.vue",
+      "line": 16,
+      "kind": "attribute",
+      "original": "六個面向",
+      "key": "common.dimensions",
+      "category": "translatable"
+    },
+    {
+      "file": "src/components/QuickContact.vue",
+      "line": 12,
+      "kind": "script",
+      "original": "聯絡我",
+      "key": "common.contact.label",
+      "category": "translatable"
+    },
+    {
+      "file": "src/components/QuickContact.vue",
+      "line": 41,
+      "kind": "expression",
+      "original": "點擊複製 Email: {email}",
+      "key": "common.contact.copyEmail",
+      "category": "translatable"
+    },
+    {
+      "file": "src/components/QuickContact.vue",
+      "line": 47,
+      "kind": "script",
+      "original": "已複製 Email 地址",
+      "key": "common.contact.emailCopied",
+      "category": "translatable"
+    },
+    {
+      "file": "src/components/ThemeToggle.vue",
+      "line": 40,
+      "kind": "script",
+      "original": "切換為淺色主題",
+      "key": "common.theme.switchToLight",
+      "category": "translatable"
+    },
+    {
+      "file": "src/components/ThemeToggle.vue",
+      "line": 40,
+      "kind": "script",
+      "original": "切換為深色主題",
+      "key": "common.theme.switchToDark",
+      "category": "translatable"
+    },
+    {
+      "file": "src/components/ThemeToggle.vue",
+      "line": 41,
+      "kind": "script",
+      "original": "切換為淺色主題",
+      "key": "common.theme.switchToLight",
+      "category": "translatable"
+    },
+    {
+      "file": "src/components/ThemeToggle.vue",
+      "line": 41,
+      "kind": "script",
+      "original": "切換為深色主題",
+      "key": "common.theme.switchToDark",
+      "category": "translatable"
+    },
+    {
+      "file": "src/components/ProjectCard.vue",
+      "line": 38,
+      "kind": "attribute",
+      "original": "查看 GitHub 原始碼",
+      "key": "common.project.viewSource",
+      "category": "translatable"
+    },
+    {
+      "file": "src/components/ProjectCard.vue",
+      "line": 40,
+      "kind": "text",
+      "original": "GitHub",
+      "category": "fixed"
+    },
+    {
+      "file": "src/components/ProjectCard.vue",
+      "line": 49,
+      "kind": "attribute",
+      "original": "前往 Live Demo 預覽",
+      "key": "common.project.viewDemo",
+      "category": "translatable"
+    },
+    {
+      "file": "src/components/ProjectCard.vue",
+      "line": 51,
+      "kind": "text",
+      "original": "Live Demo",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/HomeView.vue",
+      "line": 5,
+      "kind": "script",
+      "original": "WHO",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/HomeView.vue",
+      "line": 18,
+      "kind": "script",
+      "original": "WHO",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/HomeView.vue",
+      "line": 19,
+      "kind": "script",
+      "original": "個人資訊",
+      "key": "home.who.title",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/HomeView.vue",
+      "line": 20,
+      "kind": "script",
+      "original": "資深前端，以及除此以外。",
+      "key": "home.who.subtitle",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/HomeView.vue",
+      "line": 26,
+      "kind": "script",
+      "original": "WHEN",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/HomeView.vue",
+      "line": 27,
+      "kind": "script",
+      "original": "經歷",
+      "key": "home.when.title",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/HomeView.vue",
+      "line": 28,
+      "kind": "script",
+      "original": "成為工程師之後，以及之前。",
+      "key": "home.when.subtitle",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/HomeView.vue",
+      "line": 34,
+      "kind": "script",
+      "original": "WHAT",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/HomeView.vue",
+      "line": 35,
+      "kind": "script",
+      "original": "技術棧",
+      "key": "home.what.title",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/HomeView.vue",
+      "line": 36,
+      "kind": "script",
+      "original": "通常在寫網頁，偶爾寫不是網頁的東西。",
+      "key": "home.what.subtitle",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/HomeView.vue",
+      "line": 42,
+      "kind": "script",
+      "original": "WHERE",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/HomeView.vue",
+      "line": 43,
+      "kind": "script",
+      "original": "活動範圍",
+      "key": "home.where.title",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/HomeView.vue",
+      "line": 44,
+      "kind": "script",
+      "original": "在哪裡找得到我，或者我能跑多遠去找你。",
+      "key": "home.where.subtitle",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/HomeView.vue",
+      "line": 50,
+      "kind": "script",
+      "original": "WHY",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/HomeView.vue",
+      "line": 51,
+      "kind": "script",
+      "original": "動機",
+      "key": "home.why.title",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/HomeView.vue",
+      "line": 52,
+      "kind": "script",
+      "original": "原因很重要，但結果有時會比原因更早到。",
+      "key": "home.why.subtitle",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/HomeView.vue",
+      "line": 58,
+      "kind": "script",
+      "original": "HOW",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/HomeView.vue",
+      "line": 59,
+      "kind": "script",
+      "original": "實踐方法",
+      "key": "home.how.title",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/HomeView.vue",
+      "line": 60,
+      "kind": "script",
+      "original": "推薦你首先問問這個網站是怎麼做的。",
+      "key": "home.how.subtitle",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/HomeView.vue",
+      "line": 73,
+      "kind": "text",
+      "original": "Everything about",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/HomeView.vue",
+      "line": 73,
+      "kind": "text",
+      "original": "Fay",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/HomeView.vue",
+      "line": 84,
+      "kind": "text",
+      "original": "WHO · WHEN · WHAT",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/HomeView.vue",
+      "line": 84,
+      "kind": "text",
+      "original": "WHERE · WHY · HOW",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/HomeView.vue",
+      "line": 86,
+      "kind": "attribute",
+      "original": "六個面向",
+      "key": "common.dimensions",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/HomeView.vue",
+      "line": 87,
+      "kind": "text",
+      "original": "六個面向",
+      "key": "common.dimensions",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/HomeView.vue",
+      "line": 87,
+      "kind": "text",
+      "original": "INDEX ↓",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/HomeView.vue",
+      "line": 94,
+      "kind": "text",
+      "original": "更多細節",
+      "key": "common.moreDetails",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhoView.vue",
+      "line": 10,
+      "kind": "attribute",
+      "original": "WHO",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/WhoView.vue",
+      "line": 12,
+      "kind": "attribute",
+      "original": "個人資訊",
+      "key": "who.title",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhoView.vue",
+      "line": 13,
+      "kind": "attribute",
+      "original": "一名資深前端工程師，略懂後端。",
+      "key": "who.subtitle",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhoView.vue",
+      "line": 20,
+      "kind": "attribute",
+      "original": "我是誰？",
+      "key": "who.identity.question",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhoView.vue",
+      "line": 21,
+      "kind": "attribute",
+      "original": "剛好趕在 AI 開始威脅要取代我們之前，從手工寫程式開始的資深前端工程師。",
+      "key": "who.identity.highlight",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhoView.vue",
+      "line": 22,
+      "kind": "script",
+      "original": "Senior Frontend",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/WhoView.vue",
+      "line": 22,
+      "kind": "script",
+      "original": "React & Vue",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/WhoView.vue",
+      "line": 22,
+      "kind": "script",
+      "original": "Full-Stack Mindset",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/WhoView.vue",
+      "line": 25,
+      "kind": "text",
+      "original": "我在工作場合自稱 Fay，另外在不同社群間有不同的暱稱。",
+      "key": "who.identity.workName",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhoView.vue",
+      "line": 26,
+      "kind": "text",
+      "original": "如果你是從 LinkedIn 等人才媒合平台過來，你會在那邊看到我的本名。",
+      "key": "who.identity.realName",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhoView.vue",
+      "line": 29,
+      "kind": "text",
+      "original": "我專注於現代前端架構，慣於使用",
+      "key": "who.identity.architecture",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhoView.vue",
+      "line": 30,
+      "kind": "text",
+      "original": "Vue 3",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/WhoView.vue",
+      "line": 30,
+      "kind": "text",
+      "original": "及",
+      "key": "who.identity.architecture",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhoView.vue",
+      "line": 30,
+      "kind": "text",
+      "original": "React",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/WhoView.vue",
+      "line": 30,
+      "kind": "text",
+      "original": "兩項前端生態系。",
+      "key": "who.identity.architecture",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhoView.vue",
+      "line": 30,
+      "kind": "text",
+      "original": "後端技術方面我使用 NodeJS，並有長期與後端工程師協作的經驗",
+      "key": "who.identity.backend",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhoView.vue",
+      "line": 31,
+      "kind": "text",
+      "original": "理解 Design System 與互動設計原則，能依據 Figma 設計稿完成高精準度的 UI 實作",
+      "key": "who.identity.design",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhoView.vue",
+      "line": 38,
+      "kind": "attribute",
+      "original": "我平常在關注誰？",
+      "key": "who.interests.question",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhoView.vue",
+      "line": 39,
+      "kind": "attribute",
+      "original": "公務上關注前端技術，私底下關注獨立遊戲。",
+      "key": "who.interests.highlight",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhoView.vue",
+      "line": 43,
+      "kind": "text",
+      "original": "在我成為前端工程師之前，我首先是在鑽研獨立遊戲開發。",
+      "key": "who.interests.gameDevelopment",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhoView.vue",
+      "line": 44,
+      "kind": "text",
+      "original": "當時跟 PM 一起天天跟畫面演出的細節大戰三百回合，做著做著回過神來發現我在寫的東西跟網頁前端有八成像。",
+      "key": "who.interests.presentation",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhoView.vue",
+      "line": 45,
+      "kind": "text",
+      "original": "至於後來那個遊戲開發工具的下一代核心真的變成 HTML / CSS / JS，只能說是美麗的巧合。",
+      "key": "who.interests.coincidence",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhoView.vue",
+      "line": 48,
+      "kind": "text",
+      "original": "現在我平常追蹤 Hacker News 接收業界新聞，有空閒時則在獨立遊戲開發者的社群看看流行的新技術。",
+      "key": "who.interests.communities",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhenView.vue",
+      "line": 10,
+      "kind": "attribute",
+      "original": "WHEN",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/WhenView.vue",
+      "line": 12,
+      "kind": "attribute",
+      "original": "經歷",
+      "key": "when.title",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhenView.vue",
+      "line": 13,
+      "kind": "attribute",
+      "original": "AI 時代飛行速度有點太快，害我感覺過去那個手寫程式的自己比實際上更老。",
+      "key": "when.subtitle",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhenView.vue",
+      "line": 20,
+      "kind": "attribute",
+      "original": "我何時成為前端工程師？",
+      "key": "when.careerStart.question",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhenView.vue",
+      "line": 21,
+      "kind": "attribute",
+      "original": "2021 年末。",
+      "key": "when.careerStart.highlight",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhenView.vue",
+      "line": 24,
+      "kind": "text",
+      "original": "「寫程式」這件事從高中就開始了，但一直都停留在興趣階段，大學也不是讀資工本科。",
+      "key": "when.careerStart.hobby",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhenView.vue",
+      "line": 25,
+      "kind": "text",
+      "original": "2020 年新冠疫情改變了很多事情，我當時工作的領域大受影響，我覺得這樣下去不是辦法。",
+      "key": "when.careerStart.pandemic",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhenView.vue",
+      "line": 26,
+      "kind": "text",
+      "original": "我提了離職、找了個系統化的課程把當時前端業界該學的東西複習一遍、成功應徵到前端職位，然後就這樣了。",
+      "key": "when.careerStart.transition",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhenView.vue",
+      "line": 33,
+      "kind": "attribute",
+      "original": "上一份工作何時開始、何時結束？",
+      "key": "when.previousRole.question",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhenView.vue",
+      "line": 34,
+      "kind": "attribute",
+      "original": "2021 年末，2026 年中離職。",
+      "key": "when.previousRole.highlight",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhenView.vue",
+      "line": 37,
+      "kind": "text",
+      "original": "上一份工作就是我入行的第一份工作，待了超過四年。",
+      "key": "when.previousRole.tenure",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhenView.vue",
+      "line": 38,
+      "kind": "text",
+      "original": "是一間成長速度很快的公司，團隊的技術領導是致力於開源社群的大神。",
+      "key": "when.previousRole.company",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhenView.vue",
+      "line": 39,
+      "kind": "text",
+      "original": "除了與工作直接相關的技術外，公司內也會定期舉辦讀書會、同事們一起持續溫故知新。",
+      "key": "when.previousRole.studyGroups",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhenView.vue",
+      "line": 42,
+      "kind": "text",
+      "original": "2026 年初時，家庭內發生需要我專注處理的問題，實在沒有心力蠟燭兩頭燒，故離職專心處理家裡的狀況。",
+      "key": "when.previousRole.family",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 7,
+      "kind": "script",
+      "original": "前端核心生態",
+      "key": "what.skills.frontend.title",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 8,
+      "kind": "script",
+      "original": "Vue 3 (Pinia / Vue Router)",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 8,
+      "kind": "script",
+      "original": "React 18+ (Functional component / Redux)",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 8,
+      "kind": "script",
+      "original": "TypeScript (強型別安全)",
+      "key": "what.skills.frontend.typescript",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 8,
+      "kind": "script",
+      "original": "Vite / pnpm",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 8,
+      "kind": "script",
+      "original": "PWA",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 8,
+      "kind": "script",
+      "original": "瀏覽器差異對策",
+      "key": "what.skills.frontend.browserCompatibility",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 11,
+      "kind": "script",
+      "original": "後端與資料",
+      "key": "what.skills.backend.title",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 12,
+      "kind": "script",
+      "original": "Node.js / Express",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 12,
+      "kind": "script",
+      "original": "RxJS",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 12,
+      "kind": "script",
+      "original": "RESTful API",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 12,
+      "kind": "script",
+      "original": "MySQL",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 12,
+      "kind": "script",
+      "original": "API Mocking",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 12,
+      "kind": "script",
+      "original": "WebSocket 即時通訊",
+      "key": "what.skills.backend.websocket",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 15,
+      "kind": "script",
+      "original": "UI/UX 與 QA",
+      "key": "what.skills.design.title",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 16,
+      "kind": "script",
+      "original": "Figma 協作",
+      "key": "what.skills.design.figma",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 16,
+      "kind": "script",
+      "original": "響應式排版 (RWD)",
+      "key": "what.skills.design.responsive",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 16,
+      "kind": "script",
+      "original": "CI/CD (GitHub Actions / Pages)",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 16,
+      "kind": "script",
+      "original": "Vitest",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 25,
+      "kind": "attribute",
+      "original": "WHAT",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 27,
+      "kind": "attribute",
+      "original": "技術棧",
+      "key": "what.title",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 28,
+      "kind": "attribute",
+      "original": "說長不長、說短也不短的職涯中，那些簡單的、困難的、還有令人抓狂的事情。",
+      "key": "what.subtitle",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 36,
+      "kind": "attribute",
+      "original": "最熟悉的開發項目？",
+      "key": "what.web.question",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 37,
+      "kind": "attribute",
+      "original": "跨平台/裝置/瀏覽器的網頁開發。",
+      "key": "what.web.highlight",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 38,
+      "kind": "script",
+      "original": "Web Development",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 38,
+      "kind": "script",
+      "original": "UI/UX",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 38,
+      "kind": "script",
+      "original": "RWD",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 55,
+      "kind": "attribute",
+      "original": "除了前端以外我還會什麼？",
+      "key": "what.beyondFrontend.question",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 59,
+      "kind": "text",
+      "original": "Tauri：",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 59,
+      "kind": "text",
+      "original": "基於 Rust 實現的跨平台軟體框架，最近正在用這個開發 Side Project。",
+      "key": "what.beyondFrontend.tauri",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 60,
+      "kind": "text",
+      "original": "Flutter：",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 60,
+      "kind": "text",
+      "original": "Google 開發的跨平台開發套件，在上一份工作有一項專案以此開發，但我個人沒有特別喜歡。",
+      "key": "what.beyondFrontend.flutter",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 61,
+      "kind": "text",
+      "original": "Python：",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 61,
+      "kind": "text",
+      "original": "大學時主要在寫的程式語言，開始專注在前端領域之後比較沒在碰了。",
+      "key": "what.beyondFrontend.python",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 67,
+      "kind": "attribute",
+      "original": "我對 AI 開發的看法？",
+      "key": "what.ai.question",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 68,
+      "kind": "attribute",
+      "original": "非常強大的自動導航 ── 假如你知道你要去哪裡的話。",
+      "key": "what.ai.highlight",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 71,
+      "kind": "text",
+      "original": "如果將「軟體開發」想像成騎腳踏車出門，AI 就是把腳踏車裝上引擎、掛上導航、連龍頭都會自動轉彎。",
+      "key": "what.ai.bicycle",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 72,
+      "kind": "text",
+      "original": "假如你對目的地沒有想法，它可能會載著你繞很多遠路；",
+      "key": "what.ai.destination",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 73,
+      "kind": "text",
+      "original": "如果你不知道道路顛簸或下坡轉彎時，坐在車上的你該擺什麼姿勢，你大概會摔下車。",
+      "key": "what.ai.balance",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhatView.vue",
+      "line": 76,
+      "kind": "text",
+      "original": "但只要你會騎腳踏車、也想好等等要去哪裡，那它會幫你比用腳踩踏板省下非常多力氣。",
+      "key": "what.ai.benefit",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhereView.vue",
+      "line": 7,
+      "kind": "script",
+      "original": "GitHub",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/WhereView.vue",
+      "line": 7,
+      "kind": "script",
+      "original": "我個人開發時習慣本地操作，所以它有點空。",
+      "key": "where.social.github",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhereView.vue",
+      "line": 8,
+      "kind": "script",
+      "original": "Plurk",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/WhereView.vue",
+      "line": 8,
+      "kind": "script",
+      "original": "沒有演算法幫你決定你想看什麼的社群平台。",
+      "key": "where.social.plurk",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhereView.vue",
+      "line": 9,
+      "kind": "script",
+      "original": "LinkedIn",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/WhereView.vue",
+      "line": 9,
+      "kind": "script",
+      "original": "平常只用來看 JS Developer 發的迷因。",
+      "key": "where.social.linkedin",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhereView.vue",
+      "line": 10,
+      "kind": "script",
+      "original": "Cake",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/WhereView.vue",
+      "line": 10,
+      "kind": "script",
+      "original": "上面的資訊應該沒有比這裡多，但你往這裡發訊息我會收到通知。",
+      "key": "where.social.cake",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhereView.vue",
+      "line": 22,
+      "kind": "attribute",
+      "original": "WHERE",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/WhereView.vue",
+      "line": 24,
+      "kind": "attribute",
+      "original": "活動範圍",
+      "key": "where.title",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhereView.vue",
+      "line": 25,
+      "kind": "attribute",
+      "original": "扣掉不到一年的短暫高雄生活，我基本上是個沒見過世面的台北鄉巴佬。",
+      "key": "where.subtitle",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhereView.vue",
+      "line": 32,
+      "kind": "attribute",
+      "original": "我在哪裡？",
+      "key": "where.location.question",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhereView.vue",
+      "line": 33,
+      "kind": "attribute",
+      "original": "台北，以及網路上。",
+      "key": "where.location.highlight",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhereView.vue",
+      "line": 36,
+      "kind": "text",
+      "original": "我目前定居於台北，由於與家族同住，短期內沒有移居他地的規劃。",
+      "key": "where.location.home",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhereView.vue",
+      "line": 39,
+      "kind": "text",
+      "original": "除了約出來面對面，你也能在以下地方找到我：",
+      "key": "where.location.socialIntro",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhereView.vue",
+      "line": 64,
+      "kind": "attribute",
+      "original": "我能跑多遠去工作？",
+      "key": "where.work.question",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhereView.vue",
+      "line": 65,
+      "kind": "attribute",
+      "original": "大台北地區，或者公司遠端網路速度夠快。",
+      "key": "where.work.highlight",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhereView.vue",
+      "line": 69,
+      "kind": "text",
+      "original": "移動範圍：",
+      "key": "where.work.rangeLabel",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhereView.vue",
+      "line": 69,
+      "kind": "text",
+      "original": "大台北地區中能夠靠捷運、公車與腳踏車抵達的地點。",
+      "key": "where.work.range",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhereView.vue",
+      "line": 70,
+      "kind": "text",
+      "original": "偏好：",
+      "key": "where.work.preferenceLabel",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhereView.vue",
+      "line": 70,
+      "kind": "text",
+      "original": "混合式辦公。我有豐富的遠端協作經驗，能順暢與跨地點、跨時區的同事合作。",
+      "key": "where.work.preference",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhyView.vue",
+      "line": 10,
+      "kind": "attribute",
+      "original": "WHY",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/WhyView.vue",
+      "line": 12,
+      "kind": "attribute",
+      "original": "動機",
+      "key": "why.title",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhyView.vue",
+      "line": 13,
+      "kind": "attribute",
+      "original": "俗話說得好：Javascript，從入門到放棄。我目前還在中間。",
+      "key": "why.subtitle",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhyView.vue",
+      "line": 20,
+      "kind": "attribute",
+      "original": "為什麼選擇前端領域？",
+      "key": "why.frontend.question",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhyView.vue",
+      "line": 21,
+      "kind": "attribute",
+      "original": "其實一開始不是選這個，只是走著走著方向剛好朝這邊。",
+      "key": "why.frontend.highlight",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhyView.vue",
+      "line": 24,
+      "kind": "text",
+      "original": "最早只是因為個人興趣，為了開發遊戲所以開始寫程式。",
+      "key": "why.frontend.interest",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhyView.vue",
+      "line": 25,
+      "kind": "text",
+      "original": "遊戲開發同時包含前端與後端，所以嚴格說來我一開始選擇的方向算是全端工程師。",
+      "key": "why.frontend.fullStack",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/WhyView.vue",
+      "line": 26,
+      "kind": "text",
+      "original": "後來終於正式把寫程式當成工作，第一個的職位是前端，久而久之分配給前端的心力自然也壓倒性的多。",
+      "key": "why.frontend.firstRole",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/HowView.vue",
+      "line": 10,
+      "kind": "attribute",
+      "original": "HOW",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/HowView.vue",
+      "line": 12,
+      "kind": "attribute",
+      "original": "實踐方法",
+      "key": "how.title",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/HowView.vue",
+      "line": 13,
+      "kind": "attribute",
+      "original": "方法總比問題多，而問題有夠多。",
+      "key": "how.subtitle",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/HowView.vue",
+      "line": 20,
+      "kind": "attribute",
+      "original": "這個網站是怎麼做的？",
+      "key": "how.website.question",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/HowView.vue",
+      "line": 21,
+      "kind": "attribute",
+      "original": "我出一張嘴，Google Antigravity 出力。",
+      "key": "how.website.highlight",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/HowView.vue",
+      "line": 24,
+      "kind": "text",
+      "original": "由我定義這個網頁的目的、要在什麼裝置上被閱覽、要用哪些框架與工具、要佈署在什麼平台。",
+      "key": "how.website.scope",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/HowView.vue",
+      "line": 25,
+      "kind": "text",
+      "original": "我按照以前工作時 PM 寫規格書的方式，把我預期的目標寫下來，開始指揮 Gemini 做事。",
+      "key": "how.website.specification",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/HowView.vue",
+      "line": 26,
+      "kind": "text",
+      "original": "它做出來的東西跟我自己手動敲鍵盤基本上差不多，但它只需要我五分之一或更少的時間。",
+      "key": "how.website.timeSaved",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/HowView.vue",
+      "line": 29,
+      "kind": "text",
+      "original": "如果你想知道的是技術面的細節：",
+      "key": "how.website.technicalIntro",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/HowView.vue",
+      "line": 30,
+      "kind": "text",
+      "original": "這個網站是以 Vue / Vue Router / Vite / TypeScript 實作的靜態網站，",
+      "key": "how.website.stack",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/HowView.vue",
+      "line": 31,
+      "kind": "text",
+      "original": "透過 Github Action 佈署至 Github Pages。",
+      "key": "how.website.deployment",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/HowView.vue",
+      "line": 38,
+      "kind": "attribute",
+      "original": "我如何與不同領域的協作者進行跨領域合作？",
+      "key": "how.collaboration.question",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/HowView.vue",
+      "line": 39,
+      "kind": "attribute",
+      "original": "心有靈犀（誇飾）。",
+      "key": "how.collaboration.highlight",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/HowView.vue",
+      "line": 42,
+      "kind": "text",
+      "original": "在四年半職涯間，我密集地與後端工程師、設計師與產品經理合作。",
+      "key": "how.collaboration.experience",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/HowView.vue",
+      "line": 43,
+      "kind": "text",
+      "original": "我們得出一個共識：協作順暢的關鍵可以簡化為一句話，「我知道你腦中的畫面是什麼。」。",
+      "key": "how.collaboration.sharedPicture",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/HowView.vue",
+      "line": 44,
+      "kind": "text",
+      "original": "即便只是一點入門級的知識，也能讓我更對於對方腦中想要傳達的想像有更準確的理解。",
+      "key": "how.collaboration.basicKnowledge",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/HowView.vue",
+      "line": 45,
+      "kind": "text",
+      "original": "協作者之間共同的想像越明確，開發時的溝通摩擦便越少。",
+      "key": "how.collaboration.lessFriction",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/HowView.vue",
+      "line": 48,
+      "kind": "text",
+      "original": "我已具備常見後端架構的必要知識，並有與後端工程師長期合作的實務經驗；",
+      "key": "how.collaboration.backend",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/HowView.vue",
+      "line": 49,
+      "kind": "text",
+      "original": "並且為了提升與設計師的協作能力，我正在修習 Google UX Design Certificate 課程，學習 UI/UX 設計的知識。",
+      "key": "how.collaboration.designCourse",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 13,
+      "kind": "script",
+      "original": "前端核心生態",
+      "key": "what.skills.frontend.title",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 14,
+      "kind": "script",
+      "original": "Vue 3 (Pinia / Vue Router)",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 14,
+      "kind": "script",
+      "original": "React 18+ (Functional component / Redux)",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 14,
+      "kind": "script",
+      "original": "TypeScript (強型別安全)",
+      "key": "what.skills.frontend.typescript",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 14,
+      "kind": "script",
+      "original": "Vite / pnpm",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 17,
+      "kind": "script",
+      "original": "後端與資料",
+      "key": "what.skills.backend.title",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 18,
+      "kind": "script",
+      "original": "Node.js / Express",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 18,
+      "kind": "script",
+      "original": "RxJS",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 18,
+      "kind": "script",
+      "original": "RESTful API",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 18,
+      "kind": "script",
+      "original": "MySQL",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 18,
+      "kind": "script",
+      "original": "API Mocking",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 21,
+      "kind": "script",
+      "original": "UI/UX 與 QA",
+      "key": "what.skills.design.title",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 22,
+      "kind": "script",
+      "original": "Figma 協作",
+      "key": "what.skills.design.figma",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 22,
+      "kind": "script",
+      "original": "響應式排版 (RWD)",
+      "key": "what.skills.design.responsive",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 22,
+      "kind": "script",
+      "original": "CI/CD (GitHub Actions / Pages)",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 22,
+      "kind": "script",
+      "original": "Vitest",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 27,
+      "kind": "script",
+      "original": "GitHub",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 27,
+      "kind": "script",
+      "original": "個人開發與專案庫",
+      "key": "resume.social.github",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 28,
+      "kind": "script",
+      "original": "Plurk",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 28,
+      "kind": "script",
+      "original": "技術交流與日常",
+      "key": "resume.social.plurk",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 29,
+      "kind": "script",
+      "original": "LinkedIn",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 29,
+      "kind": "script",
+      "original": "專業經歷與職業人脈",
+      "key": "resume.social.linkedin",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 30,
+      "kind": "script",
+      "original": "Cake",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 30,
+      "kind": "script",
+      "original": "線上履歷與聯絡管道",
+      "key": "resume.social.cake",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 61,
+      "kind": "text",
+      "original": "返回首頁",
+      "key": "common.backHome",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 65,
+      "kind": "text",
+      "original": "列印 / 儲存為 PDF",
+      "key": "resume.toolbar.print",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 74,
+      "kind": "text",
+      "original": "Fay",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 76,
+      "kind": "text",
+      "original": "Fay Chung",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 77,
+      "kind": "text",
+      "original": "資深前端工程師",
+      "key": "resume.profile.title",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 77,
+      "kind": "text",
+      "original": "Senior Frontend Developer",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 80,
+      "kind": "text",
+      "original": "專注於現代前端架構（Vue 3 / React / TypeScript），具備 4+ 年高強度產品開發與跨領域協作經驗，重視清晰的程式碼架構、使用者體驗與溝通效率。",
+      "key": "resume.profile.summary",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 88,
+      "kind": "text",
+      "original": "york870198@gmail.com",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 92,
+      "kind": "text",
+      "original": "台灣 台北 (Taipei, Taiwan)",
+      "key": "resume.profile.location",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 96,
+      "kind": "text",
+      "original": "github.com/york870198",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 100,
+      "kind": "text",
+      "original": "linkedin: Fay-Chung",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 111,
+      "kind": "attribute",
+      "original": "WHO",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 113,
+      "kind": "attribute",
+      "original": "個人資訊",
+      "key": "home.who.title",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 114,
+      "kind": "attribute",
+      "original": "一名資深前端工程師，略懂後端。",
+      "key": "who.subtitle",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 120,
+      "kind": "attribute",
+      "original": "我是誰？",
+      "key": "who.identity.question",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 121,
+      "kind": "attribute",
+      "original": "剛好趕在 AI 開始威脅要取代我們之前，從手工寫程式開始的資深前端工程師。",
+      "key": "who.identity.highlight",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 122,
+      "kind": "script",
+      "original": "Senior Frontend",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 122,
+      "kind": "script",
+      "original": "React & Vue",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 122,
+      "kind": "script",
+      "original": "Full-Stack Mindset",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 125,
+      "kind": "text",
+      "original": "我在工作場合自稱 Fay，另外在不同社群間有不同的暱稱。",
+      "key": "who.identity.workName",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 126,
+      "kind": "text",
+      "original": "如果你是從 LinkedIn 等人才媒合平台過來，你會在那邊看到我的本名。",
+      "key": "who.identity.realName",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 129,
+      "kind": "text",
+      "original": "我專注於現代前端架構，慣於使用",
+      "key": "who.identity.architecture",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 130,
+      "kind": "text",
+      "original": "Vue 3",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 130,
+      "kind": "text",
+      "original": "及",
+      "key": "who.identity.architecture",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 130,
+      "kind": "text",
+      "original": "React",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 130,
+      "kind": "text",
+      "original": "兩項前端生態系。",
+      "key": "who.identity.architecture",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 130,
+      "kind": "text",
+      "original": "稍微摸過一下 Svelte 跟 Angular，但僅止於小規模專案實作。",
+      "key": "resume.who.svelteAngular",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 133,
+      "kind": "text",
+      "original": "後端協作：",
+      "key": "resume.who.backendLabel",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 133,
+      "kind": "text",
+      "original": "後端技術不是我的主要職能，不過我的知識至少充分到與後端工程師合作四年不會吵架。",
+      "key": "resume.who.backend",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 134,
+      "kind": "text",
+      "original": "UI/UX 協作：",
+      "key": "resume.who.designLabel",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 134,
+      "kind": "text",
+      "original": "理解 Design System 與互動設計原則，能依據 Figma 設計稿完成高精準度的 UI 實作。",
+      "key": "resume.who.design",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 140,
+      "kind": "attribute",
+      "original": "我平常在關注誰？",
+      "key": "who.interests.question",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 141,
+      "kind": "attribute",
+      "original": "公務上關注前端技術，私底下關注獨立遊戲。",
+      "key": "who.interests.highlight",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 145,
+      "kind": "text",
+      "original": "在我成為前端工程師之前，我首先是在鑽研獨立遊戲開發。",
+      "key": "who.interests.gameDevelopment",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 146,
+      "kind": "text",
+      "original": "當時跟 PM 一起天天跟畫面演出的細節大戰三百回合，做著做著回過神來發現我在寫的東西跟網頁前端有八成像。",
+      "key": "who.interests.presentation",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 147,
+      "kind": "text",
+      "original": "至於後來那個遊戲開發工具的下一代核心真的變成 HTML / CSS / JS，只能說是美麗的巧合。",
+      "key": "who.interests.coincidence",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 150,
+      "kind": "text",
+      "original": "現在我平常追蹤 Hacker News 接收業界新聞，有空閒時則在獨立遊戲開發者的社群看看流行的新技術。",
+      "key": "who.interests.communities",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 160,
+      "kind": "attribute",
+      "original": "WHEN",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 162,
+      "kind": "attribute",
+      "original": "經歷",
+      "key": "home.when.title",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 163,
+      "kind": "attribute",
+      "original": "AI 時代飛行速度有點太快，害我感覺過去那個手寫程式的自己比實際上更老。",
+      "key": "when.subtitle",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 169,
+      "kind": "attribute",
+      "original": "我何時成為前端工程師？",
+      "key": "when.careerStart.question",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 170,
+      "kind": "attribute",
+      "original": "2021 年末。",
+      "key": "when.careerStart.highlight",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 173,
+      "kind": "text",
+      "original": "「寫程式」這件事從高中就開始了，但一直都停留在興趣階段，大學也不是讀資工本科。",
+      "key": "when.careerStart.hobby",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 174,
+      "kind": "text",
+      "original": "2020 年新冠疫情改變了很多事情，我當時工作的領域大受影響，我覺得這樣下去不是辦法。",
+      "key": "when.careerStart.pandemic",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 175,
+      "kind": "text",
+      "original": "我提了離職、找了個系統化的課程把當時前端業界該學的東西複習一遍、成功應徵到前端職位，然後就這樣了。",
+      "key": "when.careerStart.transition",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 182,
+      "kind": "attribute",
+      "original": "上一份工作何時開始、何時結束？",
+      "key": "when.previousRole.question",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 183,
+      "kind": "attribute",
+      "original": "2021 年末，2026 年中離職。",
+      "key": "when.previousRole.highlight",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 186,
+      "kind": "text",
+      "original": "上一份工作就是我入行的第一份工作，待了超過四年。",
+      "key": "when.previousRole.tenure",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 187,
+      "kind": "text",
+      "original": "是一間成長速度很快的公司，團隊的技術領導是致力於開源社群的大神。",
+      "key": "when.previousRole.company",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 188,
+      "kind": "text",
+      "original": "除了與工作直接相關的技術外，公司內也會定期舉辦讀書會、同事們一起持續溫故知新。",
+      "key": "when.previousRole.studyGroups",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 191,
+      "kind": "text",
+      "original": "2026 年初時，我的家庭內發生了需要我專注處理的問題，實在沒有心力蠟燭兩頭燒。",
+      "key": "resume.when.family",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 192,
+      "kind": "text",
+      "original": "正好當時由我主責開發的產品在遞交後進入穩定期，我便趁此時機處理完交接，離職專心處理家裡的狀況。",
+      "key": "resume.when.handover",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 202,
+      "kind": "attribute",
+      "original": "WHAT",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 204,
+      "kind": "attribute",
+      "original": "技術棧",
+      "key": "home.what.title",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 205,
+      "kind": "attribute",
+      "original": "說長不長、說短也不短的職涯中，那些簡單的、困難的、還有令人抓狂的事情。",
+      "key": "what.subtitle",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 211,
+      "kind": "attribute",
+      "original": "最熟悉的開發項目？",
+      "key": "what.web.question",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 212,
+      "kind": "attribute",
+      "original": "跨平台/裝置/瀏覽器的網頁開發。",
+      "key": "what.web.highlight",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 213,
+      "kind": "script",
+      "original": "Web Development",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 213,
+      "kind": "script",
+      "original": "UI/UX",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 213,
+      "kind": "script",
+      "original": "RWD",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 230,
+      "kind": "attribute",
+      "original": "除了前端以外我還會什麼？",
+      "key": "what.beyondFrontend.question",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 234,
+      "kind": "text",
+      "original": "Tauri：",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 234,
+      "kind": "text",
+      "original": "基於 Rust 實現的跨平台軟體框架，最近正在用這個開發 Side Project。",
+      "key": "what.beyondFrontend.tauri",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 235,
+      "kind": "text",
+      "original": "Flutter：",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 235,
+      "kind": "text",
+      "original": "Google 開發的跨平台開發套件，在上一份工作有一項專案以此開發，但我個人沒有特別喜歡。",
+      "key": "what.beyondFrontend.flutter",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 236,
+      "kind": "text",
+      "original": "Python：",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 236,
+      "kind": "text",
+      "original": "大學時主要在寫的程式語言，開始專注在前端領域之後比較沒在碰了。",
+      "key": "what.beyondFrontend.python",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 242,
+      "kind": "attribute",
+      "original": "我對 AI 開發的看法？",
+      "key": "what.ai.question",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 243,
+      "kind": "attribute",
+      "original": "非常強大的自動導航 ── 假如你知道你要去哪裡的話。",
+      "key": "what.ai.highlight",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 246,
+      "kind": "text",
+      "original": "如果將「軟體開發」想像成騎腳踏車出門，AI 就是把腳踏車裝上引擎、掛上導航、連龍頭都會自動轉彎。",
+      "key": "what.ai.bicycle",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 247,
+      "kind": "text",
+      "original": "假如你對目的地沒有想法，它可能會載著你繞很多遠路；",
+      "key": "what.ai.destination",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 248,
+      "kind": "text",
+      "original": "如果你不知道道路顛簸或下坡轉彎時，坐在車上的你該擺什麼姿勢，你大概會摔下車。",
+      "key": "what.ai.balance",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 251,
+      "kind": "text",
+      "original": "但只要你會騎腳踏車、也想好等等要去哪裡，那它會幫你比用腳踩踏板省下非常多力氣。",
+      "key": "what.ai.benefit",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 261,
+      "kind": "attribute",
+      "original": "WHERE",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 263,
+      "kind": "attribute",
+      "original": "活動範圍",
+      "key": "home.where.title",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 264,
+      "kind": "attribute",
+      "original": "扣掉不到一年的短暫高雄生活，我基本上是個沒見過世面的台北鄉巴佬。",
+      "key": "where.subtitle",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 270,
+      "kind": "attribute",
+      "original": "我在哪裡？",
+      "key": "where.location.question",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 271,
+      "kind": "attribute",
+      "original": "台北，以及網路上。",
+      "key": "where.location.highlight",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 274,
+      "kind": "text",
+      "original": "我目前定居於台北，由於與家族同住，短期內沒有移居他地的規劃。",
+      "key": "where.location.home",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 277,
+      "kind": "text",
+      "original": "除了約出來面對面，你也能在以下地方找到我：",
+      "key": "where.location.socialIntro",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 302,
+      "kind": "attribute",
+      "original": "我能跑多遠去工作？",
+      "key": "where.work.question",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 303,
+      "kind": "attribute",
+      "original": "大台北地區，或者公司遠端網路速度夠快。",
+      "key": "where.work.highlight",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 307,
+      "kind": "text",
+      "original": "移動範圍：",
+      "key": "where.work.rangeLabel",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 307,
+      "kind": "text",
+      "original": "大台北地區中能夠靠捷運、公車與腳踏車抵達的地點。",
+      "key": "where.work.range",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 308,
+      "kind": "text",
+      "original": "偏好：",
+      "key": "where.work.preferenceLabel",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 308,
+      "kind": "text",
+      "original": "混合式辦公。我有豐富的遠端協作經驗，能順暢與跨地點、跨時區的同事合作。",
+      "key": "where.work.preference",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 317,
+      "kind": "attribute",
+      "original": "WHY",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 319,
+      "kind": "attribute",
+      "original": "動機",
+      "key": "home.why.title",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 320,
+      "kind": "attribute",
+      "original": "俗話說得好：Javascript，從入門到放棄。我目前還在中間。",
+      "key": "why.subtitle",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 326,
+      "kind": "attribute",
+      "original": "為什麼選擇前端領域？",
+      "key": "why.frontend.question",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 327,
+      "kind": "attribute",
+      "original": "其實一開始不是選這個，只是走著走著方向剛好朝這邊。",
+      "key": "why.frontend.highlight",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 330,
+      "kind": "text",
+      "original": "最早只是因為個人興趣，為了開發遊戲所以開始寫程式。",
+      "key": "why.frontend.interest",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 331,
+      "kind": "text",
+      "original": "遊戲開發同時包含前端與後端，所以嚴格說來我一開始選擇的方向算是全端工程師。",
+      "key": "why.frontend.fullStack",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 332,
+      "kind": "text",
+      "original": "後來終於正式把寫程式當成工作，第一個的職位是前端，久而久之分配給前端的心力自然也壓倒性的多。",
+      "key": "why.frontend.firstRole",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 342,
+      "kind": "attribute",
+      "original": "HOW",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 344,
+      "kind": "attribute",
+      "original": "實踐方法",
+      "key": "home.how.title",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 345,
+      "kind": "attribute",
+      "original": "方法總比問題多，而問題有夠多。",
+      "key": "how.subtitle",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 351,
+      "kind": "attribute",
+      "original": "這個網站是怎麼做的？",
+      "key": "how.website.question",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 352,
+      "kind": "attribute",
+      "original": "我出一張嘴，Google Antigravity 出力。",
+      "key": "how.website.highlight",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 355,
+      "kind": "text",
+      "original": "我想了很多，包含這個網頁的目的、要在什麼裝置上被閱覽、要用哪些框架與工具、要佈署在什麼平台。",
+      "key": "resume.how.scope",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 356,
+      "kind": "text",
+      "original": "想完之後，我按照以前工作時 PM 寫規格書的方式，把我想好的事情寫下來，開始指揮 Gemini 做事。",
+      "key": "resume.how.specification",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 357,
+      "kind": "text",
+      "original": "它做出來的東西跟我自己手動敲鍵盤基本上差不多，但它只需要我五分之一或更少的時間。",
+      "key": "how.website.timeSaved",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 364,
+      "kind": "attribute",
+      "original": "我如何與不同領域的協作者進行跨領域合作？",
+      "key": "how.collaboration.question",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 365,
+      "kind": "attribute",
+      "original": "心有靈犀（誇飾）。",
+      "key": "how.collaboration.highlight",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 368,
+      "kind": "text",
+      "original": "在四年半職涯間，我密集地與後端工程師、設計師與產品經理合作。",
+      "key": "how.collaboration.experience",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 369,
+      "kind": "text",
+      "original": "我們得出一個共識：協作順暢的關鍵可以簡化為一句話，「我知道你腦中的畫面是什麼。」。",
+      "key": "how.collaboration.sharedPicture",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 370,
+      "kind": "text",
+      "original": "即便只是一點入門級的知識，也能讓我更對於對方腦中想要傳達的想像有更準確的理解。",
+      "key": "how.collaboration.basicKnowledge",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 371,
+      "kind": "text",
+      "original": "協作者之間共同的想像越明確，開發時的溝通摩擦便越少。",
+      "key": "how.collaboration.lessFriction",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 374,
+      "kind": "text",
+      "original": "我已具備常見後端架構的必要知識，並有與後端工程師長期合作的實務經驗；",
+      "key": "how.collaboration.backend",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 375,
+      "kind": "text",
+      "original": "並且為了提升與設計師的協作能力，我正在修習 Google UX Design Certificate 課程，學習 UI/UX 設計的知識。",
+      "key": "how.collaboration.designCourse",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/NotFoundView.vue",
+      "line": 16,
+      "kind": "text",
+      "original": "找不到此頁面",
+      "key": "notFound.title",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/NotFoundView.vue",
+      "line": 17,
+      "kind": "text",
+      "original": "抱歉，您所尋找的頁面不存在或已被移動。請檢查網址或點擊下方按鈕返回首頁。",
+      "key": "notFound.description",
+      "category": "translatable"
+    },
+    {
+      "file": "src/views/NotFoundView.vue",
+      "line": 22,
+      "kind": "text",
+      "original": "返回首頁",
+      "key": "common.backHome",
+      "category": "translatable"
+    },
+    {
+      "file": "src/router/index.ts",
+      "line": 16,
+      "kind": "script",
+      "original": "Home",
+      "category": "fixed"
+    },
+    {
+      "file": "src/router/index.ts",
+      "line": 17,
+      "kind": "script",
+      "original": "HOME",
+      "category": "fixed"
+    },
+    {
+      "file": "src/router/index.ts",
+      "line": 24,
+      "kind": "script",
+      "original": "Who",
+      "category": "fixed"
+    },
+    {
+      "file": "src/router/index.ts",
+      "line": 25,
+      "kind": "script",
+      "original": "WHO",
+      "category": "fixed"
+    },
+    {
+      "file": "src/router/index.ts",
+      "line": 32,
+      "kind": "script",
+      "original": "When",
+      "category": "fixed"
+    },
+    {
+      "file": "src/router/index.ts",
+      "line": 33,
+      "kind": "script",
+      "original": "WHEN",
+      "category": "fixed"
+    },
+    {
+      "file": "src/router/index.ts",
+      "line": 40,
+      "kind": "script",
+      "original": "What",
+      "category": "fixed"
+    },
+    {
+      "file": "src/router/index.ts",
+      "line": 41,
+      "kind": "script",
+      "original": "WHAT",
+      "category": "fixed"
+    },
+    {
+      "file": "src/router/index.ts",
+      "line": 48,
+      "kind": "script",
+      "original": "Where",
+      "category": "fixed"
+    },
+    {
+      "file": "src/router/index.ts",
+      "line": 49,
+      "kind": "script",
+      "original": "WHERE",
+      "category": "fixed"
+    },
+    {
+      "file": "src/router/index.ts",
+      "line": 56,
+      "kind": "script",
+      "original": "Why",
+      "category": "fixed"
+    },
+    {
+      "file": "src/router/index.ts",
+      "line": 57,
+      "kind": "script",
+      "original": "WHY",
+      "category": "fixed"
+    },
+    {
+      "file": "src/router/index.ts",
+      "line": 64,
+      "kind": "script",
+      "original": "How",
+      "category": "fixed"
+    },
+    {
+      "file": "src/router/index.ts",
+      "line": 65,
+      "kind": "script",
+      "original": "HOW",
+      "category": "fixed"
+    },
+    {
+      "file": "src/router/index.ts",
+      "line": 76,
+      "kind": "script",
+      "original": "Home | Portfolio of Fay",
+      "category": "fixed"
+    },
+    {
+      "file": "src/router/index.ts",
+      "line": 82,
+      "kind": "script",
+      "original": "Who | Portfolio of Fay",
+      "category": "fixed"
+    },
+    {
+      "file": "src/router/index.ts",
+      "line": 88,
+      "kind": "script",
+      "original": "When | Portfolio of Fay",
+      "category": "fixed"
+    },
+    {
+      "file": "src/router/index.ts",
+      "line": 94,
+      "kind": "script",
+      "original": "What | Portfolio of Fay",
+      "category": "fixed"
+    },
+    {
+      "file": "src/router/index.ts",
+      "line": 100,
+      "kind": "script",
+      "original": "Where | Portfolio of Fay",
+      "category": "fixed"
+    },
+    {
+      "file": "src/router/index.ts",
+      "line": 106,
+      "kind": "script",
+      "original": "Why | Portfolio of Fay",
+      "category": "fixed"
+    },
+    {
+      "file": "src/router/index.ts",
+      "line": 112,
+      "kind": "script",
+      "original": "How | Portfolio of Fay",
+      "category": "fixed"
+    },
+    {
+      "file": "src/router/index.ts",
+      "line": 118,
+      "kind": "script",
+      "original": "完整履歷 | Portfolio of Fay",
+      "key": "common.metadata.resumeTitle",
+      "category": "translatable"
+    },
+    {
+      "file": "src/router/index.ts",
+      "line": 128,
+      "kind": "script",
+      "original": "404 找不到頁面 | Portfolio",
+      "key": "common.metadata.notFoundTitle",
+      "category": "translatable"
+    },
+    {
+      "file": "index.html",
+      "line": 9,
+      "kind": "metadata",
+      "original": "Portfolio - 個人簡介",
+      "key": "common.metadata.description",
+      "category": "translatable"
+    },
+    {
+      "file": "index.html",
+      "line": 10,
+      "kind": "metadata",
+      "original": "Portfolio of Fay",
+      "category": "fixed"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "line": 92,
+      "kind": "inline-design-text",
+      "original": "(Taipei, Taiwan)",
+      "category": "fixed"
+    }
+  ]
+}

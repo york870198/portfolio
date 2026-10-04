@@ -8,10 +8,10 @@ import App from '../src/App.vue'
 import { readFileSync } from 'node:fs'
 
 const inventory: { items: { file: string; category: string; original: string }[] } = JSON.parse(
-  readFileSync('.scratch/multilingual/content-inventory.json', 'utf8')
+  readFileSync('tests/fixtures/locales/content-inventory.json', 'utf8')
 )
 const revisions: { retiredFixedText?: { file: string; original: string }[] } = JSON.parse(
-  readFileSync('.scratch/multilingual/editorial-revisions.json', 'utf8')
+  readFileSync('tests/fixtures/locales/editorial-revisions.json', 'utf8')
 )
 const viewSources: Record<string, string> = {
   '/': 'Home', '/who': 'Who', '/when': 'When', '/what': 'What', '/where': 'Where',
