@@ -103,7 +103,7 @@ const { t } = useI18n({ useScope: 'global' })
   <header id="main-navbar" ref="header" class="navbar-header" @keydown="onEscape">
     <div class="container navbar-container">
       <NavigationLink to="/" class="navbar-brand" id="nav-brand-link" @click="closeMobileMenu">
-        <span class="brand-mark" aria-hidden="true">✳</span><span class="brand-name">Fay</span><span class="brand-caption">Portfolio.</span>
+        <span class="brand-name">Fay</span><span class="brand-caption">Portfolio.</span>
       </NavigationLink>
       <nav class="desktop-nav" :aria-label="t('common.navbar.mainNavigation')">
         <ul class="nav-list">
@@ -139,26 +139,26 @@ const { t } = useI18n({ useScope: 'global' })
   </header>
 </template>
 <style scoped>
-.navbar-header { position: sticky; top: 0; height: var(--navbar-height); background: var(--bg-navbar); border-bottom: 1px solid var(--border-subtle); z-index: 100; }
+.navbar-header { position: sticky; top: 0; height: var(--navbar-height); background: var(--bg-navbar);  z-index: 100; }
 .navbar-container { display: flex; align-items: center; justify-content: space-between; height: 100%; gap: 1.25rem; }
 .navbar-brand { display: flex; gap: .65rem; align-items: center; min-height: 44px; flex-shrink: 0; }
 .brand-mark { font-size: 32px; color: var(--accent-primary); line-height: 1; }
 .brand-name { font-size: 23px; font-weight: 700; letter-spacing: -.04em; }
-.brand-caption { font: 10px var(--font-mono); margin-left: .5rem; color: var(--text-secondary); }
+.brand-caption { font: 13px var(--font-sans); margin-left: .5rem; color: var(--text-secondary); }
 .nav-list { display: flex; list-style: none; gap: .15rem; }
-.nav-link { display: flex; align-items: center; min-height: 44px; padding: .5rem .65rem; font: 12px var(--font-mono); color: var(--text-secondary); }
+.nav-link { display: flex; align-items: center; min-height: 44px; padding: .5rem .65rem; font: 14px var(--font-sans); color: var(--text-secondary); }
 .nav-link:hover, .nav-link[aria-current] { color: var(--accent-primary); }
 .nav-link[aria-current] { text-decoration: underline; text-underline-offset: 8px; }
 .navbar-actions { display: flex; align-items: center; gap: .75rem; }
 .btn-download-resume { display: flex; align-items: center; gap: 1rem; min-height: 44px; font-size: 13px; white-space: nowrap; }
 .btn-download-resume span { color: var(--accent-primary); font-size: 21px; }
 .btn-download-resume:hover { color: var(--accent-primary); }
-.mobile-toggle { display: none; min-width: 44px; height: 44px; font-size: 24px; border: 1px solid var(--border-subtle); }
-.mobile-drawer { position: absolute; top: 100%; left: 0; width: 100%; padding: .75rem 1.25rem 1.25rem; background: var(--bg-mobile-menu); border-bottom: 1px solid var(--border-subtle); max-height: calc(100dvh - var(--navbar-height)); overflow-y: auto; }
+.mobile-toggle { display: none; min-width: 44px; height: 44px; font-size: 24px; background: var(--bg-secondary); }
+.mobile-drawer { position: absolute; top: 100%; left: 0; width: 100%; padding: .75rem 1.25rem 1.25rem; background: var(--bg-mobile-menu);  max-height: calc(100dvh - var(--navbar-height)); overflow-y: auto; }
 .mobile-nav-list { list-style: none; }
-.mobile-nav-link { display: flex; justify-content: space-between; align-items: center; min-height: 48px; border-bottom: 1px solid var(--border-subtle); padding: .6rem .5rem; }
+.mobile-nav-link { display: flex; justify-content: space-between; align-items: center; min-height: 48px;  padding: .6rem .5rem; }
 .mobile-nav-link[aria-current] { color: var(--accent-primary); background: var(--bg-tag); }
-.mobile-nav-tag { font: 11px var(--font-mono); color: var(--text-muted); }
+.mobile-nav-tag { font: 13px var(--font-sans); color: var(--text-muted); }
 .mobile-download-btn { display: flex; justify-content: space-between; width: 100%; margin-top: 1rem; padding: .85rem; background: var(--accent-primary); color: var(--text-inverse); }
 @media(max-width: 1100px) { .desktop-nav, .btn-download-resume { display: none; } .mobile-toggle { display: block; } }
 @media(max-width: 440px) { .brand-caption { display: none; } .navbar-container { gap: .5rem; } .navbar-actions { gap: .4rem; } }
@@ -166,7 +166,7 @@ const { t } = useI18n({ useScope: 'global' })
   .navbar-header { height: auto; }
   .navbar-container { flex-wrap: wrap; gap: 0; padding-top: .25rem; padding-bottom: .25rem; }
   .navbar-actions { width: 100%; justify-content: space-between; gap: .25rem; }
-  .navbar-container { width: 100%; padding-left: .5rem; padding-right: .5rem; }
+  .navbar-container { width: 100%; padding-left: 1.25rem; padding-right: 1.25rem; }
   .navbar-actions :deep(.variant-compact) { padding: .25rem; gap: .35rem; }
 }
 </style>

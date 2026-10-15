@@ -38,7 +38,7 @@ const { t } = useI18n({ useScope: 'global' })
 
 <style scoped>
 .app-layout {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
 }
@@ -51,15 +51,15 @@ const { t } = useI18n({ useScope: 'global' })
 
 /* Footer */
 .app-footer {
-  border-top: 1px solid var(--border-subtle);
+  
   padding: 1.75rem 0;
   margin-top: auto;
-  background: var(--bg-primary);
+  background: var(--bg-secondary);
 }
 
 .footer-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 

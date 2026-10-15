@@ -59,10 +59,10 @@ const { t } = useI18n({ useScope: 'global' })
   height: 44px;
   border-radius: var(--radius-full);
   background: var(--bg-card-subtle);
-  border: 1px solid var(--border-subtle);
+  border: 0;
   color: var(--text-primary);
   font-size: 1.05rem;
-  transition: all var(--transition-fast);
+  transition: background var(--transition-fast), transform var(--transition-fast);
   cursor: pointer;
 }
 

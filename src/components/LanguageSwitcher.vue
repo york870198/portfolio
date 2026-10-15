@@ -20,5 +20,5 @@ function changeLanguage(event: Event) {
 </template>
 
 <style scoped>
-.language-select { min-height: 44px; max-width: 115px; padding: .45rem .4rem; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); color: var(--text-primary); background: var(--bg-primary); font: 12px var(--font-sans); cursor: pointer; }
+.language-select { min-height: 44px; max-width: 115px; padding: .45rem .4rem; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); color: var(--text-primary); background: var(--bg-primary); font: 14px var(--font-sans); cursor: pointer; }
 </style>

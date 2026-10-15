@@ -88,9 +88,9 @@ const { t } = useI18n({ useScope: 'global' })
   gap: 0.85rem;
   padding: 1.1rem;
   background: var(--bg-card-subtle);
-  border: 1px solid var(--border-subtle);
+  border: 0;
   border-radius: var(--radius-md);
-  transition: all var(--transition-fast);
+  transition: background var(--transition-fast);
 }
 
 .footprint-card:hover {

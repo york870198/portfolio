@@ -156,7 +156,7 @@ const { t } = useI18n({ useScope: 'global' })
   flex-direction: column;
   gap: 0.75rem;
   padding-top: 1.25rem;
-  border-top: 1px solid var(--border-subtle);
+  border: 0;
 }
 
 .work-evidence h3 {
@@ -179,7 +179,7 @@ const { t } = useI18n({ useScope: 'global' })
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
   gap: 1.25rem;
   margin-top: 0.5rem;
 }
@@ -188,7 +188,7 @@ const { t } = useI18n({ useScope: 'global' })
   padding: 1.25rem;
   background: var(--bg-card-subtle);
   border-radius: var(--radius-md);
-  border: 1px solid var(--border-subtle);
+  border: 0;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -198,7 +198,7 @@ const { t } = useI18n({ useScope: 'global' })
   font-size: 1.05rem;
   color: var(--theme-what, #10b981);
   font-weight: 600;
-  border-bottom: 1px solid var(--border-subtle);
+  border: 0;
   padding-bottom: 0.45rem;
 }
 
@@ -210,7 +210,7 @@ const { t } = useI18n({ useScope: 'global' })
 }
 
 .skill-li {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--text-secondary);
   line-height: 1.5;
 }
