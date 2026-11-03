@@ -38,6 +38,8 @@ Thumbs.db
 .agents/
 docs/
 .scratch/
+.claude/
+.impeccable/
 skills-lock.json
 AGENTS.md
 CLAUDE.md
