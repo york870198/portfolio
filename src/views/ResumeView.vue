@@ -205,6 +205,12 @@ const { t } = useI18n({ useScope: 'global' })
 .resume-body li + li { margin-top: 0.5rem; }
 .resume-body strong { color: var(--text-primary); }
 
+/* Touch-sized contact rows on screen; print keeps the compact header. */
+@media screen {
+  .contact-item { min-height: 44px; }
+  .contact-link { align-self: stretch; display: inline-flex; align-items: center; }
+}
+
 @media print {
   .resume-section-title { break-after: avoid; page-break-after: avoid; }
   .resume-body { break-inside: avoid; page-break-inside: avoid; }
@@ -235,7 +241,7 @@ const { t } = useI18n({ useScope: 'global' })
   border-radius: var(--radius-full);
   font-weight: 600;
   font-size: 0.92rem;
-  transition: all var(--transition-fast);
+  transition: color var(--transition-fast), background var(--transition-fast), transform var(--transition-fast);
 }
 
 .back-btn {
@@ -292,7 +298,6 @@ const { t } = useI18n({ useScope: 'global' })
   color: var(--text-inverse);
   font-weight: 800;
   font-size: 1.25rem;
-  font-family: var(--font-mono);
   flex-shrink: 0;
 }
 

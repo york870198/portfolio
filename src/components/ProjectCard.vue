@@ -137,7 +137,7 @@ const { t } = useI18n({ useScope: 'global' })
   background: var(--bg-card-subtle);
   border: 1px solid var(--border-subtle);
   color: var(--text-secondary);
-  transition: all var(--transition-fast);
+  transition: color var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast);
 }
 
 .project-link-btn:hover {
