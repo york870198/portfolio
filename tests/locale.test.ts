@@ -1,13 +1,15 @@
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 import { localizedTarget, normalizeLocaleRoute, resolveLocale, switchLocaleTarget } from '../src/i18n/locale'
 
 describe('website language from the URL', () => {
-  it('defaults old, unsupported, empty and repeated language queries to Traditional Chinese', () => {
+  it.each([['zh-TW', 'zh-TW'], ['zh-CN', 'zh-TW'], ['en-US', 'en'], ['ja', 'en']])('defaults old, unsupported, empty and repeated language queries to the %s browser language', (browser, expected) => {
+    vi.spyOn(navigator, 'language', 'get').mockReturnValue(browser)
     for (const lang of [undefined, null, '', 'fr', 'EN', ['en'], ['en', 'zh-TW']]) {
-      expect(resolveLocale(lang)).toBe('zh-TW')
+      expect(resolveLocale(lang)).toBe(expected)
     }
     expect(resolveLocale('en')).toBe('en')
     expect(resolveLocale('zh-TW')).toBe('zh-TW')
+    vi.restoreAllMocks()
   })
 
   it('cleans an invalid language and trailing slash together without losing other query or hash', () => {

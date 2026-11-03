@@ -45,15 +45,15 @@ const { t } = useI18n({ useScope: 'global' })
               rel="noopener noreferrer"
               class="footprint-card"
             >
-              <span class="footprint-icon">
-                <img v-if="isImageIcon(link.icon)" :src="link.icon" :alt="link.name" class="footprint-img" />
+              <span class="footprint-icon" aria-hidden="true">
+                <img v-if="isImageIcon(link.icon)" :src="link.icon" alt="" class="footprint-img" />
                 <span v-else>{{ link.icon }}</span>
               </span>
               <div class="footprint-info">
                 <span class="footprint-name">{{ link.name }}</span>
                 <span class="footprint-desc">{{ t(link.descKey) }}</span>
               </div>
-              <span class="footprint-arrow">↗</span>
+              <span class="footprint-arrow" aria-hidden="true">↗</span><span class="sr-only">{{ t('common.opensInNewTab') }}</span>
             </a>
           </div>
         </QnACard>
@@ -133,25 +133,6 @@ const { t } = useI18n({ useScope: 'global' })
 
 .footprint-arrow {
   color: var(--text-muted);
-  font-size: 0.95rem;
-}
-
-.direct-contact-box {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1.25rem;
-  background: var(--bg-card-subtle);
-  border: 1px dashed var(--theme-where, #f59e0b);
-  border-radius: var(--radius-md);
-  margin-top: 0.75rem;
-  flex-wrap: wrap;
-}
-
-.direct-text {
-  font-weight: 500;
-  color: var(--text-primary);
   font-size: 0.95rem;
 }
 </style>

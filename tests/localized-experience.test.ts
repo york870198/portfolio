@@ -24,7 +24,7 @@ function expectFixedText(path: string) {
     if (revisions.retiredFixedText?.some(retired => retired.file === item.file && retired.original === item.original)) continue
     expect(scope, `${item.file}: ${item.original}`).toContain(item.original)
   }
-  expect(document.querySelector('.app-footer')!.textContent).toContain('Portfolio. Built with Vue 3 & TypeScript.')
+  expect(document.querySelector('.app-footer')!.textContent).toMatch(/© \d{4} Fay(\. Built with Vue 3 and TypeScript\.|。以 Vue 3 與 TypeScript 打造。)/)
 }
 
 let app: VueApp | undefined
@@ -74,7 +74,7 @@ describe('localized reading experience', () => {
     await nextTick()
     expect(router.currentRoute.value.fullPath).toBe('/what?lang=zh-TW&source=cv#intro')
     expect(document.querySelector('main')!.textContent).toContain('前端核心生態')
-    expect(document.querySelector('#nav-link-what')!.textContent).toBe('What')
+    expect(document.querySelector('#nav-link-what')!.textContent).toBe('技能')
   })
 
   it('captures the print language before switching and uses it in the failure fallback', async () => {
@@ -101,7 +101,7 @@ describe('localized reading experience', () => {
     await nextTick()
     expect(document.querySelector('main')!.textContent).toMatch(/[\u3400-\u9fff]/)
     expectFixedText(path)
-    expect(document.querySelector('#nav-link-who')!.textContent).toBe('Who')
+    expect(document.querySelector('#nav-link-who')!.textContent).toBe('關於我')
     expect(document.querySelector('.brand-caption')!.textContent).toBe('Portfolio.')
   })
 

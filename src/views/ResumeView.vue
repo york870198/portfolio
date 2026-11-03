@@ -109,10 +109,10 @@ const { t } = useI18n({ useScope: 'global' })
       <!-- 螢幕操作列 (列印時自動隱藏) -->
       <div class="resume-toolbar no-print">
         <button class="toolbar-btn back-btn" @click="goBack" id="resume-back-btn">
-          <span>←</span> {{ t('common.backHome') }} </button>
+          <span aria-hidden="true">←</span> {{ t('common.backHome') }} </button>
         <div class="toolbar-actions">
           <button class="toolbar-btn print-btn" @click="printResume" id="resume-print-action-btn">
-            <span>🖨️</span> {{ t('resume.toolbar.print') }} </button>
+            <span aria-hidden="true">🖨️</span> {{ t('resume.toolbar.print') }} </button>
         </div>
       </div>
 
@@ -131,20 +131,20 @@ const { t } = useI18n({ useScope: 'global' })
 
         <div class="profile-contact-grid">
           <div class="contact-item">
-            <span class="contact-icon">📧</span>
+            <span class="contact-icon" aria-hidden="true">📧</span>
             <a href="mailto:york870198@gmail.com" class="contact-link">york870198@gmail.com</a>
           </div>
           <div class="contact-item">
-            <span class="contact-icon">📍</span>
+            <span class="contact-icon" aria-hidden="true">📍</span>
             <span>{{ t('resume.concise.location') }}</span>
           </div>
           <div class="contact-item">
-            <span class="contact-icon">💻</span>
-            <a href="https://github.com/york870198" target="_blank" rel="noopener noreferrer" class="contact-link">github.com/york870198</a>
+            <span class="contact-icon" aria-hidden="true">💻</span>
+            <a href="https://github.com/york870198" target="_blank" rel="noopener noreferrer" class="contact-link">github.com/york870198<span class="sr-only">{{ t('common.opensInNewTab') }}</span></a>
           </div>
           <div class="contact-item">
-            <span class="contact-icon">💼</span>
-            <a href="https://www.linkedin.com/in/fay-chung-682698224/" target="_blank" rel="noopener noreferrer" class="contact-link">LinkedIn: Fay Chung</a>
+            <span class="contact-icon" aria-hidden="true">💼</span>
+            <a href="https://www.linkedin.com/in/fay-chung-682698224/" target="_blank" rel="noopener noreferrer" class="contact-link">LinkedIn: Fay Chung<span class="sr-only">{{ t('common.opensInNewTab') }}</span></a>
           </div>
         </div>
       </header>

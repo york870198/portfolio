@@ -18,8 +18,8 @@ describe('language routing and metadata', () => {
     expect(router.currentRoute.value.fullPath).toBe('/who?lang=en&source=cv#intro')
     expect(i18n.global.locale.value).toBe('en')
     expect(document.documentElement.lang).toBe('en')
-    expect(document.title).toBe('Who | Portfolio of Fay')
-    expect(document.querySelector('meta[name="description"]')?.getAttribute('content')).toBe('Portfolio - Personal profile')
+    expect(document.title).toBe('About | Portfolio of Fay')
+    expect(document.querySelector('meta[name="description"]')?.getAttribute('content')).toBe('Portfolio of Fay, a senior frontend engineer with backend knowledge.')
   })
 
   it('updates localized metadata on query switches and back/forward without dropping the literal title separator', async () => {
@@ -41,14 +41,16 @@ describe('language routing and metadata', () => {
     expect(document.documentElement.lang).toBe('zh-TW')
   })
 
-  it('renders unknown routes and invalid language as Chinese while preserving other parameters', async () => {
+  it('renders unknown routes and invalid language in the Chinese browser language while preserving other parameters', async () => {
+    vi.spyOn(navigator, 'language', 'get').mockReturnValue('zh-TW')
     const router = createPortfolioRouter(createMemoryHistory())
     await router.push('/unknown?lang=en')
-    expect(document.title).toBe('404 Page not found | Portfolio')
+    expect(document.title).toBe('404 Page not found | Portfolio of Fay')
     await router.push('/who/?lang=en&lang=zh-TW&source=cv#intro')
     expect(router.currentRoute.value.fullPath).toBe('/who?source=cv#intro')
     expect(document.documentElement.lang).toBe('zh-TW')
-    expect(document.querySelector('meta[name="description"]')?.getAttribute('content')).toBe('Portfolio - 個人簡介')
+    expect(document.querySelector('meta[name="description"]')?.getAttribute('content')).toBe('Fay 的作品集：資深前端工程師，具備後端基礎知識。')
+    vi.restoreAllMocks()
   })
 
   it('keeps scroll on same-page query changes and still restores saved positions or scrolls new pages', async () => {
@@ -70,7 +72,7 @@ describe('language routing and metadata', () => {
     router.beforeEach(() => false)
     await router.push('/resume?lang=zh-TW')
     expect(i18n.global.locale.value).toBe('en')
-    expect(document.title).toBe('Who | Portfolio of Fay')
+    expect(document.title).toBe('About | Portfolio of Fay')
   })
 
   it('has the URL-selected language ready before the first application render', async () => {

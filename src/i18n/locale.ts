@@ -8,8 +8,13 @@ export interface WebsiteLocation {
   hash: string
 }
 
+// Without a valid ?lang, follow the browser: any Chinese reads zh-TW, everything else English.
+function browserLocale(): WebsiteLocale {
+  return typeof navigator !== 'undefined' && /^zh\b/i.test(navigator.language) ? 'zh-TW' : 'en'
+}
+
 export function resolveLocale(lang: LanguageQuery): WebsiteLocale {
-  return lang === 'en' ? 'en' : 'zh-TW'
+  return lang === 'en' || lang === 'zh-TW' ? lang : browserLocale()
 }
 
 export function normalizeLocaleRoute(to: WebsiteLocation) {

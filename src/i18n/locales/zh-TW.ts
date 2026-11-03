@@ -5,8 +5,19 @@ const zhTW = {
     "language": { "label": "網站語言" },
     "skipToContent": "跳至主要內容",
     "dimensions": "六個面向",
-    "moreDetails": "更多細節",
+    "index": "目錄",
+    "opensInNewTab": "（在新分頁開啟）",
+    "footer": "© {year} Fay。以 Vue 3 與 TypeScript 打造。",
     "backHome": "返回首頁",
+    "nav": {
+      "home": "首頁",
+      "who": "關於我",
+      "when": "經歷",
+      "what": "技能",
+      "where": "聯絡",
+      "why": "動機",
+      "how": "工作方式"
+    },
     "navbar": {
       "mainNavigation": "主要導覽選單",
       "mobileNavigation": "行動版導覽選單",
@@ -16,7 +27,7 @@ const zhTW = {
       "preparing": "準備中…",
       "preparingResume": "準備履歷中…",
       "printFrameTitle": "完整履歷列印預覽",
-      "contact": "聯絡",
+      "contact": "複製信箱",
       "closeMenu": "關閉選單",
       "openMenu": "開啟選單"
     },
@@ -34,12 +45,15 @@ const zhTW = {
       "viewDemo": "前往 Live Demo 預覽"
     },
     "metadata": {
-      "description": "Portfolio - 個人簡介",
+      "description": "Fay 的作品集：資深前端工程師，具備後端基礎知識。",
+      "pageTitle": "{page} {'|'} Portfolio of Fay",
       "resumeTitle": "完整履歷 {'|'} Portfolio of Fay",
-      "notFoundTitle": "404 找不到頁面 {'|'} Portfolio"
+      "notFoundTitle": "404 找不到頁面 {'|'} Portfolio of Fay"
     }
   },
   "home": {
+    "hero": { "intro": "認識" },
+    "viewResume": "查看履歷",
     "who": {
       "title": "個人資訊",
       "subtitle": "資深前端工程師，具備後端基礎知識。"

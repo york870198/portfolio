@@ -60,23 +60,22 @@ const { t } = useI18n({ useScope: 'global' })
   <div class="page home-page">
     <div class="container home-container">
       <section class="hero-section">
-        <h1 class="hero-title"><span class="hero-intro">Everything about</span><span class="hero-name">Fay.</span></h1>
+        <h1 class="hero-title"><span class="hero-intro">{{ t('home.hero.intro') }}</span>{{ ' ' }}<span class="hero-name">Fay.</span></h1>
         <p class="hero-description">{{ t('home.who.subtitle') }}</p>
-        <NavigationLink to="/resume" class="hero-resume">{{ t('common.navbar.downloadResume') }} <span aria-hidden="true">↗</span></NavigationLink>
+        <NavigationLink to="/resume" class="hero-resume">{{ t('home.viewResume') }} <span aria-hidden="true">→</span></NavigationLink>
         <div class="hero-preview" aria-hidden="true">
           <span :key="activeTag" class="preview-word">{{ activeTag }}?</span>
           <span>{{ t(activeDimension.titleKey) }}</span>
         </div>
-        <p class="hero-footnote">WHO · WHEN · WHAT<br>WHERE · WHY · HOW</p>
       </section>
       <nav class="dimensions-section" :aria-label="t('common.dimensions')">
-        <div class="index-label"><span>{{ t('common.dimensions') }}</span><span>INDEX ↓</span></div>
+        <div class="index-label"><span>{{ t('common.dimensions') }}</span><span>{{ t('common.index') }} <span aria-hidden="true">↓</span></span></div>
         <NavigationLink v-for="item in dimensions" :key="item.tag" :to="item.path" class="dimension-card" :id="'dimension-card-' + item.tag.toLowerCase()" @mouseenter="activeTag = item.tag" @focusin="activeTag = item.tag">
           <div class="dimension-copy">
             <div class="dimension-heading"><span class="dimension-tag" :style="{ viewTransitionName: 'dimension-' + item.tag.toLowerCase() }">{{ item.tag }}</span><h2 class="dimension-title">{{ t(item.titleKey) }}</h2></div>
             <p class="dimension-subtitle">{{ t(item.subtitleKey) }}</p>
           </div>
-          <span class="explore-arrow" aria-hidden="true">↗</span><span class="sr-only">{{ t('common.moreDetails') }}</span>
+          <span class="explore-arrow" aria-hidden="true">↗</span>
         </NavigationLink>
       </nav>
     </div>
@@ -85,7 +84,7 @@ const { t } = useI18n({ useScope: 'global' })
 <style scoped>
 .home-page { padding: 1.5rem 0 4rem; }
 .home-container { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 5rem); align-items: start; }
-.hero-section { position: sticky; top: calc(var(--navbar-height) + 1.5rem); background: var(--accent-primary); color: var(--text-inverse); padding: clamp(1.5rem, 3.5vw, 3.5rem); min-height: 680px; display: flex; flex-direction: column; }
+.hero-section { --border-focus: var(--text-inverse); position: sticky; top: calc(var(--navbar-height) + 1.5rem); background: var(--accent-primary); color: var(--text-inverse); padding: clamp(1.5rem, 3.5vw, 3.5rem); min-height: 680px; display: flex; flex-direction: column; }
 .hero-title { color: inherit; font-weight: 500; }
 .hero-intro { display: block; font-size: clamp(1.75rem, 2.8vw, 2.6rem); line-height: 1.04; letter-spacing: -.055em; }
 .hero-name { display: block; font-size: clamp(7rem, 16vw, 15rem); line-height: 1.1; letter-spacing: -.085em; margin: 1rem 0; }
@@ -94,7 +93,6 @@ const { t } = useI18n({ useScope: 'global' })
 .hero-resume:hover { transform: translateY(-3px); }
 .hero-preview { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; margin-top: auto; padding-top: 3rem; }
 .preview-word { font-size: clamp(2rem, 3vw, 3rem); letter-spacing: -.055em; animation: preview-enter .3s ease both; }
-.hero-footnote { font-size: 13px; line-height: 1.7; margin-top: 1rem; grid-column: 1 / -1; }
 .index-label { display: flex; justify-content: space-between; font-size: 1rem; padding: .5rem 0 1.25rem; color: var(--text-secondary); }
 .dimension-card { display: grid; grid-template-columns: 1fr 36px; align-items: center; gap: 1rem; padding: 1.6rem 1.25rem; margin-inline: -1.25rem; transition: background .22s, transform .22s; }
 .dimension-card:hover, .dimension-card:focus-visible { background: var(--bg-secondary); transform: translateX(4px); }

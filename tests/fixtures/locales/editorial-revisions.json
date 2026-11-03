@@ -43,7 +43,20 @@
     "resume.concise.workTitle",
     "resume.concise.work",
     "resume.concise.remoteExperience",
-    "common.labelSeparator"
+    "common.labelSeparator",
+    "common.index",
+    "common.opensInNewTab",
+    "common.footer",
+    "common.nav.home",
+    "common.nav.who",
+    "common.nav.when",
+    "common.nav.what",
+    "common.nav.where",
+    "common.nav.why",
+    "common.nav.how",
+    "common.metadata.pageTitle",
+    "home.hero.intro",
+    "home.viewResume"
   ],
   "reason": "Approved wording from text-update and content-concision revisions. Preserve the original inventory as history; retiredFixedText applies only to the specified reading version. English token aliases validate exact lowercase equivalents of ordinary words, not omitted facts.",
   "chinese": {
@@ -111,7 +124,9 @@
     "common.contact.emailCopied": "已複製電子郵件地址",
     "home.where.subtitle": "聯絡方式與工作條件。",
     "what.beyondFrontend.question": "還使用過哪些技術？",
-    "resume.concise.tauri": "目前用於開發中的個人專案。"
+    "resume.concise.tauri": "目前用於開發中的個人專案。",
+    "common.navbar.contact": "複製信箱",
+    "common.metadata.description": "Fay 的作品集：資深前端工程師，具備後端基礎知識。"
   },
   "retiredKeys": [
     "resume.who.svelteAngular",
@@ -164,7 +179,8 @@
     "resume.social.linkedin",
     "resume.social.cake",
     "resume.how.scope",
-    "resume.how.specification"
+    "resume.how.specification",
+    "common.moreDetails"
   ],
   "englishTokenExceptions": {
     "who.identity.design": [
@@ -307,6 +323,82 @@
     {
       "file": "src/views/ResumeView.vue",
       "original": "CI/CD (GitHub Actions / Pages)"
+    },
+    {
+      "file": "src/App.vue",
+      "original": "Portfolio. Built with Vue 3 & TypeScript."
+    },
+    {
+      "file": "src/views/HomeView.vue",
+      "original": "Everything about"
+    },
+    {
+      "file": "src/views/HomeView.vue",
+      "original": "WHO · WHEN · WHAT"
+    },
+    {
+      "file": "src/views/HomeView.vue",
+      "original": "WHERE · WHY · HOW"
+    },
+    {
+      "file": "src/views/HomeView.vue",
+      "original": "INDEX ↓"
+    },
+    {
+      "file": "src/router/index.ts",
+      "original": "Home"
+    },
+    {
+      "file": "src/router/index.ts",
+      "original": "Who"
+    },
+    {
+      "file": "src/router/index.ts",
+      "original": "When"
+    },
+    {
+      "file": "src/router/index.ts",
+      "original": "What"
+    },
+    {
+      "file": "src/router/index.ts",
+      "original": "Where"
+    },
+    {
+      "file": "src/router/index.ts",
+      "original": "Why"
+    },
+    {
+      "file": "src/router/index.ts",
+      "original": "How"
+    },
+    {
+      "file": "src/router/index.ts",
+      "original": "Home | Portfolio of Fay"
+    },
+    {
+      "file": "src/router/index.ts",
+      "original": "Who | Portfolio of Fay"
+    },
+    {
+      "file": "src/router/index.ts",
+      "original": "When | Portfolio of Fay"
+    },
+    {
+      "file": "src/router/index.ts",
+      "original": "What | Portfolio of Fay"
+    },
+    {
+      "file": "src/router/index.ts",
+      "original": "Where | Portfolio of Fay"
+    },
+    {
+      "file": "src/router/index.ts",
+      "original": "Why | Portfolio of Fay"
+    },
+    {
+      "file": "src/router/index.ts",
+      "original": "How | Portfolio of Fay"
     }
   ],
   "englishTokenAliases": {

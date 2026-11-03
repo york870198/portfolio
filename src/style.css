@@ -113,6 +113,7 @@ h1[tabindex="-1"]:focus, main[tabindex="-1"]:focus { outline: none; }
   button, .btn-primary, .btn-secondary { transition: background .2s, color .2s, transform .2s; }
   button:active, .btn-primary:active, .btn-secondary:active { transform: translateY(1px); }
   h1, h2, h3 { text-wrap: balance; }
+  p, li { text-wrap: pretty; }
 }
 
 @page {

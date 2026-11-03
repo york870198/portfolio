@@ -42,7 +42,7 @@ const { t } = useI18n({ useScope: 'global' })
       :title="t('common.contact.copyEmail', { email: props.email })"
       id="quick-contact-btn"
     >
-      <span class="btn-icon">{{ copied ? '✓' : '↗' }}</span>
+      <span class="btn-icon" aria-hidden="true">✓</span>
       <span class="btn-text">{{ props.label ?? t('common.contact.label') }}</span>
     </button>
     <span class="copy-status" role="status">{{ copied ? t('common.contact.emailCopied') : "" }}</span>
@@ -53,7 +53,8 @@ const { t } = useI18n({ useScope: 'global' })
 .quick-contact-wrapper { display: inline-flex; position: relative; }
 .quick-contact-btn { display: inline-flex; align-items: center; gap: .65rem; min-height: 44px; padding: .5rem .65rem; color: var(--text-primary); font-size: 13px; white-space: nowrap; }
 .quick-contact-btn:hover, .quick-contact-btn.is-copied { color: var(--accent-primary); }
-.btn-icon { color: var(--accent-primary); font-size: 20px; }
+.btn-icon { color: var(--accent-primary); font-size: 20px; visibility: hidden; }
+.is-copied .btn-icon { visibility: visible; }
 .variant-primary { background: var(--accent-primary); color: var(--text-inverse); }
 .variant-primary .btn-icon { color: inherit; }
 .variant-secondary { border: 1px solid var(--border-subtle); }

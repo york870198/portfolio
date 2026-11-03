@@ -29,7 +29,7 @@ const { t } = useI18n({ useScope: 'global' })
     <footer class="app-footer">
       <div class="container footer-container">
         <p class="footer-text">
-          © {{ new Date().getFullYear() }} Portfolio. Built with Vue 3 & TypeScript.
+          {{ t('common.footer', { year: new Date().getFullYear() }) }}
         </p>
       </div>
     </footer>

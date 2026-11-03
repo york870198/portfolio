@@ -170,13 +170,6 @@ const { t } = useI18n({ useScope: 'global' })
   padding-block: 0.5rem;
 }
 
-.projects-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  margin-top: 0.5rem;
-}
-
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));

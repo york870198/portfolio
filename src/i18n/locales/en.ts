@@ -7,8 +7,19 @@ const en = {
     "language": { "label": "Website language" },
     "skipToContent": "Skip to main content",
     "dimensions": "Six dimensions",
-    "moreDetails": "More details",
+    "index": "Index",
+    "opensInNewTab": "(opens in a new tab)",
+    "footer": "© {year} Fay. Built with Vue 3 and TypeScript.",
     "backHome": "Back to home",
+    "nav": {
+      "home": "Home",
+      "who": "About",
+      "when": "Experience",
+      "what": "Skills",
+      "where": "Contact",
+      "why": "Motivation",
+      "how": "How I work"
+    },
     "navbar": {
       "mainNavigation": "Main navigation",
       "mobileNavigation": "Mobile navigation",
@@ -18,7 +29,7 @@ const en = {
       "preparing": "Preparing…",
       "preparingResume": "Preparing resume…",
       "printFrameTitle": "Full resume print preview",
-      "contact": "Contact",
+      "contact": "Copy email",
       "closeMenu": "Close menu",
       "openMenu": "Open menu"
     },
@@ -36,12 +47,15 @@ const en = {
       "viewDemo": "Open Live Demo preview"
     },
     "metadata": {
-      "description": "Portfolio - Personal profile",
+      "description": "Portfolio of Fay, a senior frontend engineer with backend knowledge.",
+      "pageTitle": "{page} {'|'} Portfolio of Fay",
       "resumeTitle": "Full resume {'|'} Portfolio of Fay",
-      "notFoundTitle": "404 Page not found {'|'} Portfolio"
+      "notFoundTitle": "404 Page not found {'|'} Portfolio of Fay"
     }
   },
   "home": {
+    "hero": { "intro": "Everything about" },
+    "viewResume": "View resume",
     "who": {
       "title": "About me",
       "subtitle": "Senior frontend engineer with backend knowledge."

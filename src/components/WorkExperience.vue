@@ -13,7 +13,7 @@ const contributions = ['delivery', 'requirements', 'api', 'verification'] as con
 <template>
   <QnACard
     :heading-level="props.headingLevel"
-    :index="1"
+    :index="props.compact ? undefined : 1"
     :question="t('when.employment.employer')"
     :highlight="t('when.employment.roles')"
     accentColor="var(--theme-when)"
@@ -24,7 +24,7 @@ const contributions = ['delivery', 'requirements', 'api', 'verification'] as con
   <QnACard
     id="vue3-rebuild"
     :heading-level="props.headingLevel"
-    :index="2"
+    :index="props.compact ? undefined : 2"
     :question="t('when.project.title')"
     :highlight="t('when.project.summary')"
     accentColor="var(--theme-when)"

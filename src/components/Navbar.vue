@@ -17,7 +17,7 @@ const header = ref<HTMLElement>()
 const menuToggle = ref<HTMLButtonElement>()
 let printFrame: HTMLIFrameElement | undefined
 let printTimeout: number | undefined
-const desktopQuery = window.matchMedia('(min-width: 1101px)')
+const desktopQuery = window.matchMedia('(min-width: 1281px)')
 
 function closeMobileMenu() { isMobileMenuOpen.value = false }
 async function toggleMobileMenu() {
@@ -108,7 +108,7 @@ const { t } = useI18n({ useScope: 'global' })
       <nav class="desktop-nav" :aria-label="t('common.navbar.mainNavigation')">
         <ul class="nav-list">
           <li v-for="item in navRoutes" :key="item.path">
-            <NavigationLink :to="item.path" class="nav-link" :id="`nav-link-${item.name}`">{{ item.title }}</NavigationLink>
+            <NavigationLink :to="item.path" class="nav-link" :id="`nav-link-${item.name}`">{{ t(item.titleKey) }}</NavigationLink>
           </li>
         </ul>
       </nav>
@@ -129,7 +129,7 @@ const { t } = useI18n({ useScope: 'global' })
         <ul class="mobile-nav-list">
           <li v-for="item in navRoutes" :key="item.path">
             <NavigationLink :to="item.path" class="mobile-nav-link" :id="`mobile-nav-link-${item.name}`" @click="closeMobileMenu">
-              <span>{{ item.title }}</span><span class="mobile-nav-tag">{{ item.tag }}</span>
+              <span>{{ t(item.titleKey) }}</span><span class="mobile-nav-tag" aria-hidden="true">{{ item.tag }}</span>
             </NavigationLink>
           </li>
         </ul>
@@ -142,11 +142,10 @@ const { t } = useI18n({ useScope: 'global' })
 .navbar-header { position: sticky; top: 0; height: var(--navbar-height); background: var(--bg-navbar);  z-index: 100; }
 .navbar-container { display: flex; align-items: center; justify-content: space-between; height: 100%; gap: 1.25rem; }
 .navbar-brand { display: flex; gap: .65rem; align-items: center; min-height: 44px; flex-shrink: 0; }
-.brand-mark { font-size: 32px; color: var(--accent-primary); line-height: 1; }
 .brand-name { font-size: 23px; font-weight: 700; letter-spacing: -.04em; }
 .brand-caption { font: 13px var(--font-sans); margin-left: .5rem; color: var(--text-secondary); }
 .nav-list { display: flex; list-style: none; gap: .15rem; }
-.nav-link { display: flex; align-items: center; min-height: 44px; padding: .5rem .65rem; font: 14px var(--font-sans); color: var(--text-secondary); }
+.nav-link { display: flex; align-items: center; min-height: 44px; white-space: nowrap; padding: .5rem .65rem; font: 14px var(--font-sans); color: var(--text-secondary); }
 .nav-link:hover, .nav-link[aria-current] { color: var(--accent-primary); }
 .nav-link[aria-current] { text-decoration: underline; text-underline-offset: 8px; }
 .navbar-actions { display: flex; align-items: center; gap: .75rem; }
@@ -160,7 +159,7 @@ const { t } = useI18n({ useScope: 'global' })
 .mobile-nav-link[aria-current] { color: var(--accent-primary); background: var(--bg-tag); }
 .mobile-nav-tag { font: 13px var(--font-sans); color: var(--text-muted); }
 .mobile-download-btn { display: flex; justify-content: space-between; width: 100%; margin-top: 1rem; padding: .85rem; background: var(--accent-primary); color: var(--text-inverse); }
-@media(max-width: 1100px) { .desktop-nav, .btn-download-resume { display: none; } .mobile-toggle { display: block; } }
+@media(max-width: 1280px) { .desktop-nav, .btn-download-resume { display: none; } .mobile-toggle { display: block; } }
 @media(max-width: 440px) { .brand-caption { display: none; } .navbar-container { gap: .5rem; } .navbar-actions { gap: .4rem; } }
 @media(max-width: 600px) {
   .navbar-header { height: auto; }

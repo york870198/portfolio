@@ -43,8 +43,8 @@ const { t } = useI18n({ useScope: 'global' })
     :aria-label="isDark ? t('common.theme.switchToLight') : t('common.theme.switchToDark')"
     id="theme-toggle-btn"
   >
-    <span class="theme-icon" v-if="isDark">◐</span>
-    <span class="theme-icon" v-else>◑</span>
+    <span class="theme-icon" aria-hidden="true" v-if="isDark">◐</span>
+    <span class="theme-icon" aria-hidden="true" v-else>◑</span>
   </button>
 </template>
 

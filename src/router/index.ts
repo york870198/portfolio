@@ -5,69 +5,18 @@ import { normalizeLocaleRoute, resolveLocale } from '@/i18n/locale'
 export interface NavRouteItem {
   path: string
   name: string
-  title: string
+  titleKey: string
   tag: string
-  icon: string
-  accentColor: string
 }
 
 export const navRoutes: NavRouteItem[] = [
-  {
-    path: '/',
-    name: 'home',
-    title: 'Home',
-    tag: 'HOME',
-    icon: '🏠',
-    accentColor: 'var(--accent-primary)'
-  },
-  {
-    path: '/who',
-    name: 'who',
-    title: 'Who',
-    tag: 'WHO',
-    icon: '👤',
-    accentColor: 'var(--theme-who)'
-  },
-  {
-    path: '/when',
-    name: 'when',
-    title: 'When',
-    tag: 'WHEN',
-    icon: '⏳',
-    accentColor: 'var(--theme-when)'
-  },
-  {
-    path: '/what',
-    name: 'what',
-    title: 'What',
-    tag: 'WHAT',
-    icon: '⚡',
-    accentColor: 'var(--theme-what)'
-  },
-  {
-    path: '/where',
-    name: 'where',
-    title: 'Where',
-    tag: 'WHERE',
-    icon: '📍',
-    accentColor: 'var(--theme-where)'
-  },
-  {
-    path: '/why',
-    name: 'why',
-    title: 'Why',
-    tag: 'WHY',
-    icon: '💡',
-    accentColor: 'var(--theme-why)'
-  },
-  {
-    path: '/how',
-    name: 'how',
-    title: 'How',
-    tag: 'HOW',
-    icon: '🛠️',
-    accentColor: 'var(--theme-how)'
-  }
+  { path: '/', name: 'home', titleKey: 'common.nav.home', tag: 'HOME' },
+  { path: '/who', name: 'who', titleKey: 'common.nav.who', tag: 'WHO' },
+  { path: '/when', name: 'when', titleKey: 'common.nav.when', tag: 'WHEN' },
+  { path: '/what', name: 'what', titleKey: 'common.nav.what', tag: 'WHAT' },
+  { path: '/where', name: 'where', titleKey: 'common.nav.where', tag: 'WHERE' },
+  { path: '/why', name: 'why', titleKey: 'common.nav.why', tag: 'WHY' },
+  { path: '/how', name: 'how', titleKey: 'common.nav.how', tag: 'HOW' }
 ]
 
 const routes: RouteRecordRaw[] = [
@@ -75,43 +24,43 @@ const routes: RouteRecordRaw[] = [
     path: '/',
     name: 'home',
     component: () => import('@/views/HomeView.vue'),
-    meta: { title: 'Home | Portfolio of Fay' }
+    meta: { pageKey: 'common.nav.home' }
   },
   {
     path: '/who',
     name: 'who',
     component: () => import('@/views/WhoView.vue'),
-    meta: { title: 'Who | Portfolio of Fay' }
+    meta: { pageKey: 'common.nav.who' }
   },
   {
     path: '/when',
     name: 'when',
     component: () => import('@/views/WhenView.vue'),
-    meta: { title: 'When | Portfolio of Fay' }
+    meta: { pageKey: 'common.nav.when' }
   },
   {
     path: '/what',
     name: 'what',
     component: () => import('@/views/WhatView.vue'),
-    meta: { title: 'What | Portfolio of Fay' }
+    meta: { pageKey: 'common.nav.what' }
   },
   {
     path: '/where',
     name: 'where',
     component: () => import('@/views/WhereView.vue'),
-    meta: { title: 'Where | Portfolio of Fay' }
+    meta: { pageKey: 'common.nav.where' }
   },
   {
     path: '/why',
     name: 'why',
     component: () => import('@/views/WhyView.vue'),
-    meta: { title: 'Why | Portfolio of Fay' }
+    meta: { pageKey: 'common.nav.why' }
   },
   {
     path: '/how',
     name: 'how',
     component: () => import('@/views/HowView.vue'),
-    meta: { title: 'How | Portfolio of Fay' }
+    meta: { pageKey: 'common.nav.how' }
   },
   {
     path: '/resume',
@@ -154,7 +103,9 @@ export function createPortfolioRouter(history: RouterHistory = createWebHistory(
     document.documentElement.lang = locale
     document.title = typeof to.meta.titleKey === 'string'
       ? i18n.global.t(to.meta.titleKey)
-      : typeof to.meta.title === 'string' ? to.meta.title : 'Portfolio of Fay'
+      : typeof to.meta.pageKey === 'string'
+        ? i18n.global.t('common.metadata.pageTitle', { page: i18n.global.t(to.meta.pageKey) })
+        : 'Portfolio of Fay'
     document.querySelector('meta[name="description"]')?.setAttribute('content', i18n.global.t('common.metadata.description'))
   })
 

@@ -15,7 +15,7 @@ const { t } = useI18n({ useScope: 'global' })
     <component :is="isResume ? 'h2' : 'h1'" class="page-title">{{ props.title }}</component>
     <p class="page-subtitle">{{ props.subtitle }}</p>
     <nav v-if="!isResume" class="chapter-nav no-print" :aria-label="t('common.dimensions')">
-      <NavigationLink v-for="item in navRoutes.slice(1)" :key="item.path" :to="item.path">{{ item.tag }}</NavigationLink>
+      <NavigationLink v-for="item in navRoutes.slice(1)" :key="item.path" :to="item.path">{{ t(item.titleKey) }}</NavigationLink>
     </nav>
   </header>
 </template>
@@ -35,7 +35,7 @@ const { t } = useI18n({ useScope: 'global' })
   .theme-letter { font-size: 3.25rem; margin-top: 1.25rem; }
   .page-title { margin: .75rem 0; }
   .page-subtitle { max-width: 45ch; }
-  .chapter-nav { grid-template-columns: repeat(6, 1fr); margin-top: 1.5rem; gap: .25rem; }
+  .chapter-nav { margin-top: 1.5rem; gap: .25rem; }
   .chapter-nav a { font-size: 13px; }
 }
 </style>
