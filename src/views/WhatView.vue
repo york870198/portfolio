@@ -99,7 +99,6 @@ const { t } = useI18n({ useScope: 'global' })
         themeIndex="03"
         :title="t('what.title')"
         :subtitle="t('what.subtitle')"
-        accentColor="var(--theme-what)"
       />
 
       <div class="page-content-flow">
@@ -109,7 +108,6 @@ const { t } = useI18n({ useScope: 'global' })
           :question="t('what.web.question')"
           :highlight="t('what.web.highlight')"
           :tags="['Web Development', 'UI/UX', 'RWD' ]"
-          accentColor="var(--theme-what)"
         >
           <div class="skills-grid">
             <div v-for="cat in skillCategories" :key="cat.id" class="skill-category-block">
@@ -137,7 +135,6 @@ const { t } = useI18n({ useScope: 'global' })
         <QnACard
           :index="2"
           :question="t('what.beyondFrontend.question')"
-          accentColor="var(--theme-what)"
         >
           <ul>
             <li><strong>Tauri{{ t('common.labelSeparator') }}</strong> {{ t('what.beyondFrontend.tauri') }}</li>
@@ -189,7 +186,7 @@ const { t } = useI18n({ useScope: 'global' })
 
 .category-title {
   font-size: 1.05rem;
-  color: var(--theme-what, #10b981);
+  color: var(--accent-primary);
   font-weight: 600;
   border: 0;
   padding-bottom: 0.45rem;

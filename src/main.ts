@@ -2,6 +2,8 @@ import { createApp } from 'vue'
 import App from '@/App.vue'
 import router from '@/router'
 import i18n from '@/i18n'
+// Self-hosted variable font; unicode-range keeps downloads to the latin subset in use.
+import '@fontsource-variable/work-sans/wght.css'
 import '@/style.css'
 
 const app = createApp(App)

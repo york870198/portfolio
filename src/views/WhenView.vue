@@ -13,7 +13,6 @@ const { t } = useI18n({ useScope: 'global' })
         themeIndex="02"
         :title="t('when.title')"
         :subtitle="t('when.subtitle')"
-        accentColor="var(--theme-when)"
       />
 
       <div class="page-content-flow">

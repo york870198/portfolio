@@ -16,7 +16,6 @@ const contributions = ['delivery', 'requirements', 'api', 'verification'] as con
     :index="props.compact ? undefined : 1"
     :question="t('when.employment.employer')"
     :highlight="t('when.employment.roles')"
-    accentColor="var(--theme-when)"
   >
     <p>{{ t('when.previousRole.highlight') }} · {{ t('when.employment.promotion') }}</p>
   </QnACard>
@@ -27,7 +26,6 @@ const contributions = ['delivery', 'requirements', 'api', 'verification'] as con
     :index="props.compact ? undefined : 2"
     :question="t('when.project.title')"
     :highlight="t('when.project.summary')"
-    accentColor="var(--theme-when)"
   >
     <p>{{ t('when.project.outcome') }}</p>
     <ul>

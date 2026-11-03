@@ -48,12 +48,6 @@
     "common.opensInNewTab",
     "common.footer",
     "common.nav.home",
-    "common.nav.who",
-    "common.nav.when",
-    "common.nav.what",
-    "common.nav.where",
-    "common.nav.why",
-    "common.nav.how",
     "common.metadata.pageTitle",
     "home.hero.intro",
     "home.viewResume"
@@ -126,7 +120,15 @@
     "what.beyondFrontend.question": "還使用過哪些技術？",
     "resume.concise.tauri": "目前用於開發中的個人專案。",
     "common.navbar.contact": "複製信箱",
-    "common.metadata.description": "Fay 的作品集：資深前端工程師，具備後端基礎知識。"
+    "common.metadata.description": "Fay 的作品集：資深前端工程師，具備後端基礎知識。",
+    "home.who.title": "關於我",
+    "who.title": "關於我",
+    "home.what.title": "技能",
+    "what.title": "技能",
+    "home.where.title": "聯絡",
+    "where.title": "聯絡",
+    "home.how.title": "工作方式",
+    "how.title": "工作方式"
   },
   "retiredKeys": [
     "resume.who.svelteAngular",

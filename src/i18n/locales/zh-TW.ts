@@ -9,15 +9,7 @@ const zhTW = {
     "opensInNewTab": "（在新分頁開啟）",
     "footer": "© {year} Fay。以 Vue 3 與 TypeScript 打造。",
     "backHome": "返回首頁",
-    "nav": {
-      "home": "首頁",
-      "who": "關於我",
-      "when": "經歷",
-      "what": "技能",
-      "where": "聯絡",
-      "why": "動機",
-      "how": "工作方式"
-    },
+    "nav": { "home": "首頁" },
     "navbar": {
       "mainNavigation": "主要導覽選單",
       "mobileNavigation": "行動版導覽選單",
@@ -55,7 +47,7 @@ const zhTW = {
     "hero": { "intro": "認識" },
     "viewResume": "查看履歷",
     "who": {
-      "title": "個人資訊",
+      "title": "關於我",
       "subtitle": "資深前端工程師，具備後端基礎知識。"
     },
     "when": {
@@ -63,11 +55,11 @@ const zhTW = {
       "subtitle": "工作經歷與代表案例。"
     },
     "what": {
-      "title": "技術棧",
+      "title": "技能",
       "subtitle": "技能與專案中的實際用途。"
     },
     "where": {
-      "title": "活動範圍",
+      "title": "聯絡",
       "subtitle": "聯絡方式與工作條件。"
     },
     "why": {
@@ -75,12 +67,12 @@ const zhTW = {
       "subtitle": "持續學習，讓想法成為看得見的成果。"
     },
     "how": {
-      "title": "實踐方法",
+      "title": "工作方式",
       "subtitle": "協作案例與網站實作方式。"
     }
   },
   "who": {
-    "title": "個人資訊",
+    "title": "關於我",
     "subtitle": "一名具備後端基礎知識的資深前端工程師。",
     "identity": {
       "question": "我是誰？",
@@ -127,7 +119,7 @@ const zhTW = {
       "websocket": "接收即時互動訊息。",
       "readCase": "閱讀工作經歷與案例"
     },
-    "title": "技術棧",
+    "title": "技能",
     "subtitle": "技能與專案中的實際用途。",
     "web": {
       "question": "最熟悉的開發項目？",
@@ -157,7 +149,7 @@ const zhTW = {
     },
   },
   "where": {
-    "title": "活動範圍",
+    "title": "聯絡",
     "subtitle": "聯絡方式與工作條件。",
     "location": {
       "question": "我在哪裡？",
@@ -202,7 +194,7 @@ const zhTW = {
       "api": "我提出前端資料需求並定義預期接收的資料結構，與後端共同確認。後端實作 API 後，由我完成前端串接。",
       "verification": "我親自比對 Figma 設計稿並檢查跨瀏覽器行為，再交由設計師與 QA 驗收。單元測試由前端團隊共同訂定。"
     },
-    "title": "實踐方法",
+    "title": "工作方式",
     "subtitle": "協作案例與網站實作方式。",
     "website": {
       "question": "這個網站是怎麼做的？",

@@ -2,6 +2,7 @@
 import { useI18n } from 'vue-i18n'
 import { computed, ref } from 'vue'
 import NavigationLink from '@/components/NavigationLink.vue'
+import Icon from '@/components/Icon.vue'
 
 const activeTag = ref('WHO')
 
@@ -62,20 +63,20 @@ const { t } = useI18n({ useScope: 'global' })
       <section class="hero-section">
         <h1 class="hero-title"><span class="hero-intro">{{ t('home.hero.intro') }}</span>{{ ' ' }}<span class="hero-name">Fay.</span></h1>
         <p class="hero-description">{{ t('home.who.subtitle') }}</p>
-        <NavigationLink to="/resume" class="hero-resume">{{ t('home.viewResume') }} <span aria-hidden="true">→</span></NavigationLink>
+        <NavigationLink to="/resume" class="hero-resume">{{ t('home.viewResume') }} <Icon name="arrow-right" /></NavigationLink>
         <div class="hero-preview" aria-hidden="true">
           <span :key="activeTag" class="preview-word">{{ activeTag }}?</span>
           <span>{{ t(activeDimension.titleKey) }}</span>
         </div>
       </section>
       <nav class="dimensions-section" :aria-label="t('common.dimensions')">
-        <div class="index-label"><span>{{ t('common.dimensions') }}</span><span>{{ t('common.index') }} <span aria-hidden="true">↓</span></span></div>
+        <div class="index-label"><span>{{ t('common.dimensions') }}</span><span>{{ t('common.index') }} <Icon name="arrow-down" /></span></div>
         <NavigationLink v-for="item in dimensions" :key="item.tag" :to="item.path" class="dimension-card" :id="'dimension-card-' + item.tag.toLowerCase()" @mouseenter="activeTag = item.tag" @focusin="activeTag = item.tag">
           <div class="dimension-copy">
             <div class="dimension-heading"><span class="dimension-tag" :style="{ viewTransitionName: 'dimension-' + item.tag.toLowerCase() }">{{ item.tag }}</span><h2 class="dimension-title">{{ t(item.titleKey) }}</h2></div>
             <p class="dimension-subtitle">{{ t(item.subtitleKey) }}</p>
           </div>
-          <span class="explore-arrow" aria-hidden="true">↗</span>
+          <span class="explore-arrow"><Icon name="arrow-up-right" /></span>
         </NavigationLink>
       </nav>
     </div>
@@ -100,7 +101,7 @@ const { t } = useI18n({ useScope: 'global' })
 .dimension-tag { font-size: clamp(2rem, 3.5vw, 3.25rem); font-weight: 500; line-height: 1; letter-spacing: -.055em; }
 .dimension-title { font-size: 1rem; font-weight: 500; }
 .dimension-subtitle { font-size: 1rem; line-height: 1.8; margin-top: .75rem; color: var(--text-secondary); }
-.explore-arrow { display: grid; place-items: center; width: 36px; height: 36px; background: var(--bg-secondary); font-size: 24px; transition: transform .22s; }
+.explore-arrow { display: grid; place-items: center; width: 36px; height: 36px; background: var(--bg-secondary); font-size: 20px; transition: transform .22s; }
 .dimension-card:hover .explore-arrow { transform: rotate(45deg); background: var(--accent-primary); color: var(--text-inverse); }
 @keyframes preview-enter { from { opacity: .4; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 @media(prefers-reduced-motion: no-preference) {

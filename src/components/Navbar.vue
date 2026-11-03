@@ -7,6 +7,7 @@ import NavigationLink from './NavigationLink.vue'
 import ThemeToggle from './ThemeToggle.vue'
 import QuickContact from './QuickContact.vue'
 import LanguageSwitcher from './LanguageSwitcher.vue'
+import Icon from './Icon.vue'
 import { resolveLocale } from '@/i18n/locale'
 
 const route = useRoute()
@@ -18,6 +19,10 @@ const menuToggle = ref<HTMLButtonElement>()
 let printFrame: HTMLIFrameElement | undefined
 let printTimeout: number | undefined
 const desktopQuery = window.matchMedia('(min-width: 1281px)')
+// Phones get a one-row header; language and theme move into the menu drawer.
+const narrowQuery = window.matchMedia('(max-width: 600px)')
+const isNarrow = ref(narrowQuery.matches)
+function onNarrow(event: MediaQueryListEvent) { isNarrow.value = event.matches }
 
 function closeMobileMenu() { isMobileMenuOpen.value = false }
 async function toggleMobileMenu() {
@@ -42,11 +47,13 @@ onMounted(() => {
   document.addEventListener('pointerdown', onOutside)
   document.addEventListener('focusin', onOutside)
   desktopQuery.addEventListener('change', onResize)
+  narrowQuery.addEventListener('change', onNarrow)
 })
 onUnmounted(() => {
   document.removeEventListener('pointerdown', onOutside)
   document.removeEventListener('focusin', onOutside)
   desktopQuery.removeEventListener('change', onResize)
+  narrowQuery.removeEventListener('change', onNarrow)
   printFrame?.remove()
   window.clearTimeout(printTimeout)
 })
@@ -113,14 +120,14 @@ const { t } = useI18n({ useScope: 'global' })
         </ul>
       </nav>
       <div class="navbar-actions">
-        <LanguageSwitcher />
+        <LanguageSwitcher v-if="!isNarrow" />
         <button id="nav-download-resume-btn" class="btn-download-resume" @click="handleDownloadResume" :disabled="isGeneratingPdf" :aria-label="t('common.navbar.downloadResumePdf')">
-          {{ isGeneratingPdf ? t('common.navbar.preparing') : t('common.navbar.downloadResume') }} <span aria-hidden="true">↗</span>
+          {{ isGeneratingPdf ? t('common.navbar.preparing') : t('common.navbar.downloadResume') }} <Icon name="arrow-down" />
         </button>
         <QuickContact variant="compact" :label="t('common.navbar.contact')" email="york870198@gmail.com" />
-        <ThemeToggle />
+        <ThemeToggle v-if="!isNarrow" />
         <button ref="menuToggle" id="mobile-menu-toggle" class="mobile-toggle" @click="toggleMobileMenu" :aria-label="isMobileMenuOpen ? t('common.navbar.closeMenu') : t('common.navbar.openMenu')" :aria-expanded="isMobileMenuOpen" aria-controls="mobile-dropdown-menu">
-          <span aria-hidden="true">{{ isMobileMenuOpen ? '×' : '☰' }}</span>
+          <Icon :name="isMobileMenuOpen ? 'close' : 'menu'" />
         </button>
       </div>
     </div>
@@ -133,7 +140,8 @@ const { t } = useI18n({ useScope: 'global' })
             </NavigationLink>
           </li>
         </ul>
-        <button class="mobile-download-btn" @click="handleDownloadResume" :disabled="isGeneratingPdf" id="mobile-download-resume-btn">{{ isGeneratingPdf ? t('common.navbar.preparingResume') : t('common.navbar.mobileDownloadResume') }} <span aria-hidden="true">↗</span></button>
+        <button class="mobile-download-btn" @click="handleDownloadResume" :disabled="isGeneratingPdf" id="mobile-download-resume-btn">{{ isGeneratingPdf ? t('common.navbar.preparingResume') : t('common.navbar.mobileDownloadResume') }} <Icon name="arrow-down" /></button>
+        <div v-if="isNarrow" class="mobile-settings"><LanguageSwitcher /><ThemeToggle /></div>
       </nav>
     </div>
   </header>
@@ -150,22 +158,19 @@ const { t } = useI18n({ useScope: 'global' })
 .nav-link[aria-current] { text-decoration: underline; text-underline-offset: 8px; }
 .navbar-actions { display: flex; align-items: center; gap: .75rem; }
 .btn-download-resume { display: flex; align-items: center; gap: 1rem; min-height: 44px; font-size: 13px; white-space: nowrap; }
-.btn-download-resume span { color: var(--accent-primary); font-size: 21px; }
+.btn-download-resume .icon { color: var(--accent-primary); font-size: 18px; }
 .btn-download-resume:hover { color: var(--accent-primary); }
-.mobile-toggle { display: none; min-width: 44px; height: 44px; font-size: 24px; background: var(--bg-secondary); }
+.mobile-toggle { display: none; min-width: 44px; height: 44px; font-size: 22px; background: var(--bg-secondary); }
+.mobile-toggle .icon { display: block; margin-inline: auto; }
 .mobile-drawer { position: absolute; top: 100%; left: 0; width: 100%; padding: .75rem 1.25rem 1.25rem; background: var(--bg-mobile-menu);  max-height: calc(100dvh - var(--navbar-height)); overflow-y: auto; }
 .mobile-nav-list { list-style: none; }
 .mobile-nav-link { display: flex; justify-content: space-between; align-items: center; min-height: 48px;  padding: .6rem .5rem; }
 .mobile-nav-link[aria-current] { color: var(--accent-primary); background: var(--bg-tag); }
 .mobile-nav-tag { font: 13px var(--font-sans); color: var(--text-muted); }
-.mobile-download-btn { display: flex; justify-content: space-between; width: 100%; margin-top: 1rem; padding: .85rem; background: var(--accent-primary); color: var(--text-inverse); }
+.mobile-download-btn { display: flex; justify-content: space-between; align-items: center; width: 100%; margin-top: 1rem; padding: .85rem; background: var(--accent-primary); color: var(--text-inverse); }
 @media(max-width: 1280px) { .desktop-nav, .btn-download-resume { display: none; } .mobile-toggle { display: block; } }
 @media(max-width: 440px) { .brand-caption { display: none; } .navbar-container { gap: .5rem; } .navbar-actions { gap: .4rem; } }
-@media(max-width: 600px) {
-  .navbar-header { height: auto; }
-  .navbar-container { flex-wrap: wrap; gap: 0; padding-top: .25rem; padding-bottom: .25rem; }
-  .navbar-actions { width: 100%; justify-content: space-between; gap: .25rem; }
-  .navbar-container { width: 100%; padding-left: 1.25rem; padding-right: 1.25rem; }
-  .navbar-actions :deep(.variant-compact) { padding: .25rem; gap: .35rem; }
-}
+.mobile-settings { display: flex; gap: .75rem; margin-top: .75rem; }
+.mobile-settings :deep(.language-select) { flex: 1; max-width: none; }
+@media(max-width: 600px) { .navbar-actions :deep(.variant-compact) { padding-inline: .25rem; } }
 </style>

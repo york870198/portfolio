@@ -1,14 +1,6 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import { useRoute, useRouter } from 'vue-router'
-import { localizedTarget } from '@/i18n/locale'
-
-const router = useRouter()
-const route = useRoute()
-
-const navigateToHome = () => {
-  router.push(localizedTarget(router.resolve('/'), route))
-}
+import NavigationLink from '@/components/NavigationLink.vue'
 const { t } = useI18n({ useScope: 'global' })
 </script>
 
@@ -20,9 +12,7 @@ const { t } = useI18n({ useScope: 'global' })
         <h1 class="notfound-title">{{ t('notFound.title') }}</h1>
         <p class="notfound-desc"> {{ t('notFound.description') }} </p>
         <div class="notfound-actions">
-          <button class="btn-primary" @click="navigateToHome" id="notfound-btn-home">
-            <span>{{ t('common.backHome') }}</span>
-          </button>
+          <NavigationLink to="/" class="btn-primary" id="notfound-btn-home">{{ t('common.backHome') }}</NavigationLink>
         </div>
       </div>
     </div>

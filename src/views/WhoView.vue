@@ -13,7 +13,6 @@ const { t } = useI18n({ useScope: 'global' })
         themeIndex="01"
         :title="t('who.title')"
         :subtitle="t('who.subtitle')"
-        accentColor="var(--theme-who)"
       />
 
       <div class="page-content-flow">
@@ -22,7 +21,6 @@ const { t } = useI18n({ useScope: 'global' })
           :question="t('who.identity.question')"
           :highlight="t('who.identity.highlight')"
           :tags="['Senior Frontend Engineer', 'React & Vue']"
-          accentColor="var(--theme-who)"
         >
           <p>{{ t('who.identity.workName') }}</p>
           <p>

@@ -11,15 +11,7 @@ const en = {
     "opensInNewTab": "(opens in a new tab)",
     "footer": "© {year} Fay. Built with Vue 3 and TypeScript.",
     "backHome": "Back to home",
-    "nav": {
-      "home": "Home",
-      "who": "About",
-      "when": "Experience",
-      "what": "Skills",
-      "where": "Contact",
-      "why": "Motivation",
-      "how": "How I work"
-    },
+    "nav": { "home": "Home" },
     "navbar": {
       "mainNavigation": "Main navigation",
       "mobileNavigation": "Mobile navigation",
@@ -65,11 +57,11 @@ const en = {
       "subtitle": "Work experience and a selected project."
     },
     "what": {
-      "title": "Tech stack",
+      "title": "Skills",
       "subtitle": "Skills and their application in projects."
     },
     "where": {
-      "title": "Where to find me",
+      "title": "Contact",
       "subtitle": "Contact details and work preferences."
     },
     "why": {
@@ -129,7 +121,7 @@ const en = {
       "websocket": "Received real-time interaction messages.",
       "readCase": "Read the work experience and case study"
     },
-    "title": "Tech stack",
+    "title": "Skills",
     "subtitle": "Skills and their application in projects.",
     "web": {
       "question": "What kind of development am I most familiar with?",
@@ -159,7 +151,7 @@ const en = {
     },
   },
   "where": {
-    "title": "Where to find me",
+    "title": "Contact",
     "subtitle": "Contact details and work preferences.",
     "location": {
       "question": "Where am I?",

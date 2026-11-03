@@ -5,18 +5,16 @@ interface Props {
   highlight?: string
   tags?: string[]
   index?: number | string
-  accentColor?: string
 }
 
 const props = withDefaults(defineProps<Props>(), {
   headingLevel: 2,
-  tags: () => [],
-  accentColor: 'var(--accent-primary)'
+  tags: () => []
 })
 </script>
 
 <template>
-  <article class="qna-card card" :style="{ '--card-accent': props.accentColor }">
+  <article class="qna-card card">
     <!-- Header: Question Number & Question Title -->
     <div class="qna-header">
       <div class="qna-title-row">

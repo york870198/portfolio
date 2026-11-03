@@ -13,7 +13,6 @@ const { t } = useI18n({ useScope: 'global' })
         themeIndex="05"
         :title="t('why.title')"
         :subtitle="t('why.subtitle')"
-        accentColor="var(--theme-why)"
       />
 
       <div class="page-content-flow">
@@ -21,7 +20,6 @@ const { t } = useI18n({ useScope: 'global' })
           :index="1"
           :question="t('why.frontend.question')"
           :highlight="t('why.frontend.highlight')"
-          accentColor="var(--theme-why)"
         >
           <p>{{ t('why.frontend.interest') }}</p>
         </QnACard>

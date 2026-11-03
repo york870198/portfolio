@@ -11,12 +11,12 @@ export interface NavRouteItem {
 
 export const navRoutes: NavRouteItem[] = [
   { path: '/', name: 'home', titleKey: 'common.nav.home', tag: 'HOME' },
-  { path: '/who', name: 'who', titleKey: 'common.nav.who', tag: 'WHO' },
-  { path: '/when', name: 'when', titleKey: 'common.nav.when', tag: 'WHEN' },
-  { path: '/what', name: 'what', titleKey: 'common.nav.what', tag: 'WHAT' },
-  { path: '/where', name: 'where', titleKey: 'common.nav.where', tag: 'WHERE' },
-  { path: '/why', name: 'why', titleKey: 'common.nav.why', tag: 'WHY' },
-  { path: '/how', name: 'how', titleKey: 'common.nav.how', tag: 'HOW' }
+  { path: '/who', name: 'who', titleKey: 'home.who.title', tag: 'WHO' },
+  { path: '/when', name: 'when', titleKey: 'home.when.title', tag: 'WHEN' },
+  { path: '/what', name: 'what', titleKey: 'home.what.title', tag: 'WHAT' },
+  { path: '/where', name: 'where', titleKey: 'home.where.title', tag: 'WHERE' },
+  { path: '/why', name: 'why', titleKey: 'home.why.title', tag: 'WHY' },
+  { path: '/how', name: 'how', titleKey: 'home.how.title', tag: 'HOW' }
 ]
 
 const routes: RouteRecordRaw[] = [
@@ -30,37 +30,37 @@ const routes: RouteRecordRaw[] = [
     path: '/who',
     name: 'who',
     component: () => import('@/views/WhoView.vue'),
-    meta: { pageKey: 'common.nav.who' }
+    meta: { pageKey: 'home.who.title' }
   },
   {
     path: '/when',
     name: 'when',
     component: () => import('@/views/WhenView.vue'),
-    meta: { pageKey: 'common.nav.when' }
+    meta: { pageKey: 'home.when.title' }
   },
   {
     path: '/what',
     name: 'what',
     component: () => import('@/views/WhatView.vue'),
-    meta: { pageKey: 'common.nav.what' }
+    meta: { pageKey: 'home.what.title' }
   },
   {
     path: '/where',
     name: 'where',
     component: () => import('@/views/WhereView.vue'),
-    meta: { pageKey: 'common.nav.where' }
+    meta: { pageKey: 'home.where.title' }
   },
   {
     path: '/why',
     name: 'why',
     component: () => import('@/views/WhyView.vue'),
-    meta: { pageKey: 'common.nav.why' }
+    meta: { pageKey: 'home.why.title' }
   },
   {
     path: '/how',
     name: 'how',
     component: () => import('@/views/HowView.vue'),
-    meta: { pageKey: 'common.nav.how' }
+    meta: { pageKey: 'home.how.title' }
   },
   {
     path: '/resume',

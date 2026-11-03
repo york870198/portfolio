@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import { nextTick, onMounted, onUnmounted } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
-import { localizedTarget } from '@/i18n/locale'
+import { useRoute } from 'vue-router'
 import WorkExperience from '@/components/WorkExperience.vue'
+import NavigationLink from '@/components/NavigationLink.vue'
+import Icon from '@/components/Icon.vue'
 
 const route = useRoute()
-const router = useRouter()
 
 const skillCategories = [
   {
@@ -85,10 +85,6 @@ const printResume = () => {
   window.print()
 }
 
-const goBack = () => {
-  router.push(localizedTarget(router.resolve('/'), route))
-}
-
 let isMounted = false
 onUnmounted(() => { isMounted = false })
 onMounted(async () => {
@@ -108,11 +104,11 @@ const { t } = useI18n({ useScope: 'global' })
     <div class="container resume-container">
       <!-- 螢幕操作列 (列印時自動隱藏) -->
       <div class="resume-toolbar no-print">
-        <button class="toolbar-btn back-btn" @click="goBack" id="resume-back-btn">
-          <span aria-hidden="true">←</span> {{ t('common.backHome') }} </button>
+        <NavigationLink to="/" class="toolbar-btn back-btn" id="resume-back-btn">
+          <Icon name="arrow-left" /> {{ t('common.backHome') }} </NavigationLink>
         <div class="toolbar-actions">
           <button class="toolbar-btn print-btn" @click="printResume" id="resume-print-action-btn">
-            <span aria-hidden="true">🖨️</span> {{ t('resume.toolbar.print') }} </button>
+            <Icon name="printer" /> {{ t('resume.toolbar.print') }} </button>
         </div>
       </div>
 
@@ -131,19 +127,19 @@ const { t } = useI18n({ useScope: 'global' })
 
         <div class="profile-contact-grid">
           <div class="contact-item">
-            <span class="contact-icon" aria-hidden="true">📧</span>
+            <Icon name="mail" class="contact-icon" />
             <a href="mailto:york870198@gmail.com" class="contact-link">york870198@gmail.com</a>
           </div>
           <div class="contact-item">
-            <span class="contact-icon" aria-hidden="true">📍</span>
+            <Icon name="pin" class="contact-icon" />
             <span>{{ t('resume.concise.location') }}</span>
           </div>
           <div class="contact-item">
-            <span class="contact-icon" aria-hidden="true">💻</span>
+            <Icon name="code" class="contact-icon" />
             <a href="https://github.com/york870198" target="_blank" rel="noopener noreferrer" class="contact-link">github.com/york870198<span class="sr-only">{{ t('common.opensInNewTab') }}</span></a>
           </div>
           <div class="contact-item">
-            <span class="contact-icon" aria-hidden="true">💼</span>
+            <Icon name="briefcase" class="contact-icon" />
             <a href="https://www.linkedin.com/in/fay-chung-682698224/" target="_blank" rel="noopener noreferrer" class="contact-link">LinkedIn: Fay Chung<span class="sr-only">{{ t('common.opensInNewTab') }}</span></a>
           </div>
         </div>
@@ -234,6 +230,7 @@ const { t } = useI18n({ useScope: 'global' })
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  min-height: 44px;
   padding: 0.6rem 1.25rem;
   border-radius: var(--radius-full);
   font-weight: 600;
@@ -254,14 +251,12 @@ const { t } = useI18n({ useScope: 'global' })
 }
 
 .print-btn {
-  background: var(--accent-gradient);
+  background: var(--accent-primary);
   color: var(--text-inverse);
-  box-shadow: 0 4px 12px var(--accent-glow);
 }
 
 .print-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.4);
+  background: var(--accent-primary-hover);
 }
 
 /* 履歷頭部名片 */
@@ -293,12 +288,11 @@ const { t } = useI18n({ useScope: 'global' })
   width: 48px;
   height: 48px;
   border-radius: var(--radius-sm);
-  background: var(--accent-gradient);
+  background: var(--accent-primary);
   color: var(--text-inverse);
   font-weight: 800;
   font-size: 1.25rem;
   font-family: var(--font-mono);
-  box-shadow: 0 4px 14px var(--accent-glow);
   flex-shrink: 0;
 }
 
@@ -334,6 +328,7 @@ const { t } = useI18n({ useScope: 'global' })
   font-size: 1rem;
   color: var(--text-secondary);
   line-height: 1.7;
+  max-width: 60ch;
 }
 
 .profile-contact-grid {
@@ -354,6 +349,7 @@ const { t } = useI18n({ useScope: 'global' })
 
 .contact-icon {
   font-size: 1.1rem;
+  color: var(--accent-primary);
 }
 
 .contact-link {
@@ -406,7 +402,7 @@ const { t } = useI18n({ useScope: 'global' })
 
 .category-title {
   font-size: 1.05rem;
-  color: var(--theme-what, #10b981);
+  color: var(--accent-primary);
   font-weight: 600;
   border-bottom: 1px solid var(--border-subtle);
   padding-bottom: 0.45rem;

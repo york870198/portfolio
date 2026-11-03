@@ -18,7 +18,7 @@ describe('language routing and metadata', () => {
     expect(router.currentRoute.value.fullPath).toBe('/who?lang=en&source=cv#intro')
     expect(i18n.global.locale.value).toBe('en')
     expect(document.documentElement.lang).toBe('en')
-    expect(document.title).toBe('About | Portfolio of Fay')
+    expect(document.title).toBe('About me | Portfolio of Fay')
     expect(document.querySelector('meta[name="description"]')?.getAttribute('content')).toBe('Portfolio of Fay, a senior frontend engineer with backend knowledge.')
   })
 
@@ -72,7 +72,7 @@ describe('language routing and metadata', () => {
     router.beforeEach(() => false)
     await router.push('/resume?lang=zh-TW')
     expect(i18n.global.locale.value).toBe('en')
-    expect(document.title).toBe('About | Portfolio of Fay')
+    expect(document.title).toBe('About me | Portfolio of Fay')
   })
 
   it('has the URL-selected language ready before the first application render', async () => {

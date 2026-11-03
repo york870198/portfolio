@@ -14,7 +14,6 @@ const { t } = useI18n({ useScope: 'global' })
         themeIndex="06"
         :title="t('how.title')"
         :subtitle="t('how.subtitle')"
-        accentColor="var(--theme-how)"
       />
 
       <div class="page-content-flow">
@@ -22,7 +21,6 @@ const { t } = useI18n({ useScope: 'global' })
           :index="1"
           :question="t('how.collaboration.question')"
           :highlight="t('how.case.summary')"
-          accentColor="var(--theme-how)"
         >
           <CollaborationCase />
           <p>{{ t('how.collaboration.designCourse') }}</p>
@@ -31,7 +29,6 @@ const { t } = useI18n({ useScope: 'global' })
         <QnACard
           :index="2"
           :question="t('how.website.question')"
-          accentColor="var(--theme-how)"
         >
           <p>{{ t('how.website.scope') }}</p>
           <p>{{ t('how.website.stack') }}</p>

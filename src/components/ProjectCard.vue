@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
+import Icon from './Icon.vue'
 interface Metric {
   label: string
   value: string
@@ -40,7 +41,7 @@ const { t } = useI18n({ useScope: 'global' })
           :title="t('common.project.viewSource')"
         >
           <span>GitHub</span>
-          <span class="link-arrow">↗</span>
+          <Icon name="arrow-up-right" class="link-arrow" />
         </a>
         <a
           v-if="props.liveUrl"
@@ -51,7 +52,7 @@ const { t } = useI18n({ useScope: 'global' })
           :title="t('common.project.viewDemo')"
         >
           <span>Live Demo</span>
-          <span class="link-arrow">↗</span>
+          <Icon name="arrow-up-right" class="link-arrow" />
         </a>
       </div>
     </div>
@@ -114,9 +115,9 @@ const { t } = useI18n({ useScope: 'global' })
   font-weight: 600;
   padding: 0.2rem 0.6rem;
   border-radius: var(--radius-full);
-  background: rgba(16, 185, 129, 0.12);
-  color: #10b981;
-  border: 1px solid rgba(16, 185, 129, 0.3);
+  background: var(--bg-tag);
+  color: var(--accent-primary);
+  border: 1px solid var(--border-subtle);
 }
 
 .project-links {
@@ -146,14 +147,14 @@ const { t } = useI18n({ useScope: 'global' })
 }
 
 .project-link-btn.primary {
-  background: rgba(99, 102, 241, 0.15);
-  border-color: rgba(99, 102, 241, 0.35);
-  color: #818cf8;
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: var(--text-inverse);
 }
 
 .project-link-btn.primary:hover {
-  background: rgba(99, 102, 241, 0.25);
-  color: #ffffff;
+  background: var(--accent-primary-hover);
+  color: var(--text-inverse);
 }
 
 .link-arrow {
@@ -184,7 +185,7 @@ const { t } = useI18n({ useScope: 'global' })
 .metric-val {
   font-size: 1.15rem;
   font-weight: 700;
-  color: var(--theme-what, #10b981);
+  color: var(--accent-primary);
   font-family: var(--font-heading);
 }
 

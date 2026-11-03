@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
+import Icon from './Icon.vue'
 
-const isDark = ref(true)
+// index.html resolves the saved or system theme before first paint; start from what it chose.
+const isDark = ref(document.documentElement.dataset.theme !== 'light')
 
 const toggleTheme = () => {
   isDark.value = !isDark.value
@@ -15,23 +17,6 @@ const toggleTheme = () => {
   }
 }
 
-onMounted(() => {
-  try {
-    const savedTheme = localStorage.getItem('portfolio-theme')
-    if (savedTheme === 'light' || savedTheme === 'dark') {
-      isDark.value = savedTheme === 'dark'
-      document.documentElement.setAttribute('data-theme', savedTheme)
-    } else {
-      // Check system preference
-      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-      isDark.value = prefersDark
-      document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light')
-    }
-  } catch (e) {
-    // Default to dark
-    document.documentElement.setAttribute('data-theme', 'dark')
-  }
-})
 const { t } = useI18n({ useScope: 'global' })
 </script>
 
@@ -43,8 +28,7 @@ const { t } = useI18n({ useScope: 'global' })
     :aria-label="isDark ? t('common.theme.switchToLight') : t('common.theme.switchToDark')"
     id="theme-toggle-btn"
   >
-    <span class="theme-icon" aria-hidden="true" v-if="isDark">◐</span>
-    <span class="theme-icon" aria-hidden="true" v-else>◑</span>
+    <Icon :name="isDark ? 'sun' : 'moon'" class="theme-icon" />
   </button>
 </template>
 
@@ -61,7 +45,7 @@ const { t } = useI18n({ useScope: 'global' })
   background: var(--bg-card-subtle);
   border: 0;
   color: var(--text-primary);
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   transition: background var(--transition-fast), transform var(--transition-fast);
   cursor: pointer;
 }

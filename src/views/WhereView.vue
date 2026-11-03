@@ -2,18 +2,15 @@
 import { useI18n } from 'vue-i18n'
 import PageHeader from '@/components/PageHeader.vue'
 import QnACard from '@/components/QnACard.vue'
-import plurkIcon from '@/assets/icons/plurk.png'
+import Icon from '@/components/Icon.vue'
 
 const socialLinks = [
-  { id: 'github', name: 'GitHub', icon: '💻', url: 'https://github.com/york870198', descKey: 'where.social.github' },
-  { id: 'plurk', name: 'Plurk', icon: plurkIcon, url: 'https://www.plurk.com/york870198', descKey: 'where.social.plurk' },
-  { id: 'linkedin', name: 'LinkedIn', icon: '💼', url: 'https://www.linkedin.com/in/fay-chung-682698224/', descKey: 'where.social.linkedin' },
-  { id: 'cake', name: 'Cake', icon: '🍰', url: 'https://www.cake.me/me/fayang', descKey: 'where.social.cake' }
+  { id: 'github', name: 'GitHub', icon: 'code', url: 'https://github.com/york870198', descKey: 'where.social.github' },
+  { id: 'plurk', name: 'Plurk', icon: 'chat', url: 'https://www.plurk.com/york870198', descKey: 'where.social.plurk' },
+  { id: 'linkedin', name: 'LinkedIn', icon: 'briefcase', url: 'https://www.linkedin.com/in/fay-chung-682698224/', descKey: 'where.social.linkedin' },
+  { id: 'cake', name: 'Cake', icon: 'document', url: 'https://www.cake.me/me/fayang', descKey: 'where.social.cake' }
 ]
 
-const isImageIcon = (icon: string) => {
-  return icon.startsWith('data:') || icon.startsWith('/') || icon.includes('.') || icon.includes('blob:')
-}
 const { t } = useI18n({ useScope: 'global' })
 </script>
 
@@ -25,7 +22,6 @@ const { t } = useI18n({ useScope: 'global' })
         themeIndex="04"
         :title="t('where.title')"
         :subtitle="t('where.subtitle')"
-        accentColor="var(--theme-where)"
       />
 
       <div class="page-content-flow">
@@ -33,7 +29,6 @@ const { t } = useI18n({ useScope: 'global' })
           :index="1"
           :question="t('where.location.question')"
           :highlight="t('where.location.highlight')"
-          accentColor="var(--theme-where)"
         >
           <p>{{ t('where.location.home') }}</p>
           <div class="footprint-grid">
@@ -45,15 +40,12 @@ const { t } = useI18n({ useScope: 'global' })
               rel="noopener noreferrer"
               class="footprint-card"
             >
-              <span class="footprint-icon" aria-hidden="true">
-                <img v-if="isImageIcon(link.icon)" :src="link.icon" alt="" class="footprint-img" />
-                <span v-else>{{ link.icon }}</span>
-              </span>
+              <Icon :name="link.icon" class="footprint-icon" />
               <div class="footprint-info">
                 <span class="footprint-name">{{ link.name }}</span>
                 <span class="footprint-desc">{{ t(link.descKey) }}</span>
               </div>
-              <span class="footprint-arrow" aria-hidden="true">↗</span><span class="sr-only">{{ t('common.opensInNewTab') }}</span>
+              <Icon name="arrow-up-right" class="footprint-arrow" /><span class="sr-only">{{ t('common.opensInNewTab') }}</span>
             </a>
           </div>
         </QnACard>
@@ -62,7 +54,6 @@ const { t } = useI18n({ useScope: 'global' })
           :index="2"
           :question="t('where.work.question')"
           :highlight="t('where.work.highlight')"
-          accentColor="var(--theme-where)"
         >
           <ul>
             <li><strong>{{ t('where.work.rangeLabel') }}</strong> {{ t('where.work.range') }}</li>
@@ -90,28 +81,17 @@ const { t } = useI18n({ useScope: 'global' })
   background: var(--bg-card-subtle);
   border: 0;
   border-radius: var(--radius-md);
-  transition: background var(--transition-fast);
+  transition: background var(--transition-fast), transform var(--transition-fast);
 }
 
 .footprint-card:hover {
   background: var(--bg-card-hover);
-  border-color: var(--theme-where, #f59e0b);
   transform: translateY(-2px);
 }
 
 .footprint-icon {
   font-size: 1.5rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 1.75rem;
-  height: 1.75rem;
-  flex-shrink: 0;
-}
-.footprint-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  color: var(--accent-primary);
 }
 
 .footprint-info {
