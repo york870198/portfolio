@@ -1,7 +1,7 @@
-import type { MessageCatalog } from './zh-TW'
+import type zhTW from './zh-TW'
 
 // Existing English design text stays in the templates or shared data.
-const en = {
+export default {
   "common": {
     "labelSeparator": ":",
     "language": { "label": "Website language" },
@@ -237,6 +237,4 @@ const en = {
     "title": "Page not found",
     "description": "Sorry, the page you're looking for doesn't exist or has moved. Check the URL or use the button below to return home."
   }
-} satisfies MessageCatalog
-
-export default en
+} satisfies typeof zhTW

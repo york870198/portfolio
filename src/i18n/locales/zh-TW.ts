@@ -1,5 +1,6 @@
 // Original Traditional Chinese wording. Keep message keys aligned with en.ts.
-const zhTW = {
+// Keep a literal default export: the build precompiles it (see vite.config.ts).
+export default {
   "common": {
     "labelSeparator": "：",
     "language": { "label": "網站語言" },
@@ -236,6 +237,3 @@ const zhTW = {
     "description": "抱歉，您所尋找的頁面不存在或已被移動。請檢查網址或點擊下方按鈕返回首頁。"
   }
 }
-
-export type MessageCatalog = typeof zhTW
-export default zhTW
