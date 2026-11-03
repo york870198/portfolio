@@ -43,6 +43,8 @@ function onOutside(event: Event) {
 }
 function onResize() { if (desktopQuery.matches) closeMobileMenu() }
 watch(() => route.fullPath, closeMobileMenu)
+// The open drawer owns scrolling; the page behind it stays put.
+watch(isMobileMenuOpen, open => { document.documentElement.classList.toggle('menu-open', open) })
 onMounted(() => {
   document.addEventListener('pointerdown', onOutside)
   document.addEventListener('focusin', onOutside)
@@ -54,6 +56,7 @@ onUnmounted(() => {
   document.removeEventListener('focusin', onOutside)
   desktopQuery.removeEventListener('change', onResize)
   narrowQuery.removeEventListener('change', onNarrow)
+  document.documentElement.classList.remove('menu-open')
   printFrame?.remove()
   window.clearTimeout(printTimeout)
 })
@@ -131,6 +134,7 @@ const { t } = useI18n({ useScope: 'global' })
         </button>
       </div>
     </div>
+    <div v-if="isMobileMenuOpen" class="mobile-scrim" aria-hidden="true" @click="closeMobileMenu"></div>
     <div v-if="isMobileMenuOpen" class="mobile-drawer" id="mobile-dropdown-menu">
       <nav class="mobile-nav" :aria-label="t('common.navbar.mobileNavigation')">
         <ul class="mobile-nav-list">
@@ -162,7 +166,9 @@ const { t } = useI18n({ useScope: 'global' })
 .btn-download-resume:hover { color: var(--accent-primary); }
 .mobile-toggle { display: none; min-width: 44px; height: 44px; font-size: 22px; background: var(--bg-secondary); }
 .mobile-toggle .icon { display: block; margin-inline: auto; }
-.mobile-drawer { position: absolute; top: 100%; left: 0; width: 100%; padding: .75rem 1.25rem 1.25rem; background: var(--bg-mobile-menu);  max-height: calc(100dvh - var(--navbar-height)); overflow-y: auto; }
+.mobile-scrim { position: fixed; inset: var(--navbar-height) 0 0; background: var(--bg-scrim); animation: scrim-in .2s ease-out; }
+.mobile-drawer { position: absolute; top: 100%; left: 0; width: 100%; padding: .75rem 1.25rem 1.25rem; background: var(--bg-mobile-menu); border-bottom: 1px solid var(--border-subtle); max-height: calc(100dvh - var(--navbar-height)); overflow-y: auto; overscroll-behavior: contain; }
+@keyframes scrim-in { from { opacity: 0; } }
 .mobile-nav-list { list-style: none; }
 .mobile-nav-link { display: flex; justify-content: space-between; align-items: center; min-height: 48px;  padding: .6rem .5rem; }
 .mobile-nav-link[aria-current] { color: var(--accent-primary); background: var(--bg-tag); }
