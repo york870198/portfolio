@@ -79,7 +79,8 @@ h1[tabindex="-1"]:focus, main[tabindex="-1"]:focus { outline: none; }
   .page-container:not(.resume-page) > .container { grid-template-columns: 1fr; gap: 2.5rem; }
 }
 @media(prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+  /* Color fades stay as feedback; movement (transforms, entrances, smooth scroll) does not animate. */
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-property: color, background-color, border-color, opacity !important; scroll-behavior: auto !important; }
   ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
 }
 
