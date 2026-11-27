@@ -225,3 +225,15 @@ describe('skill lists', () => {
     ])
   })
 })
+
+describe('resume download button', () => {
+  it('names itself by its visible text while the resume is being prepared', async () => {
+    await mountSite('/who?lang=en')
+    const button = document.querySelector<HTMLButtonElement>('#nav-download-resume-btn')!
+    button.click()
+    await nextTick()
+    expect(button.textContent!.trim()).toBe('Preparing…')
+    const name = button.getAttribute('aria-label') ?? button.textContent!.trim()
+    expect(name).toContain('Preparing…')
+  })
+})

@@ -124,7 +124,7 @@ const { t } = useI18n({ useScope: 'global' })
       </nav>
       <div class="navbar-actions">
         <LanguageSwitcher v-if="!isNarrow" />
-        <button id="nav-download-resume-btn" class="btn-download-resume" @click="handleDownloadResume" :disabled="isGeneratingPdf" :aria-label="t('common.navbar.downloadResumePdf')">
+        <button id="nav-download-resume-btn" class="btn-download-resume" @click="handleDownloadResume" :disabled="isGeneratingPdf" :aria-label="isGeneratingPdf ? undefined : t('common.navbar.downloadResumePdf')">
           {{ isGeneratingPdf ? t('common.navbar.preparing') : t('common.navbar.downloadResume') }} <Icon name="arrow-down" />
         </button>
         <QuickContact variant="compact" :label="t('common.navbar.contact')" email="york870198@gmail.com" />
