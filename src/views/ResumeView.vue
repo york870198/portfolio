@@ -6,81 +6,9 @@ import WorkExperience from '@/components/WorkExperience.vue'
 import PersonalProject from '@/components/PersonalProject.vue'
 import NavigationLink from '@/components/NavigationLink.vue'
 import Icon from '@/components/Icon.vue'
+import SkillGrid from '@/components/SkillGrid.vue'
 
 const route = useRoute()
-
-const skillCategories = [
-  {
-    "id": "frontend",
-    "nameKey": "what.skills.frontend.title",
-    "skills": [
-      {
-        "id": "vue",
-        "label": "Vue 3 (Pinia / Vue Router)"
-      },
-      {
-        "id": "react",
-        "label": "React 18+ (functional components / Redux)"
-      },
-      {
-        "id": "typescript",
-        "messageKey": "what.skills.frontend.typescript"
-      },
-      {
-        "id": "vite",
-        "label": "Vite / pnpm"
-      }
-    ]
-  },
-  {
-    "id": "backend",
-    "nameKey": "what.skills.backend.title",
-    "skills": [
-      {
-        "id": "node",
-        "label": "Node.js / Express"
-      },
-      {
-        "id": "rxjs",
-        "label": "RxJS"
-      },
-      {
-        "id": "rest",
-        "label": "RESTful API"
-      },
-      {
-        "id": "mysql",
-        "label": "MySQL"
-      },
-      {
-        "id": "mocking",
-        "label": "API Mocking"
-      }
-    ]
-  },
-  {
-    "id": "design",
-    "nameKey": "what.skills.design.title",
-    "skills": [
-      {
-        "id": "figma",
-        "messageKey": "what.skills.design.figma"
-      },
-      {
-        "id": "responsive",
-        "messageKey": "what.skills.design.responsive"
-      },
-      {
-        "id": "ci",
-        "label": "CI/CD (GitHub Actions / GitHub Pages)"
-      },
-      {
-        "id": "vitest",
-        "label": "Vitest"
-      }
-    ]
-  }
-]
 
 const printResume = () => {
   window.print()
@@ -167,16 +95,7 @@ const { t } = useI18n({ useScope: 'global' })
 
         <section class="resume-section" aria-labelledby="resume-skills-title">
           <h2 id="resume-skills-title" class="resume-section-title">{{ t('home.what.title') }}</h2>
-          <div class="skills-grid">
-            <div v-for="cat in skillCategories" :key="cat.id" class="skill-category-block">
-              <h3 class="category-title">{{ t(cat.nameKey) }}</h3>
-              <ul class="skills-sublist">
-                <li v-for="item in cat.skills" :key="item.id" class="skill-li">
-                  {{ item.messageKey ? t(item.messageKey) : item.label }}
-                </li>
-              </ul>
-            </div>
-          </div>
+          <SkillGrid compact />
         </section>
 
         <section class="resume-section resume-body" aria-labelledby="resume-development-title">
@@ -397,45 +316,6 @@ const { t } = useI18n({ useScope: 'global' })
   display: flex;
   flex-direction: column;
   gap: 1.75rem;
-}
-
-/* Skills 網格 (來自 WhatView) */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
-  gap: 1.25rem;
-  margin-top: 0.5rem;
-}
-
-.skill-category-block {
-  padding: 1.25rem;
-  background: var(--bg-card-subtle);
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border-subtle);
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.category-title {
-  font-size: 1.05rem;
-  color: var(--accent-primary);
-  font-weight: 600;
-  border-bottom: 1px solid var(--border-subtle);
-  padding-bottom: 0.45rem;
-}
-
-.skills-sublist {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.skill-li {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  line-height: 1.5;
 }
 
 @media (max-width: 768px) {

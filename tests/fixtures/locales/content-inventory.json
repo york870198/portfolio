@@ -738,8 +738,8 @@
       "category": "translatable"
     },
     {
-      "file": "src/views/WhatView.vue",
-      "line": 8,
+      "file": "src/components/SkillGrid.vue",
+      "line": 10,
       "kind": "script",
       "original": "Vue 3 (Pinia / Vue Router)",
       "category": "fixed"
@@ -760,15 +760,15 @@
       "category": "translatable"
     },
     {
-      "file": "src/views/WhatView.vue",
-      "line": 8,
+      "file": "src/components/SkillGrid.vue",
+      "line": 13,
       "kind": "script",
       "original": "Vite / pnpm",
       "category": "fixed"
     },
     {
-      "file": "src/views/WhatView.vue",
-      "line": 8,
+      "file": "src/components/SkillGrid.vue",
+      "line": 14,
       "kind": "script",
       "original": "PWA",
       "category": "fixed"
@@ -790,36 +790,36 @@
       "category": "translatable"
     },
     {
-      "file": "src/views/WhatView.vue",
-      "line": 12,
+      "file": "src/components/SkillGrid.vue",
+      "line": 22,
       "kind": "script",
       "original": "Node.js / Express",
       "category": "fixed"
     },
     {
-      "file": "src/views/WhatView.vue",
-      "line": 12,
+      "file": "src/components/SkillGrid.vue",
+      "line": 23,
       "kind": "script",
       "original": "RxJS",
       "category": "fixed"
     },
     {
-      "file": "src/views/WhatView.vue",
-      "line": 12,
+      "file": "src/components/SkillGrid.vue",
+      "line": 24,
       "kind": "script",
       "original": "RESTful API",
       "category": "fixed"
     },
     {
-      "file": "src/views/WhatView.vue",
-      "line": 12,
+      "file": "src/components/SkillGrid.vue",
+      "line": 25,
       "kind": "script",
       "original": "MySQL",
       "category": "fixed"
     },
     {
-      "file": "src/views/WhatView.vue",
-      "line": 12,
+      "file": "src/components/SkillGrid.vue",
+      "line": 26,
       "kind": "script",
       "original": "API Mocking",
       "category": "fixed"
@@ -864,8 +864,8 @@
       "category": "fixed"
     },
     {
-      "file": "src/views/WhatView.vue",
-      "line": 16,
+      "file": "src/components/SkillGrid.vue",
+      "line": 37,
       "kind": "script",
       "original": "Vitest",
       "category": "fixed"
@@ -1417,8 +1417,8 @@
       "category": "translatable"
     },
     {
-      "file": "src/views/ResumeView.vue",
-      "line": 14,
+      "file": "src/components/SkillGrid.vue",
+      "line": 10,
       "kind": "script",
       "original": "Vue 3 (Pinia / Vue Router)",
       "category": "fixed"
@@ -1439,8 +1439,8 @@
       "category": "translatable"
     },
     {
-      "file": "src/views/ResumeView.vue",
-      "line": 14,
+      "file": "src/components/SkillGrid.vue",
+      "line": 13,
       "kind": "script",
       "original": "Vite / pnpm",
       "category": "fixed"
@@ -1454,36 +1454,36 @@
       "category": "translatable"
     },
     {
-      "file": "src/views/ResumeView.vue",
-      "line": 18,
+      "file": "src/components/SkillGrid.vue",
+      "line": 22,
       "kind": "script",
       "original": "Node.js / Express",
       "category": "fixed"
     },
     {
-      "file": "src/views/ResumeView.vue",
-      "line": 18,
+      "file": "src/components/SkillGrid.vue",
+      "line": 23,
       "kind": "script",
       "original": "RxJS",
       "category": "fixed"
     },
     {
-      "file": "src/views/ResumeView.vue",
-      "line": 18,
+      "file": "src/components/SkillGrid.vue",
+      "line": 24,
       "kind": "script",
       "original": "RESTful API",
       "category": "fixed"
     },
     {
-      "file": "src/views/ResumeView.vue",
-      "line": 18,
+      "file": "src/components/SkillGrid.vue",
+      "line": 25,
       "kind": "script",
       "original": "MySQL",
       "category": "fixed"
     },
     {
-      "file": "src/views/ResumeView.vue",
-      "line": 18,
+      "file": "src/components/SkillGrid.vue",
+      "line": 26,
       "kind": "script",
       "original": "API Mocking",
       "category": "fixed"
@@ -1520,8 +1520,8 @@
       "category": "fixed"
     },
     {
-      "file": "src/views/ResumeView.vue",
-      "line": 22,
+      "file": "src/components/SkillGrid.vue",
+      "line": 37,
       "kind": "script",
       "original": "Vitest",
       "category": "fixed"

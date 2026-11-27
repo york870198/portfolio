@@ -200,3 +200,28 @@ describe('localized reading experience', () => {
     expect(document.querySelector('main')!.textContent).toContain('台北，以及網路上。')
   })
 })
+
+describe('skill lists', () => {
+  const skillsOn = () => [...document.querySelectorAll('.skill-category-block')].map(block => ({
+    title: block.querySelector('h3')!.textContent!.trim(),
+    skills: [...block.querySelectorAll('li')].map(li => li.textContent!.trim())
+  }))
+
+  it('lists every skill on the tech stack page', async () => {
+    await mountSite('/what?lang=en')
+    expect(skillsOn()).toEqual([
+      { title: 'Core frontend ecosystem', skills: ['Vue 3 (Pinia / Vue Router)', 'React 18+ (functional components / Redux)', 'TypeScript (strong type safety)', 'Vite / pnpm', 'PWA', 'Handling browser differences'] },
+      { title: 'Backend and data', skills: ['Node.js / Express', 'RxJS', 'RESTful API', 'MySQL', 'API Mocking', 'WebSocket real-time communication'] },
+      { title: 'UI/UX and QA', skills: ['Figma collaboration', 'Responsive layouts (RWD)', 'CI/CD (GitHub Actions / GitHub Pages)', 'Vitest'] }
+    ])
+  })
+
+  it('keeps the resume to its shorter skill list', async () => {
+    await mountSite('/resume?lang=en')
+    expect(skillsOn()).toEqual([
+      { title: 'Core frontend ecosystem', skills: ['Vue 3 (Pinia / Vue Router)', 'React 18+ (functional components / Redux)', 'TypeScript (strong type safety)', 'Vite / pnpm'] },
+      { title: 'Backend and data', skills: ['Node.js / Express', 'RxJS', 'RESTful API', 'MySQL', 'API Mocking'] },
+      { title: 'UI/UX and QA', skills: ['Figma collaboration', 'Responsive layouts (RWD)', 'CI/CD (GitHub Actions / GitHub Pages)', 'Vitest'] }
+    ])
+  })
+})

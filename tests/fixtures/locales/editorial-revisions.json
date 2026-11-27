@@ -413,6 +413,18 @@
     {
       "file": "src/router/index.ts",
       "original": "How | Portfolio of Fay"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "original": "GitHub"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "original": "Vue 3"
+    },
+    {
+      "file": "src/views/ResumeView.vue",
+      "original": "React"
     }
   ],
   "englishTokenAliases": {
