@@ -177,6 +177,7 @@ const { t } = useI18n({ useScope: 'global' })
 @media(max-width: 1280px) { .desktop-nav, .btn-download-resume { display: none; } .mobile-toggle { display: block; } }
 @media(max-width: 440px) { .brand-caption { display: none; } .navbar-container { gap: .5rem; } .navbar-actions { gap: .4rem; } }
 .mobile-settings { display: flex; gap: .75rem; margin-top: .75rem; }
-.mobile-settings :deep(.language-select) { flex: 1; max-width: none; }
+/* 16px stops iOS Safari from zooming the page when the select is focused. */
+.mobile-settings :deep(.language-select) { flex: 1; max-width: none; font-size: 16px; }
 @media(max-width: 600px) { .navbar-actions :deep(.variant-compact) { padding-inline: .25rem; } }
 </style>
