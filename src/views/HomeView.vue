@@ -103,6 +103,8 @@ const { t } = useI18n({ useScope: 'global' })
 .dimension-subtitle { font-size: 1rem; line-height: 1.8; margin-top: .75rem; color: var(--text-secondary); }
 .explore-arrow { display: grid; place-items: center; width: 36px; height: 36px; background: var(--bg-secondary); font-size: 20px; transition: transform .22s; }
 .dimension-card:hover .explore-arrow { transform: rotate(45deg); background: var(--accent-primary); color: var(--text-inverse); }
+/* The 680px hero needs ~784px to stay pinned below the navbar; shorter screens let it scroll. */
+@media(max-height: 790px) { .hero-section { position: static; } }
 @keyframes preview-enter { from { opacity: .4; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 @media(prefers-reduced-motion: no-preference) {
   .hero-title, .hero-description, .hero-resume { animation: preview-enter .65s both; }
