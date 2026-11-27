@@ -143,6 +143,10 @@ const { t } = useI18n({ useScope: 'global' })
             <Icon name="briefcase" class="contact-icon" />
             <a href="https://www.linkedin.com/in/fay-chung-682698224/" target="_blank" rel="noopener noreferrer" class="contact-link">LinkedIn: Fay Chung<span class="sr-only">{{ t('common.opensInNewTab') }}</span></a>
           </div>
+          <div class="contact-item">
+            <Icon name="document" class="contact-icon" />
+            <a href="https://york870198.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="contact-link">york870198.github.io/portfolio<span class="sr-only">{{ t('common.opensInNewTab') }}</span></a>
+          </div>
         </div>
       </header>
 
