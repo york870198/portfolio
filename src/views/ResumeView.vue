@@ -3,6 +3,7 @@ import { useI18n } from 'vue-i18n'
 import { nextTick, onMounted, onUnmounted } from 'vue'
 import { useRoute } from 'vue-router'
 import WorkExperience from '@/components/WorkExperience.vue'
+import PersonalProject from '@/components/PersonalProject.vue'
 import NavigationLink from '@/components/NavigationLink.vue'
 import Icon from '@/components/Icon.vue'
 
@@ -150,6 +151,13 @@ const { t } = useI18n({ useScope: 'global' })
           <h2 id="resume-experience-title" class="resume-section-title">{{ t('home.when.title') }}</h2>
           <div class="section-content-flow">
             <WorkExperience compact :heading-level="3" />
+          </div>
+        </section>
+
+        <section class="resume-section" aria-labelledby="resume-project-title">
+          <h2 id="resume-project-title" class="resume-section-title">{{ t('resume.concise.projectTitle') }}</h2>
+          <div class="section-content-flow">
+            <PersonalProject :heading-level="3" />
           </div>
         </section>
 

@@ -25,6 +25,12 @@ describe('approved bilingual content', () => {
     }
   })
 
+  // Mountain Dog is still in closed testing; change only once it is public on Google Play.
+  it('describes Mountain Dog as in closed testing, not launched', () => {
+    expect(zhTW.when.personalProject.period).toContain('Google Play 封閉測試中')
+    expect(en.when.personalProject.period).toContain('In Google Play closed testing')
+  })
+
   it('retains approved English wording and the updated Resume vocabulary', () => {
     expect(en.who.identity.design).toContain('design systems')
     expect(en.what.beyondFrontend.flutter).toBe('Used on a project in my previous role.')

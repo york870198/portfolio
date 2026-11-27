@@ -106,6 +106,20 @@ export default {
       "api": "Defined frontend data requirements and expected response structures, confirmed them with backend engineers, and integrated the APIs they implemented.",
       "verification": "Checked the implementation against Figma designs and verified cross-browser behavior, then handed it over to designers and QA for acceptance testing. Unit tests were defined jointly by the frontend team."
     },
+    "personalProject": {
+      "title": "Mountain Dog (personal project)",
+      "summary": "A solo-built Android game: type any text as food and feed a Bernese Mountain Dog until it grows as big as a mountain.",
+      "period": "Nov 2026–present · In Google Play closed testing",
+      "labels": {
+        "approach": "Approach:",
+        "stack": "Stack:",
+        "outcome": "Outcome:",
+        "link": "Developer site:"
+      },
+      "approach": "I owned product definition, architecture decisions, and acceptance, and guided an AI coding agent with specs, tickets, and architecture decision records (ADRs).",
+      "stack": "TypeScript, Vite, Capacitor (Android)",
+      "outcome": "Went from first commit to a Google Play closed-test submission in 4 days; documented 12 architecture decisions."
+    },
     "title": "Experience",
     "subtitle": "Roles, career progression, and product delivery.",
     "previousRole": {
@@ -147,6 +161,7 @@ export default {
       "question": "What other technologies have I used?",
       "tauri": "Currently using it for a personal project in development.",
       "flutter": "Used on a project in my previous role.",
+      "capacitor": "Used for my personal project Mountain Dog (Android).",
       "python": "My main language at university; used less in recent years."
     },
   },
@@ -211,6 +226,7 @@ export default {
   "resume": {
     "concise": {
       "location": "Taipei, Taiwan",
+      "projectTitle": "Personal project",
       "developmentTitle": "Learning and additional experience",
       "uxCourse": "Google UX Design Certificate: in progress, studying UI/UX design to improve collaboration with designers.",
       "tauri": "Currently using it for a personal project in development.",

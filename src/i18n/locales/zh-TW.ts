@@ -105,6 +105,20 @@ export default {
       "api": "提出前端資料需求並定義預期接收的資料結構，與後端共同確認；由後端實作 API，再由我完成前端串接。",
       "verification": "親自比對 Figma 設計稿並檢查跨瀏覽器行為，再交由設計師與 QA 驗收。單元測試由前端團隊共同訂定。"
     },
+    "personalProject": {
+      "title": "Mountain Dog（個人專案）",
+      "summary": "獨立開發的 Android 文字餵食遊戲：輸入任何文字當食物，把伯恩山犬餵得和山一樣大。",
+      "period": "2026 年 11 月起 · Google Play 封閉測試中",
+      "labels": {
+        "approach": "開發方式：",
+        "stack": "使用技術：",
+        "outcome": "成果：",
+        "link": "開發者網站："
+      },
+      "approach": "一人負責產品定義、架構決策與驗收，以規格、工票與架構決策紀錄（ADR）引導 AI coding agent 實作。",
+      "stack": "TypeScript、Vite、Capacitor（Android）",
+      "outcome": "4 天從第一個 commit 到送審 Google Play 封閉測試；記錄 12 份架構決策。"
+    },
     "title": "經歷",
     "subtitle": "任職、升遷與產品交付經驗。",
     "previousRole": {
@@ -146,6 +160,7 @@ export default {
       "question": "還使用過哪些技術？",
       "tauri": "目前用於開發中的個人專案。",
       "flutter": "曾用於前一份工作的專案。",
+      "capacitor": "用於個人專案 Mountain Dog（Android）。",
       "python": "大學時主要使用，近年較少接觸。"
     },
   },
@@ -210,6 +225,7 @@ export default {
   "resume": {
     "concise": {
       "location": "台灣 台北",
+      "projectTitle": "個人專案",
       "developmentTitle": "進修與補充經驗",
       "uxCourse": "Google UX Design Certificate：修習中，學習 UI/UX 設計以提升與設計師協作的能力。",
       "tauri": "目前用於開發中的個人專案。",

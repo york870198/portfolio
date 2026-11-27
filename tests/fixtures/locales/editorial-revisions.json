@@ -50,7 +50,19 @@
     "common.nav.home",
     "common.metadata.pageTitle",
     "home.hero.intro",
-    "home.viewResume"
+    "home.viewResume",
+    "when.personalProject.title",
+    "when.personalProject.summary",
+    "when.personalProject.period",
+    "when.personalProject.labels.approach",
+    "when.personalProject.labels.stack",
+    "when.personalProject.labels.outcome",
+    "when.personalProject.labels.link",
+    "when.personalProject.approach",
+    "when.personalProject.stack",
+    "when.personalProject.outcome",
+    "what.beyondFrontend.capacitor",
+    "resume.concise.projectTitle"
   ],
   "reason": "Approved wording from text-update and content-concision revisions. Preserve the original inventory as history; retiredFixedText applies only to the specified reading version. English token aliases validate exact lowercase equivalents of ordinary words, not omitted facts.",
   "chinese": {
@@ -413,6 +425,9 @@
     "when.previousRole.highlight": {
       "5": "May",
       "12": "Dec"
+    },
+    "when.personalProject.period": {
+      "11": "Nov"
     }
   }
 }

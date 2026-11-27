@@ -139,6 +139,7 @@ const { t } = useI18n({ useScope: 'global' })
           <ul>
             <li><strong>Tauri{{ t('common.labelSeparator') }}</strong> {{ t('what.beyondFrontend.tauri') }}</li>
             <li><strong>Flutter{{ t('common.labelSeparator') }}</strong> {{ t('what.beyondFrontend.flutter') }}</li>
+            <li><strong>Capacitor{{ t('common.labelSeparator') }}</strong> {{ t('what.beyondFrontend.capacitor') }}</li>
             <li><strong>Python{{ t('common.labelSeparator') }}</strong> {{ t('what.beyondFrontend.python') }}</li>
           </ul>
         </QnACard>

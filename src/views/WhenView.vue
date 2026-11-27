@@ -2,6 +2,7 @@
 import { useI18n } from 'vue-i18n'
 import PageHeader from '@/components/PageHeader.vue'
 import WorkExperience from '@/components/WorkExperience.vue'
+import PersonalProject from '@/components/PersonalProject.vue'
 const { t } = useI18n({ useScope: 'global' })
 </script>
 
@@ -17,6 +18,7 @@ const { t } = useI18n({ useScope: 'global' })
 
       <div class="page-content-flow">
         <WorkExperience />
+        <PersonalProject :index="3" />
       </div>
     </div>
   </div>
