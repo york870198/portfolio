@@ -58,7 +58,7 @@ const { t } = useI18n({ useScope: 'global' })
 
 <style scoped>
 .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 1.25rem; margin-top: .5rem; }
-.skill-category-block { display: flex; flex-direction: column; gap: .75rem; padding: 1.25rem; background: var(--bg-card-subtle); }
+.skill-category-block { display: flex; flex-direction: column; gap: .75rem; padding: 1.25rem; background: var(--bg-secondary); }
 .category-title { padding-bottom: .45rem; font-size: 1.05rem; font-weight: 600; color: var(--accent-primary); }
 .skills-sublist { display: flex; flex-direction: column; gap: .5rem; list-style: none; }
 .skill-li { font-size: 1rem; line-height: 1.5; color: var(--text-secondary); }

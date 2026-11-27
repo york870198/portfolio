@@ -19,7 +19,6 @@ const { t } = useI18n({ useScope: 'global' })
     <div class="container">
       <PageHeader
         themeTag="WHERE"
-        themeIndex="04"
         :title="t('where.title')"
         :subtitle="t('where.subtitle')"
       />
@@ -78,7 +77,7 @@ const { t } = useI18n({ useScope: 'global' })
   align-items: center;
   gap: 0.85rem;
   padding: 1.1rem;
-  background: var(--bg-card-subtle);
+  background: var(--bg-secondary);
   border: 0;
   border-radius: var(--radius-md);
   transition: background var(--transition-fast), transform var(--transition-fast);

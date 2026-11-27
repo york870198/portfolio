@@ -33,10 +33,6 @@ export default {
       "switchToLight": "切換為淺色主題",
       "switchToDark": "切換為深色主題"
     },
-    "project": {
-      "viewSource": "查看 GitHub 原始碼",
-      "viewDemo": "前往 Live Demo 預覽"
-    },
     "metadata": {
       "description": "Fay 的作品集：資深前端工程師，具備後端基礎知識。",
       "pageTitle": "{page} {'|'} Portfolio of Fay",

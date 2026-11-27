@@ -158,7 +158,7 @@ const { t } = useI18n({ useScope: 'global' })
   justify-content: space-between;
   margin-bottom: 2rem;
   padding: 0.75rem 1.25rem;
-  background: var(--bg-card-subtle);
+  background: var(--bg-secondary);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
 }

@@ -64,7 +64,7 @@
     "what.beyondFrontend.capacitor",
     "resume.concise.projectTitle"
   ],
-  "reason": "Approved wording from text-update and content-concision revisions. Preserve the original inventory as history; retiredFixedText applies only to the specified reading version. English token aliases validate exact lowercase equivalents of ordinary words, not omitted facts.",
+  "reason": "Approved wording from text-update and content-concision revisions. Preserve the original inventory as history; retiredFixedText applies only to the specified reading version. English token aliases validate exact lowercase equivalents of ordinary words, not omitted facts. Deleting an unused component retires its keys and fixed text in both reading versions.",
   "chinese": {
     "what.beyondFrontend.tauri": "目前用於開發中的個人專案。",
     "what.beyondFrontend.flutter": "曾用於前一份工作的專案。",
@@ -194,7 +194,9 @@
     "resume.social.cake",
     "resume.how.scope",
     "resume.how.specification",
-    "common.moreDetails"
+    "common.moreDetails",
+    "common.project.viewSource",
+    "common.project.viewDemo"
   ],
   "englishTokenExceptions": {
     "who.identity.design": [
@@ -425,6 +427,14 @@
     {
       "file": "src/views/ResumeView.vue",
       "original": "React"
+    },
+    {
+      "file": "src/components/ProjectCard.vue",
+      "original": "GitHub"
+    },
+    {
+      "file": "src/components/ProjectCard.vue",
+      "original": "Live Demo"
     }
   ],
   "englishTokenAliases": {

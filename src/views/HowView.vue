@@ -11,7 +11,6 @@ const { t } = useI18n({ useScope: 'global' })
     <div class="container">
       <PageHeader
         themeTag="HOW"
-        themeIndex="06"
         :title="t('how.title')"
         :subtitle="t('how.subtitle')"
       />
@@ -37,7 +36,3 @@ const { t } = useI18n({ useScope: 'global' })
     </div>
   </div>
 </template>
-
-<style scoped>
-/* Scoped styles can be extended here for custom customizations */
-</style>

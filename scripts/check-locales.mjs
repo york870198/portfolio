@@ -52,8 +52,10 @@ for (const [key, original] of Object.entries(zh)) {
 }
 
 const normalize = value => value.replace(/\s+/g, ' ').trim()
+// Approved content cuts can retire a fixed phrase in one reading version; a retired file may no longer exist.
+const isRetired = item => revisions.retiredFixedText?.some(retired => retired.file === item.file && retired.original === item.original)
 const fixedSources = new Map(await Promise.all(
-  [...new Set(inventory.items.filter(item => item.category === 'fixed').map(item => item.file))]
+  [...new Set(inventory.items.filter(item => item.category === 'fixed' && !isRetired(item)).map(item => item.file))]
     .map(async file => [file, normalize(await readFile(new URL(file, root), 'utf8'))])
 ))
 const used = new Set()
@@ -64,8 +66,7 @@ for (const key of revisions.addedKeys ?? []) {
 for (const item of inventory.items) {
   assert.ok(['fixed', 'translatable'].includes(item.category), `Unclassified source: ${item.file}:${item.line}`)
   if (item.category === 'fixed') {
-    // Approved content cuts can retire a fixed phrase in one reading version.
-    if (revisions.retiredFixedText?.some(retired => retired.file === item.file && retired.original === item.original)) continue
+    if (isRetired(item)) continue
     assert.ok(fixedSources.get(item.file).includes(item.original), `Fixed design text changed: ${item.file}:${item.line} '${item.original}'`)
     continue
   }

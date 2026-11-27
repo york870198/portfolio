@@ -42,7 +42,7 @@ const { t } = useI18n({ useScope: 'global' })
   width: 44px;
   height: 44px;
   border-radius: var(--radius-full);
-  background: var(--bg-card-subtle);
+  background: var(--bg-secondary);
   border: 0;
   color: var(--text-primary);
   font-size: 1.25rem;

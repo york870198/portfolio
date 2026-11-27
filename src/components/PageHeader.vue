@@ -4,7 +4,7 @@ import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { navRoutes } from '@/router'
 import NavigationLink from './NavigationLink.vue'
-const props = withDefaults(defineProps<{ themeTag: string; themeIndex?: string; title: string; subtitle: string}>(), { themeIndex: '01' })
+const props = defineProps<{ themeTag: string; title: string; subtitle: string }>()
 const route = useRoute()
 const isResume = computed(() => route.path === '/resume')
 const { t } = useI18n({ useScope: 'global' })

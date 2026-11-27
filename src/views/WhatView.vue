@@ -13,7 +13,6 @@ const { t } = useI18n({ useScope: 'global' })
     <div class="container">
       <PageHeader
         themeTag="WHAT"
-        themeIndex="03"
         :title="t('what.title')"
         :subtitle="t('what.subtitle')"
       />

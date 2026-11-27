@@ -34,10 +34,6 @@ export default {
       "switchToLight": "Switch to light theme",
       "switchToDark": "Switch to dark theme"
     },
-    "project": {
-      "viewSource": "View GitHub source code",
-      "viewDemo": "Open Live Demo preview"
-    },
     "metadata": {
       "description": "Portfolio of Fay, a senior frontend engineer with backend knowledge.",
       "pageTitle": "{page} {'|'} Portfolio of Fay",
